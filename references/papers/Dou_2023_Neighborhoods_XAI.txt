@@ -1,0 +1,4 @@
+Paper: Dou_2023_Neighborhoods_XAI
+Query: incorporating neighborhoods explainable artificial intelligence housing prices Dou 2023
+DOI: 10.1016/j.apgeog.2023.103073
+Status: Not found as open access

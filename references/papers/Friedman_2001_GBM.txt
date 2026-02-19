@@ -1,0 +1,12 @@
+Paper: Friedman_2001_GBM
+Query: greedy function approximation gradient boosting machine Friedman 2001
+DOI: N/A
+Status: Not found as open access
+
+Semantic Scholar results:
+  - Greedy function approximation: A gradient boosting machine.
+    URL: https://www.semanticscholar.org/paper/1679beddda3a183714d380e944fe6bf586c083cd
+  - Off-Policy Temporal Difference Learning with Function Approximation
+    URL: https://www.semanticscholar.org/paper/e54152403da98a0403afef8477d42383d606e1f9
+  - Mercedes-Benz Bench Test Time Estimation
+    URL: https://www.semanticscholar.org/paper/189e96755f27be50d9325235c2000d9690ed102c

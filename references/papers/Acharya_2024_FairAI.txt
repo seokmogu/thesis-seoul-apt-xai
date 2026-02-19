@@ -1,0 +1,12 @@
+Paper: Acharya_2024_FairAI
+Query: explainable fair AI financial real estate machine learning Acharya 2024
+DOI: N/A
+Status: Not found as open access
+
+Semantic Scholar results:
+  - Explainable and Fair AI: Balancing Performance in Financial and Real Estate Machine Learning Models
+    URL: https://www.semanticscholar.org/paper/6102a582e5b767e292fa8b423e39a575e103fab4
+  - Decoding Real Estate Stock Prices in Emerging Markets: An Explainable AI-Enhanced Fuzzy Logic and Machine Learning Framework
+    URL: https://www.semanticscholar.org/paper/9c023d6435e5cb5398e6f7991d07278d763ace9d
+  - Analysis on AI-based Techniques for Detection of Banking Frauds: Recent Trends, Challenges, and Future Directions
+    URL: https://www.semanticscholar.org/paper/b960c0c0291fa74ec8d5748efeaffe19d17066df

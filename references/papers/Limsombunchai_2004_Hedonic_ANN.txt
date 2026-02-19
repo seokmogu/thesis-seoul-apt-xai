@@ -1,0 +1,4 @@
+Paper: Limsombunchai_2004_Hedonic_ANN
+Query: house price prediction hedonic price model artificial neural network Limsombunchai 2004
+DOI: N/A
+Status: Not found as open access

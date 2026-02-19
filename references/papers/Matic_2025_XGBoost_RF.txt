@@ -1,0 +1,10 @@
+Paper: Matic_2025_XGBoost_RF
+Query: housing price prediction XGBoost random forest Matic Kalinic 2025
+DOI: N/A
+Status: Not found as open access
+
+Semantic Scholar results:
+  - HOUSING PRICE PREDICTION USING XGBOOST AND RANDOM FOREST METHODS
+    URL: https://www.semanticscholar.org/paper/812fa5e0891b51b647184994ecedbf2306ac51ea
+  - Analysis of Apartment Prices in Ljubljana’s Post-War Housing Estates (1947–1986)
+    URL: https://www.semanticscholar.org/paper/9287fd4c8891c000158c83003a4db9e20ae9e758

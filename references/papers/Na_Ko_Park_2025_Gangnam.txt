@@ -1,0 +1,8 @@
+Paper: Na_Ko_Park_2025_Gangnam
+Query: machine learning determinants apartment prices Gangnam Seoul Na Ko Park 2025
+DOI: N/A
+Status: Not found as open access
+
+Semantic Scholar results:
+  - A Machine Learning Approach to the Determinants of Apartment Prices : Comparing Gangnam 3-gu and Gangbuk 3-gu in Seoul
+    URL: https://www.semanticscholar.org/paper/03ee154163eb35c1416fcd18094feb38e7b3b34d

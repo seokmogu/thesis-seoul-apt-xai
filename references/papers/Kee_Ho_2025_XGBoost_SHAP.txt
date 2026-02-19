@@ -1,0 +1,4 @@
+Paper: Kee_Ho_2025_XGBoost_SHAP
+Query: explainable machine learning real estate XGBoost Shapley Kee Ho 2025
+DOI: N/A
+Status: Not found as open access

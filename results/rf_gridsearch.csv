@@ -1,0 +1,5 @@
+﻿params,mean_test_score,std_test_score
+"{'max_depth': 10, 'min_samples_leaf': 5, 'n_estimators': 200}",0.8408893394289106,0.0029339548391800942
+"{'max_depth': 10, 'min_samples_leaf': 10, 'n_estimators': 200}",0.8305504926508224,0.0025475930576324087
+"{'max_depth': 15, 'min_samples_leaf': 5, 'n_estimators': 200}",0.8657568652413175,0.0024260248221163413
+"{'max_depth': 15, 'min_samples_leaf': 10, 'n_estimators': 200}",0.8482839092294227,0.002397169476127668

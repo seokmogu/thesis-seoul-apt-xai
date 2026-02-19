@@ -1,0 +1,22 @@
+{
+  "RF_best": {
+    "max_depth": 15,
+    "min_samples_leaf": 5,
+    "n_estimators": 200
+  },
+  "XGB_GridSearch_best": {
+    "colsample_bytree": 0.8,
+    "learning_rate": 0.1,
+    "max_depth": 8,
+    "subsample": 0.8
+  },
+  "XGB_final_n_estimators": 999,
+  "XGB_5fold_CV_R2": "0.8990 ± 0.0038",
+  "split": "train 70% / val 10% / test 20%",
+  "GridSearchCV_sample": 50000,
+  "SHAP_sample": 5000,
+  "total": 308525,
+  "train": 215967,
+  "val": 30853,
+  "test": 61705
+}

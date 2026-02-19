@@ -1,0 +1,4 @@
+Paper: Rosen_1974_Hedonic
+Query: hedonic prices implicit markets Rosen 1974
+DOI: 10.1086/260169
+Status: Not found as open access

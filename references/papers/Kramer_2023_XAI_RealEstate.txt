@@ -1,0 +1,4 @@
+Paper: Kramer_2023_XAI_RealEstate
+Query: explainable AI real estate context residential values Kramer 2023
+DOI: N/A
+Status: Not found as open access
