@@ -1,20 +1,36 @@
 {
+  "version": "v3",
+  "change": "학교수(총합) 변수 제거 — 구조적 선형결합 해소",
+  "features": [
+    "전용면적",
+    "층",
+    "건물연령",
+    "강남구분",
+    "초등학교수",
+    "중학교수",
+    "고등학교수",
+    "공원수",
+    "백화점수",
+    "기준금리",
+    "CD금리",
+    "소비자물가지수",
+    "M2"
+  ],
+  "n_features": 13,
   "RF_best": {
     "max_depth": 15,
     "min_samples_leaf": 5,
     "n_estimators": 200
   },
-  "XGB_GridSearch_best": {
+  "XGB_best": {
     "colsample_bytree": 0.8,
     "learning_rate": 0.1,
     "max_depth": 8,
     "subsample": 0.8
   },
-  "XGB_final_n_estimators": 999,
-  "XGB_5fold_CV_R2": "0.8990 ± 0.0038",
-  "split": "train 70% / val 10% / test 20%",
-  "GridSearchCV_sample": 50000,
-  "SHAP_sample": 5000,
+  "XGB_n_estimators": 998,
+  "XGB_5fold_CV": "0.8975 ± 0.0040",
+  "split": "train 70%/val 10%/test 20%",
   "total": 308525,
   "train": 215967,
   "val": 30853,
