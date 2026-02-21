@@ -1,10 +1,1 @@
-Paper: Tchuente_2024_AVM_SHAP
-Query: real estate automated valuation model explainable AI Shapley Tchuente 2024
-DOI: N/A
-Status: Not found as open access
-
-Semantic Scholar results:
-  - Real Estate Automated Valuation Model with Explainable Artificial Intelligence Based on Shapley Values
-    URL: https://www.semanticscholar.org/paper/eb2ec7fd812ae1501ccc54873ab6b18020a38aa0
-  - Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market
-    URL: https://www.semanticscholar.org/paper/ee4a73efc5ad67b4400db23b09eeacbeb4812f86
+WRONG PDF REMOVED. Correct paper: Tchuente (2024) AVM SHAP, JREFE. DOI: 10.1007/s11146-024-09998-9
