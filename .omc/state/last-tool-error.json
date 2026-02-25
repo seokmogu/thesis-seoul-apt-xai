@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/home/nexus/thesis-seoul-apt-xai/paper/논문_초안_v4.md\"}",
+  "error": "File content (40685 tokens) exceeds maximum allowed tokens (25000). Please use offset and limit parameters to read specific portions of the file, or use the GrepTool to search for specific content.",
+  "timestamp": "2026-02-24T15:26:12.997Z",
+  "retry_count": 1
+}

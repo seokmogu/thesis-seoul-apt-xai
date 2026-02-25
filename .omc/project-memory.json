@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1771945855661,
+  "projectRoot": "/home/nexus/thesis-seoul-apt-xai",
+  "techStack": {
+    "languages": [
+      {
+        "name": "Python",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "requirements.txt"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "pip",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "data": {
+      "path": "data",
+      "purpose": "Data files",
+      "fileCount": 23,
+      "lastAccessed": 1771945855655,
+      "keyFiles": [
+        "apartment_final.csv",
+        "apartment_final_v2.csv",
+        "apartment_final_v5.csv",
+        "apartment_final_v5_dong.csv",
+        "apartment_trades.csv"
+      ]
+    },
+    "paper": {
+      "path": "paper",
+      "purpose": null,
+      "fileCount": 11,
+      "lastAccessed": 1771945855657,
+      "keyFiles": [
+        "reference_verification.md",
+        "thesis_review_claude.md",
+        "thesis_review_gemini.md",
+        "thesis_review_gemini31.md",
+        "thesis_review_gemini31_v3.md"
+      ]
+    },
+    "references": {
+      "path": "references",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1771945855658,
+      "keyFiles": [
+        "부동산_빅데이터_선행연구_서베이.md",
+        "부동산_빅데이터_선행연구_서베이_확장.md"
+      ]
+    },
+    "results": {
+      "path": "results",
+      "purpose": null,
+      "fileCount": 16,
+      "lastAccessed": 1771945855658,
+      "keyFiles": [
+        "correlation_matrix.csv",
+        "descriptive_stats.csv",
+        "feature_importance.csv",
+        "hyperparameters.json",
+        "model_comparison.csv"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 22,
+      "lastAccessed": 1771945855658,
+      "keyFiles": [
+        "build_dong_data.py",
+        "collect_apartment_trades.py",
+        "collect_ecos.py",
+        "collect_infra_dong.py",
+        "collect_schools.py"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "paper/논문_초안_v4.md",
+      "accessCount": 7,
+      "lastAccessed": 1771946782283,
+      "type": "file"
+    },
+    {
+      "path": "results/modeling_v5_dong_results.json",
+      "accessCount": 1,
+      "lastAccessed": 1771945874787,
+      "type": "file"
+    },
+    {
+      "path": "results/hyperparameters.json",
+      "accessCount": 1,
+      "lastAccessed": 1771946007902,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}
