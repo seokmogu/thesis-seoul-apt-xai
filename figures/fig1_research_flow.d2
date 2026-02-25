@@ -1,0 +1,112 @@
+direction: down
+
+title: {
+  label: Research Framework
+  style.font-size: 28
+  style.bold: true
+  near: top-center
+}
+
+data_collection: {
+  label: "Data Collection\n(2019.01 - 2025.12)"
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.font-size: 16
+  style.bold: true
+
+  apt: "Apartment Transactions\n391,826 records\n(MOLIT API)" {
+    style.fill: "#BBDEFB"
+    style.stroke: "#1565C0"
+  }
+  infra: "Infrastructure Variables\nSchools, Subway, CCTV,\nDepartment Stores\n(NEIS, Seoul Open Data)" {
+    style.fill: "#BBDEFB"
+    style.stroke: "#1565C0"
+  }
+  macro: "Macroeconomic Indicators\nInterest Rate, CD Rate,\nCPI, M2\n(BOK ECOS API)" {
+    style.fill: "#BBDEFB"
+    style.stroke: "#1565C0"
+  }
+}
+
+preprocessing: {
+  label: "Preprocessing"
+  style.fill: "#E8F5E9"
+  style.stroke: "#2E7D32"
+  style.font-size: 16
+  style.bold: true
+
+  dong_mapping: "Administrative Dong Mapping\n(Nominatim + GeoJSON Spatial Join)\n215 Administrative Dongs" {
+    style.fill: "#C8E6C9"
+    style.stroke: "#2E7D32"
+  }
+  merge: "Variable Integration\n14 Independent Variables\n+ Gangnam Binary Variable" {
+    style.fill: "#C8E6C9"
+    style.stroke: "#2E7D32"
+  }
+  split: "Train / Val / Test\n(70% / 10% / 20%)" {
+    style.fill: "#C8E6C9"
+    style.stroke: "#2E7D32"
+  }
+}
+
+modeling: {
+  label: "Model Comparison"
+  style.fill: "#FFF3E0"
+  style.stroke: "#E65100"
+  style.font-size: 16
+  style.bold: true
+
+  ols: "OLS Regression\nR² = 0.587" {
+    style.fill: "#FFE0B2"
+    style.stroke: "#E65100"
+  }
+  rf: "Random Forest\nR² = 0.956" {
+    style.fill: "#FFE0B2"
+    style.stroke: "#E65100"
+  }
+  xgb: "XGBoost\nR² = 0.967" {
+    style.fill: "#FFCC80"
+    style.stroke: "#E65100"
+    style.bold: true
+    style.stroke-width: 3
+  }
+}
+
+xai: {
+  label: "Explainable AI (XAI)"
+  style.fill: "#F3E5F5"
+  style.stroke: "#6A1B9A"
+  style.font-size: 16
+  style.bold: true
+
+  shap: "SHAP Analysis\n(TreeExplainer)" {
+    style.fill: "#E1BEE7"
+    style.stroke: "#6A1B9A"
+  }
+  global_: "Global Interpretation\nFeature Importance Ranking\nSummary & Dependence Plots" {
+    style.fill: "#E1BEE7"
+    style.stroke: "#6A1B9A"
+  }
+  regional: "Regional Comparison\nGangnam vs Non-Gangnam\nSHAP Value Differences" {
+    style.fill: "#E1BEE7"
+    style.stroke: "#6A1B9A"
+  }
+}
+
+results: {
+  label: "Key Findings"
+  style.fill: "#FFEBEE"
+  style.stroke: "#C62828"
+  style.font-size: 16
+  style.bold: true
+
+  finding: "Top Determinants:\n1. Exclusive Area (22.7%)\n2. Gangnam Premium (16.2%)\n3. Building Age (11.8%)\n4. Department Stores (11.8%)\n5. M2 Money Supply (8.5%)" {
+    style.fill: "#FFCDD2"
+    style.stroke: "#C62828"
+  }
+}
+
+data_collection -> preprocessing
+preprocessing -> modeling
+modeling -> xai
+xai -> results

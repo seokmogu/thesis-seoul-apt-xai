@@ -1,0 +1,99 @@
+direction: right
+
+title: {
+  label: XGBoost Ensemble Learning Architecture
+  style.font-size: 24
+  style.bold: true
+  near: top-center
+}
+
+input: "Training Data\nX = {x₁, x₂, ..., x₁₄}\ny = Transaction Price" {
+  style.fill: "#E3F2FD"
+  style.stroke: "#1565C0"
+  style.font-size: 14
+}
+
+ensemble: {
+  label: "Gradient Boosting Ensemble"
+  style.fill: "#FFF8E1"
+  style.stroke: "#F57F17"
+  style.font-size: 16
+  style.bold: true
+
+  t1: {
+    label: "Tree 1\n(Base Learner)"
+    style.fill: "#DCEDC8"
+    style.stroke: "#558B2F"
+    shape: hexagon
+  }
+  t2: {
+    label: "Tree 2\n(Residual Fit)"
+    style.fill: "#DCEDC8"
+    style.stroke: "#558B2F"
+    shape: hexagon
+  }
+  dots: "..." {
+    style.fill: transparent
+    style.stroke: transparent
+    style.font-size: 24
+  }
+  tn: {
+    label: "Tree N\n(Final Residual)"
+    style.fill: "#DCEDC8"
+    style.stroke: "#558B2F"
+    shape: hexagon
+  }
+
+  t1 -> t2: "residuals" {
+    style.stroke: "#F57F17"
+    style.font-size: 11
+  }
+  t2 -> dots: "residuals" {
+    style.stroke: "#F57F17"
+    style.font-size: 11
+  }
+  dots -> tn: "residuals" {
+    style.stroke: "#F57F17"
+    style.font-size: 11
+  }
+}
+
+sum: "Σ Weighted Sum\nŷ = Σ η·fₖ(x)" {
+  style.fill: "#FFE0B2"
+  style.stroke: "#E65100"
+  style.font-size: 14
+  style.bold: true
+  shape: diamond
+}
+
+objective: {
+  label: "Objective Function"
+  style.fill: "#F3E5F5"
+  style.stroke: "#6A1B9A"
+  style.font-size: 14
+
+  loss: "Loss: Σ l(yᵢ, ŷᵢ)" {
+    style.fill: "#E1BEE7"
+    style.stroke: "#6A1B9A"
+  }
+  reg: "Regularization:\nΩ(f) = γT + ½λ||w||²" {
+    style.fill: "#E1BEE7"
+    style.stroke: "#6A1B9A"
+  }
+}
+
+prediction: "Predicted Price\nŷ (만원)" {
+  style.fill: "#C8E6C9"
+  style.stroke: "#2E7D32"
+  style.font-size: 14
+  style.bold: true
+  shape: oval
+}
+
+input -> ensemble
+ensemble -> sum
+sum -> prediction
+sum -> objective: "optimize" {
+  style.stroke-dash: 5
+  style.stroke: "#6A1B9A"
+}

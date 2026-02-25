@@ -1,0 +1,88 @@
+direction: down
+
+title: {
+  label: SHAP (SHapley Additive exPlanations) Framework
+  style.font-size: 24
+  style.bold: true
+  near: top-center
+}
+
+theory: {
+  label: "Game Theory Foundation"
+  style.fill: "#E8EAF6"
+  style.stroke: "#283593"
+  style.font-size: 15
+  style.bold: true
+
+  shapley: "Shapley Value\nφᵢ = Σ |S|!(p-|S|-1)!/p! · [f(S∪{i}) - f(S)]" {
+    style.fill: "#C5CAE9"
+    style.stroke: "#283593"
+    style.font-size: 13
+  }
+  props: {
+    label: "Axioms"
+    style.fill: "#C5CAE9"
+    style.stroke: "#283593"
+    
+    p1: "Efficiency\nΣφᵢ = f(x) - E[f(x)]" {style.fill: "#DCEDC8"}
+    p2: "Symmetry\nEqual contribution → Equal value" {style.fill: "#DCEDC8"}
+    p3: "Dummy\nNo contribution → Zero value" {style.fill: "#DCEDC8"}
+    p4: "Additivity\nCombined model = Sum of values" {style.fill: "#DCEDC8"}
+  }
+}
+
+treeshap: {
+  label: "TreeSHAP Algorithm"
+  style.fill: "#E0F2F1"
+  style.stroke: "#00695C"
+  style.font-size: 15
+  style.bold: true
+
+  opt: "Optimized for Tree Models\nO(TLD²) complexity\n(T: trees, L: leaves, D: depth)" {
+    style.fill: "#B2DFDB"
+    style.stroke: "#00695C"
+  }
+  xgb_input: "XGBoost Model\n(R² = 0.967)" {
+    style.fill: "#B2DFDB"
+    style.stroke: "#00695C"
+    style.bold: true
+  }
+}
+
+outputs: {
+  label: "SHAP Outputs"
+  style.fill: "#FFF3E0"
+  style.stroke: "#E65100"
+  style.font-size: 15
+  style.bold: true
+
+  global_: {
+    label: "Global Interpretation"
+    style.fill: "#FFE0B2"
+    style.stroke: "#E65100"
+
+    bar: "Feature Importance\n(Mean |SHAP|)" {style.fill: "#FFCC80"}
+    summary: "Summary Plot\n(Value × SHAP)" {style.fill: "#FFCC80"}
+    dep: "Dependence Plot\n(Feature × SHAP)" {style.fill: "#FFCC80"}
+  }
+
+  local_: {
+    label: "Local Interpretation"
+    style.fill: "#FFE0B2"
+    style.stroke: "#E65100"
+
+    force: "Force Plot\n(Individual Prediction)" {style.fill: "#FFCC80"}
+    waterfall: "Waterfall Plot\n(Feature Contributions)" {style.fill: "#FFCC80"}
+  }
+
+  regional: {
+    label: "Regional Analysis"
+    style.fill: "#FFE0B2"
+    style.stroke: "#E65100"
+
+    gangnam: "Gangnam vs Non-Gangnam\nSHAP Comparison" {style.fill: "#FFCC80"}
+  }
+}
+
+theory -> treeshap: "Applied to" {style.stroke: "#455A64"}
+treeshap -> outputs: "Generates" {style.stroke: "#455A64"}
