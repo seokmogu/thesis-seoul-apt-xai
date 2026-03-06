@@ -1,0 +1,42 @@
+{
+  "temporal_split": {
+    "train_period": "2019.01-2023.12",
+    "test_period": "2024.01-2025.12",
+    "train_count": 250544,
+    "test_count": 141282
+  },
+  "results": {
+    "OLS_temporal": {
+      "R2": 0.5233,
+      "RMSE": 64709.0,
+      "MAE": 41127.0
+    },
+    "RF_temporal": {
+      "R2": 0.7969,
+      "RMSE": 42236.0,
+      "MAE": 22219.0
+    },
+    "XGB_temporal": {
+      "R2": 0.795,
+      "RMSE": 42437.0,
+      "MAE": 23523.0
+    }
+  },
+  "random_split_reference": {
+    "OLS": {
+      "R2": 0.608,
+      "RMSE": 49426,
+      "MAE": 31768
+    },
+    "RF": {
+      "R2": 0.958,
+      "RMSE": 16115,
+      "MAE": 8063
+    },
+    "XGB": {
+      "R2": 0.968,
+      "RMSE": 14221,
+      "MAE": 7422
+    }
+  }
+}
