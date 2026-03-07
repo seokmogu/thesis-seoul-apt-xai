@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error
+from sklearn.metrics import r2_score, mean_squared_error, mean_absolute_error, mean_absolute_percentage_error
 import xgboost as xgb
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
@@ -28,8 +28,9 @@ def evaluate(y_true, y_pred, label=""):
     r2 = r2_score(y_true, y_pred)
     rmse = np.sqrt(mean_squared_error(y_true, y_pred))
     mae = mean_absolute_error(y_true, y_pred)
-    print(f"  [{label}] R² = {r2:.4f}, RMSE = {rmse:,.0f}, MAE = {mae:,.0f}")
-    return {'R2': round(r2, 4), 'RMSE': round(float(rmse), 0), 'MAE': round(float(mae), 0)}
+    mape = mean_absolute_percentage_error(y_true, y_pred) * 100  # percent
+    print(f"  [{label}] R² = {r2:.4f}, RMSE = {rmse:,.0f}, MAE = {mae:,.0f}, MAPE = {mape:.2f}%")
+    return {'R2': round(r2, 4), 'RMSE': round(float(rmse), 0), 'MAE': round(float(mae), 0), 'MAPE': round(mape, 2)}
 
 def main():
     print("=" * 60)
@@ -105,24 +106,48 @@ def main():
     results['XGB_temporal'] = evaluate(y_test, y_pred, "시간순")
     print(f"  Best iteration: {model.best_iteration}")
     
-    # === 기존 무작위 분할 결과 (논문 기준) ===
+    # === 무작위 분할도 실행하여 MAPE 계산 ===
+    print("\n" + "=" * 60)
+    print("무작위 분할 MAPE 계산")
+    print("=" * 60)
+    
+    X_all = df[FEATURES].values
+    y_all = df[TARGET].values
+    X_tr_r, X_te_r, y_tr_r, y_te_r = train_test_split(X_all, y_all, test_size=0.2, random_state=42)
+    
+    # OLS random
+    ols_r = LinearRegression()
+    ols_r.fit(X_tr_r, y_tr_r)
+    results['OLS_random'] = evaluate(y_te_r, ols_r.predict(X_te_r), "무작위")
+    
+    # RF random
+    rf_r = RandomForestRegressor(n_estimators=200, max_depth=15, min_samples_leaf=5,
+                                  n_jobs=-1, random_state=42)
+    rf_r.fit(X_tr_r, y_tr_r)
+    results['RF_random'] = evaluate(y_te_r, rf_r.predict(X_te_r), "무작위")
+    
+    # XGB random
+    X_tr_r2, X_val_r, y_tr_r2, y_val_r = train_test_split(X_tr_r, y_tr_r, test_size=0.1, random_state=42)
+    dtrain_r = xgb.DMatrix(X_tr_r2, label=y_tr_r2, feature_names=FEATURES)
+    dval_r = xgb.DMatrix(X_val_r, label=y_val_r, feature_names=FEATURES)
+    dtest_r = xgb.DMatrix(X_te_r, label=y_te_r, feature_names=FEATURES)
+    model_r = xgb.train(params, dtrain_r, num_boost_round=2000,
+                         evals=[(dval_r, 'val')], early_stopping_rounds=50,
+                         verbose_eval=200)
+    results['XGB_random'] = evaluate(y_te_r, model_r.predict(dtest_r), "무작위")
+    
+    # === 비교 출력 ===
     print("\n" + "=" * 60)
     print("비교: 무작위 분할 vs 시간순 분할")
     print("=" * 60)
     
-    random_results = {
-        'OLS': {'R2': 0.608, 'RMSE': 49426, 'MAE': 31768},
-        'RF':  {'R2': 0.958, 'RMSE': 16115, 'MAE': 8063},
-        'XGB': {'R2': 0.968, 'RMSE': 14221, 'MAE': 7422},
-    }
-    
-    print(f"\n{'모형':<12} {'무작위 R²':>10} {'시간순 R²':>10} {'차이':>8} {'무작위 RMSE':>12} {'시간순 RMSE':>12}")
-    print("-" * 64)
-    for name, rkey in [('OLS', 'OLS_temporal'), ('RF', 'RF_temporal'), ('XGBoost', 'XGB_temporal')]:
-        rr = random_results[name.replace('oost','')]
+    print(f"\n{'모형':<12} {'무작위 R²':>10} {'시간순 R²':>10} {'차이':>8} {'무작위 RMSE':>12} {'시간순 RMSE':>12} {'무작위 MAPE':>12} {'시간순 MAPE':>12}")
+    print("-" * 96)
+    for name, rkey, rrkey in [('OLS', 'OLS_temporal', 'OLS_random'), ('RF', 'RF_temporal', 'RF_random'), ('XGBoost', 'XGB_temporal', 'XGB_random')]:
+        rr = results[rrkey]
         tr = results[rkey]
         diff = tr['R2'] - rr['R2']
-        print(f"{name:<12} {rr['R2']:>10.4f} {tr['R2']:>10.4f} {diff:>+8.4f} {rr['RMSE']:>12,.0f} {tr['RMSE']:>12,.0f}")
+        print(f"{name:<12} {rr['R2']:>10.4f} {tr['R2']:>10.4f} {diff:>+8.4f} {rr['RMSE']:>12,.0f} {tr['RMSE']:>12,.0f} {rr['MAPE']:>11.2f}% {tr['MAPE']:>11.2f}%")
     
     # Save
     output = {
