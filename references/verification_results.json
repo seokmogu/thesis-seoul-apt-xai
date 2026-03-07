@@ -1,0 +1,106 @@
+[
+  {
+    "ref": "An et al. (2025)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Anselin (1988)",
+    "status": "TEXTBOOK"
+  },
+  {
+    "ref": "Breiman (2001)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Čeh et al. (2018)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Chen & Guestrin (2016)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Choy & Ho (2023)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Chun et al. (2025)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Friedman (2001)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Hair et al. (2010)",
+    "status": "FOUND",
+    "title": "Multivariate data analysis : a global perspective",
+    "doi": ""
+  },
+  {
+    "ref": "Hastie et al. (2009)",
+    "status": "TEXTBOOK"
+  },
+  {
+    "ref": "Ke et al. (2017)",
+    "status": "FOUND",
+    "title": "LightGBM: A Highly Efficient Gradient Boosting Decision Tree",
+    "doi": ""
+  },
+  {
+    "ref": "Kim et al. (2022)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Kim Choi Lee (2025)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Lancaster (1966)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Limsombunchai (2004)",
+    "status": "FOUND",
+    "title": "House Price Prediction: Hedonic Price Model vs. Artificial Neural Network",
+    "doi": "10.3844/AJASSP.2004.193.201"
+  },
+  {
+    "ref": "Lundberg & Lee (2017)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Lundberg et al. (2020)",
+    "status": "FOUND",
+    "title": "From local explanations to global understanding with explainable AI for trees",
+    "doi": "10.1038/s42256-019-0138-9"
+  },
+  {
+    "ref": "Mora-García et al. (2022)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Neves et al. (2024)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Revathi & Devarajan (2025)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Ribeiro et al. (2016)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Rosen (1974)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Shahhosseini et al. (2022)",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Tarasov & Dessoulavy (2025)",
+    "status": "NOT_FOUND"
+  }
+]

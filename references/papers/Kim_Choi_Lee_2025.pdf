@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>
+		Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market
+							| International Journal of Strategic Property Management
+			</title>
+
+	
+<link rel="icon" href="https://journals.vilniustech.lt/public/journals/9/favicon_en_US.png">
+<meta name="generator" content="Open Journal Systems 3.4.0.8">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.Creator.PersonalName" content="Woo-sung Kim"/>
+<meta name="DC.Creator.PersonalName" content="Insu Choi"/>
+<meta name="DC.Creator.PersonalName" content="Myounggu Lee"/>
+<meta name="DC.Date.created" scheme="ISO8601" content="2025-11-04"/>
+<meta name="DC.Date.dateSubmitted" scheme="ISO8601" content="2025-02-02"/>
+<meta name="DC.Date.issued" scheme="ISO8601" content="2025-10-16"/>
+<meta name="DC.Date.modified" scheme="ISO8601" content="2025-11-04"/>
+<meta name="DC.Description" xml:lang="en" content="Mass appraisal plays a pivotal role in real estate management, facilitating property tax assessments, mortgage evaluations, and urban planning across large geographical areas. In regions like Korea, where real estate markets are rapidly evolving, valuation models based on multiple linear regression are valued for their simplicity and interpretability but often fall short in capturing complex market dynamics. In contrast, machine learning (ML) models, while addressing non-linear relationships between property characteristics and market values and offering superior predictive performance, are often criticized for their “black-box” nature, which raises concerns over interpretability in transparency-critical domains like property tax assessments and policy planning. To address these concerns, this study investigates the application of Explainable AI (XAI) techniques in the mass appraisal of residential properties in Korea, integrating XAI methods with both multiple linear regression and random forest models. Using SHAP (SHapley Additive exPlanations) and PFI (Permutation Feature Importance) values, the study analyzes feature importance and predictive contributions, offering insights into the factors driving property valuations. Additionally, a temporal analysis was conducted by segmenting the data into time intervals to examine how feature importance and predictive contributions evolve over time. By combining high predictive performance with transparent and interpretable insights, the findings demonstrate that XAI can enhance the usability of both traditional and advanced automated valuation models (AVMs) for real-world decision-making in the Korean real estate sector."/>
+<meta name="DC.Format" scheme="IMT" content="application/pdf"/>
+<meta name="DC.Identifier" content="25137"/>
+<meta name="DC.Identifier.pageNumber" content="350–376"/>
+<meta name="DC.Identifier.DOI" content="10.3846/ijspm.2025.25137"/>
+<meta name="DC.Identifier.URI" content="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137"/>
+<meta name="DC.Language" scheme="ISO639-1" content="en"/>
+<meta name="DC.Rights" content="Copyright (c) 2025 The Author(s). Published by Vilnius Gediminas Technical University."/>
+<meta name="DC.Rights" content="http://creativecommons.org/licenses/by/4.0"/>
+<meta name="DC.Source" content="International Journal of Strategic Property Management"/>
+<meta name="DC.Source.ISSN" content="1648-9179"/>
+<meta name="DC.Source.Issue" content="5"/>
+<meta name="DC.Source.Volume" content="29"/>
+<meta name="DC.Source.URI" content="https://journals.vilniustech.lt/index.php/IJSPM"/>
+<meta name="DC.Subject" xml:lang="en" content="automatic valuation model"/>
+<meta name="DC.Subject" xml:lang="en" content="mass appraisal"/>
+<meta name="DC.Subject" xml:lang="en" content="explainable AI (XAI)"/>
+<meta name="DC.Subject" xml:lang="en" content="SHAP (SHapley Additive exPlanations)"/>
+<meta name="DC.Subject" xml:lang="en" content="Permutation Feature Importance (PFI)"/>
+<meta name="DC.Subject" xml:lang="en" content="temporal analysis"/>
+<meta name="DC.Title" content="Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market"/>
+<meta name="DC.Type" content="Text.Serial.Journal"/>
+<meta name="DC.Type.articleType" content="Articles"/>
+<meta name="gs_meta_revision" content="1.1"/>
+<meta name="citation_journal_title" content="International Journal of Strategic Property Management"/>
+<meta name="citation_journal_abbrev" content="IJSPM"/>
+<meta name="citation_issn" content="1648-9179"/> 
+<meta name="citation_author" content="Woo-sung Kim"/>
+<meta name="citation_author_institution" content="Department of Business Administration, Konkuk University, Seoul, South Korea"/>
+<meta name="citation_author" content="Insu Choi"/>
+<meta name="citation_author_institution" content="Division of Business Administration, Dongduk Women’s University, Seoul, South Korea"/>
+<meta name="citation_author" content="Myounggu Lee"/>
+<meta name="citation_author_institution" content="Department of Business Administration, Konkuk University, Seoul, South Korea"/>
+<meta name="citation_title" content="Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market"/>
+<meta name="citation_language" content="en"/>
+<meta name="citation_date" content="2025/11/04"/>
+<meta name="citation_volume" content="29"/>
+<meta name="citation_issue" content="5"/>
+<meta name="citation_firstpage" content="350"/>
+<meta name="citation_lastpage" content="376"/>
+<meta name="citation_doi" content="10.3846/ijspm.2025.25137"/>
+<meta name="citation_abstract_html_url" content="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137"/>
+<meta name="citation_abstract" xml:lang="en" content="Mass appraisal plays a pivotal role in real estate management, facilitating property tax assessments, mortgage evaluations, and urban planning across large geographical areas. In regions like Korea, where real estate markets are rapidly evolving, valuation models based on multiple linear regression are valued for their simplicity and interpretability but often fall short in capturing complex market dynamics. In contrast, machine learning (ML) models, while addressing non-linear relationships between property characteristics and market values and offering superior predictive performance, are often criticized for their “black-box” nature, which raises concerns over interpretability in transparency-critical domains like property tax assessments and policy planning. To address these concerns, this study investigates the application of Explainable AI (XAI) techniques in the mass appraisal of residential properties in Korea, integrating XAI methods with both multiple linear regression and random forest models. Using SHAP (SHapley Additive exPlanations) and PFI (Permutation Feature Importance) values, the study analyzes feature importance and predictive contributions, offering insights into the factors driving property valuations. Additionally, a temporal analysis was conducted by segmenting the data into time intervals to examine how feature importance and predictive contributions evolve over time. By combining high predictive performance with transparent and interpretable insights, the findings demonstrate that XAI can enhance the usability of both traditional and advanced automated valuation models (AVMs) for real-world decision-making in the Korean real estate sector."/>
+<meta name="citation_keywords" xml:lang="en" content="automatic valuation model"/>
+<meta name="citation_keywords" xml:lang="en" content="mass appraisal"/>
+<meta name="citation_keywords" xml:lang="en" content="explainable AI (XAI)"/>
+<meta name="citation_keywords" xml:lang="en" content="SHAP (SHapley Additive exPlanations)"/>
+<meta name="citation_keywords" xml:lang="en" content="Permutation Feature Importance (PFI)"/>
+<meta name="citation_keywords" xml:lang="en" content="temporal analysis"/>
+<meta name="citation_pdf_url" content="https://journals.vilniustech.lt/index.php/IJSPM/article/download/25137/13114"/>
+<meta name="citation_reference" content="Adair, A., McGreal, S., Smyth, A., Cooper, J., &amp; Ryley, T. (2000). House prices and accessibility: The testing of relationships within the Belfast urban area. Housing Studies, 15(5), 699–716. https://doi.org/10.1080/02673030050134565"/>
+<meta name="citation_reference" content="Al-Yahyaee, K. H., Mensi, W., Ko, H. U., Caporin, M., &amp; Kang, S. H. (2021). Is the Korean housing market following Gangnam style? Empirical Economics, 61, 2041–2072. https://doi.org/10.1007/s00181-020-01931-2"/>
+<meta name="citation_reference" content="Antipov, E. A., &amp; Pokryshevskaya, E. B. (2012). Mass appraisal of residential apartments: An application of random forest for valuation and a CART-based approach for model diagnostics. Expert Systems with Applications, 39(2), 1772–1778. https://doi.org/10.1016/j.eswa.2011.08.077"/>
+<meta name="citation_reference" content="Bae, Y., &amp; Joo, Y. M. (2020). The making of Gangnam: Social construction and identity of urban place in South Korea. Urban Affairs Review, 56(3), 726–757. https://doi.org/10.1177/1078087419827645"/>
+<meta name="citation_reference" content="Benson, E. D., Hansen, J. L., Schwartz, A. L., &amp; Smersh, G. T. (1998). Pricing residential amenities: The value of a view. The Journal of Real Estate Finance and Economics, 16, 55–73. https://doi.org/10.1023/A:1007785315925"/>
+<meta name="citation_reference" content="Bidanset, P. E., &amp; Rakow, R. (2022). Survey on the use of automated valuation models (AVMs) in government assessment offices: An analysis of AVM use, acceptance, and barriers to more widespread implementation. Journal of Property Tax Assessment &amp; Administration, 19(2). https://doi.org/10.63642/1357-1419.1250"/>
+<meta name="citation_reference" content="Bilgilioğlu, S. S., &amp; Yılmaz, H. M. (2023). Comparison of different machine learning models for mass appraisal of real estate. Survey Review, 55(388), 32–43. https://doi.org/10.1080/00396265.2021.1996799"/>
+<meta name="citation_reference" content="Binoy, B. V., Naseer, M. A., Kumar, P. A., &amp; Lazar, N. (2022). A bibliometric analysis of property valuation research. International Journal of Housing Markets and Analysis, 15(1), 35–54. https://doi.org/10.1108/IJHMA-09-2020-0115"/>
+<meta name="citation_reference" content="Breiman, L. (2001). Random forests. Machine Learning, 45, 5–32. https://doi.org/10.1023/A:1010933404324"/>
+<meta name="citation_reference" content="Carroll, T. M., Clauretie, T. M., &amp; Jensen, J. (1996). Living next to godliness: Residential property values and churches. The Journal of Real Estate Finance and Economics, 12, 319–330. https://doi.org/10.1007/BF00127540"/>
+<meta name="citation_reference" content="Chau, K. W., &amp; Chin, T. L. (2003). A critical review of literature on the hedonic price model. International Journal for Housing Science and its Applications, 27(2), 145–165."/>
+<meta name="citation_reference" content="Chen, C., Ma, X., &amp; Zhang, X. (2024). Empirical study on real estate mass appraisal based on dynamic neural networks. Buildings, 14(7), Article 2199. https://doi.org/10.3390/buildings14072199"/>
+<meta name="citation_reference" content="Chen, L., Yao, X., Liu, Y., Zhu, Y., Chen, W., Zhao, X., &amp; Chi, T. (2020). Measuring impacts of urban environmental elements on housing prices based on multisource data—a case study of Shanghai, China. ISPRS International Journal of Geo-Information, 9(2), Article 106. https://doi.org/10.3390/ijgi9020106"/>
+<meta name="citation_reference" content="Clark, D. E., &amp; Herrin, W. E. (2000). The impact of public school attributes on home sale prices in California. Growth and Change, 31(3), 385–407. https://doi.org/10.1111/0017-4815.00134"/>
+<meta name="citation_reference" content="Dimopoulos, T., &amp; Moulas, A. (2016). A proposal of a mass appraisal system in Greece with CAMA system: Evaluating GWR and MRA techniques in Thessaloniki Municipality. Open Geosciences, 8(1), 675–693. https://doi.org/10.1515/geo-2016-0064"/>
+<meta name="citation_reference" content="Duan, J., Tian, G., Yang, L., &amp; Zhou, T. (2021). Addressing the macroeconomic and hedonic determinants of housing prices in Beijing metropolitan area, China. Habitat International, 113, Article 102374. https://doi.org/10.1016/j.habitatint.2021.102374"/>
+<meta name="citation_reference" content="Espey, M., &amp; Lopez, H. (2000). The impact of airport noise and proximity on residential property values. Growth and Change, 31(3), 408–419. https://doi.org/10.1111/0017-4815.00135"/>
+<meta name="citation_reference" content="Fan, G. Z., Ong, S. E., &amp; Koh, H. C. (2006). Determinants of house price: A decision tree approach. Urban Studies, 43(12), 2301–2315. https://doi.org/10.1080/00420980600990928"/>
+<meta name="citation_reference" content="Fletcher, M., Gallimore, P., &amp; Mangan, J. (2000). Heteroscedasticity in hedonic house price model. Journal of Property Research, 17(2), 93–108. https://doi.org/10.1080/095999100367930"/>
+<meta name="citation_reference" content="Follain, J. R., &amp; Jimenez, E. (1985). Estimating the demand for housing characteristics: A survey and critique. Regional Science and Urban Economics, 15(1), 77–107. https://doi.org/10.1016/0166-0462(85)90033-X"/>
+<meta name="citation_reference" content="Forrest, D., Glen, J., &amp; Ward, R. (1996). The impact of a light rail system on the structure of house prices: A hedonic longitudinal study. Journal of Transport Economics and Policy, 30, 15–29."/>
+<meta name="citation_reference" content="Gabrielli, L., &amp; French, N. (2021). Pricing to market: Property valuation methods – a practical review. Journal of Property Investment &amp; Finance, 39(5), 464–480. https://doi.org/10.1108/JPIF-09-2020-0101"/>
+<meta name="citation_reference" content="Garrod, G. D., &amp; Willis, K. G. (1992). Valuing goods’ characteristics: An application of the hedonic price method to environmental features. Journal of Environmental Management, 34(1), 59–76. https://doi.org/10.1016/S0301-4797(05)80110-0"/>
+<meta name="citation_reference" content="Glumac, B., &amp; Des Rosiers, F. (2021). Practice briefing – Automated valuation models (AVMs): Their role, their advantages and their limitations. Journal of Property Investment and Finance, 39(5), 481–491. https://doi.org/10.1108/JPIF-07-2020-0086"/>
+<meta name="citation_reference" content="Hong, J., &amp; Kim, W.-s. (2022). Combination of machine learning-based automatic valuation models for residential properties in South Korea. International Journal of Strategic Property Management, 26(5), 362–384. https://doi.org/10.3846/ijspm.2022.17909"/>
+<meta name="citation_reference" content="Hong, J., Choi, H., &amp; Kim, W.-s. (2020). A house price valuation based on the random forest approach: The mass appraisal of residential property in South Korea. International Journal of Strategic Property Management, 24(3), 140–152. https://doi.org/10.3846/ijspm.2020.11544"/>
+<meta name="citation_reference" content="Iban, M. C. (2022). An explainable model for the mass appraisal of residences: The application of tree-based machine learning algorithms and interpretation of value determinants. Habitat International, 128, Article 102660. https://doi.org/10.1016/j.habitatint.2022.102660"/>
+<meta name="citation_reference" content="International Association of Assessing Officers. (2017). Standard on mass appraisal of real property. Kansas City, Missouri, USA."/>
+<meta name="citation_reference" content="Kok, N., Koponen, E. L., &amp; Martínez-Barbosa, C. A. (2017). Big data in real estate? From manual appraisal to automated valuation. Journal of Portfolio Management, 43(6), 202–211. https://doi.org/10.3905/jpm.2017.43.6.202"/>
+<meta name="citation_reference" content="Kontrimas, V., &amp; Verikas, A. (2011). The mass appraisal of the real estate by computational intelligence. Applied Soft Computing, 11(1), 443–448. https://doi.org/10.1016/j.asoc.2009.12.003"/>
+<meta name="citation_reference" content="Krämer, B., Nagl, C., Stang, M., &amp; Schäfers, W. (2023). Explainable AI in a real estate context–exploring the determinants of residential real estate values. Journal of Housing Research, 32(2), 204–245. https://doi.org/10.1080/10527001.2023.2170769"/>
+<meta name="citation_reference" content="Lancaster, K. J. (1966). A new approach to consumer theory. Journal of Political Economy, 74, 132–157. https://doi.org/10.1086/259131"/>
+<meta name="citation_reference" content="Lenaers, I., Boudt, K., &amp; De Moor, L. (2024). Predictability of Belgian residential real estate rents using tree-based ML models and IML techniques. International Journal of Housing Markets and Analysis, 17(1), 96–113. https://doi.org/10.1108/ijhma-11-2022-0172"/>
+<meta name="citation_reference" content="Li, M. M., &amp; Brown, H. J. (1980). Micro-neighborhood externalities and hedonic housing prices. Land Economics, 56(2), 125–141. https://doi.org/10.2307/3145857"/>
+<meta name="citation_reference" content="Lundberg, S. M., Erion, G. G., &amp; Lee, S. I. (2018). Consistent individualized feature attribution for tree ensembles. arXiv. https://doi.org/10.48550/arXiv.1802.03888"/>
+<meta name="citation_reference" content="Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., &amp; Lee, S. I. (2019). Explainable AI for trees: From local explanations to global understanding. arXiv. https://doi.org/10.48550/arXiv.1905.04610"/>
+<meta name="citation_reference" content="Lundberg, S., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. arXiv. https://doi.org/10.48550/arXiv.1705.07874"/>
+<meta name="citation_reference" content="Maeil Business Newpaper. (2024, November 18). KB real estate average sale price survey Seocho-gu ranked 2nd with 86.75 million won. Lowest place, Dobong-gu, KRW 26.69 million. https://www.mk.co.kr/en/realestate/11170899"/>
+<meta name="citation_reference" content="Malpezzi, S. (2003). Hedonic pricing models: A selective and applied review. Housing Economics and Public Policy, 1, 67–89. https://doi.org/10.1002/9780470690680.ch5"/>
+<meta name="citation_reference" content="McCluskey, W. J., Deddis, W. G., Lamont, I. G., &amp; Borst, R. A. (2000). The application of surface generated interpolation models for the prediction of residential property values. Journal of Property Investment and Finance, 18(2), 162–176. https://doi.org/10.1108/14635780010324321"/>
+<meta name="citation_reference" content="McCluskey, W., Davis, P., Haran, M., McCord, M., &amp; McIlhatton, D. (2012). The potential of artificial neural networks in mass appraisal: The case revisited. Journal of Financial Management of Property and Construction, 17(3), 274–292. https://doi.org/10.1108/13664381211274371"/>
+<meta name="citation_reference" content="McMillan, D., Jarmin, R., &amp; Thorsnes, P. (1992). Selection bias and land development in the monocentric model. Journal of Urban Economics, 31, 273–284. https://doi.org/10.1016/0094-1190(92)90056-Q"/>
+<meta name="citation_reference" content="Miller, N., Peng, L., &amp; Sklarz, M. (2011). House prices and economic growth. The Journal of Real Estate Finance and Economics, 42(4), 522–541. https://doi.org/10.1007/s11146-009-9197-8"/>
+<meta name="citation_reference" content="Mok, H. M., Chan, P. P., &amp; Cho, Y. S. (1995). A hedonic price model for private properties in Hong Kong. The Journal of Real Estate Finance and Economics, 10, 37–48. https://doi.org/10.1007/BF01099610"/>
+<meta name="citation_reference" content="Moreira de Aguiar, M., Simões, R., &amp; Braz Golgher, A. (2014). Housing market analysis using a hierarchical–spatial approach: The case of Belo Horizonte, Minas Gerais, Brazil. Regional Studies, Regional Science, 1(1), 116–137. https://doi.org/10.1080/21681376.2014.934391"/>
+<meta name="citation_reference" content="Ostrikova, A., &amp; Selyutin, V. (2024, March). Machine learning for mass valuation of residential real estate. In Future of Information and Communication Conference (pp. 570–578). Springer Nature Switzerland. https://doi.org/10.1007/978-3-031-53960-2_37"/>
+<meta name="citation_reference" content="Pagourtzi, E., Assimakopoulos, V., Hatzichristos, T., &amp; French, N. (2003). Real estate appraisal: A review of valuation methods. Journal of Property Investment &amp; Finance, 21(4), 383–401. https://doi.org/10.1108/14635780310483656"/>
+<meta name="citation_reference" content="Pi-ying, L. (2011). Analysis of the mass appraisal model by using artificial neural network in Kaohsiung city. Journal of Modern Accounting and Auditing, 7(10), Article 1080."/>
+<meta name="citation_reference" content="Reyes-Bueno, F., García-Samaniego, J. M., &amp; Sánchez-Rodríguez, A. (2018). Large-scale simultaneous market segment definition and mass appraisal using decision tree learning for fiscal purposes. Land Use Policy, 79, 116–122. https://doi.org/10.1016/j.landusepol.2018.08.012"/>
+<meta name="citation_reference" content="Rodriguez, M., &amp; Sirmans, C. F. (1994). Quantifying the value of a view in single-family housing markets. Appraisal Journal, 62, 600–603."/>
+<meta name="citation_reference" content="Rosen, S. (1974). Hedonic prices and implicit markets: Product differentiation in pure competition. Journal of Political Economy, 82(1), 34–55. https://doi.org/10.1086/260169"/>
+<meta name="citation_reference" content="Sayın, Z. M., Elburz, Z., &amp; Duran, H. E. (2022). Analyzing housing price determinants in Izmir using spatial models. Habitat International, 130, Article 102712. https://doi.org/10.1016/j.habitatint.2022.102712"/>
+<meta name="citation_reference" content="Seoul Metropolitan Government. (2025). Automobile registration status [Web page]. https://news.seoul.go.kr/traffic/archives/341"/>
+<meta name="citation_reference" content="Shapley, L. S. (1953). Stochastic games. Proceedings of the National Academy of Sciences, 39(10), 1095–1100. https://doi.org/10.1073/pnas.39.10.1095"/>
+<meta name="citation_reference" content="Su, T., Li, H., &amp; An, Y. (2021). A BIM and machine learning integration framework for automated property valuation. Journal of Building Engineering, 44, Article 102636. https://doi.org/10.1016/j.jobe.2021.10263"/>
+<meta name="citation_reference" content="Tchuente, D. (2024). Real estate automated valuation model with explainable artificial intelligence based on Shapley values. The Journal of Real Estate Finance and Economics, 1–39. https://doi.org/10.1007/s11146-024-09998-9"/>
+<meta name="citation_reference" content="Teoh, E. Z., Yau, W. C., Ong, T. S., &amp; Connie, T. (2023). Explainable housing price prediction with determinant analysis. International Journal of Housing Markets and Analysis, 16(5), 1021–1045. https://doi.org/10.1108/ijhma-02-2022-0025"/>
+<meta name="citation_reference" content="Torres-Pruñonosa, J., Garcia-Estevez, P., &amp; Prado-Roman, C. (2021). Artificial neural network, quantile and semi-log regression modelling of mass appraisal in housing. Mathematics, 9(7), Article 783. https://doi.org/10.3390/math9070783"/>
+<meta name="citation_reference" content="Trindade Neves, F., Aparicio, M., &amp; de Castro Neto, M. (2024). The impacts of open data and eXplainable AI on real estate price predictions in smart cities. Applied Sciences, 14(5), Article 2209. https://doi.org/10.3390/app14052209"/>
+<meta name="citation_reference" content="Tse, R. Y., &amp; Love, P. E. (2000). Measuring residential property values in Hong Kong. Property Management, 18(5), 366–374. https://doi.org/10.1108/02637470010360669"/>
+<meta name="citation_reference" content="Wang, D., &amp; Li, V. J. (2019). Mass appraisal models of real estate in the 21st century: A systematic literature review. Sustainability, 11(24), Article 7006. https://doi.org/10.3390/su11247006"/>
+<meta name="citation_reference" content="Wang, J., Sui, J., Zhang, Z., Qi, J., Liu, N., &amp; Lv, J. (2020, May). Empirical analysis of I-GBDT to improve the accuracy of mass appraisal method. Journal of Physics: Conference Series, 1550, Article 032074. https://doi.org/10.1088/1742-6596/1550/3/032074"/>
+<meta name="citation_reference" content="Wikipedia. (2025). Gangnam-gu. In Korean Wikipedia. https://ko.wikipedia.org/wiki/%EA%B0%95%EB%82%A8%EA%B5%AC"/>
+<meta name="citation_reference" content="Wittowsky, D., Hoekveld, J., Welsch, J., &amp; Steier, M. (2020). Residential housing prices: Impact of housing characteristics, accessibility and neighbouring apartments – a case study of Dortmund, Germany. Urban, Planning and Transport Research, 8(1), 44–70. https://doi.org/10.1080/21650020.2019.1704429"/>
+<meta name="citation_reference" content="Worzala, E., Lenk, M., &amp; Silva, A. (1995). An exploration of neural networks and its application to real estate valuation. Journal of Real Estate Research, 10(2), 185–201. https://doi.org/10.1080/10835547.1995.12090782"/>
+<meta name="citation_reference" content="Xu, F., Uszkoreit, H., Du, Y., Fan, W., Zhao, D., &amp; Zhu, J. (2019). Explainable AI: A brief survey on history, research areas, approaches and challenges. In J. Tang, M.-Y. Kan, D. Zhao, S. Li, &amp; H. Zan (Eds.), Natural language processing and Chinese computing (pp. 563–574). Springer International Publishing. https://doi.org/10.1007/978-3-030-32236-6_51"/>
+<meta name="citation_reference" content="Yasnitsky, L. N., Yasnitsky, V. L., &amp; Alekseev, A. O. (2021). The complex neural network model for mass appraisal and scenario forecasting of the urban real estate market value that adapts itself to space and time. Complexity, 2021(1), Article 5392170. https://doi.org/10.1155/2021/5392170"/>
+<meta name="citation_reference" content="Zheng, Y., Yang, B., Zhang, R., Bai, Z., &amp; Sun, Y. (2022, December). Mass appraisal of real estate prices using improved BP neural network with policy evaluation. In 2022 IEEE Conference on Telecommunications, Optics and Computer Science (TOCS) (pp. 1036–1041). IEEE. https://doi.org/10.1109/TOCS56154.2022.10015915"/>
+<meta name="citation_reference" content="Zurada, J., Levitan, A., &amp; Guan, J. (2011). A comparison of regression and artificial intelligence methods in a mass appraisal context. Journal of Real Estate Research, 33(3), 349–388. https://doi.org/10.1080/10835547.2011.12091311"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/index.php/IJSPM/$$$call$$$/page/page/css?name=stylesheet" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/index.php/IJSPM/$$$call$$$/page/page/css?name=font" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/lib/pkp/styles/fontawesome/fontawesome.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/plugins/generic/pdfJsViewer/pdf.js/web/viewer.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" type="text/css" /><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/plugins/generic/orcidProfile/css/orcidProfile.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/index.php/IJSPM/$$$call$$$/page/page/css?name=print" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/plugins/generic/citationStyleLanguage/css/citationStyleLanguagePlugin.css?v=3.4.0.8" type="text/css" /><link rel="stylesheet" href="https://journals.vilniustech.lt/index.php/IJSPM/$$$call$$$/page/page/css?name=customStyles" type="text/css" />
+
+		    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LX2SJQ8EPE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-LX2SJQ8EPE');
+    </script>
+
+	  <!-- Favicon links -->
+	  <link rel="icon" type="image/png" href="https://journals.vilniustech.lt/plugins/themes/responsive/img/favicon.png">
+	  <link rel="shortcut icon" href="https://journals.vilniustech.lt/plugins/themes/responsive/img/favicon.png">
+	  <link rel="apple-touch-icon" sizes="180x180" href="https://journals.vilniustech.lt/plugins/themes/responsive/img/favicon.png">
+	  <!-- End Favicon links -->
+	      
+	<!-- Shariff Plugin Open Graph Meta Tags -->
+	<meta property="og:image" content="https://journals.vilniustech.lt/public/journals/9/journalThumbnail_en.png" />
+	<meta property="og:image:secure_url" content="https://journals.vilniustech.lt/public/journals/9/journalThumbnail_en.png" />
+	<meta property="og:image:width" content="1920" />
+	<meta property="og:image:height" content="1080" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137" />
+	<meta property="og:title" content="Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market" />
+	<meta property="og:site_name" content="International Journal of Strategic Property Management" />
+	<meta property="og:description" content="Mass appraisal plays a pivotal role in real estate management, facilitating property tax assessments, mortgage evaluations, and urban planning across large geographical areas. In regions like Korea, where real estate markets are rapidly evolving, valuation models based on multiple linear regressi..." />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:description" content="Mass appraisal plays a pivotal role in real estate management, facilitating property tax assessments, mortgage evaluations, and urban planning across large geographical areas. In regions like Korea, where real estate markets are rapidly evolving, valuation models based on multiple linear regressi..." />
+	<meta property="article:published_time" content="2025-11-04" />
+	<!-- End Shariff Plugin OG Tags -->
+
+																	<meta name="author" content="Woo-sung Kim" />
+								<meta property="article:author" content="Woo-sung Kim" />
+																<meta property="article:author" content="Insu Choi" />
+																<meta property="article:author" content="Myounggu Lee" />
+						</head>
+<body class="pkp_page_article pkp_op_view has_site_logo" dir="ltr">
+
+	<div class="pkp_structure_page">
+
+				<header class="pkp_structure_head" id="headerNavigationContainer" role="banner">
+						
+ <nav class="cmp_skip_to_content" aria-label="Jump to content links">
+	<a href="#pkp_content_main">Skip to main content</a>
+	<a href="#siteNav">Skip to main navigation menu</a>
+		<a href="#pkp_content_footer">Skip to site footer</a>
+</nav>
+
+			<div class="pkp_head_wrapper journalHeadWrapper">
+				
+				<div class="pkp_site_name_wrapper journalNameWrapper">
+					
+										<div class="pkp_site_name journal">
+                                                                            <div class="logos-wrapper">
+                                <div class="logo-group">
+                                    									                                        <a href="/" class="vilnius-tech-logo">
+                                            <img src="https://journals.vilniustech.lt/plugins/themes/responsive/img/VT70_Antrinė_versija_Balta.png" alt="VILNIUS TECH" class="vilniusTechLogo">
+                                        </a>
+                                                                        <a href="                            https://journals.vilniustech.lt/index.php/IJSPM/index
+                        " class="is_img">
+                                        <img src="https://journals.vilniustech.lt/public/journals/9/pageHeaderLogoImage_en_US.png" 
+                                            width="1654" 
+                                            height="175" 
+                                            alt="logo" />
+                                    </a>
+                                </div>
+                                <div id="showTopLinks">
+            <div class="topSocial">
+        <ul>
+            <li><a href="https://www.facebook.com/VilniusTechBiblioteka" class="fa fa-facebook" target="_blank"></a>
+            </li>
+            <li><a href="https://twitter.com/vgtu_biblioteka" class="fa fa-twitter" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/school/vilnius-gediminas-technical-university/" class="fa fa-linkedin"
+                    target="_blank"></a></li>
+        </ul>
+    </div>
+
+</div>                            </div>
+                                            </div>
+
+										
+				<nav class="pkp_site_nav_menu" aria-label="Site Navigation">
+					<a id="siteNav"></a>
+					<div class="pkp_navigation_primary_row">
+						<div class="pkp_navigation_primary_wrapper">
+																					<ul id="main-navigation" class="nav navbar-nav pkp_nav_list">
+								<li class="">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM">
+					Home
+				</a>
+							</li>
+								<li class="">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/about">
+					About
+				</a>
+									<ul>
+																					<li class="">
+									<a href="https://journals.vilniustech.lt/index.php/IJSPM/about">
+										About the Journal
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://journals.vilniustech.lt/index.php/IJSPM/about/editorialTeam">
+										Editorial Office
+									</a>
+								</li>
+																												<li class="">
+									<a href="https://journals.vilniustech.lt/index.php/IJSPM/about/contact">
+										Contact
+									</a>
+								</li>
+																		</ul>
+							</li>
+								<li class="">
+				<a href="http://journals.vilniustech.lt/index.php/IJSPM/journalpolicies">
+					Journal Policies
+				</a>
+							</li>
+								<li class="">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/issue/current">
+					Current
+				</a>
+							</li>
+								<li class="">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/issue/archive">
+					Archives
+				</a>
+							</li>
+								<li class="">
+				<a href="https://journals.vgtu.lt/index.php/IJSPM/issue/view/994">
+					Articles in Press
+				</a>
+							</li>
+			</ul>
+
+													<ul id="main-navigation" class="nav navbar-nav pkp_nav_list">
+								<li class="profile">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/login">
+					Login
+				</a>
+							</li>
+										</ul>
+
+					
+
+																														<div id="searchWrpNav">
+
+									        
+									          <div class="searchCntNav">
+
+									            <form class="navbar-form navbar-right" role="search" method="post" action="https://journals.vilniustech.lt/index.php/IJSPM/search/search">
+  <div class="form-group">
+    <input class="form-control" name="query" value="" type="search" aria-label="Search Query" placeholder="Search">
+  </div>
+  <button type="submit" class="btn btn-default">Search</button>
+</form>
+
+									          </div>
+
+									        
+										</div>
+													</div>
+					</div>
+														</nav>
+				</div>
+			</div><!-- .pkp_head_wrapper -->
+			<button class="pkp_site_nav_toggle">
+						<span>Open Menu</span>
+					</button>
+		</header><!-- .pkp_structure_head -->
+    
+<div class="pkp_structure_content container journalContainer" id="mainContainer">
+    				<main class="pkp_structure_main col-md-9 col-lg-9 col-sm-9" role="main" id="articleTextHeader">
+    
+<div class="deepanbrea">
+			<nav class="cmp_breadcrumbs breadArticle" role="navigation" aria-label="You are here:">
+	<div class="breadcrumb-wrapper">
+		<ol class="breadcrumb">
+			<li>
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/index">
+					Home
+				</a>
+			</li>
+			<li>
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/issue/archive">
+					Archives
+				</a>
+			</li>
+							<li>
+					<a href="https://journals.vilniustech.lt/index.php/IJSPM/issue/view/1414">
+						Vol 29 No 5 (2025)
+					</a>
+				</li>
+						<li class="active">
+									Articles
+							</li>
+		</ol>
+
+		<div class="text-resize-controls">
+			<button id="speechButton" class="text-resize-button speech-button" title="Read selected text aloud">
+				<i class="fa fa-volume-up" aria-hidden="true"></i>
+			</button>
+			<button id="accessibilityToggle" class="text-resize-button" title="Accessibility options">
+				<i class="fa fa-universal-access" aria-hidden="true"></i>
+			</button>
+			<button id="increaseTextSize" class="text-resize-button" title="Increase text size">A+</button>
+			<button id="decreaseTextSize" class="text-resize-button" title="Decrease text size">A-</button>
+			<button class="text-resize-button hypothesis-toggle hypothesis-active"
+				title="Toggle annotate and comment">
+				<a href="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137?toggle_hypothesis=off">
+					<i class="fa fa-comments" aria-hidden="true"></i>
+				</a>
+			</button>
+			<button class="text-resize-button print-button" type="button" id="printButton" title="Print page">
+				<i class="fa fa-print" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+</nav>
+
+	<script src="https://hypothes.is/embed.js"></script>
+	</div>
+	<div class="page page_article">
+			<article class="obj_article_details">
+
+
+
+		
+	<div class="row" id="article_page_tabs">
+		<div class="main_entry">
+			<input type="hidden" value="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137" id="pageUrl">
+
+			<h2 class="page_title">
+				Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market
+
+							</h2>
+																						<ul class="item-n authors-n" style="background: transparent; margin:10px 0;">
+																<div class="authors" style="display: inline;">
+																					<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?query=Woo-sung%20Kim"
+								class="btn-view-author-options art_det_author_name">
+								Woo-sung Kim
+							</a>
+
+															<a href="https://orcid.org/0000-0001-9444-2712" class="orcid-link" target="_blank">
+									<svg class="orcid_icon" viewBox="0 0 256 256" aria-hidden="true">
+	<style type="text/css">
+		.st0{fill:#A6CE39;}
+		.st1{fill:#FFFFFF;}
+	</style>
+	<path class="st0" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+	<g>
+		<path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+		<path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+			c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+		<path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+			C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+	</g>
+</svg>
+								</a>
+							
+														
+																																												<a href="javascript:void(0)" class="author-biodown art_det_affiliation" myaff="2">
+									Info <i class="fa fa-angle-down"></i><span class="semi"></span>
+								</a>
+
+								<div class="myDownload1 aff-bio authourAffDown2" style="display:none">
+									<table class="views-table cols-3">
+										<thead>
+											<tr>
+												<th>Author Name</th>
+												<th>Affiliation</th>																							</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													Woo-sung Kim
+																											<a href="https://orcid.org/0000-0001-9444-2712" class="orcid-link" target="_blank">
+															<svg class="orcid_icon" viewBox="0 0 256 256" aria-hidden="true">
+	<style type="text/css">
+		.st0{fill:#A6CE39;}
+		.st1{fill:#FFFFFF;}
+	</style>
+	<path class="st0" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+	<g>
+		<path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+		<path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+			c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+		<path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+			C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+	</g>
+</svg>
+														</a>
+																									</td>
+																									<td>
+														Department of Business Administration, Konkuk University, Seoul, South Korea
+																											</td>
+																																			</tr>
+										</tbody>
+									</table>
+								</div>
+													</div>
+											<div class="authors" style="display: inline;">
+							
+																					<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?query=Insu%20Choi"
+								class="btn-view-author-options art_det_author_name">
+								Insu Choi
+							</a>
+
+							
+														
+																																												<a href="javascript:void(0)" class="author-biodown art_det_affiliation" myaff="3">
+									Info <i class="fa fa-angle-down"></i><span class="semi"></span>
+								</a>
+
+								<div class="myDownload1 aff-bio authourAffDown3" style="display:none">
+									<table class="views-table cols-3">
+										<thead>
+											<tr>
+												<th>Author Name</th>
+												<th>Affiliation</th>																							</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													Insu Choi
+																									</td>
+																									<td>
+														Division of Business Administration, Dongduk Women’s University, Seoul, South Korea
+																											</td>
+																																			</tr>
+										</tbody>
+									</table>
+								</div>
+													</div>
+											<div class="authors" style="display: inline;">
+							
+																					<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?query=Myounggu%20Lee"
+								class="btn-view-author-options art_det_author_name">
+								Myounggu Lee
+							</a>
+
+															<a href="https://orcid.org/0000-0001-8398-9165" class="orcid-link" target="_blank">
+									<svg class="orcid_icon" viewBox="0 0 256 256" aria-hidden="true">
+	<style type="text/css">
+		.st0{fill:#A6CE39;}
+		.st1{fill:#FFFFFF;}
+	</style>
+	<path class="st0" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+	<g>
+		<path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+		<path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+			c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+		<path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+			C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+	</g>
+</svg>
+								</a>
+							
+														
+																																												<a href="javascript:void(0)" class="author-biodown art_det_affiliation" myaff="4">
+									Info <i class="fa fa-angle-down"></i><span class="semi"></span>
+								</a>
+
+								<div class="myDownload1 aff-bio authourAffDown4" style="display:none">
+									<table class="views-table cols-3">
+										<thead>
+											<tr>
+												<th>Author Name</th>
+												<th>Affiliation</th>																							</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													Myounggu Lee
+																											<a href="https://orcid.org/0000-0001-8398-9165" class="orcid-link" target="_blank">
+															<svg class="orcid_icon" viewBox="0 0 256 256" aria-hidden="true">
+	<style type="text/css">
+		.st0{fill:#A6CE39;}
+		.st1{fill:#FFFFFF;}
+	</style>
+	<path class="st0" d="M256,128c0,70.7-57.3,128-128,128C57.3,256,0,198.7,0,128C0,57.3,57.3,0,128,0C198.7,0,256,57.3,256,128z"/>
+	<g>
+		<path class="st1" d="M86.3,186.2H70.9V79.1h15.4v48.4V186.2z"/>
+		<path class="st1" d="M108.9,79.1h41.6c39.6,0,57,28.3,57,53.6c0,27.5-21.5,53.6-56.8,53.6h-41.8V79.1z M124.3,172.4h24.5
+			c34.9,0,42.9-26.5,42.9-39.7c0-21.5-13.7-39.7-43.7-39.7h-23.7V172.4z"/>
+		<path class="st1" d="M88.7,56.8c0,5.5-4.5,10.1-10.1,10.1c-5.6,0-10.1-4.6-10.1-10.1c0-5.6,4.5-10.1,10.1-10.1
+			C84.2,46.7,88.7,51.3,88.7,56.8z"/>
+	</g>
+</svg>
+														</a>
+																									</td>
+																									<td>
+														Department of Business Administration, Konkuk University, Seoul, South Korea
+																											</td>
+																																			</tr>
+										</tbody>
+									</table>
+								</div>
+													</div>
+									</ul>
+													<span class="doi">
+					<i class="glyphicon glyphicon-link"></i>
+					DOI: <a
+						href="https://doi.org/10.3846/ijspm.2025.25137">https://doi.org/10.3846/ijspm.2025.25137</a>
+				</span>
+																	<style>
+					.page_title,
+					.subtitle {
+						visibility: hidden;
+					}
+
+					.math-processed .page_title,
+					.math-processed .subtitle {
+						visibility: visible;
+					}
+
+					.abstract-content {
+						opacity: 0;
+						transition: opacity 0.3s;
+					}
+
+					.abstract-ready {
+						opacity: 1;
+					}
+				</style>
+				<script>
+					if (!window.MathJax) {
+						document.documentElement.classList.remove('math-processed');
+
+						window.MathJax = {
+							tex: {
+								inlineMath: [
+									['$', '$'],
+									['\\(', '\\)']
+								],
+								displayMath: [
+									['$$', '$$'],
+									['\\[', '\\]']
+								],
+								processEscapes: true
+							},
+							svg: {
+								fontCache: 'global'
+							},
+							startup: {
+								ready: function() {
+									MathJax.startup.defaultReady();
+									MathJax.startup.promise.then(function() {
+										document.documentElement.classList.add('math-processed');
+
+										// Show all hidden elements
+										document.querySelectorAll('.page_title, .subtitle, .abstract').forEach(function(
+											el) {
+											el.style.visibility = 'visible';
+										});
+									});
+								}
+							}
+						};
+
+						// Fallback timeout
+						setTimeout(function() {
+							document.documentElement.classList.add('math-processed');
+							document.querySelectorAll('.page_title, .subtitle, .abstract').forEach(function(el) {
+								el.style.visibility = 'visible';
+							});
+						}, 2000);
+					}
+				</script>
+				<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+				<section class="item abstract">
+					<h2 class="abstract">Abstract</h2>
+					<p><p>Mass appraisal plays a pivotal role in real estate management, facilitating property tax assessments, mortgage evaluations, and urban planning across large geographical areas. In regions like Korea, where real estate markets are rapidly evolving, valuation models based on multiple linear regression are valued for their simplicity and interpretability but often fall short in capturing complex market dynamics. In contrast, machine learning (ML) models, while addressing non-linear relationships between property characteristics and market values and offering superior predictive performance, are often criticized for their “black-box” nature, which raises concerns over interpretability in transparency-critical domains like property tax assessments and policy planning. To address these concerns, this study investigates the application of Explainable AI (XAI) techniques in the mass appraisal of residential properties in Korea, integrating XAI methods with both multiple linear regression and random forest models. Using SHAP (SHapley Additive exPlanations) and PFI (Permutation Feature Importance) values, the study analyzes feature importance and predictive contributions, offering insights into the factors driving property valuations. Additionally, a temporal analysis was conducted by segmenting the data into time intervals to examine how feature importance and predictive contributions evolve over time. By combining high predictive performance with transparent and interpretable insights, the findings demonstrate that XAI can enhance the usability of both traditional and advanced automated valuation models (AVMs) for real-world decision-making in the Korean real estate sector.</p></p>
+				</section>
+													<section class="item keywords">
+					<h2 class="label">
+												Keywords:
+					</h2>
+					<span class="value">
+																					<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=automatic%20valuation%20model&amp;query=automatic%20valuation%20model"
+									class="keyword-link">automatic valuation model</a>,																												<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=mass%20appraisal&amp;query=mass%20appraisal"
+									class="keyword-link">mass appraisal</a>,																												<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=explainable%20AI%20%28XAI%29&amp;query=explainable%20AI%20%28XAI%29"
+									class="keyword-link">explainable AI (XAI)</a>,																												<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=SHAP%20%28SHapley%20Additive%20exPlanations%29&amp;query=SHAP%20%28SHapley%20Additive%20exPlanations%29"
+									class="keyword-link">SHAP (SHapley Additive exPlanations)</a>,																												<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=Permutation%20Feature%20Importance%20%28PFI%29&amp;query=Permutation%20Feature%20Importance%20%28PFI%29"
+									class="keyword-link">Permutation Feature Importance (PFI)</a>,																												<a href="https://journals.vilniustech.lt/index.php/IJSPM/search/search?searchPhrase=temporal%20analysis&amp;query=temporal%20analysis"
+									class="keyword-link">temporal analysis</a>																		</span>
+				</section>
+							<div class="item citation">
+		<section class="sub_item citation_display">
+			<h2 class="label">
+				How to Cite
+			</h2>
+			<div class="value">
+				<div id="citationOutput" role="region" aria-live="polite">
+					<div class="csl-bib-body">
+  <div class="csl-entry">Kim, W.- sung, &#38; Lee, M. (2025). Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market. <i>International Journal of Strategic Property Management</i>, <i>29</i>(5), 350–376. <a href="https://doi.org/10.3846/ijspm.2025.25137">https://doi.org/10.3846/ijspm.2025.25137</a></div>
+</div>
+				</div>
+				<div class="citation_formats">
+					<button class="citation_formats_button label" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+						More Citation Formats
+					</button>
+					<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+						<ul class="citation_formats_styles">
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acm-sig-proceedings?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acm-sig-proceedings?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ACM
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acs-nano?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acs-nano?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ACS
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/apa?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/apa?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										APA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ABNT
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/chicago-author-date?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/chicago-author-date?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Chicago
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/harvard-cite-them-right?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/harvard-cite-them-right?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Harvard
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/ieee?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/ieee?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										IEEE
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/modern-language-association?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/modern-language-association?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										MLA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Turabian
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/vancouver?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/vancouver?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Vancouver
+									</a>
+								</li>
+													</ul>
+													<div class="label">
+								Download Citation
+							</div>
+							<ul class="citation_formats_styles">
+																	<li>
+										<a href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/download/ris?submissionId=25137&amp;publicationId=22799&amp;issueId=1414">
+											<span class="fa fa-download"></span>
+											Endnote/Zotero/Mendeley (RIS)
+										</a>
+									</li>
+																	<li>
+										<a href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/download/bibtex?submissionId=25137&amp;publicationId=22799&amp;issueId=1414">
+											<span class="fa fa-download"></span>
+											BibTeX
+										</a>
+									</li>
+															</ul>
+											</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/css/shariff.css">
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/shariff-3.3.0/shariff.complete.css">
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/css/wcag-themes.css">
+				<div class="item shariffblock"><div><section class="sub_item"><h2 class="label">Share</h2></section>
+				<div class="shariff item" data-lang="en"
+					data-services="[facebook,twitter,linkedin,mail]"
+					data-mail-url="mailto:"
+					data-mail-body="https://doi.org/10.3846/ijspm.2025.25137"
+					
+					data-theme="standard"
+					data-orientation="horizontal"
+					data-url="https://doi.org/10.3846/ijspm.2025.25137">
+				</div>
+				</div>
+				</div>
+				<script src="https://journals.vilniustech.lt/plugins/generic/shariff/shariff-3.3.0/shariff.complete.js"></script>
+
+						<div class="item stats-container">
+				<div class="article-metrics">
+										<div class="metric-block">
+
+						<div class="metric-label">
+							<i class="fa fa-calendar-check-o"></i>
+							<span>Published in Issue</span>
+						</div>
+						<div class="metric-value">
+
+							<span>November 4, 2025</span>
+						</div>
+
+					</div>
+
+										<div class="metric-block">
+						<div class="metric-label">
+							<i class="fa fa-eye"></i>
+							<span>Abstract Views</span>
+
+						</div>
+						<div class="metric-value">
+							<span>569</span>
+						</div>
+					</div>
+
+																							<div class="metric-block">
+								<div class="metric-label">
+									<i class="fa fa-download"></i>
+									<a
+										href="https://journals.vilniustech.lt/index.php/IJSPM/article/download/25137/13114">
+										PDF Downloads
+									</a>
+
+								</div>
+								<div class="metric-value">
+									<span>346</span>
+								</div>
+							</div>
+															</div>
+			</div>
+
+			
+							<div class="item copyright">
+					<h2 class="label">
+						License
+					</h2>
+																										<p>Copyright (c) 2025 The Author(s). Published by Vilnius Gediminas Technical University.
+								</p>
+														<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+																				</div>
+						
+
+						
+										<section class="item references">
+					<h2 class="references">
+						References
+					</h2>
+					<div class="value">
+																																				<p>
+																											
+																																																																																												
+																																						Adair, A., McGreal, S., Smyth, A., Cooper, J., &amp; Ryley, T. (2000). House prices and accessibility: The testing of relationships within the Belfast urban area. Housing Studies, 15(5), 699–716. <a href="https://doi.org/10.1080/02673030050134565">https://doi.org/10.1080/02673030050134565</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Al-Yahyaee, K. H., Mensi, W., Ko, H. U., Caporin, M., &amp; Kang, S. H. (2021). Is the Korean housing market following Gangnam style? Empirical Economics, 61, 2041–2072. <a href="https://doi.org/10.1007/s00181-020-01931-2">https://doi.org/10.1007/s00181-020-01931-2</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Antipov, E. A., &amp; Pokryshevskaya, E. B. (2012). Mass appraisal of residential apartments: An application of random forest for valuation and a CART-based approach for model diagnostics. Expert Systems with Applications, 39(2), 1772–1778. <a href="https://doi.org/10.1016/j.eswa.2011.08.077">https://doi.org/10.1016/j.eswa.2011.08.077</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Bae, Y., &amp; Joo, Y. M. (2020). The making of Gangnam: Social construction and identity of urban place in South Korea. Urban Affairs Review, 56(3), 726–757. <a href="https://doi.org/10.1177/1078087419827645">https://doi.org/10.1177/1078087419827645</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Benson, E. D., Hansen, J. L., Schwartz, A. L., &amp; Smersh, G. T. (1998). Pricing residential amenities: The value of a view. The Journal of Real Estate Finance and Economics, 16, 55–73. <a href="https://doi.org/10.1023/A:1007785315925">https://doi.org/10.1023/A:1007785315925</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Bidanset, P. E., &amp; Rakow, R. (2022). Survey on the use of automated valuation models (AVMs) in government assessment offices: An analysis of AVM use, acceptance, and barriers to more widespread implementation. Journal of Property Tax Assessment &amp; Administration, 19(2). <a href="https://doi.org/10.63642/1357-1419.1250">https://doi.org/10.63642/1357-1419.1250</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Bilgilioğlu, S. S., &amp; Yılmaz, H. M. (2023). Comparison of different machine learning models for mass appraisal of real estate. Survey Review, 55(388), 32–43. <a href="https://doi.org/10.1080/00396265.2021.1996799">https://doi.org/10.1080/00396265.2021.1996799</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Binoy, B. V., Naseer, M. A., Kumar, P. A., &amp; Lazar, N. (2022). A bibliometric analysis of property valuation research. International Journal of Housing Markets and Analysis, 15(1), 35–54. <a href="https://doi.org/10.1108/IJHMA-09-2020-0115">https://doi.org/10.1108/IJHMA-09-2020-0115</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Breiman, L. (2001). Random forests. Machine Learning, 45, 5–32. <a href="https://doi.org/10.1023/A:1010933404324">https://doi.org/10.1023/A:1010933404324</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Carroll, T. M., Clauretie, T. M., &amp; Jensen, J. (1996). Living next to godliness: Residential property values and churches. The Journal of Real Estate Finance and Economics, 12, 319–330. <a href="https://doi.org/10.1007/BF00127540">https://doi.org/10.1007/BF00127540</a>
+																	</p>
+								
+																							<p>
+																											
+									
+																																						Chau, K. W., &amp; Chin, T. L. (2003). A critical review of literature on the hedonic price model. International Journal for Housing Science and its Applications, 27(2), 145–165.
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Chen, C., Ma, X., &amp; Zhang, X. (2024). Empirical study on real estate mass appraisal based on dynamic neural networks. Buildings, 14(7), Article 2199. <a href="https://doi.org/10.3390/buildings14072199">https://doi.org/10.3390/buildings14072199</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Chen, L., Yao, X., Liu, Y., Zhu, Y., Chen, W., Zhao, X., &amp; Chi, T. (2020). Measuring impacts of urban environmental elements on housing prices based on multisource data—a case study of Shanghai, China. ISPRS International Journal of Geo-Information, 9(2), Article 106. <a href="https://doi.org/10.3390/ijgi9020106">https://doi.org/10.3390/ijgi9020106</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Clark, D. E., &amp; Herrin, W. E. (2000). The impact of public school attributes on home sale prices in California. Growth and Change, 31(3), 385–407. <a href="https://doi.org/10.1111/0017-4815.00134">https://doi.org/10.1111/0017-4815.00134</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Dimopoulos, T., &amp; Moulas, A. (2016). A proposal of a mass appraisal system in Greece with CAMA system: Evaluating GWR and MRA techniques in Thessaloniki Municipality. Open Geosciences, 8(1), 675–693. <a href="https://doi.org/10.1515/geo-2016-0064">https://doi.org/10.1515/geo-2016-0064</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Duan, J., Tian, G., Yang, L., &amp; Zhou, T. (2021). Addressing the macroeconomic and hedonic determinants of housing prices in Beijing metropolitan area, China. Habitat International, 113, Article 102374. <a href="https://doi.org/10.1016/j.habitatint.2021.102374">https://doi.org/10.1016/j.habitatint.2021.102374</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Espey, M., &amp; Lopez, H. (2000). The impact of airport noise and proximity on residential property values. Growth and Change, 31(3), 408–419. <a href="https://doi.org/10.1111/0017-4815.00135">https://doi.org/10.1111/0017-4815.00135</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Fan, G. Z., Ong, S. E., &amp; Koh, H. C. (2006). Determinants of house price: A decision tree approach. Urban Studies, 43(12), 2301–2315. <a href="https://doi.org/10.1080/00420980600990928">https://doi.org/10.1080/00420980600990928</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Fletcher, M., Gallimore, P., &amp; Mangan, J. (2000). Heteroscedasticity in hedonic house price model. Journal of Property Research, 17(2), 93–108. <a href="https://doi.org/10.1080/095999100367930">https://doi.org/10.1080/095999100367930</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Follain, J. R., &amp; Jimenez, E. (1985). Estimating the demand for housing characteristics: A survey and critique. Regional Science and Urban Economics, 15(1), 77–107. <a href="https://doi.org/10.1016/0166-0462(85)90033-X">https://doi.org/10.1016/0166-0462(85)90033-X</a>
+																	</p>
+								
+																							<p>
+																											
+									
+																																						Forrest, D., Glen, J., &amp; Ward, R. (1996). The impact of a light rail system on the structure of house prices: A hedonic longitudinal study. Journal of Transport Economics and Policy, 30, 15–29.
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Gabrielli, L., &amp; French, N. (2021). Pricing to market: Property valuation methods – a practical review. Journal of Property Investment &amp; Finance, 39(5), 464–480. <a href="https://doi.org/10.1108/JPIF-09-2020-0101">https://doi.org/10.1108/JPIF-09-2020-0101</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Garrod, G. D., &amp; Willis, K. G. (1992). Valuing goods’ characteristics: An application of the hedonic price method to environmental features. Journal of Environmental Management, 34(1), 59–76. <a href="https://doi.org/10.1016/S0301-4797(05)80110-0">https://doi.org/10.1016/S0301-4797(05)80110-0</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Glumac, B., &amp; Des Rosiers, F. (2021). Practice briefing – Automated valuation models (AVMs): Their role, their advantages and their limitations. Journal of Property Investment and Finance, 39(5), 481–491. <a href="https://doi.org/10.1108/JPIF-07-2020-0086">https://doi.org/10.1108/JPIF-07-2020-0086</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Hong, J., &amp; Kim, W.-s. (2022). Combination of machine learning-based automatic valuation models for residential properties in South Korea. International Journal of Strategic Property Management, 26(5), 362–384. <a href="https://doi.org/10.3846/ijspm.2022.17909">https://doi.org/10.3846/ijspm.2022.17909</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Hong, J., Choi, H., &amp; Kim, W.-s. (2020). A house price valuation based on the random forest approach: The mass appraisal of residential property in South Korea. International Journal of Strategic Property Management, 24(3), 140–152. <a href="https://doi.org/10.3846/ijspm.2020.11544">https://doi.org/10.3846/ijspm.2020.11544</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Iban, M. C. (2022). An explainable model for the mass appraisal of residences: The application of tree-based machine learning algorithms and interpretation of value determinants. Habitat International, 128, Article 102660. <a href="https://doi.org/10.1016/j.habitatint.2022.102660">https://doi.org/10.1016/j.habitatint.2022.102660</a>
+																	</p>
+								
+																							<p>
+																											
+									
+																																						International Association of Assessing Officers. (2017). Standard on mass appraisal of real property. Kansas City, Missouri, USA.
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Kok, N., Koponen, E. L., &amp; Martínez-Barbosa, C. A. (2017). Big data in real estate? From manual appraisal to automated valuation. Journal of Portfolio Management, 43(6), 202–211. <a href="https://doi.org/10.3905/jpm.2017.43.6.202">https://doi.org/10.3905/jpm.2017.43.6.202</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Kontrimas, V., &amp; Verikas, A. (2011). The mass appraisal of the real estate by computational intelligence. Applied Soft Computing, 11(1), 443–448. <a href="https://doi.org/10.1016/j.asoc.2009.12.003">https://doi.org/10.1016/j.asoc.2009.12.003</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Krämer, B., Nagl, C., Stang, M., &amp; Schäfers, W. (2023). Explainable AI in a real estate context–exploring the determinants of residential real estate values. Journal of Housing Research, 32(2), 204–245. <a href="https://doi.org/10.1080/10527001.2023.2170769">https://doi.org/10.1080/10527001.2023.2170769</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Lancaster, K. J. (1966). A new approach to consumer theory. Journal of Political Economy, 74, 132–157. <a href="https://doi.org/10.1086/259131">https://doi.org/10.1086/259131</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Lenaers, I., Boudt, K., &amp; De Moor, L. (2024). Predictability of Belgian residential real estate rents using tree-based ML models and IML techniques. International Journal of Housing Markets and Analysis, 17(1), 96–113. <a href="https://doi.org/10.1108/ijhma-11-2022-0172">https://doi.org/10.1108/ijhma-11-2022-0172</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Li, M. M., &amp; Brown, H. J. (1980). Micro-neighborhood externalities and hedonic housing prices. Land Economics, 56(2), 125–141. <a href="https://doi.org/10.2307/3145857">https://doi.org/10.2307/3145857</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Lundberg, S. M., Erion, G. G., &amp; Lee, S. I. (2018). Consistent individualized feature attribution for tree ensembles. arXiv. <a href="https://doi.org/10.48550/arXiv.1802.03888">https://doi.org/10.48550/arXiv.1802.03888</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., &amp; Lee, S. I. (2019). Explainable AI for trees: From local explanations to global understanding. arXiv. <a href="https://doi.org/10.48550/arXiv.1905.04610">https://doi.org/10.48550/arXiv.1905.04610</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Lundberg, S., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. arXiv. <a href="https://doi.org/10.48550/arXiv.1705.07874">https://doi.org/10.48550/arXiv.1705.07874</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Maeil Business Newpaper. (2024, November 18). KB real estate average sale price survey Seocho-gu ranked 2nd with 86.75 million won. Lowest place, Dobong-gu, KRW 26.69 million. <a href="https://www.mk.co.kr/en/realestate/11170899">https://www.mk.co.kr/en/realestate/11170899</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Malpezzi, S. (2003). Hedonic pricing models: A selective and applied review. Housing Economics and Public Policy, 1, 67–89. <a href="https://doi.org/10.1002/9780470690680.ch5">https://doi.org/10.1002/9780470690680.ch5</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						McCluskey, W. J., Deddis, W. G., Lamont, I. G., &amp; Borst, R. A. (2000). The application of surface generated interpolation models for the prediction of residential property values. Journal of Property Investment and Finance, 18(2), 162–176. <a href="https://doi.org/10.1108/14635780010324321">https://doi.org/10.1108/14635780010324321</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						McCluskey, W., Davis, P., Haran, M., McCord, M., &amp; McIlhatton, D. (2012). The potential of artificial neural networks in mass appraisal: The case revisited. Journal of Financial Management of Property and Construction, 17(3), 274–292. <a href="https://doi.org/10.1108/13664381211274371">https://doi.org/10.1108/13664381211274371</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						McMillan, D., Jarmin, R., &amp; Thorsnes, P. (1992). Selection bias and land development in the monocentric model. Journal of Urban Economics, 31, 273–284. <a href="https://doi.org/10.1016/0094-1190(92)90056-Q">https://doi.org/10.1016/0094-1190(92)90056-Q</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Miller, N., Peng, L., &amp; Sklarz, M. (2011). House prices and economic growth. The Journal of Real Estate Finance and Economics, 42(4), 522–541. <a href="https://doi.org/10.1007/s11146-009-9197-8">https://doi.org/10.1007/s11146-009-9197-8</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Mok, H. M., Chan, P. P., &amp; Cho, Y. S. (1995). A hedonic price model for private properties in Hong Kong. The Journal of Real Estate Finance and Economics, 10, 37–48. <a href="https://doi.org/10.1007/BF01099610">https://doi.org/10.1007/BF01099610</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Moreira de Aguiar, M., Simões, R., &amp; Braz Golgher, A. (2014). Housing market analysis using a hierarchical–spatial approach: The case of Belo Horizonte, Minas Gerais, Brazil. Regional Studies, Regional Science, 1(1), 116–137. <a href="https://doi.org/10.1080/21681376.2014.934391">https://doi.org/10.1080/21681376.2014.934391</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Ostrikova, A., &amp; Selyutin, V. (2024, March). Machine learning for mass valuation of residential real estate. In Future of Information and Communication Conference (pp. 570–578). Springer Nature Switzerland. <a href="https://doi.org/10.1007/978-3-031-53960-2_37">https://doi.org/10.1007/978-3-031-53960-2_37</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Pagourtzi, E., Assimakopoulos, V., Hatzichristos, T., &amp; French, N. (2003). Real estate appraisal: A review of valuation methods. Journal of Property Investment &amp; Finance, 21(4), 383–401. <a href="https://doi.org/10.1108/14635780310483656">https://doi.org/10.1108/14635780310483656</a>
+																	</p>
+								
+																							<p>
+																											
+									
+																																						Pi-ying, L. (2011). Analysis of the mass appraisal model by using artificial neural network in Kaohsiung city. Journal of Modern Accounting and Auditing, 7(10), Article 1080.
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Reyes-Bueno, F., García-Samaniego, J. M., &amp; Sánchez-Rodríguez, A. (2018). Large-scale simultaneous market segment definition and mass appraisal using decision tree learning for fiscal purposes. Land Use Policy, 79, 116–122. <a href="https://doi.org/10.1016/j.landusepol.2018.08.012">https://doi.org/10.1016/j.landusepol.2018.08.012</a>
+																	</p>
+								
+																							<p>
+																											
+									
+																																						Rodriguez, M., &amp; Sirmans, C. F. (1994). Quantifying the value of a view in single-family housing markets. Appraisal Journal, 62, 600–603.
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Rosen, S. (1974). Hedonic prices and implicit markets: Product differentiation in pure competition. Journal of Political Economy, 82(1), 34–55. <a href="https://doi.org/10.1086/260169">https://doi.org/10.1086/260169</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Sayın, Z. M., Elburz, Z., &amp; Duran, H. E. (2022). Analyzing housing price determinants in Izmir using spatial models. Habitat International, 130, Article 102712. <a href="https://doi.org/10.1016/j.habitatint.2022.102712">https://doi.org/10.1016/j.habitatint.2022.102712</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Seoul Metropolitan Government. (2025). Automobile registration status [Web page]. <a href="https://news.seoul.go.kr/traffic/archives/341">https://news.seoul.go.kr/traffic/archives/341</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Shapley, L. S. (1953). Stochastic games. Proceedings of the National Academy of Sciences, 39(10), 1095–1100. <a href="https://doi.org/10.1073/pnas.39.10.1095">https://doi.org/10.1073/pnas.39.10.1095</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Su, T., Li, H., &amp; An, Y. (2021). A BIM and machine learning integration framework for automated property valuation. Journal of Building Engineering, 44, Article 102636. <a href="https://doi.org/10.1016/j.jobe.2021.10263">https://doi.org/10.1016/j.jobe.2021.10263</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Tchuente, D. (2024). Real estate automated valuation model with explainable artificial intelligence based on Shapley values. The Journal of Real Estate Finance and Economics, 1–39. <a href="https://doi.org/10.1007/s11146-024-09998-9">https://doi.org/10.1007/s11146-024-09998-9</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Teoh, E. Z., Yau, W. C., Ong, T. S., &amp; Connie, T. (2023). Explainable housing price prediction with determinant analysis. International Journal of Housing Markets and Analysis, 16(5), 1021–1045. <a href="https://doi.org/10.1108/ijhma-02-2022-0025">https://doi.org/10.1108/ijhma-02-2022-0025</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Torres-Pruñonosa, J., Garcia-Estevez, P., &amp; Prado-Roman, C. (2021). Artificial neural network, quantile and semi-log regression modelling of mass appraisal in housing. Mathematics, 9(7), Article 783. <a href="https://doi.org/10.3390/math9070783">https://doi.org/10.3390/math9070783</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Trindade Neves, F., Aparicio, M., &amp; de Castro Neto, M. (2024). The impacts of open data and eXplainable AI on real estate price predictions in smart cities. Applied Sciences, 14(5), Article 2209. <a href="https://doi.org/10.3390/app14052209">https://doi.org/10.3390/app14052209</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Tse, R. Y., &amp; Love, P. E. (2000). Measuring residential property values in Hong Kong. Property Management, 18(5), 366–374. <a href="https://doi.org/10.1108/02637470010360669">https://doi.org/10.1108/02637470010360669</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Wang, D., &amp; Li, V. J. (2019). Mass appraisal models of real estate in the 21st century: A systematic literature review. Sustainability, 11(24), Article 7006. <a href="https://doi.org/10.3390/su11247006">https://doi.org/10.3390/su11247006</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Wang, J., Sui, J., Zhang, Z., Qi, J., Liu, N., &amp; Lv, J. (2020, May). Empirical analysis of I-GBDT to improve the accuracy of mass appraisal method. Journal of Physics: Conference Series, 1550, Article 032074. <a href="https://doi.org/10.1088/1742-6596/1550/3/032074">https://doi.org/10.1088/1742-6596/1550/3/032074</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Wikipedia. (2025). Gangnam-gu. In Korean Wikipedia. <a href="https://ko.wikipedia.org/wiki/%EA%B0%95%EB%82%A8%EA%B5%AC">https://ko.wikipedia.org/wiki/%EA%B0%95%EB%82%A8%EA%B5%AC</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Wittowsky, D., Hoekveld, J., Welsch, J., &amp; Steier, M. (2020). Residential housing prices: Impact of housing characteristics, accessibility and neighbouring apartments – a case study of Dortmund, Germany. Urban, Planning and Transport Research, 8(1), 44–70. <a href="https://doi.org/10.1080/21650020.2019.1704429">https://doi.org/10.1080/21650020.2019.1704429</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Worzala, E., Lenk, M., &amp; Silva, A. (1995). An exploration of neural networks and its application to real estate valuation. Journal of Real Estate Research, 10(2), 185–201. <a href="https://doi.org/10.1080/10835547.1995.12090782">https://doi.org/10.1080/10835547.1995.12090782</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Xu, F., Uszkoreit, H., Du, Y., Fan, W., Zhao, D., &amp; Zhu, J. (2019). Explainable AI: A brief survey on history, research areas, approaches and challenges. In J. Tang, M.-Y. Kan, D. Zhao, S. Li, &amp; H. Zan (Eds.), Natural language processing and Chinese computing (pp. 563–574). Springer International Publishing. <a href="https://doi.org/10.1007/978-3-030-32236-6_51">https://doi.org/10.1007/978-3-030-32236-6_51</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Yasnitsky, L. N., Yasnitsky, V. L., &amp; Alekseev, A. O. (2021). The complex neural network model for mass appraisal and scenario forecasting of the urban real estate market value that adapts itself to space and time. Complexity, 2021(1), Article 5392170. <a href="https://doi.org/10.1155/2021/5392170">https://doi.org/10.1155/2021/5392170</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Zheng, Y., Yang, B., Zhang, R., Bai, Z., &amp; Sun, Y. (2022, December). Mass appraisal of real estate prices using improved BP neural network with policy evaluation. In 2022 IEEE Conference on Telecommunications, Optics and Computer Science (TOCS) (pp. 1036–1041). IEEE. <a href="https://doi.org/10.1109/TOCS56154.2022.10015915">https://doi.org/10.1109/TOCS56154.2022.10015915</a>
+																	</p>
+								
+																							<p>
+																											
+																																																																																												
+																																						Zurada, J., Levitan, A., &amp; Guan, J. (2011). A comparison of regression and artificial intelligence methods in a mass appraisal context. Journal of Real Estate Research, 33(3), 349–388. <a href="https://doi.org/10.1080/10835547.2011.12091311">https://doi.org/10.1080/10835547.2011.12091311</a>
+																	</p>
+								
+																		</div>
+				</section>
+			
+			
+		</div><!-- .main_entry -->
+
+		<div class="entry_details">
+
+						
+										<div class="item galleys">
+					<h2 class="labelis">
+						View article in other formats
+					</h2>
+					<ul class="value galleys_links">
+													<li>
+								
+	
+													
+
+
+<script>
+    console.log("PDF URL: https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137/13114");
+</script>
+
+<a class="obj_galley_link pdf" href="https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137/13114">
+		
+	PDF
+
+	</a>
+							</li>
+											</ul>
+				</div>
+						
+			<!-- Start CrossMark Snippet v2.0 -->
+
+			<div class=" item crossmark-container">
+				<section class="sub_item">
+					<h2 class="labelis">
+						CrossMark check
+					</h2>
+					<script src="https://crossmark-cdn.crossref.org/widget/v2.0/widget.js"></script>
+					<a data-target="crossmark" class="crossmark-link">
+						<img src="https://crossmark-cdn.crossref.org/widget/v2.0/logos/CROSSMARK_Color_horizontal.svg"
+							width="100" alt="CrossMark logo" />
+					</a>
+				</section>
+			</div>
+			<!-- End CrossMark Snippet -->
+
+							<div class="item published">
+					<section class="sub_item">
+						<h2 class="labelis">
+							Published
+						</h2>
+						<div class="value">
+																						<span>2025-11-04</span>
+																					</div>
+					</section>
+									</div>
+			
+						
+										<div class="item issue">
+
+											<section class="sub_item">
+							<h2 class="labelis">
+								Issue
+							</h2>
+							<div class="value">
+								<a class="title" href="https://journals.vilniustech.lt/index.php/IJSPM/issue/view/1414">
+									Vol 29 No 5 (2025)
+								</a>
+							</div>
+						</section>
+					
+											<section class="sub_item">
+							<h2 class="labelis">
+								Section
+							</h2>
+							<div class="value">
+								Articles
+							</div>
+						</section>
+					
+									</div>
+			
+						
+										<div class="item copyright">
+					<section class="sub_item">
+						<h2 class="labelis">
+							Copyright
+						</h2>
+																														<p>Copyright (c) 2025 The Author(s). Published by Vilnius Gediminas Technical University.
+									</p>
+															</section>
+
+							<section class="sub_item">
+								<h2 class="labelis">
+									License
+								</h2>
+								<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
+							</section>
+																				</div>
+							<div class="item citation">
+		<section class="sub_item citation_display">
+			<h2 class="label">
+				How to Cite
+			</h2>
+			<div class="value">
+				<div id="citationOutput" role="region" aria-live="polite">
+					<div class="csl-bib-body">
+  <div class="csl-entry">Kim, W.- sung, &#38; Lee, M. (2025). Explainable AI-based mass appraisal: Insights from machine learning applications in Korea’s residential property market. <i>International Journal of Strategic Property Management</i>, <i>29</i>(5), 350–376. <a href="https://doi.org/10.3846/ijspm.2025.25137">https://doi.org/10.3846/ijspm.2025.25137</a></div>
+</div>
+				</div>
+				<div class="citation_formats">
+					<button class="citation_formats_button label" aria-controls="cslCitationFormats" aria-expanded="false" data-csl-dropdown="true">
+						More Citation Formats
+					</button>
+					<div id="cslCitationFormats" class="citation_formats_list" aria-hidden="true">
+						<ul class="citation_formats_styles">
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acm-sig-proceedings?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acm-sig-proceedings?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ACM
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acs-nano?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/acs-nano?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ACS
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/apa?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/apa?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										APA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/associacao-brasileira-de-normas-tecnicas?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										ABNT
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/chicago-author-date?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/chicago-author-date?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Chicago
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/harvard-cite-them-right?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/harvard-cite-them-right?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Harvard
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/ieee?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/ieee?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										IEEE
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/modern-language-association?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/modern-language-association?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										MLA
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/turabian-fullnote-bibliography?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Turabian
+									</a>
+								</li>
+															<li>
+									<a
+											rel="nofollow"
+											aria-controls="citationOutput"
+											href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/vancouver?submissionId=25137&amp;publicationId=22799&amp;issueId=1414"
+											data-load-citation
+											data-json-href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/get/vancouver?submissionId=25137&amp;publicationId=22799&amp;issueId=1414&amp;return=json"
+									>
+										Vancouver
+									</a>
+								</li>
+													</ul>
+													<div class="label">
+								Download Citation
+							</div>
+							<ul class="citation_formats_styles">
+																	<li>
+										<a href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/download/ris?submissionId=25137&amp;publicationId=22799&amp;issueId=1414">
+											<span class="fa fa-download"></span>
+											Endnote/Zotero/Mendeley (RIS)
+										</a>
+									</li>
+																	<li>
+										<a href="https://journals.vilniustech.lt/index.php/IJSPM/citationstylelanguage/download/bibtex?submissionId=25137&amp;publicationId=22799&amp;issueId=1414">
+											<span class="fa fa-download"></span>
+											BibTeX
+										</a>
+									</li>
+															</ul>
+											</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/css/shariff.css">
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/shariff-3.3.0/shariff.complete.css">
+				<link rel="stylesheet" type="text/css" href="https://journals.vilniustech.lt/plugins/generic/shariff/css/wcag-themes.css">
+				<div class="item shariffblock"><div><section class="sub_item"><h2 class="label">Share</h2></section>
+				<div class="shariff item" data-lang="en"
+					data-services="[facebook,twitter,linkedin,mail]"
+					data-mail-url="mailto:"
+					data-mail-body="https://doi.org/10.3846/ijspm.2025.25137"
+					
+					data-theme="standard"
+					data-orientation="horizontal"
+					data-url="https://doi.org/10.3846/ijspm.2025.25137">
+				</div>
+				</div>
+				</div>
+				<script src="https://journals.vilniustech.lt/plugins/generic/shariff/shariff-3.3.0/shariff.complete.js"></script>
+
+		</div><!-- .entry_details -->
+	</div><!-- .row -->
+	<script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/coverImagePopup.js"></script>
+	<script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/textResize.js"></script>
+</article>
+	
+</div><!-- .page -->
+
+</main><!-- pkp_structure_main -->
+
+	</div><!-- pkp_structure_content -->
+
+<div class="pkp_structure_footer_wrapper" role="contentinfo">
+	<div class="social-links-wrapper">
+		<div id="showTopLinks">
+            <div class="topSocial">
+        <ul>
+            <li><a href="https://www.facebook.com/VilniusTechBiblioteka" class="fa fa-facebook" target="_blank"></a>
+            </li>
+            <li><a href="https://twitter.com/vgtu_biblioteka" class="fa fa-twitter" target="_blank"></a></li>
+            <li><a href="https://www.linkedin.com/school/vilnius-gediminas-technical-university/" class="fa fa-linkedin"
+                    target="_blank"></a></li>
+        </ul>
+    </div>
+
+</div>	</div>
+	<a id="pkp_content_footer"></a>
+
+	<div class="pkp_structure_footer">
+
+					<div class="pkp_footer_content">
+				<div class="bottom-bar">
+<div class="container text-center">
+<div class="row"><a href="https://journals.vilniustech.lt/index.php/IJSPM">Home</a> | <a href="https://journals.vilniustech.lt/index.php/IJSPM/journalpolicies">Policies</a> | <a href="https://journals.vilniustech.lt/index.php/IJSPM/about/contact">Contact Us</a>
+<div>Copyright © 2026 Vilnius Gediminas Technical University</div>
+</div>
+</div>
+</div>
+				<div class="platform-credit">Platform & workflow by <a href="https://journals.vilniustech.lt/index.php/IJSPM/about/aboutThisPublishingSystem">PKP/OJS</a></div>
+			</div>
+					</div>
+</div><!-- pkp_structure_footer_wrapper -->
+
+</div><!-- pkp_structure_page -->
+<div id="cookieConsent" class="cookie-consent" style="display: none;">
+	<div class="cookie-content">
+	<p>This website uses cookies to ensure you get the best experience and for essential site functionality. Learn more in our  <a href="https://journals.vilniustech.lt/index.php/IJSPM/about/privacy" class="privacy-link">Privacy Policy.</a></p>
+		<div class="cookie-buttons">
+			<button id="cookieAccept"
+				class="cookie-btn accept">Accept</button>
+			<button id="cookieDecline"
+				class="cookie-btn decline">Decline</button>
+		</div>
+	</div>
+</div>
+<script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/cookieConsent.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js?v=3.4.0.8" type="text/javascript"></script><script src="https://code.jquery.com/jquery-3.6.0.min.js?v=3.4.0.8" type="text/javascript"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/lib/pkp/lib/vendor/components/jquery/jquery.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/lib/pkp/lib/vendor/components/jqueryui/jquery-ui.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/default/js/lib/bootstrap/util.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/default/js/lib/bootstrap/dropdown.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/default/js/main.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/togle.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/staticpages.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/breadcrumbs.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/submissions.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/mobileMenu.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/textToSpeech.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/adjustContentPadding.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/accessibilityModes.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/headerColapse.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/generic/citationStyleLanguage/js/articleCitation.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/printHandler.js?v=3.4.0.8" type="text/javascript"></script><script src="https://journals.vilniustech.lt/plugins/themes/responsive/js/downloadPublic.js?v=3.4.0.8" type="text/javascript"></script><script type="text/javascript">
+(function (w, d, s, l, i) { w[l] = w[l] || []; var f = d.getElementsByTagName(s)[0],
+j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+j.src = 'https://www.googletagmanager.com/gtag/js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+function gtag(){dataLayer.push(arguments)}; gtag('js', new Date()); gtag('config', i); })
+(window, document, 'script', 'dataLayer', 'G-3HVSJDSLNX');
+</script>
+
+
+</body>
+
+</html>

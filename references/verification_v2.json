@@ -1,0 +1,102 @@
+[
+  {
+    "ref": "An_2025",
+    "status": "VERIFIED",
+    "doi": "10.1186/s40854-025-00874-w",
+    "pdf": false
+  },
+  {
+    "ref": "Breiman_2001",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Ceh_2018",
+    "status": "VERIFIED",
+    "doi": "10.3390/ijgi7050168",
+    "pdf": true
+  },
+  {
+    "ref": "Chen_Guestrin_2016",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Choy_Ho_2023",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Chun_2025",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Friedman_2001",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Kim_2022_Multiplex",
+    "status": "VERIFIED",
+    "doi": "10.3390/su14127116",
+    "pdf": true
+  },
+  {
+    "ref": "Kim_Choi_Lee_2025",
+    "status": "VERIFIED",
+    "doi": "10.3846/ijspm.2025.25137",
+    "pdf": false
+  },
+  {
+    "ref": "Lancaster_1966",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Limsombunchai_2004",
+    "status": "HAVE_PDF"
+  },
+  {
+    "ref": "Lundberg_Lee_2017",
+    "status": "VERIFIED",
+    "doi": "",
+    "pdf": false
+  },
+  {
+    "ref": "Lundberg_2020",
+    "status": "VERIFIED",
+    "doi": "10.1038/s42256-019-0138-9",
+    "pdf": false
+  },
+  {
+    "ref": "Mora_Garcia_2022",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Neves_2024",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Revathi_2025",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Ribeiro_2016",
+    "status": "VERIFIED",
+    "doi": "10.1145/2939672.2939778",
+    "pdf": true
+  },
+  {
+    "ref": "Rosen_1974",
+    "status": "VERIFIED",
+    "doi": "10.1086/260169",
+    "pdf": true
+  },
+  {
+    "ref": "Shahhosseini_2022",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Tarasov_2025",
+    "status": "NOT_FOUND"
+  },
+  {
+    "ref": "Ke_2017",
+    "status": "NOT_FOUND"
+  }
+]
