@@ -69,7 +69,7 @@ def main():
     
     # 2. Random Forest
     print("\n=== Random Forest ===")
-    rf = RandomForestRegressor(n_estimators=300, max_depth=20, min_samples_leaf=5,
+    rf = RandomForestRegressor(n_estimators=200, max_depth=15, min_samples_leaf=5,
                                n_jobs=-1, random_state=42)
     rf.fit(X_train, y_train)
     y_pred_rf = rf.predict(X_test)
@@ -88,7 +88,7 @@ def main():
     params = {
         'objective': 'reg:squarederror',
         'max_depth': 8,
-        'learning_rate': 0.05,
+        'learning_rate': 0.1,
         'subsample': 0.8,
         'colsample_bytree': 0.8,
         'min_child_weight': 5,
