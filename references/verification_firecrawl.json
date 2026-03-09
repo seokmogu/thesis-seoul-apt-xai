@@ -1,0 +1,170 @@
+[
+  {
+    "ref": "An_2025",
+    "status": "VERIFIED",
+    "query": "\"Toward transparent and accurate housing price appraisal\" 2025",
+    "matched_title": "Hedonic price models versus machine learning algorithms",
+    "url": "https://link.springer.com/article/10.1186/s40854-025-00874-w",
+    "doi": "10.1186/s40854-025-00874-w"
+  },
+  {
+    "ref": "Breiman_2001",
+    "status": "VERIFIED",
+    "query": "\"Random forests\" 2001",
+    "matched_title": "Random Forests | Machine Learning | Springer Nature Link",
+    "url": "https://link.springer.com/article/10.1023/A:1010933404324",
+    "doi": "10.1023/A:1010933404324"
+  },
+  {
+    "ref": "Ceh_2018",
+    "status": "VERIFIED",
+    "query": "\"Estimating the performance of random forest versus multiple regression\" 2018",
+    "matched_title": "Estimating the Performance of Random Forest versus ...",
+    "url": "https://www.mdpi.com/2220-9964/7/5/168",
+    "doi": "10.3390/ijgi7050168"
+  },
+  {
+    "ref": "Chen_Guestrin_2016",
+    "status": "VERIFIED",
+    "query": "\"XGBoost: A scalable tree boosting system\" 2016",
+    "matched_title": "[1603.02754] XGBoost: A Scalable Tree Boosting System - arXiv",
+    "url": "https://arxiv.org/abs/1603.02754",
+    "doi": "10.48550/arXiv.1603.02754"
+  },
+  {
+    "ref": "Choy_Ho_2023",
+    "status": "VERIFIED",
+    "query": "\"The use of machine learning in real estate research\" 2023",
+    "matched_title": "The Use of Machine Learning in Real Estate Research - MDPI",
+    "url": "https://www.mdpi.com/2073-445X/12/4/740",
+    "doi": "10.3390/land12040740."
+  },
+  {
+    "ref": "Chun_2025",
+    "status": "VERIFIED",
+    "query": "\"Predicting housing price in Seoul using explainable AI\" 2025",
+    "matched_title": "Predicting Housing Price in Seoul using Explainable AI (XAI) and ...",
+    "url": "https://koreascience.kr/article/JAKO202514739605288.pub?orgId=ksii1",
+    "doi": "10.3837/tiis.2025.04.002"
+  },
+  {
+    "ref": "Friedman_2001",
+    "status": "NOT_FOUND",
+    "query": "\"Greedy function approximation: A gradient boosting machine\" 2001",
+    "matched_title": null,
+    "url": null,
+    "doi": null
+  },
+  {
+    "ref": "Kim_2022_Multiplex",
+    "status": "VERIFIED",
+    "query": "\"analysis of the price determinants of multiplex houses\" 2022",
+    "matched_title": "An Analysis of the Price Determinants of Multiplex Houses ...",
+    "url": "https://www.mdpi.com/2071-1050/14/12/7116",
+    "doi": "10.3390/su14127116"
+  },
+  {
+    "ref": "Kim_Choi_Lee_2025",
+    "status": "VERIFIED",
+    "query": "\"Explainable AI-based mass appraisal\" 2025",
+    "matched_title": "Explainable AI-based mass appraisal: Insights from machine ...",
+    "url": "https://journals.vilniustech.lt/index.php/IJSPM/article/view/25137",
+    "doi": "10.3846/ijspm.2025.25137"
+  },
+  {
+    "ref": "Lancaster_1966",
+    "status": "NOT_FOUND",
+    "query": "\"A new approach to consumer theory\" 1966",
+    "matched_title": null,
+    "url": null,
+    "doi": null
+  },
+  {
+    "ref": "Limsombunchai_2004",
+    "status": "VERIFIED",
+    "query": "\"House price prediction: Hedonic price model\" 2004",
+    "matched_title": "[PDF] Hedonic Price Model vs. Artificial Neural Network",
+    "url": "https://thescipub.com/pdf/ajassp.2004.193.201.pdf",
+    "doi": null
+  },
+  {
+    "ref": "Lundberg_Lee_2017",
+    "status": "VERIFIED",
+    "query": "\"A unified approach to interpreting model predictions\" 2017",
+    "matched_title": "A Unified Approach to Interpreting Model Predictions - NIPS",
+    "url": "https://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions",
+    "doi": null
+  },
+  {
+    "ref": "Lundberg_2020",
+    "status": "VERIFIED",
+    "query": "\"From local explanations to global understanding\" 2020",
+    "matched_title": "From local explanations to global understanding with explainable AI ...",
+    "url": "https://www.nature.com/articles/s42256-019-0138-9",
+    "doi": "10.1007/s10115-013-0679-x)"
+  },
+  {
+    "ref": "Mora_Garcia_2022",
+    "status": "VERIFIED",
+    "query": "\"Housing price prediction using machine learning algorithms in COVID\" 2022",
+    "matched_title": "Housing Price Prediction Using Machine Learning Algorithms in ...",
+    "url": "https://www.mdpi.com/2073-445X/11/11/2100",
+    "doi": "10.3390/land11112100"
+  },
+  {
+    "ref": "Neves_2024",
+    "status": "VERIFIED",
+    "query": "\"The impacts of open data and explainable AI on real estate\" 2024",
+    "matched_title": "[PDF] The Impacts of Open Data and eXplainable AI on Real Estate ...",
+    "url": "https://www.semanticscholar.org/paper/The-Impacts-of-Open-Data-and-eXplainable-AI-on-Real-Neves-Aparicio/aa0357b542acee388c13b76a339ab42936a67025",
+    "doi": "10.3390/app14052209"
+  },
+  {
+    "ref": "Revathi_2025",
+    "status": "VERIFIED",
+    "query": "\"robust ensemble-based framework for house price estimation\" 2025",
+    "matched_title": "Integrating XG-Boost with SHAP and Web Deployment",
+    "url": "https://www.itm-conferences.org/articles/itmconf/abs/2025/10/itmconf_keis2025_01023/itmconf_keis2025_01023.html",
+    "doi": "10.1051/itmconf/20257901023"
+  },
+  {
+    "ref": "Ribeiro_2016",
+    "status": "VERIFIED",
+    "query": "\"Why should I trust you\" 2016",
+    "matched_title": "\"Why Should I Trust You?\": Explaining the Predictions of Any Classifier",
+    "url": "https://arxiv.org/abs/1602.04938",
+    "doi": "10.48550/arXiv.1602.04938"
+  },
+  {
+    "ref": "Rosen_1974",
+    "status": "VERIFIED",
+    "query": "\"Hedonic prices and implicit markets\" 1974",
+    "matched_title": "[PDF] Hedonic prices and implicit markets: product differentiation in pure ...",
+    "url": "https://blogs.ubc.ca/apfnet04/files/2015/08/SUFES_05_Module-V_Hedonic-Price-Rosen-1974.pdf",
+    "doi": null
+  },
+  {
+    "ref": "Shahhosseini_2022",
+    "status": "VERIFIED",
+    "query": "\"Optimizing ensemble weights and hyperparameters\" 2022",
+    "matched_title": "Optimizing ensemble weights and hyperparameters of machine ...",
+    "url": "https://www.sciencedirect.com/science/article/pii/S2666827022000020",
+    "doi": "10.1016/j.mlwa.2022.100251"
+  },
+  {
+    "ref": "Tarasov_2025",
+    "status": "NOT_FOUND",
+    "query": "\"Algorithm-driven hedonic real estate pricing\" 2025",
+    "matched_title": null,
+    "url": null,
+    "doi": null
+  },
+  {
+    "ref": "Ke_2017",
+    "status": "VERIFIED",
+    "query": "\"LightGBM: A highly efficient gradient boosting\" 2017",
+    "matched_title": "[PDF] LightGBM: A Highly Efficient Gradient Boosting Decision Tree - NIPS",
+    "url": "https://proceedings.neurips.cc/paper/6907-lightgbm-a-highly-efficient-gradient-boosting-decision-tree.pdf",
+    "doi": null
+  }
+]

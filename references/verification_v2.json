@@ -1,31 +1,31 @@
 [
   {
     "ref": "An_2025",
-    "status": "VERIFIED",
-    "doi": "10.1186/s40854-025-00874-w",
-    "pdf": false
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Breiman_2001",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Ceh_2018",
-    "status": "VERIFIED",
-    "doi": "10.3390/ijgi7050168",
-    "pdf": true
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Chen_Guestrin_2016",
-    "status": "NOT_FOUND"
+    "status": "VERIFIED",
+    "doi": "10.1145/2939672.2939785",
+    "pdf": false
   },
   {
     "ref": "Choy_Ho_2023",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Chun_2025",
-    "status": "NOT_FOUND"
+    "status": "VERIFIED",
+    "doi": "10.3837/tiis.2025.04.002",
+    "pdf": false
   },
   {
     "ref": "Friedman_2001",
@@ -33,19 +33,17 @@
   },
   {
     "ref": "Kim_2022_Multiplex",
-    "status": "VERIFIED",
-    "doi": "10.3390/su14127116",
-    "pdf": true
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Kim_Choi_Lee_2025",
-    "status": "VERIFIED",
-    "doi": "10.3846/ijspm.2025.25137",
-    "pdf": false
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Lancaster_1966",
-    "status": "NOT_FOUND"
+    "status": "VERIFIED",
+    "doi": "10.1086/259131",
+    "pdf": true
   },
   {
     "ref": "Limsombunchai_2004",
@@ -53,23 +51,19 @@
   },
   {
     "ref": "Lundberg_Lee_2017",
-    "status": "VERIFIED",
-    "doi": "",
-    "pdf": false
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Lundberg_2020",
-    "status": "VERIFIED",
-    "doi": "10.1038/s42256-019-0138-9",
-    "pdf": false
+    "status": "NOT_FOUND"
   },
   {
     "ref": "Mora_Garcia_2022",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Neves_2024",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Revathi_2025",
@@ -77,15 +71,11 @@
   },
   {
     "ref": "Ribeiro_2016",
-    "status": "VERIFIED",
-    "doi": "10.1145/2939672.2939778",
-    "pdf": true
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Rosen_1974",
-    "status": "VERIFIED",
-    "doi": "10.1086/260169",
-    "pdf": true
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Shahhosseini_2022",
@@ -93,10 +83,10 @@
   },
   {
     "ref": "Tarasov_2025",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   },
   {
     "ref": "Ke_2017",
-    "status": "NOT_FOUND"
+    "status": "HAVE_PDF"
   }
 ]
