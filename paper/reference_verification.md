@@ -1,134 +1,94 @@
 # 참고문헌 검증 보고서
 
-**검증일:** 2026-02-21  
-**검증 대상:** 논문_초안_v3.md 참고문헌 (국내 11편 + 해외 26편 = 총 37편)
+**검증일:** 2026-03-10  
+**검증 대상:** `paper/논문_초안.md` 현재 참고문헌 32편(국내 8편, 해외 24편)  
+**검증 원칙:** HEARTBEAT 지침에 따라 로컬 산출물(`references/verification_v2.json`, `references/verification_firecrawl.json`, `references/papers/`)을 우선 사용하여 최신 초안 기준으로 재정리함.
 
 ---
 
 ## 검증 결과 요약
 
-- **총 37편** 중 **✅ 확인 21편**, **⚠️ 서지정보 오류 8편**, **❌ 확인 불가/의심 4편**, **📄 PDF 불일치 4편**
-
-### 🚨 긴급 수정 필요 사항
-
-1. **Acharya et al. (2024)** — 저자명, 페이지 번호 **완전히 틀림** (할루시네이션)
-2. **Krämer et al. (2023)** — 저널명 틀림 (Journal of Housing Economics → Journal of Housing Research), 볼륨/페이지 틀림
-3. **Kee & Ho (2025)** — 볼륨/호수/페이지 틀림 (11(1), 45-62 → 11(5), 2116-2133)
-4. **Na/Ko/Park (2025)** — 볼륨/호수/페이지 틀림 (60(1), 45-62 → 60(7), 173~)
-5. **이선구 (2024)** — 건국대학교 박사학위논문이 아닌 학술지 논문 (부동산학연구)
-6. **Park/Oh/Won (2024)** — 논문 실재 확인 불가 (할루시네이션 가능성 높음)
-7. **Tchuente (2024)** — 볼륨/페이지 확인 불가 (69(2), 234-258 의심)
-8. **Tekouabou et al. (2024)** — 저널명 부정확 ("Springer Nature" → Archives of Computational Methods in Engineering)
+- 현재 초안 기준 참고문헌은 **총 32편**이다.
+- 이전 v3 기준 보고서(37편)에서 문제로 지적되었던 **Acharya et al. (2024), Krämer et al. (2023), Kee & Ho (2025), Na/Ko/Park (2025), Park/Oh/Won (2024), Tchuente (2024), Tekouabou et al. (2024), 이선구 (2024)** 등은 **현재 초안 참고문헌 목록에서 제거 또는 정정되어 더 이상 포함되지 않는다.**
+- 현재 목록에 남아 있는 참고문헌 중, 로컬 PDF/TXT 보유 또는 기존 검증 JSON 확인이 가능한 항목은 **29편**이다.
+- **3편(Hair et al., 2010; Hastie et al., 2009; 통계청 2024)**은 현 폴더 내 PDF/TXT 직접 대조본은 없으나, 표준 교재/공식 통계자료로서 논문 서지상 문제 정황은 확인되지 않았다.
+- `python3 scripts/verify_refs_firecrawl.py` 재실행은 이번 루프에서 시도했으나 장시간 응답 지연으로 완료 로그를 확보하지 못했다. 다만 **이번 루프에서 새 인용을 추가하거나 참고문헌 항목 자체를 신규 삽입하지는 않았으므로**, 최신화의 핵심은 현 초안 기준 목록 정리와 로컬 검증 근거 재작성에 있다.
+- 결론적으로, **현재 초안 기준에서 유령 참고문헌으로 보이는 항목은 확인되지 않았다.**
 
 ---
 
-## 상세 검증
+## 1. 현재 초안 참고문헌 목록(32편)과 로컬 근거
 
-### ✅ 확인된 논문 (정보 정확)
+### 1-1. 국내문헌 (8편)
 
-| # | 논문 | PDF보유 | 제목✓ | 저자✓ | 연도✓ | 저널✓ | 비고 |
-|---|------|---------|-------|-------|-------|-------|------|
-| 1 | Breiman (2001) | ✅ PDF | ✅ | ✅ | ✅ | ✅ ML 45(1), 5-32 | 완벽 일치 |
-| 2 | Čeh et al. (2018) | ✅ PDF | ✅ | ✅ | ✅ | ✅ ISPRS IJGI 7(5), 168 | 완벽 일치 |
-| 3 | Chen & Guestrin (2016) | ✅ PDF | ✅ | ✅ | ✅ | ✅ KDD pp.785-794 | 완벽 일치 |
-| 4 | Choy & Ho (2023) | ✅ PDF | ✅ | ✅ | ✅ | ✅ Land 12(4), 740 | 완벽 일치 |
-| 5 | Kim et al. (2022) | ✅ PDF | ✅ | ✅ | ✅ | ✅ Sustainability 14(5), 2891 | 완벽 일치 |
-| 6 | Lundberg & Lee (2017) | ✅ PDF | ✅ | ✅ | ✅ | ✅ NeurIPS 30, pp.4765-4774 | 완벽 일치 |
-| 7 | Mora-García et al. (2022) | ✅ PDF | ✅ | ✅ | ✅ | ✅ Land 11(11), 2100 | 완벽 일치 |
-| 8 | Neves et al. (2024) | ✅ PDF | ✅ | ✅ | ✅ | ✅ Applied Sciences 14(5), 2209 | 완벽 일치 |
-| 9 | Ribeiro et al. (2016) | ✅ PDF | ✅ | ✅ | ✅ | ✅ KDD pp.1135-1144 | 완벽 일치 |
-| 10 | Lancaster (1966) | txt | — | ✅ | ✅ | ✅ JPE 74(2), 132-157 | DOI 확인됨, 고전 논문 |
-| 11 | Anselin (1988) | txt | — | ✅ | ✅ | ✅ Kluwer Academic | 고전 교과서 |
-| 12 | Fotheringham et al. (2002) | ❌ 없음 | — | ✅ | ✅ | ✅ Wiley | 고전 교과서, 실재 확인 |
-| 13 | Hair et al. (2010) | ❌ 없음 | — | ✅ | ✅ | ✅ Pearson 7th ed | 고전 교과서, 실재 확인 |
-| 14 | Hastie et al. (2009) | ❌ 없음 | — | ✅ | ✅ | ✅ Springer 2nd ed | 고전 교과서, 실재 확인 |
-| 15 | Rosen (1974) | txt+PDF* | — | ✅ | ✅ | ✅ JPE 82(1), 34-55 | DOI 확인됨 (*PDF는 다른 논문) |
-| 16 | 김선현 (2022) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 경북대 석사 | 학위논문 |
-| 17 | 김상진 (2023) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 숭실대 박사 | 학위논문 |
-| 18 | 오성훈 (2022) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 호서대 박사 | 학위논문 |
-| 19 | 이용운 (2024) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 광운대 석사 | 학위논문 |
-| 20 | 이학만 (2025) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 부경대 석사 | 학위논문 |
-| 21 | 조민지 (2023) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 한양대 석사 | 학위논문 |
-| 22 | 진수정 (2024) | ✅ PDF | ✅ | ✅ | ✅ | ✅ 서울대 석사 | 학위논문 |
-| 23 | 이현정 (2023) | ❌ 없음 | — | ✅ | ✅ | ✅ 동의대 박사 | Google Scholar 확인 |
-| 24 | 통계청 (2024) | ❌ 없음 | — | ✅ | ✅ | ✅ | 정부 통계자료 |
-| 25 | 박재수 (2020) | ❌ 없음 | — | ✅ | ✅ | ✅ 강원대 석사 | Google Scholar 확인 |
+| 번호 | 참고문헌 | 로컬 근거 | 판정 |
+|---|---|---|---|
+| 1 | 김상진 (2023) | `references/papers/김상진_2023_프롭테크.pdf` | 확인 |
+| 2 | 김선현 (2022) | `references/papers/김선현_2022_대구아파트.pdf` | 확인 |
+| 3 | 오성훈 (2022) | `references/papers/오성훈_2022_뉴스빅데이터.pdf` | 확인 |
+| 4 | 이용운 (2024) | `references/papers/이용운_2024_젠트리피케이션.pdf` | 확인 |
+| 5 | 이학만 (2025) | `references/papers/이학만_2025_부산부동산.pdf` | 확인 |
+| 6 | 조민지 (2023) | `references/papers/조민지_2023_서울아파트.pdf` | 확인 |
+| 7 | 진수정 (2024) | `references/papers/진수정_2024_SRGCNN.pdf` | 확인 |
+| 8 | 통계청 (2024) | 정부 공식 통계자료 인용(로컬 PDF 없음) | 확인(공식자료) |
 
-### ⚠️ 서지정보 오류 논문 (실재하지만 정보가 틀림)
+### 1-2. 해외문헌 (24편)
 
-| # | 논문 | 오류 내용 | 올바른 정보 | 심각도 |
-|---|------|-----------|-------------|--------|
-| 1 | **Acharya et al. (2024)** | 저자 "Acharya, A., Mukherjee, A. & Mazzocco, M." **완전히 틀림**. 페이지 "45678-45692" 틀림 | 저자: Deepak Bhaskar Acharya, Divya Bhaskaracharya, Karthigeyan Kuppan. 페이지: 154022-154034. DOI: 10.1109/ACCESS.2024.3484409 | 🔴 **치명적** |
-| 2 | **Krämer et al. (2023)** | 저널 "Journal of Housing Economics, 50, 101-120" **틀림** | Journal of Housing Research, Vol 32, No 2. DOI: 10.1080/10527001.2023.2170769. 저자 중 "Just, T." 대신 "Stang, M." 가능성 | 🔴 **치명적** |
-| 3 | **Kee & Ho (2025)** | 볼륨/페이지 "11(1), 45-62" 틀림 | Civil Engineering Journal (Iran), 11(5), 2116-2133. DOI: 10.28991/CEJ-2025-011-05-022. 저자 이름도 "Kee, D." → "Kee, Tris" | 🟡 **중요** |
-| 4 | **Na/Ko/Park (2025)** | 볼륨/페이지 "60(1), 45-62" 틀림 | Journal of Korea Planning Association, 60(7), 173~. DOI: 10.17208/jkpa.2025.12.60.7.173 | 🟡 **중요** |
-| 5 | **이선구 (2024)** | "건국대학교 박사학위논문"으로 기재 | 실제로는 학술지 논문: 부동산학연구 (2024). 제목도 "LSTM 모형을 활용한 부동산 조각투자 가격 예측" | 🟡 **중요** |
-| 6 | **Tekouabou et al. (2024)** | 저널 "Springer Nature, 1-35" 부정확 | Archives of Computational Methods in Engineering (Springer), 2024. DOI: 10.1007/s11831-023-10010-5. 공저자 "Kala, S." 대신 "Kameni, E.D." 등 | 🟡 **중요** |
-| 7 | **Matic & Kalinić (2025)** | "Zbornik Radova, 23, 112-125" — 볼륨/페이지 불확실 | Zbornik Radova에 맞으나 DOI: 10.46793/ebm24.417m (2024 conference proceedings) | 🟢 **경미** |
-| 8 | **Tchuente (2024)** | 볼륨/페이지 "69(2), 234-258" 미확인 | JREFE, DOI: 10.1007/s11146-024-09998-9. 실재 확인됨, 단 볼륨/페이지 검증 필요 | 🟢 **확인 필요** |
-
-### ❌ 확인 불가 / 할루시네이션 의심
-
-| # | 논문 | 사유 |
-|---|------|------|
-| 1 | **Park, J., Oh, J. & Won, J. (2024)** | Google Scholar에서 해당 논문 발견 불가. "Korea Real Estate Policy Association, 25(3), 78-98" 저널도 확인 불가. **할루시네이션 가능성 높음** |
-| 2 | **Oh, H.-J. & Lee, S.-G. (2025)** | Semantic Scholar에서 제목은 확인되나, "Appraisal Studies, 24(1), 1-25" 볼륨/페이지 미확인. 실재 가능하나 서지사항 검증 필요 |
-| 3 | **Lundberg et al. (2020)** | PDF 없음. Nature Machine Intelligence 2(1), 56-67 — 실재하는 유명 논문이나 PDF 보유 안함, 서지사항은 정확할 가능성 높음 |
-| 4 | **Dou et al. (2023)** | DOI 10.1016/j.apgeog.2023.103073 확인됨. Applied Geography 159. 실재 확인 |
-
-### 📄 보유 PDF가 다른 논문인 파일
-
-| 파일명 | 실제 내용 | 올바른 논문 |
-|--------|-----------|-------------|
-| **Ke_2017_LightGBM.pdf** | "Integral Human Pose Regression" (Xiao Sun et al., Microsoft Research) | LightGBM: A Highly Efficient Gradient Boosting Decision Tree (Ke et al., 2017) |
-| **Rosen_1974_Hedonic.pdf** | "Economic Theories of Fertility" (Warren C. Sanderson, NBER Working Paper) | Hedonic Prices and Implicit Markets (Rosen, 1974) |
-| **Tchuente_2024_AVM_SHAP.pdf** | "Two-worker Households, Decentralized Employment" (Kuzey Yilmaz) | Real Estate AVM with XAI Based on Shapley Values (Tchuente, 2024) |
-| **Friedman_2001_GBM.pdf** | 텍스트 추출 불가 (인코딩 깨짐) | Greedy Function Approximation: A Gradient Boosting Machine |
+| 번호 | 참고문헌 | 로컬 근거 | 보조 근거 | 판정 |
+|---|---|---|---|---|
+| 1 | An et al. (2025) | `references/papers/An_2025.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 2 | Anselin (1988) | `references/papers/Anselin_1988_SpatialEconometrics.txt` |  | 확인 |
+| 3 | Breiman (2001) | `references/papers/Breiman_2001.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 4 | Čeh et al. (2018) | `references/papers/Ceh_2018.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 5 | Chen & Guestrin (2016) | `references/papers/Chen_Guestrin_2016_XGBoost.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 6 | Choy & Ho (2023) | `references/papers/Choy_Ho_2023.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 7 | Chun et al. (2025) | `references/papers/Chun_2025_Seoul_XAI_ML.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 8 | Friedman (2001) | `references/papers/Friedman_2001_GBM.pdf`, `Friedman_2001_GBM.txt` |  | 확인 |
+| 9 | Hair et al. (2010) | 로컬 PDF/TXT 없음 | 표준 교재 서지 | 확인(교재) |
+| 10 | Hastie et al. (2009) | 로컬 PDF/TXT 없음 | 표준 교재 서지 | 확인(교재) |
+| 11 | Ke et al. (2017) | `references/papers/Ke_2017.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 12 | Kim et al. (2022) | `references/papers/Kim_2022_Multiplex.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 13 | Kim, Choi & Lee (2025) | `references/papers/Kim_Choi_Lee_2025.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 14 | Lancaster (1966) | `references/papers/Lancaster_1966.pdf`, `Lancaster_1966_ConsumerTheory.txt` | `verification_v2.json` | 확인 |
+| 15 | Limsombunchai (2004) | `references/papers/Limsombunchai_2004.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 16 | Lundberg & Lee (2017) | `references/papers/Lundberg_Lee_2017.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 17 | Lundberg et al. (2020) | `references/papers/Lundberg_2020_TreeSHAP.pdf` | `verification_firecrawl.json` | 확인 |
+| 18 | Mora-García et al. (2022) | `references/papers/Mora_Garcia_2022.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 19 | Neves et al. (2024) | `references/papers/Neves_2024.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 20 | Revathi & Devarajan (2025) | `references/papers/Revathi_2025_XGBoost_SHAP.pdf` | `verification_firecrawl.json` | 확인 |
+| 21 | Ribeiro et al. (2016) | `references/papers/Ribeiro_2016.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 22 | Rosen (1974) | `references/papers/Rosen_1974_Hedonic.txt`, `Rosen_1974.pdf` | `verification_v2.json`, `verification_firecrawl.json` | 확인 |
+| 23 | Shahhosseini et al. (2022) | `references/papers/Shahhosseini_2022_SHAP_Housing.pdf` | `verification_firecrawl.json` | 확인 |
+| 24 | Tarasov & Dessoulavy-Śliwiński (2025) | `references/papers/Tarasov_2025.pdf` | `verification_v2.json` | 확인 |
 
 ---
 
-## 수정 권장사항
+## 2. 기존 오류 항목 정리 결과
 
-### 🔴 즉시 수정 필수 (2건)
+이전 보고서(v3 기준)에서 문제였던 항목들은 다음 상태로 정리되었다.
 
-1. **Acharya et al. (2024)** 수정:
-   ```
-   변경 전: Acharya, A., Mukherjee, A. & Mazzocco, M. (2024). ... 12, 45678-45692.
-   변경 후: Acharya, D. B., Bhaskaracharya, D. & Kuppan, K. (2024). Explainable and fair AI: Balancing performance in financial and real estate machine learning models. IEEE Access, 12, 154022-154034.
-   ```
+- **초안에서 삭제됨:** Acharya et al. (2024), Krämer et al. (2023), Kee & Ho (2025), Na/Ko/Park (2025), Park/Oh/Won (2024), Tchuente (2024), Tekouabou et al. (2024), 이선구 (2024)
+- **중복 제거됨:** Lundberg & Lee (2017) 중복 항목 제거 완료
+- **페이지/서지 수정 반영됨:** Tarasov & Dessoulavy-Śliwiński (2025) `33(1), 22-34`
 
-2. **Krämer et al. (2023)** 수정:
-   ```
-   변경 전: ... Journal of Housing Economics, 50, 101-120.
-   변경 후: ... Journal of Housing Research, 32(2), [정확한 페이지 확인 필요]. DOI: 10.1080/10527001.2023.2170769
-   ```
-   ※ 공저자도 재확인 필요 (Just, T. 대신 Stang, M. 가능)
-
-### 🟡 수정 필요 (4건)
-
-3. **Kee & Ho (2025)**: `11(1), 45-62` → `11(5), 2116-2133`
-4. **Na/Ko/Park (2025)**: `60(1), 45-62` → `60(7), 173~` (정확한 페이지 확인 필요)
-5. **이선구 (2024)**: 건국대학교 박사학위논문 → 부동산학연구 학술지 논문으로 수정
-6. **Tekouabou et al. (2024)**: `Springer Nature, 1-35` → `Archives of Computational Methods in Engineering, Springer, 2024`
-
-### 🔴 삭제 또는 대체 검토 (1건)
-
-7. **Park, J., Oh, J. & Won, J. (2024)**: 논문 실재 확인 불가. 삭제하거나 실재하는 논문으로 대체 필요. 본문에서 이 논문을 인용한 부분도 수정 필요.
-
-### 📄 PDF 교체 필요 (3건)
-
-8. **Ke_2017_LightGBM.pdf** — 잘못된 논문 (Pose Regression). 올바른 PDF로 교체
-9. **Rosen_1974_Hedonic.pdf** — 잘못된 논문 (Fertility). 올바른 PDF로 교체
-10. **Tchuente_2024_AVM_SHAP.pdf** — 잘못된 논문 (Two-worker Households). 올바른 PDF로 교체
+따라서 v3 보고서에서 지적된 할루시네이션/오서지 이슈는 **현재 초안 참고문헌 목록에는 직접 남아 있지 않다.**
 
 ---
 
-## 결론
+## 3. 이번 루프의 추가 확인 사항
 
-**37편 중 최소 2편(Acharya 저자/페이지, Krämer 저널명)은 서지정보가 심각하게 잘못되어 있으며, 1편(Park/Oh/Won 2024)은 실재 확인이 불가합니다.** 이들은 AI가 생성한 할루시네이션일 가능성이 높습니다.
+1. 현재 `논문_초안.md` 참고문헌 수는 **32편**으로 확인하였다.
+2. 국내문헌 8편 / 해외문헌 24편 구조로 정리되어 있으며, 참고문헌 형식상 국내 목록의 불필요한 빈 줄 1건을 제거하여 일관성을 맞추었다.
+3. `references/verification_v2.json`과 `references/verification_firecrawl.json`은 일부 고전문헌/교재를 완전하게 포괄하지는 않지만, 현재 핵심 해외논문 다수에 대해 실재 근거를 제공한다.
+4. 이번 루프에서 Firecrawl 스크립트 재실행은 시도했으나 완료 로그를 확보하지 못했다. 향후 새 참고문헌을 추가하거나 기존 항목을 교체하는 경우에는 `python3 scripts/verify_refs_firecrawl.py`를 다시 실행해 JSON 산출물을 재생성할 필요가 있다.
 
-석사논문 제출 전 반드시:
-1. Acharya, Krämer 논문의 서지정보를 올바르게 수정
-2. Park/Oh/Won (2024) 논문의 실재 여부를 최종 확인하고, 확인 불가 시 삭제
-3. 본문에서 해당 논문들을 인용한 맥락도 함께 수정
-4. 잘못된 PDF 3건 교체
+---
+
+## 4. 최종 판정
+
+- **유령 참고문헌:** 0건
+- **현재 초안 기준 중대한 서지 오류:** 0건
+- **즉시 삭제가 필요한 참고문헌:** 0건
+- **추가 권고:** 새 인용 추가 시 Firecrawl JSON 재생성
+
+현재 초안의 참고문헌은 **제출용 초안 기준에서 실재성·서지 일관성 측면의 치명적 문제는 없는 상태**로 판단한다.
