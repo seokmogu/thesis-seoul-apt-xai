@@ -150,6 +150,12 @@ def main():
         print(f"{name:<12} {rr['R2']:>10.4f} {tr['R2']:>10.4f} {diff:>+8.4f} {rr['RMSE']:>12,.0f} {tr['RMSE']:>12,.0f} {rr['MAPE']:>11.2f}% {tr['MAPE']:>11.2f}%")
     
     # Save
+    random_results = {
+        'OLS': results['OLS_random'],
+        'RF': results['RF_random'],
+        'XGB': results['XGB_random'],
+    }
+
     output = {
         'temporal_split': {
             'train_period': '2019.01-2023.12',
@@ -157,7 +163,11 @@ def main():
             'train_count': len(train_df),
             'test_count': len(test_df),
         },
-        'results': results,
+        'results': {
+            'OLS_temporal': results['OLS_temporal'],
+            'RF_temporal': results['RF_temporal'],
+            'XGB_temporal': results['XGB_temporal'],
+        },
         'random_split_reference': random_results
     }
     

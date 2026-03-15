@@ -1,14 +1,16 @@
-"""v5 행정동 데이터로 OLS 회귀계수 테이블 생성"""
+"""v6 행정동 데이터 기준 OLS 회귀계수 테이블 생성.
+레거시 파일명(ols_detailed_v5_dong.csv)은 기존 문서/스크립트 호환을 위해 유지한다.
+"""
 import pandas as pd
-import numpy as np
 import statsmodels.api as sm
 import os
 
-DATA = os.path.join(os.path.dirname(__file__), '..', 'data', 'apartment_final_v5_dong.csv')
+DATA = os.path.join(os.path.dirname(__file__), '..', 'data', 'apartment_final_v6_dong.csv')
 df = pd.read_csv(DATA)
 
 features = ['전용면적', '층', '건물연령', '강남구분', '초등학교수', '중학교수', '고등학교수',
-            'CCTV수', '백화점수', '지하철역수', '기준금리', 'CD금리', '소비자물가지수', 'M2']
+            'CCTV수', '백화점수', '지하철역수', '공원수', '도서관수', '학원수', '어린이집수',
+            '기준금리', 'CD금리', '소비자물가지수', 'M2']
 target = '거래금액'
 
 X = df[features].copy()
