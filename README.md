@@ -117,3 +117,5 @@ python modeling.py      # OLS → RF → XGBoost → SHAP
 ## ⚖️ License
 
 This project is for academic purposes (Master's thesis at Hanyang University).
+
+<!-- build-date: 2026-03-20 -->
