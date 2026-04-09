@@ -88,7 +88,7 @@ def main():
     params = {
         'objective': 'reg:squarederror',
         'max_depth': 8,
-        'learning_rate': 0.05,
+        'learning_rate': 0.1,
         'subsample': 0.8,
         'colsample_bytree': 0.8,
         'min_child_weight': 5,

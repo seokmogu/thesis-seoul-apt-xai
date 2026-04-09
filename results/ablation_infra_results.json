@@ -1,0 +1,129 @@
+{
+  "dropped": [
+    "학원수",
+    "어린이집수"
+  ],
+  "full": {
+    "OLS": {
+      "R2": 0.6079,
+      "RMSE": 49424.0,
+      "MAPE": 40.14
+    },
+    "RF": {
+      "R2": 0.9487,
+      "RMSE": 17877.0,
+      "MAPE": 11.66
+    },
+    "XGB": {
+      "R2": 0.9692,
+      "RMSE": 13845.0,
+      "MAPE": 7.7
+    },
+    "SHAP_top10": [
+      {
+        "feature": "전용면적",
+        "mean_abs_shap": 25294.71
+      },
+      {
+        "feature": "강남구분",
+        "mean_abs_shap": 19020.58
+      },
+      {
+        "feature": "건물연령",
+        "mean_abs_shap": 12903.36
+      },
+      {
+        "feature": "M2",
+        "mean_abs_shap": 9730.98
+      },
+      {
+        "feature": "백화점수",
+        "mean_abs_shap": 8007.7
+      },
+      {
+        "feature": "소비자물가지수",
+        "mean_abs_shap": 7411.13
+      },
+      {
+        "feature": "어린이집수",
+        "mean_abs_shap": 6061.32
+      },
+      {
+        "feature": "학원수",
+        "mean_abs_shap": 5848.7
+      },
+      {
+        "feature": "CCTV수",
+        "mean_abs_shap": 4454.77
+      },
+      {
+        "feature": "층",
+        "mean_abs_shap": 3001.04
+      }
+    ]
+  },
+  "ablation": {
+    "OLS": {
+      "R2": 0.5874,
+      "RMSE": 50701.0,
+      "MAPE": 40.04
+    },
+    "RF": {
+      "R2": 0.943,
+      "RMSE": 18842.0,
+      "MAPE": 12.38
+    },
+    "XGB": {
+      "R2": 0.9689,
+      "RMSE": 13913.0,
+      "MAPE": 7.85
+    },
+    "SHAP_top10": [
+      {
+        "feature": "전용면적",
+        "mean_abs_shap": 24729.26
+      },
+      {
+        "feature": "강남구분",
+        "mean_abs_shap": 18320.33
+      },
+      {
+        "feature": "건물연령",
+        "mean_abs_shap": 13203.95
+      },
+      {
+        "feature": "백화점수",
+        "mean_abs_shap": 12801.17
+      },
+      {
+        "feature": "M2",
+        "mean_abs_shap": 9370.29
+      },
+      {
+        "feature": "소비자물가지수",
+        "mean_abs_shap": 8045.94
+      },
+      {
+        "feature": "CCTV수",
+        "mean_abs_shap": 5757.32
+      },
+      {
+        "feature": "초등학교수",
+        "mean_abs_shap": 5328.76
+      },
+      {
+        "feature": "층",
+        "mean_abs_shap": 3040.5
+      },
+      {
+        "feature": "지하철역수",
+        "mean_abs_shap": 2892.53
+      }
+    ]
+  },
+  "delta_R2": {
+    "OLS": -0.0205,
+    "RF": -0.0057,
+    "XGB": -0.0003
+  }
+}
