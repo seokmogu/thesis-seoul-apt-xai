@@ -9,9 +9,14 @@
 본문: 10~11pt 바탕체, 줄간격 160~200%
 큰제목(장): 16pt 진하게 / 중간제목(절): 13pt 진하게
 """
-import os, re
+import os, re, io
+import latex2mathml.converter as _l2m
+import mathml2omml as _m2o
 from docx import Document
-from docx.shared import Pt, Cm, Mm, RGBColor
+
+OMML_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/math'
+
+from docx.shared import Pt, Cm, Mm, RGBColor, Emu
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
 from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.section import WD_ORIENT
@@ -93,6 +98,58 @@ def create_doc():
     return doc
 
 
+def latex_to_omml(latex, block=False):
+    """LaTeX -> MathML -> OMML XML element (with m: namespace). block=True wraps in oMathPara."""
+    mml = _l2m.convert(latex)
+    omml_str = _m2o.convert(mml)  # starts with <m:oMath>...</m:oMath>
+    # Bug workaround: mathml2omml 0.0.2 emits malformed closing tag for groupChrPr.
+    omml_str = re.sub(
+        r'(<m:groupChrPr>[^<]*<m:chr[^/]*/>[^<]*<m:pos[^/]*/>)\s*</m:groupChr>',
+        r'\1</m:groupChrPr>',
+        omml_str,
+    )
+    # Inject namespace on root element so parse_xml can resolve m: prefix.
+    omml_ns = omml_str.replace('<m:oMath>', f'<m:oMath xmlns:m="{OMML_NS}">', 1)
+    if block:
+        omml_ns = (
+            f'<m:oMathPara xmlns:m="{OMML_NS}">'
+            f'{omml_ns}'
+            f'</m:oMathPara>'
+        )
+    return parse_xml(omml_ns)
+
+
+def add_block_math(doc, latex):
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.first_line_indent = Cm(0)
+    p.paragraph_format.space_before = Pt(6)
+    p.paragraph_format.space_after = Pt(6)
+    try:
+        elem = latex_to_omml(latex, block=True)
+        p._p.append(elem)
+    except Exception as e:
+        r = p.add_run(latex)
+        r.font.size = Pt(10)
+        r.font.name = 'Cambria Math'
+        r.italic = True
+        print(f'  [math fallback-block] {latex[:60]} -> {e}')
+    return p
+
+
+def add_inline_math_run(paragraph, latex):
+    try:
+        elem = latex_to_omml(latex, block=False)
+        paragraph._p.append(elem)
+        return None
+    except Exception as e:
+        r = paragraph.add_run(latex)
+        r.font.name = 'Cambria Math'
+        r.italic = True
+        print(f'  [math fallback-inline] {latex[:60]} -> {e}')
+        return r
+
+
 def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -120,7 +177,7 @@ def add_cover(doc):
     centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
     for _ in range(5):
         doc.add_paragraph('')
-    centered_text(doc, '[성 명]', 16, True)
+    centered_text(doc, '박  현  근', 16, True)
     for _ in range(2):
         doc.add_paragraph('')
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
@@ -143,7 +200,7 @@ def add_submission(doc):
     centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
     for _ in range(2):
         doc.add_paragraph('')
-    centered_text(doc, '지도교수  [지도교수명]', 14, True)
+    centered_text(doc, '지도교수  ____________', 14, True)
     for _ in range(2):
         doc.add_paragraph('')
     centered_text(doc, '이 논문을 공학 석사학위논문으로 제출합니다.', 12)
@@ -153,9 +210,9 @@ def add_submission(doc):
     doc.add_paragraph('')
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
     doc.add_paragraph('')
-    centered_text(doc, '도시·부동산빅데이터 전공', 13)
+    centered_text(doc, '빅 데 이 터  전 공', 13)
     doc.add_paragraph('')
-    centered_text(doc, '[성 명]', 16, True)
+    centered_text(doc, '박  현  근', 16, True)
     doc.add_page_break()
 
 
@@ -163,7 +220,7 @@ def add_approval(doc):
     """양식3: 인준서"""
     for _ in range(3):
         doc.add_paragraph('')
-    centered_text(doc, '이 논문을 [성명]의', 14)
+    centered_text(doc, '이 논문을 박현근의', 14)
     centered_text(doc, '석사학위 논문으로 인준함.', 14)
     for _ in range(2):
         doc.add_paragraph('')
@@ -207,6 +264,12 @@ def add_heading(doc, text, level=1):
         p.paragraph_format.space_after = Pt(8)
         r = p.add_run(text)
         set_font(r, 11, True)
+    elif level == 4:
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.space_before = Pt(10)
+        p.paragraph_format.space_after = Pt(6)
+        r = p.add_run(text)
+        set_font(r, 12, True)
     return p
 
 
@@ -214,14 +277,19 @@ def add_body(doc, text):
     if not text.strip():
         return
     p = doc.add_paragraph()
-    parts = re.split(r'(\*\*[^*]+\*\*)', text)
-    for part in parts:
-        if part.startswith('**') and part.endswith('**'):
-            r = p.add_run(part[2:-2])
-            set_font(r, 11, True)
-        else:
-            r = p.add_run(part)
-            set_font(r, 11)
+    # split by bold first
+    bold_parts = re.split(r'(\*\*[^*]+\*\*)', text)
+    for bp in bold_parts:
+        is_bold = bp.startswith('**') and bp.endswith('**')
+        segment = bp[2:-2] if is_bold else bp
+        # split by inline math $...$
+        math_parts = re.split(r'(\$[^$\n]+\$)', segment)
+        for mp in math_parts:
+            if mp.startswith('$') and mp.endswith('$') and len(mp) > 2:
+                add_inline_math_run(p, mp[1:-1])
+            elif mp:
+                r = p.add_run(mp)
+                set_font(r, 11, is_bold)
     return p
 
 
@@ -303,20 +371,20 @@ def convert_md(doc, md_path):
     while i < len(lines):
         line = lines[i].rstrip()
         
-        # 수식 블록
+        # 블록 수식 (한 줄 $$...$$)
+        m_one = re.match(r'^\s*\$\$(.+)\$\$\s*$', line)
+        if m_one:
+            add_block_math(doc, m_one.group(1).strip())
+            i += 1
+            continue
+        # 블록 수식 (다중 라인 $$ ... $$)
         if line.strip() == '$$':
             parts = []
             i += 1
             while i < len(lines) and lines[i].strip() != '$$':
                 parts.append(lines[i].strip())
                 i += 1
-            p = doc.add_paragraph()
-            p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-            p.paragraph_format.first_line_indent = Cm(0)
-            r = p.add_run(' '.join(parts))
-            r.font.size = Pt(10)
-            r.font.name = 'Cambria Math'
-            r.italic = True
+            add_block_math(doc, ' '.join(parts))
             i += 1
             continue
         
@@ -367,6 +435,10 @@ def convert_md(doc, md_path):
             continue
         if line.startswith('## '):
             add_heading(doc, line[3:].strip(), 2)
+            i += 1
+            continue
+        if line.startswith('#### '):
+            add_heading(doc, line[5:].strip(), 4)
             i += 1
             continue
         if line.startswith('### '):
