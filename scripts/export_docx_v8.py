@@ -49,16 +49,16 @@ def set_shading(cell, color):
 
 
 def add_page_number(section, start_num=None, fmt='decimal'):
-    """페이지 번호 추가 (하단 중앙, "- N -" 형식)"""
+    """페이지 번호 추가 (하단 중앙, "- N -" 형식). fmt='decimal'|'lowerRoman'."""
     footer = section.footer
     footer.is_linked_to_previous = False
     p = footer.paragraphs[0] if footer.paragraphs else footer.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
-    
+
     r1 = p.add_run('- ')
     set_font(r1, 10)
-    
+
     # 페이지 번호 필드
     fld_xml = (
         f'<w:fldSimple {nsdecls("w")} w:instr=" PAGE \\* {fmt} ">'
@@ -66,9 +66,25 @@ def add_page_number(section, start_num=None, fmt='decimal'):
         f'</w:fldSimple>'
     )
     p._element.append(parse_xml(fld_xml))
-    
+
     r2 = p.add_run(' -')
     set_font(r2, 10)
+
+    # 시작 번호 지정 (front matter는 i부터, body는 1부터 재시작)
+    if start_num is not None:
+        sectPr = section._sectPr
+        existing = sectPr.find(qn('w:pgNumType'))
+        if existing is not None:
+            sectPr.remove(existing)
+        new_el = parse_xml(
+            f'<w:pgNumType {nsdecls("w")} w:start="{start_num}" w:fmt="{fmt}"/>'
+        )
+        # Schema order: ... pgMar, paperSrc, pgBorders, lnNumType, pgNumType, cols, ...
+        cols = sectPr.find(qn('w:cols'))
+        if cols is not None:
+            cols.addprevious(new_el)
+        else:
+            sectPr.append(new_el)
 
 
 
@@ -88,8 +104,8 @@ def create_doc():
     section = doc.sections[0]
     section.page_width = Mm(210)
     section.page_height = Mm(297)
-    section.top_margin = Cm(3.8)
-    section.bottom_margin = Cm(3.8)
+    section.top_margin = Cm(4.0)
+    section.bottom_margin = Cm(4.0)
     section.left_margin = Cm(3.5)
     section.right_margin = Cm(3.5)
     section.header_distance = Cm(1.5)
@@ -180,17 +196,20 @@ def add_cover(doc):
     _empty(doc, 4)
     centered_text(doc, '석 사 학 위 논 문', 16, True)
     _empty(doc, 2)
-    centered_text(doc, 'XGBoost와 SHAP을 활용한', 22, True)
-    centered_text(doc, '서울시 아파트 매매가격 결정요인 분석', 22, True)
+    centered_text(doc, 'XGBoost와 SHAP을 활용한', 18, True)
+    centered_text(doc, '서울시 아파트 단위면적당 매매가격의', 18, True)
+    centered_text(doc, '설명 패턴 분석', 18, True)
     _empty(doc)
-    centered_text(doc, 'Analysis of Determinants of Apartment Sale Prices', 14, True)
-    centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
+    centered_text(doc, 'Explanatory Patterns of Apartment Unit-Area', 14, True)
+    centered_text(doc, 'Sale Prices in Seoul Using XGBoost and SHAP', 14, True)
     _empty(doc, 5)
-    centered_text(doc, '박  현  근', 16, True)
-    _empty(doc, 2)
+    centered_text(doc, '2026 년  2 월', 14, True)
+    _empty(doc)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
     _empty(doc)
-    centered_text(doc, '2026 년  2 월', 14, True)
+    centered_text(doc, '도 시 부 동 산 정 책 전 공', 13)
+    _empty(doc)
+    centered_text(doc, '박  현  근', 16, True)
     doc.add_page_break()
 
 
@@ -199,21 +218,22 @@ def add_submission(doc):
     _empty(doc, 4)
     centered_text(doc, '석 사 학 위 논 문', 16, True)
     _empty(doc, 2)
-    centered_text(doc, 'XGBoost와 SHAP을 활용한', 22, True)
-    centered_text(doc, '서울시 아파트 매매가격 결정요인 분석', 22, True)
+    centered_text(doc, 'XGBoost와 SHAP을 활용한', 18, True)
+    centered_text(doc, '서울시 아파트 단위면적당 매매가격의', 18, True)
+    centered_text(doc, '설명 패턴 분석', 18, True)
     _empty(doc)
-    centered_text(doc, 'Analysis of Determinants of Apartment Sale Prices', 14, True)
-    centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
+    centered_text(doc, 'Explanatory Patterns of Apartment Unit-Area', 14, True)
+    centered_text(doc, 'Sale Prices in Seoul Using XGBoost and SHAP', 14, True)
     _empty(doc, 2)
-    centered_text(doc, '지도교수  ____________', 14, True)
+    centered_text(doc, '지도교수  고  준  호', 14, True)
     _empty(doc, 2)
-    centered_text(doc, '이 논문을 공학 석사학위논문으로 제출합니다.', 12)
+    centered_text(doc, '이 논문을 부동산학 석사학위논문으로 제출합니다.', 12)
     _empty(doc, 2)
     centered_text(doc, '2026 년  2 월', 14, True)
     _empty(doc)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
     _empty(doc)
-    centered_text(doc, '빅 데 이 터  전 공', 13)
+    centered_text(doc, '도 시 부 동 산 정 책 전 공', 13)
     _empty(doc)
     centered_text(doc, '박  현  근', 16, True)
     doc.add_page_break()
@@ -400,33 +420,36 @@ def add_image(doc, path, caption=''):
     if not os.path.exists(path):
         add_body(doc, f'[그림 파일 없음: {os.path.basename(path)}]')
         return
-    p = doc.add_paragraph()
-    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    p.paragraph_format.first_line_indent = Cm(0)
-    r = p.add_run()
-    r.add_picture(path, width=Cm(13))
-    
     if caption:
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.first_line_indent = Cm(0)
         r = p.add_run(caption)
         set_font(r, 10, font='휴먼명조')
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    p.paragraph_format.first_line_indent = Cm(0)
+    r = p.add_run()
+    r.add_picture(path, width=Cm(13))
 
 
 def convert_md(doc, md_path):
     with open(md_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    
+
+    # 본문 시작은 표제지/제출서/인준서 다음의 첫 marker(목차 또는 국문초록)부터
     start = 0
     for i, line in enumerate(lines):
-        if line.strip().startswith('# 국문초록') or line.strip().startswith('# 국문 초록'):
+        s = line.strip()
+        if s.startswith('# 목차') or s.startswith('# 국문초록') or s.startswith('# 국문 초록'):
             start = i
             break
-    
+
     i = start
     caption = ''
-    
+    body_section_started = False  # 첫 '제N장' 헤딩을 만나면 새 섹션 시작
+    in_references = False  # 참고문헌 섹션 hanging indent 모드
+
     while i < len(lines):
         line = lines[i].rstrip()
         
@@ -486,9 +509,38 @@ def convert_md(doc, md_path):
         # 제목
         if line.startswith('# '):
             txt = line[2:].strip()
-            # 장 제목은 새 페이지
+            # 참고문헌/Abstract 헤딩에서 모드 전환
+            if txt.startswith('참고문헌'):
+                in_references = True
+            elif txt.startswith('Abstract') or txt.startswith('ABSTRACT'):
+                in_references = False
+            # 장 제목은 새 페이지. 첫 제N장 만남 → body 섹션 시작 (페이지 번호 1부터 아라비아)
             if txt.startswith('제') and '장' in txt:
-                doc.add_page_break()
+                if not body_section_started:
+                    from docx.enum.section import WD_SECTION
+                    new_sec = doc.add_section(WD_SECTION.NEW_PAGE)
+                    new_sec.page_width = Mm(210)
+                    new_sec.page_height = Mm(297)
+                    new_sec.top_margin = Cm(4.0)
+                    new_sec.bottom_margin = Cm(4.0)
+                    new_sec.left_margin = Cm(3.5)
+                    new_sec.right_margin = Cm(3.5)
+                    new_sec.header_distance = Cm(1.5)
+                    new_sec.footer_distance = Cm(1.5)
+                    # Explicit nextPage type so LibreOffice honors pgNumType.start reset
+                    sectPr = new_sec._sectPr
+                    if sectPr.find(qn('w:type')) is None:
+                        type_el = parse_xml(f'<w:type {nsdecls("w")} w:val="nextPage"/>')
+                        # Insert after footerReference / before pgSz
+                        pgSz = sectPr.find(qn('w:pgSz'))
+                        if pgSz is not None:
+                            pgSz.addprevious(type_el)
+                        else:
+                            sectPr.append(type_el)
+                    add_page_number(new_sec, start_num=1, fmt='decimal')
+                    body_section_started = True
+                else:
+                    doc.add_page_break()
             add_heading(doc, txt, 1)
             i += 1
             continue
@@ -533,8 +585,13 @@ def convert_md(doc, md_path):
         if m_dash:
             p = add_body(doc, m_dash.group(1))
             if p is not None:
-                p.style = doc.styles['List Bullet']
-                p.paragraph_format.first_line_indent = Cm(0)
+                if in_references:
+                    # 참고문헌: bullet 제거, hanging indent (1.0cm)
+                    p.paragraph_format.first_line_indent = Cm(-1.0)
+                    p.paragraph_format.left_indent = Cm(1.0)
+                else:
+                    p.style = doc.styles['List Bullet']
+                    p.paragraph_format.first_line_indent = Cm(0)
             i += 1
             continue
         if m_num:
@@ -563,11 +620,11 @@ def main():
     # 3. 인준서
     add_approval(doc)
     
-    # 4. 본문 (목차~참고문헌~Abstract 포함)
+    # 첫 섹션 (표지/제출서/인준서/목차/표목차/그림목차/국문초록): 로마자 i부터
+    add_page_number(doc.sections[0], start_num=1, fmt='lowerRoman')
+
+    # 4. 본문 (목차~참고문헌~Abstract 포함). 제1장 만나면 새 섹션 시작 → 아라비아 1부터
     convert_md(doc, os.path.join(PAPER_DIR, '석사학위논문_박현근.md'))
-    
-    # 페이지 번호 추가 (첫 번째 섹션)
-    add_page_number(doc.sections[0])
     
     out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
     doc.save(out)
