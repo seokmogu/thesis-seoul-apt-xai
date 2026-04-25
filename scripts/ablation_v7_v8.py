@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-v7 vs v8 어블레이션: 변수셋·시점 처리별 비교.
+v7 vs v8 Ablation: 변수셋·시점 처리별 비교.
 
 비교할 피처셋:
   A. 행정동만 (v7 원본): legacy_counts (초/중/고/어린이집/학원/공원/도서관/백화점/CCTV/지하철역수)

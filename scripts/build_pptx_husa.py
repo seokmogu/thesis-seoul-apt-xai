@@ -8,7 +8,7 @@
   03~04 INTRODUCTION (연구 배경 / 연구 질문·기여)
   05~06 LITERATURE REVIEW (선행연구·공백 / 차별성)
   07~11 METHODS (데이터·지오코딩·거리변수·시점정합·모형설계)
-  12~18 RESULTS (어블레이션·성능·SHAP Top·비선형·권역·연도×권역·Top1)
+  12~18 RESULTS (Ablation·성능·SHAP Top·비선형·권역·연도×권역·Top1)
   19~20 CONCLUSION (기여 / 한계·마무리)
 """
 import os
@@ -190,7 +190,7 @@ def main():
         ('01', 'INTRODUCTION', '연구 배경 및 연구 질문'),
         ('02', 'LITERATURE REVIEW', '선행연구 검토와 본 연구의 차별성'),
         ('03', 'METHODS', '데이터·변수 설계·모형 구축'),
-        ('04', 'RESULTS', '어블레이션·SHAP·시공간 이질성'),
+        ('04', 'RESULTS', 'Ablation·SHAP·시공간 이질성'),
         ('05', 'CONCLUSION', '결과 요약·기여·한계'),
     ]
     for i, (no, en, kr) in enumerate(sections):
@@ -274,7 +274,7 @@ def main():
              size=14, bold=True, color=WHITE,
              align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     cs = [
-        ('방법론적 타당성', '행정동 집계·거리 기반·시점 정합·통합 4 시나리오 어블레이션'),
+        ('방법론적 타당성', '행정동 집계·거리 기반·시점 정합·통합 4 시나리오 Ablation'),
         ('예측 성능 개선', '시간순 분할 R² +7.1%p (행정동 집계 대비) · 통합 모형 D 최고'),
         ('시공간 이질성 해석', '권역×연도 21 SHAP — 강남 6회 Top1 교체 vs 비강남 7년 안정'),
     ]
@@ -452,9 +452,9 @@ def main():
         add_text(s, 4.5, y, 5.0, 0.5, fac, size=11, color=DARK, anchor=MSO_ANCHOR.MIDDLE)
         add_text(s, 9.5, y, 3.4, 0.5, walk, size=11, bold=True, color=ACCENT, anchor=MSO_ANCHOR.MIDDLE)
     add_text(s, 0.4, 6.6, 12.5, 0.5,
-             '교수 피드백 직접 답변 → 도서관 12.0분(생활SOC 도보권), 백화점 38.5분(차량권)',
+             '도서관 12.0분(생활SOC 도보권), 백화점 38.5분(차량권 프리미엄)',
              size=12, bold=True, color=ACCENT, align=PP_ALIGN.CENTER)
-    add_notes(s, '거리 변수는 13 시설군에 대해 최근접 거리, 반경 500m·1km·2km 개수, 도보 추정 분 4축으로 산출했습니다. 교수님 피드백인 도서관 도보 km, 백화점 조건에 도보 분으로 직접 답변합니다.')
+    add_notes(s, '거리 변수는 13 시설군에 대해 최근접 거리, 반경 500m·1km·2km 개수, 도보 추정 분 4축으로 산출했습니다. 도서관 도보권은 12.0분, 백화점은 38.5분으로 차량 권역에 해당합니다.')
 
     # ===== 10. METHODS — 시점 정합 =====
     s = prs.slides.add_slide(blank)
@@ -494,7 +494,7 @@ def main():
 
     # ===== 11. METHODS — 모형·분할 설계 =====
     s = prs.slides.add_slide(blank)
-    add_chapter_header(s, 3, 'METHODS', '모형·분할 설계 + 어블레이션 4 시나리오', 11)
+    add_chapter_header(s, 3, 'METHODS', '모형·분할 설계 + Ablation 4 시나리오', 11)
     # 위: 모형·분할
     add_rect(s, 0.4, 1.4, 6.2, 0.5, fill=NAVY)
     add_text(s, 0.4, 1.4, 6.2, 0.5, '예측 모형 (3) × 분할 (3)',
@@ -521,12 +521,12 @@ def main():
         add_text(s, 0.5, y, 1.7, 0.45, sp, size=11, bold=True, color=WHITE,
                  align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         add_text(s, 2.3, y, 4.2, 0.45, d, size=11, color=DARK, anchor=MSO_ANCHOR.MIDDLE)
-    # 우: 어블레이션 4 시나리오
+    # 우: Ablation 4 시나리오
     add_rect(s, 6.9, 1.4, 6.0, 0.5, fill=NAVY)
-    add_text(s, 6.9, 1.4, 6.0, 0.5, '어블레이션 4 시나리오',
+    add_text(s, 6.9, 1.4, 6.0, 0.5, 'Ablation 4 시나리오',
              size=13, bold=True, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     abl = [
-        ('A', '행정동 집계만', '18 변수 (v7 재현)'),
+        ('A', '행정동 집계만', '18 변수 (선행연구 재현)'),
         ('B', '거리 기반 + 시점 무관', '26 변수 (2026 스냅샷)'),
         ('C', '거리 + 시점 정합', '26 변수 (연도별)'),
         ('D', '거리 + 시점 + 행정동', '36 변수 (통합 — 본 연구)'),
@@ -538,11 +538,11 @@ def main():
                  align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         add_text(s, 7.7, y + 0.05, 5.2, 0.45, name, size=13, bold=True, color=NAVY)
         add_text(s, 7.7, y + 0.5, 5.2, 0.45, n, size=11, color=DARK)
-    add_notes(s, '모형은 OLS·Random Forest·XGBoost 3종을 무작위·Group·시간순 3분할에서 비교했고, 어블레이션은 4 시나리오로 공간 정합·시간 정합·결합 효과를 분리했습니다.')
+    add_notes(s, '모형은 OLS·Random Forest·XGBoost 3종을 무작위·Group·시간순 3분할에서 비교했고, Ablation은 4 시나리오로 공간 정합·시간 정합·결합 효과를 분리했습니다.')
 
-    # ===== 12. RESULTS — 어블레이션 (표) =====
+    # ===== 12. RESULTS — Ablation (표) =====
     s = prs.slides.add_slide(blank)
-    add_chapter_header(s, 4, 'RESULTS', '어블레이션 — 거리 전환이 시간순 R² +7.1%p 견인', 12)
+    add_chapter_header(s, 4, 'RESULTS', 'Ablation — 거리 전환이 시간순 R² +7.1%p 견인', 12)
     # 표
     headers = ['시나리오', '무작위', '시간순', '단지 Group', '변수 수']
     rows = [
@@ -584,13 +584,13 @@ def main():
         'D (거리+시점+행정동) : 무작위·시간순·Group 모두 최고 — 보완적 결합',
     ]
     add_bullets(s, 0.6, 5.5, 12.1, 1.1, findings, size=12)
-    add_notes(s, '''[RESULTS 어블레이션]
-어블레이션 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, 시점 정합 단독 효과는 R²로는 작지만 미래 시설 정보 누수를 제거하는 방법론적 가치가 있습니다.
+    add_notes(s, '''[RESULTS Ablation]
+Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, 시점 정합 단독 효과는 R²로는 작지만 미래 시설 정보 누수를 제거하는 방법론적 가치가 있습니다.
 통합 모형 D는 무작위 0.959, 시간순 0.871, 단지 그룹 0.804로 모든 분할에서 최고 성능을 보였습니다.''')
 
-    # ===== 13. RESULTS — 어블레이션 (그림) =====
+    # ===== 13. RESULTS — Ablation (그림) =====
     s = prs.slides.add_slide(blank)
-    add_chapter_header(s, 4, 'RESULTS', '어블레이션 시나리오별 XGB R² 시각화', 13)
+    add_chapter_header(s, 4, 'RESULTS', 'Ablation 시나리오별 XGB R² 시각화', 13)
     add_image(s, os.path.join(FIGS, 'fig10_ablation.png'), 1.5, 1.4, w=10.0)
     add_text(s, 0.4, 6.4, 12.5, 0.5,
              '→ 모든 분할에서 D(통합)가 최고. A→B 거리 전환의 시간순 분할 개선이 가장 큼.',
@@ -762,19 +762,10 @@ def main():
         'LightGBM·CatBoost·TabNet과의 비교',
         '수도권·지방 대도시 외적 타당성 검증',
     ], size=11)
-    # 교수 피드백 답변
-    add_rect(s, 0.4, 5.05, 12.5, 1.4, fill=NAVY)
-    add_text(s, 0.6, 5.15, 12.1, 0.4, '교수 피드백 정량 답변',
-             size=13, bold=True, color=WHITE)
-    add_bullets(s, 0.6, 5.55, 12.1, 0.85, [
-        '도서관 도보 — 중앙값 12.0분 (생활SOC 도보권)',
-        '백화점 조건 — 중앙값 38.5분 (도보권 밖, 차량권 프리미엄)',
-        '시간 변동 — 6 시설군 연도별 활동 스냅샷, 5 시설군은 한계 명시',
-    ], size=11, color=WHITE)
     # 감사
-    add_text(s, 0.4, 6.7, 12.5, 0.4, '감사합니다 · Q & A',
-             size=18, bold=True, color=NAVY, align=PP_ALIGN.CENTER)
-    add_notes(s, '한계와 후속 연구를 정리하고, 교수님 피드백에 대한 정량 답변으로 마무리합니다. 도서관 12분, 백화점 38.5분, 6 시설군 시점 정합. 감사합니다. 질문 받겠습니다.')
+    add_text(s, 0.4, 6.4, 12.5, 0.5, '감사합니다 · Q & A',
+             size=22, bold=True, color=NAVY, align=PP_ALIGN.CENTER)
+    add_notes(s, '한계와 후속 연구 방향을 정리하며 마무리합니다. 감사합니다. 질문 받겠습니다.')
 
     prs.save(OUT)
     sz = os.path.getsize(OUT) // 1024

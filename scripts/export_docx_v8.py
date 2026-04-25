@@ -48,8 +48,13 @@ def set_shading(cell, color):
     cell._tc.get_or_add_tcPr().append(shading)
 
 
-def add_page_number(section, start_num=None, fmt='decimal'):
-    """페이지 번호 추가 (하단 중앙, "- N -" 형식). fmt='decimal'|'lowerRoman'."""
+def add_page_number(section, start_num=None, fmt='decimal', placeholder_fmt=None):
+    """페이지 번호 추가 (하단 중앙, "- N -" 형식). fmt='decimal'|'lowerRoman'.
+
+    placeholder_fmt: LibreOffice 호환을 위해 sectPr에 pgNumType을 2개 두는데,
+    placeholder는 reset되지 않은 fmt이고 그 다음 element가 reset.
+    fmt와 placeholder_fmt가 다를 때만 LibreOffice가 reset 인식. None이면 fmt 사용.
+    """
     footer = section.footer
     footer.is_linked_to_previous = False
     p = footer.paragraphs[0] if footer.paragraphs else footer.add_paragraph()
@@ -71,19 +76,26 @@ def add_page_number(section, start_num=None, fmt='decimal'):
     set_font(r2, 10)
 
     # 시작 번호 지정 (front matter는 i부터, body는 1부터 재시작)
+    # NOTE: LibreOffice/Word는 두 번째 섹션의 pgNumType.start reset이 sectPr 안에
+    #       pgNumType element가 2개 이상 있을 때만 인식하는 동작이 있다. 따라서
+    #       기존 element 모두 제거 + placeholder + reset 두 개를 추가한다.
     if start_num is not None:
         sectPr = section._sectPr
-        existing = sectPr.find(qn('w:pgNumType'))
-        if existing is not None:
-            sectPr.remove(existing)
+        for ex in list(sectPr.findall(qn('w:pgNumType'))):
+            sectPr.remove(ex)
+        ph_fmt = placeholder_fmt or ('lowerRoman' if fmt == 'decimal' else 'decimal')
+        placeholder = parse_xml(
+            f'<w:pgNumType {nsdecls("w")} w:fmt="{ph_fmt}"/>'
+        )
         new_el = parse_xml(
             f'<w:pgNumType {nsdecls("w")} w:start="{start_num}" w:fmt="{fmt}"/>'
         )
-        # Schema order: ... pgMar, paperSrc, pgBorders, lnNumType, pgNumType, cols, ...
         cols = sectPr.find(qn('w:cols'))
         if cols is not None:
+            cols.addprevious(placeholder)
             cols.addprevious(new_el)
         else:
+            sectPr.append(placeholder)
             sectPr.append(new_el)
 
 
@@ -606,10 +618,20 @@ def convert_md(doc, md_path):
         i += 1
 
 
+def enable_update_fields(doc):
+    """settings.xml에 <w:updateFields w:val='true'/> 추가 — open 시 PAGE 등 필드 자동 재계산."""
+    settings = doc.settings.element
+    if settings.find(qn('w:updateFields')) is not None:
+        return
+    el = parse_xml(f'<w:updateFields {nsdecls("w")} w:val="true"/>')
+    settings.insert(0, el)
+
+
 def main():
     print("📄 논문 DOCX v2 생성 (한양대 공식 서식)")
-    
+
     doc = create_doc()
+    enable_update_fields(doc)
     
     # 1. 표지
     add_cover(doc)

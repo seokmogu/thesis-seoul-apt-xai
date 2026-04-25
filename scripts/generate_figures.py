@@ -202,14 +202,14 @@ def fig_ablation(out):
     rows = pd.read_csv(os.path.join(ROOT, 'results/ablation_v7_v8.csv'))
     pv = rows.pivot(index='scenario', columns='split', values='xgb_r2')
     pv = pv.reindex(['A_행정동만_v7', 'B_거리만_시점무관(2026스냅샷)', 'C_거리+시점정합(v8)', 'D_거리+시점+행정동'])
-    pv.index = ['A 행정동만(v7)', 'B 거리만·시점무관', 'C 거리+시점정합', 'D 통합(거리+시점+행정동)']
+    pv.index = ['A 행정동만(선행연구)', 'B 거리만·시점무관', 'C 거리+시점정합', 'D 통합(거리+시점+행정동)']
     pv = pv[['random', 'temporal', 'group']]
     pv.columns = ['무작위', '시간순', 'Group']
     fig, ax = plt.subplots(figsize=(10, 5.5))
     pv.plot(kind='bar', ax=ax, color=['#1f77b4', '#ff7f0e', '#2ca02c'])
     ax.set_ylim(0.6, 1.0)
     ax.set_ylabel('XGBoost R²')
-    ax.set_title('<그림 10> 어블레이션 시나리오별 XGB R² (분할별)')
+    ax.set_title('<그림 10> Ablation 시나리오별 XGB R² (분할별)')
     ax.legend(title='분할')
     ax.grid(True, axis='y', alpha=0.3)
     for c in ax.containers:
