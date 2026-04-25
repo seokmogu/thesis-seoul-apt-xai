@@ -245,6 +245,8 @@ def add_approval(doc):
 def add_heading(doc, text, level=1):
     p = doc.add_paragraph()
     p.paragraph_format.first_line_indent = Cm(0)
+    # 한양대 표준: 헤딩 줄간격 160%, 들여쓰기 0
+    p.paragraph_format.line_spacing = 1.6
     # 표준 Heading 스타일 적용 (TOC·목차 인식 + grep false positive 제거)
     style_name = f'Heading {level}'
     try:
@@ -283,6 +285,10 @@ def add_body(doc, text):
     if not text.strip():
         return
     p = doc.add_paragraph()
+    # 한양대 부동산융합대학원 표준: 본문 줄간격 160%, 첫 줄 들여쓰기 2자(약 0.7cm)
+    p.paragraph_format.line_spacing = 1.6
+    p.paragraph_format.first_line_indent = Cm(0.7)
+    p.paragraph_format.space_after = Pt(0)
     # split by bold first
     bold_parts = re.split(r'(\*\*[^*]+\*\*)', text)
     for bp in bold_parts:
@@ -495,7 +501,16 @@ def convert_md(doc, md_path):
             i += 1
             continue
         
+        # 표 목차·그림 목차 항목은 List Bullet 스타일로 유지
         if line.strip().startswith('- <표') or line.strip().startswith('- <그림'):
+            txt = line.strip()[2:]  # "- " 제거
+            p = add_body(doc, txt)
+            if p is not None:
+                try:
+                    p.style = doc.styles['List Bullet']
+                except Exception:
+                    pass
+                p.paragraph_format.first_line_indent = Cm(0)
             i += 1
             continue
 
