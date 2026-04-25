@@ -1,0 +1,386 @@
+/* @theme modern-thesis */
+/* Genspark/Gamma inspired modern thesis theme
+   - Pretendard 한글 + Inter/Montserrat 숫자
+   - Deep navy hero + crisp content
+   - Stat cards, split layouts, callouts */
+
+@import 'default';
+
+:root {
+  --primary: #08A5C1;
+  --primary-dark: #006B7F;
+  --primary-light: #E6F7FA;
+  --bg-dark: #0A1628;
+  --bg-mid: #1A365D;
+  --bg-soft: #F7F9FC;
+  --bg-card: #FFFFFF;
+  --text-dark: #1A202C;
+  --text-mid: #4A5568;
+  --text-light: #FFFFFF;
+  --muted: #A0AEC0;
+  --accent: #FF6B6B;
+  --accent-warm: #FBB040;
+  --success: #38A169;
+  --border: #E2E8F0;
+}
+
+/* ===== 기본 슬라이드 ===== */
+section {
+  background: var(--bg-soft);
+  color: var(--text-dark);
+  font-family: 'Pretendard', 'Pretendard Variable', -apple-system, sans-serif;
+  font-size: 20px;
+  line-height: 1.45;
+  padding: 48px 72px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 1920px;
+  height: 1080px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+section::after {
+  /* 페이지 번호 */
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 300;
+}
+
+/* 공통 타이포 */
+h1, h2, h3 {
+  font-family: 'Pretendard', sans-serif;
+  color: var(--text-dark);
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 { font-size: 60px; font-weight: 800; letter-spacing: -0.02em; }
+h2 { font-size: 40px; font-weight: 700; letter-spacing: -0.01em; }
+h3 { font-size: 26px; font-weight: 600; color: var(--primary-dark); margin-bottom: 16px; }
+
+p { margin: 0 0 12px 0; color: var(--text-mid); }
+strong { color: var(--text-dark); font-weight: 700; }
+em { color: var(--primary-dark); font-style: normal; font-weight: 600; }
+
+ul, ol { padding-left: 22px; margin: 0; }
+li { margin-bottom: 6px; line-height: 1.45; color: var(--text-mid); }
+li strong { color: var(--text-dark); }
+
+code {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+}
+
+/* ===== HERO (표지) ===== */
+section.hero {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+  color: var(--text-light);
+  justify-content: center;
+  text-align: center;
+  padding: 120px;
+}
+section.hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+}
+section.hero h1 {
+  color: var(--text-light);
+  font-size: 84px;
+  margin-bottom: 32px;
+  line-height: 1.15;
+}
+section.hero h1 em {
+  color: var(--primary);
+  font-weight: 800;
+}
+section.hero .subtitle {
+  font-size: 28px;
+  color: var(--muted);
+  margin-bottom: 80px;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+}
+section.hero .meta {
+  font-size: 22px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+section.hero .meta strong { color: var(--primary); font-weight: 700; }
+
+/* ===== SECTION 구분 슬라이드 ===== */
+section.divider {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+  color: var(--text-light);
+  justify-content: center;
+  padding: 120px;
+}
+section.divider .section-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 280px;
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 24px;
+  opacity: 0.9;
+}
+section.divider h1 {
+  color: var(--text-light);
+  font-size: 72px;
+  margin-bottom: 40px;
+}
+section.divider .items {
+  font-size: 24px;
+  color: var(--muted);
+  line-height: 2;
+}
+
+/* ===== TITLE + CONTENT 기본 슬라이드 ===== */
+section.content::before {
+  content: attr(data-section);
+  position: absolute;
+  top: 48px;
+  left: 72px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+section.content h2 {
+  margin-bottom: 24px;
+  margin-top: 18px;
+}
+
+/* ===== STAT CARDS (2-3 큰 숫자) ===== */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 24px 0;
+}
+.stat-grid.two { grid-template-columns: repeat(2, 1fr); }
+.stat-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 32px;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+.stat-card .number {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+.stat-card .label {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 6px;
+}
+.stat-card .sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+.stat-card.accent .number { color: var(--accent); }
+.stat-card.warm .number { color: var(--accent-warm); }
+.stat-card.dark { background: var(--bg-dark); color: var(--text-light); border-color: transparent; }
+.stat-card.dark .label { color: var(--text-light); }
+.stat-card.dark .sub { color: var(--muted); }
+
+/* ===== SPLIT LAYOUT (좌텍스트/우 강조) ===== */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 16px;
+  min-height: 0;
+}
+.split.one-two { grid-template-columns: 1fr 2fr; }
+.split.two-one { grid-template-columns: 2fr 1fr; }
+.split .right {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 28px 32px;
+  border-left: 5px solid var(--primary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* ===== COMPARISON (v6 vs v7) ===== */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 64px 1fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-top: 32px;
+}
+.compare .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: var(--primary);
+}
+.compare .before, .compare .after {
+  padding: 40px;
+  border-radius: 16px;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+}
+.compare .after {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+.compare h3 { margin-bottom: 16px; }
+.compare .before h3 { color: var(--text-mid); }
+.compare .after h3 { color: var(--primary-dark); }
+
+/* ===== CALLOUT / QUOTE ===== */
+.callout {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--text-light);
+  padding: 24px 32px;
+  border-radius: 16px;
+  margin: 20px 0 0;
+  font-size: 22px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(8, 165, 193, 0.25);
+}
+.callout.warm {
+  background: linear-gradient(135deg, var(--accent-warm) 0%, var(--accent) 100%);
+  box-shadow: 0 8px 24px rgba(251, 176, 64, 0.25);
+}
+
+/* ===== FEATURE CARDS 3-column ===== */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+.features .card {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+}
+.features .card .badge {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 4px 12px;
+  border-radius: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.features .card h3 {
+  font-size: 20px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.features .card p {
+  font-size: 15px;
+  color: var(--text-mid);
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+/* ===== TABLE (깔끔 ver.) ===== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 16px;
+  margin-top: 12px;
+}
+th {
+  background: var(--bg-dark);
+  color: var(--text-light);
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+}
+td {
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+}
+tbody tr:hover { background: var(--primary-light); }
+tbody tr td:first-child { font-weight: 600; color: var(--text-dark); }
+
+/* ===== 강조 바 (큰 스탯) ===== */
+.mega-stat {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+  color: var(--text-light);
+  padding: 28px 40px;
+  border-radius: 20px;
+  margin: 20px 0 0;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.mega-stat .big {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 88px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.mega-stat .desc {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.5;
+}
+.mega-stat .desc strong { color: var(--text-light); font-size: 22px; }
+
+/* ===== IMAGE FRAME ===== */
+img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== TAGS ===== */
+.tag {
+  display: inline-block;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+.tag.accent { background: #FFE5E5; color: var(--accent); }
+.tag.warm { background: #FFF4E0; color: #C76A00; }
+
+/* ===== LAST (감사합니다) ===== */
+section.thanks {
+  background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-mid) 100%);
+  color: var(--text-light);
+  justify-content: center;
+  text-align: center;
+}
+section.thanks h1 {
+  color: var(--text-light);
+  font-size: 120px;
+  margin-bottom: 40px;
+}
+section.thanks p { color: var(--muted); font-size: 24px; }

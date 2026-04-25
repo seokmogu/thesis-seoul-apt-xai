@@ -1,0 +1,79 @@
+아파트: 8,601
+
+=== 2019년 스냅샷 (cutoff=2019-12-31) ===
+  subway: active=783/794
+  elem_school: active=605/610
+  middle_school: active=385/390
+  high_school: active=318/319
+  childcare: active=5,818/8,789
+  park: active=130/130
+  academy: active=14,876/25,418
+  large_store: active=34,881/138,380
+
+=== 2020년 스냅샷 (cutoff=2020-12-31) ===
+  subway: active=783/794
+  elem_school: active=606/610
+  middle_school: active=387/390
+  high_school: active=318/319
+  childcare: active=5,444/8,789
+  park: active=130/130
+  academy: active=16,076/25,418
+  large_store: active=35,984/138,380
+
+=== 2021년 스냅샷 (cutoff=2021-12-31) ===
+  subway: active=783/794
+  elem_school: active=607/610
+  middle_school: active=389/390
+  high_school: active=318/319
+  childcare: active=5,137/8,789
+  park: active=130/130
+  academy: active=17,607/25,418
+  large_store: active=37,311/138,380
+
+=== 2022년 스냅샷 (cutoff=2022-12-31) ===
+  subway: active=794/794
+  elem_school: active=609/610
+  middle_school: active=390/390
+  high_school: active=318/319
+  childcare: active=4,785/8,789
+  park: active=130/130
+  academy: active=19,351/25,418
+  large_store: active=37,788/138,380
+
+=== 2023년 스냅샷 (cutoff=2023-12-31) ===
+  subway: active=794/794
+  elem_school: active=609/610
+  middle_school: active=390/390
+  high_school: active=318/319
+  childcare: active=4,505/8,789
+  park: active=130/130
+  academy: active=21,106/25,418
+  large_store: active=37,829/138,380
+
+=== 2024년 스냅샷 (cutoff=2024-12-31) ===
+  subway: active=794/794
+  elem_school: active=610/610
+  middle_school: active=390/390
+  high_school: active=318/319
+  childcare: active=4,275/8,789
+  park: active=130/130
+  academy: active=22,999/25,418
+  large_store: active=36,973/138,380
+
+=== 2025년 스냅샷 (cutoff=2025-12-31) ===
+  subway: active=794/794
+  elem_school: active=610/610
+  middle_school: active=390/390
+  high_school: active=318/319
+  childcare: active=4,106/8,789
+  park: active=130/130
+  academy: active=25,034/25,418
+  large_store: active=36,111/138,380
+
+저장: /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_distance_features_yearly.csv (60,207 행, 67 컬럼)
+
+연도별 active 시설수 요약:
+  academy: {2019: np.int64(14876), 2020: np.int64(16076), 2021: np.int64(17607), 2022: np.int64(19351), 2023: np.int64(21106), 2024: np.int64(22999), 2025: np.int64(25034)}
+  childcare: {2019: np.int64(5818), 2020: np.int64(5444), 2021: np.int64(5137), 2022: np.int64(4785), 2023: np.int64(4505), 2024: np.int64(4275), 2025: np.int64(4106)}
+  large_store: {2019: np.int64(34881), 2020: np.int64(35984), 2021: np.int64(37311), 2022: np.int64(37788), 2023: np.int64(37829), 2024: np.int64(36973), 2025: np.int64(36111)}
+  subway: {2019: np.int64(783), 2020: np.int64(783), 2021: np.int64(783), 2022: np.int64(794), 2023: np.int64(794), 2024: np.int64(794), 2025: np.int64(794)}

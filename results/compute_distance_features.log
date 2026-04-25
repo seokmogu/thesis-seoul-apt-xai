@@ -1,0 +1,106 @@
+아파트 단지: 8,601
+
+=== subway ===
+  subway: 611 지점 로드
+  nearest(m): median=467, p90=941
+  count_500m: median=1, p90=2, max=6
+  count_1000m: median=2, p90=5, max=13
+  count_2000m: median=9, p90=18, max=34
+  elapsed 0.1s
+
+=== elem_school ===
+  elem_school: 610 지점 로드
+  nearest(m): median=361, p90=604
+  count_500m: median=1, p90=2, max=5
+  count_1000m: median=4, p90=6, max=11
+  count_2000m: median=15, p90=21, max=31
+  elapsed 0.1s
+
+=== middle_school ===
+  middle_school: 390 지점 로드
+  nearest(m): median=468, p90=875
+  count_500m: median=1, p90=2, max=4
+  count_1000m: median=2, p90=5, max=8
+  count_2000m: median=10, p90=14, max=20
+  elapsed 0.0s
+
+=== high_school ===
+  high_school: 319 지점 로드
+  nearest(m): median=610, p90=1168
+  count_500m: median=0, p90=2, max=7
+  count_1000m: median=2, p90=4, max=10
+  count_2000m: median=7, p90=12, max=19
+  elapsed 0.0s
+
+=== childcare ===
+  childcare: 8,787 지점 로드
+  nearest(m): median=94, p90=238
+  count_500m: median=18, p90=32, max=73
+  count_1000m: median=67, p90=105, max=155
+  count_2000m: median=232, p90=334, max=470
+  elapsed 0.2s
+
+=== park ===
+  park: 130 지점 로드
+  nearest(m): median=1002, p90=1756
+  count_500m: median=0, p90=1, max=3
+  count_1000m: median=0, p90=2, max=4
+  count_2000m: median=3, p90=5, max=10
+  elapsed 0.0s
+
+=== library ===
+  library: 215 지점 로드
+  nearest(m): median=594, p90=1138
+  count_500m: median=0, p90=1, max=5
+  count_1000m: median=1, p90=3, max=8
+  count_2000m: median=5, p90=9, max=17
+  elapsed 0.0s
+
+=== mart ===
+  mart: 473 지점 로드
+  nearest(m): median=388, p90=844
+  count_500m: median=1, p90=2, max=6
+  count_1000m: median=4, p90=7, max=12
+  count_2000m: median=13, p90=21, max=32
+  elapsed 0.0s
+
+=== department ===
+  department: 36 지점 로드
+  nearest(m): median=1900, p90=3395
+  count_500m: median=0, p90=0, max=4
+  count_1000m: median=0, p90=1, max=6
+  count_2000m: median=1, p90=2, max=6
+  elapsed 0.0s
+
+=== cctv ===
+  cctv: 129,123 지점 로드
+  count_500m: median=252, p90=371, max=713
+  count_1000m: median=939, p90=1336, max=1963
+  count_2000m: median=3408, p90=4556, max=6032
+  elapsed 0.7s
+
+=== hospital ===
+  hospital: 1,117 지점 로드
+  nearest(m): median=799, p90=2176
+  count_500m: median=0, p90=9, max=42
+  count_1000m: median=2, p90=32, max=52
+  count_2000m: median=37, p90=55, max=114
+  elapsed 0.1s
+
+=== hospital_general ===
+  hospital_general: 25 지점 로드
+  nearest(m): median=2022, p90=3833
+  count_500m: median=0, p90=0, max=2
+  count_1000m: median=0, p90=1, max=3
+  count_2000m: median=0, p90=2, max=4
+  elapsed 0.0s
+
+=== academy ===
+  academy: 25,418 지점 로드
+  nearest(m): median=94, p90=213
+  count_500m: median=43, p90=110, max=1033
+  count_1000m: median=174, p90=348, max=1738
+  count_2000m: median=632, p90=1183, max=2572
+  elapsed 0.3s
+
+저장: /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_distance_features.csv (8,601 행, 62 컬럼)

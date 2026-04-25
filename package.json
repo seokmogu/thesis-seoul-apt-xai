@@ -1,0 +1,24 @@
+{
+  "name": "thesis-seoul-apt-xai",
+  "version": "1.0.0",
+  "description": "> 한양대학교 부동산융합대학원 빅데이터전공 석사논문",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seokmogu/thesis-seoul-apt-xai.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/seokmogu/thesis-seoul-apt-xai/issues"
+  },
+  "homepage": "https://github.com/seokmogu/thesis-seoul-apt-xai#readme",
+  "dependencies": {
+    "pptxgenjs": "^4.0.1"
+  }
+}

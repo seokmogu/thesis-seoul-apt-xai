@@ -1,0 +1,5 @@
+﻿params,mean_test_score,std_test_score
+"{'colsample_bytree': 0.8, 'learning_rate': 0.05, 'max_depth': 6, 'subsample': 0.8}",0.8717466592788696,0.004506479425966151
+"{'colsample_bytree': 0.8, 'learning_rate': 0.05, 'max_depth': 8, 'subsample': 0.8}",0.8847302993138632,0.002149523849252303
+"{'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 6, 'subsample': 0.8}",0.8775104681650797,0.003361976115909473
+"{'colsample_bytree': 0.8, 'learning_rate': 0.1, 'max_depth': 8, 'subsample': 0.8}",0.889644185702006,0.0011783604135702612

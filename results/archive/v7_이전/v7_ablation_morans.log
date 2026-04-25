@@ -1,0 +1,11 @@
+=== Ablation: 학원수·어린이집수 제거 ===
+  [전체(18)] OLS R²=0.5061  RF R²=0.8937  XGB R²=0.9554
+  [제거(16)] OLS R²=0.4520  RF R²=0.8875  XGB R²=0.9550
+  ΔR²: OLS=0.0542  RF=0.0062  XGB=0.0004
+
+=== Moran's I (OLS/XGB 잔차, 행정동 인접 행렬) ===
+  행정동 수: 214
+  OLS: Moran's I = 0.3247, E = -0.0047, Z = 9.438, p(perm) = 0.0000
+  XGBoost: Moran's I = 0.0042, E = -0.0047, Z = 0.296, p(perm) = 0.3627
+
+저장: results/ablation_morans_v7.json

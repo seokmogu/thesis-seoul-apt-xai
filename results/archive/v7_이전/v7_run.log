@@ -1,0 +1,101 @@
+=== 데이터 로드 ===
+  총 391,826건
+  ㎡당 가격: mean=1337.7, median=1142.7, min=163.2, max=10586.7 (만원/㎡)
+  log 변환 후: mean=7.0747, std=0.4879
+  기술통계 저장: descriptive_stats_v7.csv
+
+=== VIF ===
+     변수    VIF
+   기준금리 110.11
+   CD금리  96.44
+소비자물가지수  42.87
+     M2  28.38
+  어린이집수   5.99
+   중학교수   4.13
+  초등학교수   4.04
+    학원수   3.92
+  고등학교수   2.73
+   백화점수   2.19
+   강남구분   1.98
+  CCTV수   1.48
+   도서관수   1.37
+    공원수   1.32
+  지하철역수   1.26
+   건물연령   1.16
+   전용면적   1.09
+      층   1.07
+
+=== Random split: train=274,277, val=39,183, test=78,366 ===
+  OLS    R²_log=0.5061  Median_APE=22.04%
+  RF     R²_log=0.8937  Median_APE=7.51%
+  XGB    R²_log=0.9554  Median_APE=4.16%  best_iter=1999
+
+=== Group split 준비: unique groups = 8,601 ===
+
+=== Group split: train=273,388, val=40,935, test=77,503 ===
+  OLS    R²_log=0.4618  Median_APE=22.35%
+  RF     R²_log=0.7414  Median_APE=13.12%
+  XGB    R²_log=0.8005  Median_APE=11.72%  best_iter=121
+
+=== Chronological split: train < 202401, val=202401~6, test=202407~ ===
+
+=== Chronological split: train=250,544, val=27,813, test=113,469 ===
+  OLS    R²_log=0.3939  Median_APE=24.74%
+  RF     R²_log=0.6955  Median_APE=14.82%
+  XGB    R²_log=0.7972  Median_APE=12.61%  best_iter=881
+
+=== SHAP Analysis (random split XGB) ===
+     변수  mean_abs_shap_log  기여도_%
+   건물연령           0.114093  12.43
+   강남구분           0.107676  11.74
+  어린이집수           0.105794  11.53
+     M2           0.098782  10.77
+    학원수           0.088172   9.61
+   전용면적           0.087647   9.55
+소비자물가지수           0.064116   6.99
+   백화점수           0.052727   5.75
+  CCTV수           0.043711   4.76
+      층           0.031102   3.39
+  초등학교수           0.024069   2.62
+  지하철역수           0.021502   2.34
+   CD금리           0.019090   2.08
+  고등학교수           0.016564   1.81
+   중학교수           0.015163   1.65
+   기준금리           0.013856   1.51
+   도서관수           0.008797   0.96
+    공원수           0.004666   0.51
+
+=== Plots ===
+  plots saved to /Users/seokmogu/project/thesis-seoul-apt-xai/results/plots_v7_m2price
+
+=== 지역 별도 모형 (강남구분 제거, 17 features) ===
+
+  [전체] n=391,826
+    OLS R²=0.4631  RF R²=0.9086  XGB R²=0.9552 (MedAPE 4.17%)
+    SHAP Top5: ['어린이집수', '학원수', '건물연령', '전용면적', '소비자물가지수']
+
+  [강남3구] n=65,077
+    OLS R²=0.3790  RF R²=0.9003  XGB R²=0.9356 (MedAPE 4.10%)
+    SHAP Top5: ['건물연령', '소비자물가지수', '백화점수', '전용면적', 'M2']
+
+  [비강남] n=326,749
+    OLS R²=0.3810  RF R²=0.8695  XGB R²=0.9421 (MedAPE 4.07%)
+    SHAP Top5: ['건물연령', '소비자물가지수', '전용면적', '어린이집수', 'M2']
+
+=== 시기별 3구간 XGB ===
+
+  [2019_2021_유동성] n=202,191
+    XGB R²=0.9487  Top5: ['건물연령', '어린이집수', '강남구분', 'M2', '전용면적']
+
+  [2022_2023_금리인상] n=48,353
+    XGB R²=0.9166  Top5: ['강남구분', '건물연령', '전용면적', '백화점수', '학원수']
+
+  [2024_2025_금리인하] n=141,282
+    XGB R²=0.9575  Top5: ['건물연령', '강남구분', '전용면적', '학원수', '백화점수']
+
+=== 저장 완료: /Users/seokmogu/project/thesis-seoul-apt-xai/results/modeling_v7_m2price_results.json ===
+
+요약:
+  주 분석 (random split, XGB): R²_log=0.9554, Median_APE=4.16%
+  Group split XGB:    R²_log=0.8005
+  Chronological XGB:  R²_log=0.7972

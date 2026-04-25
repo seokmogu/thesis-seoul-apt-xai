@@ -4,3 +4,8 @@ __pycache__/
 .env
 .venv/
 .env.firecrawl
+
+# 대용량 파생 데이터 (GitHub 100MB 초과)
+data/apartment_final_v8.csv
+data/seoul_large_stores_v2.csv
+.DS_Store

@@ -1,0 +1,48 @@
+유니크 단지: 8601
+  [200/8601] hit=188 miss=12 elapsed=22s rate=9.2/s
+  [400/8601] hit=376 miss=24 elapsed=43s rate=9.2/s
+  [600/8601] hit=559 miss=41 elapsed=66s rate=9.1/s
+  [800/8601] hit=749 miss=51 elapsed=87s rate=9.1/s
+  [1000/8601] hit=940 miss=60 elapsed=109s rate=9.2/s
+  [1200/8601] hit=1128 miss=72 elapsed=130s rate=9.2/s
+  [1400/8601] hit=1315 miss=85 elapsed=152s rate=9.2/s
+  [1600/8601] hit=1506 miss=94 elapsed=173s rate=9.2/s
+  [1800/8601] hit=1698 miss=102 elapsed=194s rate=9.3/s
+  [2000/8601] hit=1889 miss=111 elapsed=216s rate=9.3/s
+  [2200/8601] hit=2079 miss=121 elapsed=237s rate=9.3/s
+  [2400/8601] hit=2262 miss=138 elapsed=260s rate=9.2/s
+  [2600/8601] hit=2430 miss=170 elapsed=283s rate=9.2/s
+  [2800/8601] hit=2617 miss=183 elapsed=304s rate=9.2/s
+  [3000/8601] hit=2808 miss=192 elapsed=324s rate=9.3/s
+  [3200/8601] hit=2983 miss=217 elapsed=346s rate=9.3/s
+  [3400/8601] hit=3170 miss=230 elapsed=368s rate=9.3/s
+  [3600/8601] hit=3357 miss=243 elapsed=389s rate=9.3/s
+  [3800/8601] hit=3546 miss=254 elapsed=411s rate=9.2/s
+  [4000/8601] hit=3727 miss=273 elapsed=434s rate=9.2/s
+  [4200/8601] hit=3914 miss=286 elapsed=455s rate=9.2/s
+  [4400/8601] hit=4106 miss=294 elapsed=476s rate=9.2/s
+  [4600/8601] hit=4290 miss=310 elapsed=496s rate=9.3/s
+  [4800/8601] hit=4476 miss=324 elapsed=517s rate=9.3/s
+  [5000/8601] hit=4663 miss=337 elapsed=539s rate=9.3/s
+  [5200/8601] hit=4845 miss=355 elapsed=562s rate=9.3/s
+  [5400/8601] hit=5034 miss=366 elapsed=584s rate=9.2/s
+  [5600/8601] hit=5224 miss=376 elapsed=605s rate=9.3/s
+  [5800/8601] hit=5422 miss=378 elapsed=626s rate=9.3/s
+  [6000/8601] hit=5608 miss=392 elapsed=647s rate=9.3/s
+  [6200/8601] hit=5795 miss=405 elapsed=668s rate=9.3/s
+  [6400/8601] hit=5983 miss=417 elapsed=690s rate=9.3/s
+  [6600/8601] hit=6167 miss=433 elapsed=711s rate=9.3/s
+  [6800/8601] hit=6350 miss=450 elapsed=733s rate=9.3/s
+  [7000/8601] hit=6538 miss=462 elapsed=755s rate=9.3/s
+  [7200/8601] hit=6722 miss=478 elapsed=777s rate=9.3/s
+  [7400/8601] hit=6909 miss=491 elapsed=799s rate=9.3/s
+  [7600/8601] hit=7085 miss=515 elapsed=822s rate=9.3/s
+  [7800/8601] hit=7272 miss=528 elapsed=843s rate=9.2/s
+  [8000/8601] hit=7453 miss=547 elapsed=866s rate=9.2/s
+  [8200/8601] hit=7628 miss=572 elapsed=889s rate=9.2/s
+  [8400/8601] hit=7814 miss=586 elapsed=911s rate=9.2/s
+  [8600/8601] hit=7998 miss=602 elapsed=933s rate=9.2/s
+
+완료: 성공 7999, 실패 602
+  → /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_coords.csv
+  → /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_coords_failed.csv

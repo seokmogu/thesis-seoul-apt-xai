@@ -1,0 +1,147 @@
+{
+  "status": "complete",
+  "paper_path": "/home/hackit/project/thesis-seoul-apt-xai/paper/\ub17c\ubb38_\ucd08\uc548.pdf",
+  "venue": null,
+  "metadata": {
+    "title": "Analysis of Determinants of Apartment Sale Prices in Seoul Using XGBoost and SHAP",
+    "authors": [
+      "\ubc15\ud604\uadfc"
+    ],
+    "abstract": "\ubcf8 \uc5f0\uad6c\ub294 \uc11c\uc6b8\uc2dc 215\uac1c \ud589\uc815\ub3d9 \uc544\ud30c\ud2b8 \uc2e4\uac70\ub798 391,826\uac74(2019~2025)\uc744 \ub300\uc0c1\uc73c\ub85c OLS\u00b7Random Forest\u00b7XGBoost\ub97c \ube44\uad50\ud558\uace0, SHAP\uc73c\ub85c \uc608\uce21\uac12 \uc124\uba85\uad6c\uc870\ub97c \ubd84\uc11d\ud558\uc600\ub2e4. XGBoost\ub294 R\u00b2=0.970(\ubb34\uc791\uc704), 0.846(Group \ubd84\ud560)\uc73c\ub85c OLS\ub97c \uc0c1\ud68c\ud558\uc600\ub2e4. SHAP \uacb0\uacfc \uc804\uc6a9\uba74\uc801(22.2%), \uac15\ub0a8\uc785\uc9c0(16.0%), \uac74\ubb3c \uc5f0\ub839(11.4%)\uc774 \ud575\uc2ec \ubcc0\uc218\ub85c, \uc2dc\uae30\ubcc4 \ube44\uad50\uc5d0\uc11c\ub3c4 \uc774\ub4e4\uc758 \uc21c\uc704\ub294 \uc548\uc815\uc801\uc774\uc5c8\ub2e4. Moran's I \uac80\uc815\uc5d0\uc11c OLS \uc794\ucc28\uc758 \uacf5\uac04 \uc790\uae30\uc0c1\uad00(I=0.211, p<0.001)\uc774 XGBoost\uc5d0\uc11c\ub294 \ud574\uc18c\ub418\uc5c8\ub2e4(I=0.043, p=0.179). \uac15\ub0a8/\ube44\uac15\ub0a8 \ubcc4\ub3c4 \ubaa8\ud615\uc5d0\uc11c \ubc31\ud654\uc810 \uc218\uc758 \uac15\ub0a8 \uc6b0\uc704(5.29\ubc30)\uc640 \ud559\uc6d0\uc218\u00b7\uc5b4\ub9b0\uc774\uc9d1 \uc218\uc758 \ube44\uac15\ub0a8 \uc6b0\uc704\uac00 \uc7ac\ud655\uc778\ub418\uc5c8\ub2e4.",
+    "is_academic_paper": true,
+    "venue": null,
+    "keywords": [
+      "\uc544\ud30c\ud2b8\ub9e4\ub9e4\uac00\uaca9",
+      "XGBoost",
+      "SHAP",
+      "\uc124\uba85\uac00\ub2a5\ud55c\uc778\uacf5\uc9c0\ub2a5(XAI)",
+      "\ud5e4\ub3c4\ub2c9\uac00\uaca9\ubaa8\ud615",
+      "\uc11c\uc6b8\ubd80\ub3d9\uc0b0\uc2dc\uc7a5"
+    ]
+  },
+  "review": "## Summary\nThe paper titled \"Analysis of Determinants of Apartment Sale Prices in Seoul Using XGBoost and SHAP\" explores the use of machine learning models, specifically XGBoost, to predict apartment sale prices in Seoul. The study compares the performance of traditional OLS regression with Random Forest and XGBoost models, emphasizing the explanatory power of SHAP values in understanding feature contributions. The research utilizes a large dataset of apartment transactions from 2019 to 2025, providing insights into significant determinants of apartment prices and the spatial differences between Gangnam and non-Gangnam areas.\n\n## Strengths\n- **Comprehensive Dataset**: The paper uses a substantial dataset of 391,826 apartment transactions, providing a robust basis for analysis.\n- **Comparative Analysis**: By comparing OLS, Random Forest, and XGBoost, the study offers a clear view of the advantages of machine learning models over traditional methods.\n- **Use of SHAP Values**: The application of SHAP values to interpret model predictions enhances the transparency and interpretability of the results, addressing the 'black box' issue of machine learning models.\n- **Spatial Analysis**: The differentiation between Gangnam and non-Gangnam areas adds depth to the analysis, highlighting regional disparities in price determinants.\n\n## Weaknesses\n- **Lack of Theoretical Integration**: The paper could benefit from a stronger theoretical framework linking the findings to existing economic theories of real estate pricing.\n- **Limited Discussion on Model Limitations**: While the paper discusses model performance, it lacks a critical evaluation of the limitations and potential biases inherent in the models used.\n- **Insufficient Exploration of Temporal Dynamics**: The study spans several years, including significant economic events, yet the temporal analysis of price determinants over these periods is not thoroughly explored.\n\n## Detailed Comments\n### Introduction\n- The introduction effectively sets the stage for the research but could be enhanced by more explicitly stating the research questions and hypotheses.\n\n### Methodology\n- The methodology section is well-detailed but could include more information on the hyperparameter tuning process for the machine learning models.\n- Consider providing a clearer justification for the choice of SHAP over other XAI methods.\n\n### Results\n- The results are presented clearly, but additional visualizations (e.g., time series plots) could help illustrate the temporal trends in price determinants.\n- The discussion of Moran's I statistic is insightful; however, further elaboration on its implications for spatial autocorrelation would be beneficial.\n\n### Conclusion\n- The conclusion summarizes the findings well but could be strengthened by discussing the broader implications for policy and practice in the real estate market.\n\n## Questions for Authors\n1. How do you account for potential biases in the dataset, such as reporting delays or missing data?\n2. Can you elaborate on the choice of SHAP over other interpretability methods like LIME?\n3. How do the findings inform real estate policy, particularly in addressing regional disparities?\n\n## Missing References\n- Consider citing \"Learning Real Estate Automated Valuation Models from Heterogeneous Data Sources\" for additional context on AVM methodologies.\n- \"Predicting housing prices and analyzing real estate market in the Chicago suburbs using Machine Learning\" could provide comparative insights into similar applications of machine learning in real estate.\n\n## Minor Issues\n- **Grammar**: Ensure consistent use of past tense when describing completed research activities.\n- **Formatting**: Standardize the presentation of equations and figures for improved readability.\n- **Clarity**: Some sections, particularly those discussing statistical tests, could benefit from simplified language to enhance accessibility.\n\n## Recommendation\nThe paper presents a valuable contribution to the field of real estate analytics by integrating machine learning and XAI techniques. With revisions to enhance theoretical integration, model evaluation, and temporal analysis, the study would be a strong candidate for publication. I recommend acceptance with minor revisions.",
+  "scores": {
+    "dimensions": [
+      {
+        "name": "Soundness",
+        "score": 3.0,
+        "justification": "The paper is technically sound with a robust dataset and a well-detailed methodology. However, it lacks a critical evaluation of model limitations and potential biases, which prevents it from achieving a higher score."
+      },
+      {
+        "name": "Presentation",
+        "score": 3.0,
+        "justification": "The paper is generally clear and well-organized, with a comprehensive presentation of results. Minor issues in grammar and formatting, as well as the need for additional visualizations, slightly detract from its clarity."
+      },
+      {
+        "name": "Contribution",
+        "score": 3.0,
+        "justification": "The study provides a solid contribution by integrating machine learning and XAI techniques in real estate analytics. While it offers valuable insights, the theoretical integration and exploration of temporal dynamics could be enhanced."
+      },
+      {
+        "name": "Confidence",
+        "score": 3.0,
+        "justification": "I am fairly confident in my evaluation, as I am familiar with the area and have assessed the key aspects of the paper. However, I am not an expert in all specific methodologies used."
+      }
+    ],
+    "final_score": 6.2835
+  },
+  "related_works": [
+    {
+      "arxiv_id": "1909.00704v1",
+      "title": "Learning Real Estate Automated Valuation Models from Heterogeneous Data Sources",
+      "authors": [
+        "Francesco Bergadano",
+        "Roberto Bertilone",
+        "Daniela Paolotti",
+        "Giancarlo Ruffo"
+      ],
+      "abstract": "Real estate appraisal is a complex and important task, that can be made more precise and faster with the help of automated valuation tools. Usually the value of some property is determined by taking into account both structural and geographical characteristics. However, while geographical information is easily found, obtaining significant structural information requires the intervention of a real estate expert, a professional appraiser. In this paper we propose a Web data acquisition methodology, and a Machine Learning model, that can be used to automatically evaluate real estate properties. This method uses data from previous appraisal documents, from the advertised prices of similar properties found via Web crawling, and from open data describing the characteristics of a corresponding geographical area. We describe a case study, applicable to the whole Italian territory, and initially trained on a data set of individual homes located in the city of Turin, and analyze prediction and p",
+      "relevance_score": 0.6,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2210.06261v1",
+      "title": "Predicting housing prices and analyzing real estate market in the Chicago suburbs using Machine Learning",
+      "authors": [
+        "Kevin Xu",
+        "Hieu Nguyen"
+      ],
+      "abstract": "The pricing of housing properties is determined by a variety of factors. However, post-pandemic markets have experienced volatility in the Chicago suburb area, which have affected house prices greatly. In this study, analysis was done on the Naperville/Bolingbrook real estate market to predict property prices based on these housing attributes through machine learning models, and to evaluate the effectiveness of such models in a volatile market space. Gathering data from Redfin, a real estate website, sales data from 2018 up until the summer season of 2022 were collected for research. By analyzing these sales in this range of time, we can also look at the state of the housing market and identify trends in price. For modeling the data, the models used were linear regression, support vector regression, decision tree regression, random forest regression, and XGBoost regression. To analyze results, comparison was made on the MAE, RMSE, and R-squared values for each model. It was found that ",
+      "relevance_score": 0.6,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "1907.03178v4",
+      "title": "XGBoostLSS -- An extension of XGBoost to probabilistic forecasting",
+      "authors": [
+        "Alexander M\u00e4rz"
+      ],
+      "abstract": "We propose a new framework of XGBoost that predicts the entire conditional distribution of a univariate response variable. In particular, XGBoostLSS models all moments of a parametric distribution (i.e., mean, location, scale and shape [LSS]) instead of the conditional mean only. Choosing from a wide range of continuous, discrete and mixed discrete-continuous distribution, modelling and predicting the entire conditional distribution greatly enhances the flexibility of XGBoost, as it allows to gain additional insight into the data generating process, as well as to create probabilistic forecasts from which prediction intervals and quantiles of interest can be derived. We present both a simulation study and real world examples that demonstrate the virtues of our approach.",
+      "relevance_score": 0.5,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "1809.04933v2",
+      "title": "Identifying Real Estate Opportunities using Machine Learning",
+      "authors": [
+        "Alejandro Baldominos",
+        "Iv\u00e1n Blanco",
+        "Antonio Jos\u00e9 Moreno",
+        "Rub\u00e9n Iturrarte",
+        "\u00d3scar Bern\u00e1rdez",
+        "Carlos Afonso"
+      ],
+      "abstract": "The real estate market is exposed to many fluctuations in prices because of existing correlations with many variables, some of which cannot be controlled or might even be unknown. Housing prices can increase rapidly (or in some cases, also drop very fast), yet the numerous listings available online where houses are sold or rented are not likely to be updated that often. In some cases, individuals interested in selling a house (or apartment) might include it in some online listing, and forget about updating the price. In other cases, some individuals might be interested in deliberately setting a price below the market price in order to sell the home faster, for various reasons. In this paper, we aim at developing a machine learning application that identifies opportunities in the real estate market in real time, i.e., houses that are listed with a price substantially below the market price. This program can be useful for investors interested in the housing market. We have focused in a u",
+      "relevance_score": 0.5,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2603.12046v1",
+      "title": "Dr. SHAP-AV: Decoding Relative Modality Contributions via Shapley Attribution in Audio-Visual Speech Recognition",
+      "authors": [
+        "Umberto Cappellazzo",
+        "Stavros Petridis",
+        "Maja Pantic"
+      ],
+      "abstract": "Audio-Visual Speech Recognition (AVSR) leverages both acoustic and visual information for robust recognition under noise. However, how models balance these modalities remains unclear. We present Dr. SHAP-AV, a framework using Shapley values to analyze modality contributions in AVSR. Through experiments on six models across two benchmarks and varying SNR levels, we introduce three analyses: Global SHAP for overall modality balance, Generative SHAP for contribution dynamics during decoding, and Temporal Alignment SHAP for input-output correspondence. Our findings reveal that models shift toward visual reliance under noise yet maintain high audio contributions even under severe degradation. Modality balance evolves during generation, temporal alignment holds under noise, and SNR is the dominant factor driving modality weighting. These findings expose a persistent audio bias, motivating ad-hoc modality-weighting mechanisms and Shapley-based attribution as a standard AVSR diagnostic.",
+      "relevance_score": 0.3,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2112.01566v1",
+      "title": "Theoretical Analysis of an XGBoost Framework for Product Cannibalization",
+      "authors": [
+        "Gautham Bekal",
+        "Mohammad Bari"
+      ],
+      "abstract": "This paper is an extension of our work where we presented a three-stage XGBoost algorithm for forecasting sales under product cannibalization scenario. Previously we developed the model based on our intuition and provided empirical evidence on its performance. In this study we would briefly go over the algorithm and then provide mathematical reasoning behind its working.",
+      "relevance_score": 0.3,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    },
+    {
+      "arxiv_id": "2407.09950v2",
+      "title": "PSO Fuzzy XGBoost Classifier Boosted with Neural Gas Features on EEG Signals in Emotion Recognition",
+      "authors": [
+        "Seyed Muhammad Hossein Mousavi"
+      ],
+      "abstract": "Emotion recognition is the technology-driven process of identifying and categorizing human emotions from various data sources, such as facial expressions, voice patterns, body motion, and physiological signals, such as EEG. These physiological indicators, though rich in data, present challenges due to their complexity and variability, necessitating sophisticated feature selection and extraction methods. NGN, an unsupervised learning algorithm, effectively adapts to input spaces without predefined grid structures, improving feature extraction from physiological data. Furthermore, the incorporation of fuzzy logic enables the handling of fuzzy data by introducing reasoning that mimics human decision-making. The combination of PSO with XGBoost aids in optimizing model performance through efficient hyperparameter tuning and decision process optimization. This study explores the integration of Neural-Gas Network (NGN), XGBoost, Particle Swarm Optimization (PSO), and fuzzy logic to enhance em",
+      "relevance_score": 0.2,
+      "summary_type": "abstract",
+      "detailed_summary": null,
+      "focus_areas": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,16 @@
+거래: 391,826, 연도별 거리변수: 60,207
+legacy 컬럼 rename: 10개
+조인 결측: 0 (0.00%)
+
+저장: /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_final_v8.csv
+최종 shape: (391826, 91)
+
+주요 최근접거리(m) 중앙값:
+  subway_nearest_m: 464
+  elem_school_nearest_m: 307
+  library_nearest_m: 579
+  department_nearest_m: 1861
+  mart_nearest_m: 353
+  park_nearest_m: 960
+  academy_nearest_m: 109
+  hospital_general_nearest_m: 2134

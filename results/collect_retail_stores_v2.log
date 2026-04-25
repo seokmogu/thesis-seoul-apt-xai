@@ -1,0 +1,15 @@
+  전체 건수: 2,217
+      1-1000  누적 1,000/2,217
+   1001-2000  누적 2,000/2,217
+   2001-2217  누적 2,217/2,217
+
+수집 완료: 2,217 행, 25 컬럼
+컬럼: ['OPNSFTEAMCODE', 'MGTNO', 'APVPERMYMD', 'APVCANCELYMD', 'TRDSTATEGBN', 'TRDSTATENM', 'DTLSTATEGBN', 'DTLSTATENM', 'DCBYMD', 'CLGSTDT', 'CLGENDDT', 'ROPNYMD', 'SITETEL', 'SITEAREA', 'SITEPOSTNO', 'SITEWHLADDR', 'RDNWHLADDR', 'RDNPOSTNO', 'BPLCNM', 'LASTMODTS', 'UPDATEGBN', 'UPDATEDT', 'X', 'Y', 'RGTMBDSNO']
+저장: /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/seoul_retail_stores_v2.csv
+
+영업상태별:
+TRDSTATENM
+폐업                1233
+영업/정상              970
+휴업                   8
+취소/말소/만료/정지/중지       6

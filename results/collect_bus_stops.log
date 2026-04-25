@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/Users/seokmogu/project/thesis-seoul-apt-xai/scripts/collect_bus_stops.py", line 49, in <module>
+    main()
+  File "/Users/seokmogu/project/thesis-seoul-apt-xai/scripts/collect_bus_stops.py", line 21, in main
+    total = r.json()[SERVICE]['list_total_count']
+            ~~~~~~~~^^^^^^^^^
+KeyError: 'busStopLocationXY'
