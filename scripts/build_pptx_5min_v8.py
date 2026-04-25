@@ -120,12 +120,13 @@ def add_notes(slide, script):
 
 
 def add_header(slide, num, title):
-    """슬라이드 상단 헤더 (페이지 번호 + 제목)."""
-    add_rect(slide, 0, 0, 13.333, 0.7, fill_color=PRIMARY)
-    add_text(slide, 0.4, 0.05, 1.2, 0.6, f'{num:02d}', size=22, bold=True, color=WHITE,
+    """슬라이드 상단 헤더 — 학술 보수 스타일 (검정 텍스트, 하단 가는 회색 선)."""
+    add_text(slide, 0.4, 0.15, 1.2, 0.55, f'{num:02d}', size=20, bold=True, color=DARK,
              anchor=MSO_ANCHOR.MIDDLE)
-    add_text(slide, 1.2, 0.05, 11.5, 0.6, title, size=22, bold=True, color=WHITE,
+    add_text(slide, 1.2, 0.15, 11.5, 0.55, title, size=22, bold=True, color=DARK,
              anchor=MSO_ANCHOR.MIDDLE)
+    # 하단 구분선 (가는 회색)
+    add_rect(slide, 0.4, 0.78, 12.5, 0.02, fill_color=LIGHT)
 
 
 def add_footer(slide):
@@ -142,7 +143,7 @@ def main():
     # =========== 1. 표지 ===========
     s = prs.slides.add_slide(blank)
     add_rect(s, 0, 0, 13.333, 7.5, fill_color=WHITE)
-    add_rect(s, 0, 6.5, 13.333, 1.0, fill_color=PRIMARY)
+    add_rect(s, 0, 6.5, 13.333, 1.0, fill_color=BG_LIGHT)
     add_text(s, 0.7, 1.5, 12.0, 0.6, '한양대학교 부동산융합대학원 석사학위논문 (중간발표)',
              size=18, color=LIGHT)
     add_text(s, 0.7, 2.3, 12.0, 1.6,
@@ -152,11 +153,11 @@ def main():
                     '서울시 아파트 단위면적당 매매가격의 설명 패턴 분석'])
     add_text(s, 0.7, 4.5, 12.0, 0.6,
              '— 거리 기반 입지 변수 · 연도별 시점 정합 · 권역×연도 SHAP 분해 —',
-             size=18, color=PRIMARY)
+             size=18, color=DARK)
     add_text(s, 0.7, 5.5, 12.0, 0.5, '도시부동산정책전공  박현근',
              size=20, color=DARK)
     add_text(s, 0.7, 6.05, 12.0, 0.4, '지도교수  고준호', size=18, color=DARK)
-    add_text(s, 0.7, 6.65, 12.0, 0.7, '2026. 04', size=14, color=WHITE,
+    add_text(s, 0.7, 6.65, 12.0, 0.7, '2026. 04', size=14, color=DARK,
              align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     add_notes(s, '''[표지 · 약 30초]
 안녕하세요. 한양대학교 부동산융합대학원 석사 과정 박현근입니다.
@@ -167,7 +168,7 @@ def main():
     s = prs.slides.add_slide(blank)
     add_header(s, 1, '연구 배경 — 왜 이 주제인가')
     add_text(s, 0.7, 1.0, 12.0, 0.5, '세 가지 층위의 동기',
-             size=22, bold=True, color=PRIMARY)
+             size=22, bold=True, color=DARK)
     box_y = 1.7
     for i, (title, body) in enumerate([
         ('실무·제도', 'AVM 확산 가속, 감정평가·은행·세무에 “왜 이 가격인가”를\n설명할 해석 프레임워크 요구'),
@@ -177,7 +178,7 @@ def main():
         x = 0.7 + i * 4.1
         add_rect(s, x, box_y, 3.9, 4.0, fill_color=BG_LIGHT)
         add_text(s, x + 0.2, box_y + 0.2, 3.5, 0.6, title,
-                 size=20, bold=True, color=PRIMARY)
+                 size=20, bold=True, color=DARK)
         lines = body.split('\n')
         add_text(s, x + 0.2, box_y + 1.0, 3.5, 2.8, body,
                  size=15, color=DARK, lines=lines)
@@ -196,7 +197,7 @@ def main():
     s = prs.slides.add_slide(blank)
     add_header(s, 2, '데이터와 방법 — 거리 기반 + 시점 정합')
     add_text(s, 0.7, 1.0, 12.0, 0.5, '서울 215개 행정동 · 391,826 거래 (2019.01~2025.12)',
-             size=20, bold=True, color=PRIMARY)
+             size=20, bold=True, color=DARK)
     add_bullets(s, 0.7, 1.7, 12.0, 5.0, [
         '아파트 단지 8,601개 Kakao Local API 지오코딩 (거래건수 기준 100% 커버)',
         '13 시설군 거리 기반 변수: 최근접거리(m) + 반경 500m/1km/2km 개수 + 도보 추정 시간(분)',
@@ -220,7 +221,7 @@ def main():
     s = prs.slides.add_slide(blank)
     add_header(s, 3, '어블레이션 — 거리 전환이 시간순 R² +7.1%p 개선 견인')
     add_image(s, os.path.join(FIGS, 'fig10_ablation.png'), 0.5, 1.0, w_in=7.8)
-    add_text(s, 8.6, 1.2, 4.4, 0.5, '핵심 발견', size=20, bold=True, color=PRIMARY)
+    add_text(s, 8.6, 1.2, 4.4, 0.5, '핵심 발견', size=20, bold=True, color=DARK)
     add_bullets(s, 8.6, 1.8, 4.4, 5.0, [
         'A→B 거리 변환만으로 시간순 +5.6%p',
         'B→C 시점 정합 단독 R² 효과는 작음 (~0.5%p)\n  → 성능이 아니라 미래 시점 정보의\n     누수 제거(방법론적 타당성)',
@@ -239,12 +240,12 @@ def main():
     add_header(s, 4, '권역×연도 SHAP — 강남 변동 vs 비강남 안정')
     add_image(s, os.path.join(FIGS, 'fig12_year_region_heatmap.png'), 0.5, 1.0, w_in=5.5)
     add_image(s, os.path.join(FIGS, 'fig13_top1_timeline.png'), 6.5, 1.0, w_in=6.5)
-    add_text(s, 0.5, 4.6, 6.0, 0.5, 'R² 7년×3권역', size=16, bold=True, color=PRIMARY)
+    add_text(s, 0.5, 4.6, 6.0, 0.5, 'R² 7년×3권역', size=16, bold=True, color=DARK)
     add_bullets(s, 0.5, 5.0, 6.0, 2.0, [
         '두 권역 모두 0.92 이상 안정 (2022 dip 0.857)',
         '2022 거래 70% 감소 + 금리 1.25→3.25% 급등',
     ], size=13)
-    add_text(s, 6.5, 4.6, 6.5, 0.5, 'Top 1 연도별 변동', size=16, bold=True, color=PRIMARY)
+    add_text(s, 6.5, 4.6, 6.5, 0.5, 'Top 1 연도별 변동', size=16, bold=True, color=DARK)
     add_bullets(s, 6.5, 5.0, 6.5, 2.0, [
         '강남: 백화점수→건물연령→CCTV→건물연령\n→종합병원→건물연령→백화점 최근접 (6회 교체)',
         '비강남: 건물연령 일관(2020 어린이집 1회)\n— 7년 안정',
@@ -287,7 +288,7 @@ def main():
         'SHAP은 인과 효과가 아닌 예측 기여도',
         'Group 분할 R² 하락 — 미관측 신규 단지 외삽 한계',
     ], size=14)
-    add_text(s, 7.0, 1.0, 6.0, 0.5, '후속 연구', size=20, bold=True, color=PRIMARY)
+    add_text(s, 7.0, 1.0, 6.0, 0.5, '후속 연구', size=20, bold=True, color=DARK)
     add_bullets(s, 7.0, 1.6, 6.0, 5.0, [
         '정밀 보행 네트워크 거리 (OSRM/ORS/상용 API) 민감도 분석',
         '시설 개폐업 완전 패널 + 정책 이벤트 결합',
@@ -308,7 +309,7 @@ def main():
     # =========== 8. 마무리 ===========
     s = prs.slides.add_slide(blank)
     add_rect(s, 0, 0, 13.333, 7.5, fill_color=WHITE)
-    add_rect(s, 0, 0, 13.333, 0.7, fill_color=PRIMARY)
+    add_rect(s, 0, 0.78, 12.5, 0.02, fill_color=LIGHT)  # 가는 회색 선만
     add_text(s, 0.7, 1.5, 12.0, 1.0, '본 연구의 기여 한 줄 요약',
              size=22, bold=True, color=LIGHT)
     add_text(s, 0.7, 2.5, 12.0, 1.6,
@@ -318,14 +319,14 @@ def main():
                     '예측 신호의 권역×연도 이질성을',
                     '설명 가능한 방식으로 검증한 연구"'])
     add_text(s, 0.7, 5.0, 12.0, 0.5, '교수 피드백 정량 답변',
-             size=18, bold=True, color=PRIMARY)
+             size=18, bold=True, color=DARK)
     add_bullets(s, 0.7, 5.6, 12.0, 1.4, [
         '도서관 도보 → 중앙값 12.0분 (생활SOC 도보권)',
         '백화점 조건 → 중앙값 38.5분 (도보권 밖, 차량권 프리미엄)',
         '시간 변동 → 6 시설군 연도별 활동 스냅샷, 5 시설군은 한계로 명시',
     ], size=14)
     add_text(s, 0.7, 6.9, 12.0, 0.4, '감사합니다 · Q&A',
-             size=16, color=PRIMARY, align=PP_ALIGN.CENTER)
+             size=16, color=DARK, align=PP_ALIGN.CENTER)
     add_notes(s, '''[마무리 · 약 30초]
 본 연구의 기여를 한 줄로 정리하면, 공간 단위와 시간 정합성을 통제한 뒤 예측 신호의 권역×연도 이질성을 설명 가능한 방식으로 검증한 연구입니다.
 교수님 피드백에 대한 정량 답변으로 도서관 도보 중앙값은 12.0분으로 생활SOC 도보권에 해당하고, 백화점은 38.5분으로 도보권 밖, 시간 변동은 6개 시설군에 연도별 활동 스냅샷을 적용해 다뤘습니다.
