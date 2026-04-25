@@ -18,7 +18,7 @@ OMML_NS = 'http://schemas.openxmlformats.org/officeDocument/2006/math'
 
 from docx.shared import Pt, Cm, Mm, RGBColor, Emu
 from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
-from docx.enum.table import WD_TABLE_ALIGNMENT
+from docx.enum.table import WD_TABLE_ALIGNMENT, WD_ALIGN_VERTICAL
 from docx.enum.section import WD_ORIENT
 from docx.oxml.ns import qn, nsdecls
 from docx.oxml import parse_xml
@@ -29,9 +29,10 @@ PAPER_DIR = os.path.join(BASE_DIR, 'paper')
 FONT_KR = '바탕'
 
 
-def set_font(run, size=11, bold=False, font=FONT_KR):
+def set_font(run, size=11, bold=False, font=FONT_KR, italic=False):
     run.font.size = Pt(size)
     run.font.bold = bold
+    run.font.italic = italic
     run.font.name = font
     rPr = run._element.get_or_add_rPr()
     rFonts = rPr.find(qn('w:rFonts'))
@@ -70,6 +71,16 @@ def add_page_number(section, start_num=None, fmt='decimal'):
     set_font(r2, 10)
 
 
+
+def _empty(doc, n=1):
+    """빈 줄 추가 (줄간격 1.0 강제 — 표지/제출서 페이지 초과 방지)"""
+    from docx.shared import Pt as _Pt
+    for _ in range(n):
+        p = doc.add_paragraph('')
+        p.paragraph_format.line_spacing = 1.0
+        p.paragraph_format.space_before = _Pt(0)
+        p.paragraph_format.space_after = _Pt(0)
+
 def create_doc():
     doc = Document()
     
@@ -77,8 +88,8 @@ def create_doc():
     section = doc.sections[0]
     section.page_width = Mm(210)
     section.page_height = Mm(297)
-    section.top_margin = Cm(4)
-    section.bottom_margin = Cm(4)
+    section.top_margin = Cm(3.8)
+    section.bottom_margin = Cm(3.8)
     section.left_margin = Cm(3.5)
     section.right_margin = Cm(3.5)
     section.header_distance = Cm(1.5)
@@ -154,6 +165,7 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
+    p.paragraph_format.line_spacing = 1.15
     if space_before:
         p.paragraph_format.space_before = Pt(space_before)
     if space_after:
@@ -165,68 +177,56 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
 
 def add_cover(doc):
     """양식1: 표지"""
-    for _ in range(4):
-        doc.add_paragraph('')
+    _empty(doc, 4)
     centered_text(doc, '석 사 학 위 논 문', 16, True)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, 'XGBoost와 SHAP을 활용한', 22, True)
     centered_text(doc, '서울시 아파트 매매가격 결정요인 분석', 22, True)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, 'Analysis of Determinants of Apartment Sale Prices', 14, True)
     centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
-    for _ in range(5):
-        doc.add_paragraph('')
+    _empty(doc, 5)
     centered_text(doc, '박  현  근', 16, True)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, '2026 년  2 월', 14, True)
     doc.add_page_break()
 
 
 def add_submission(doc):
     """양식2: 제출서"""
-    for _ in range(4):
-        doc.add_paragraph('')
+    _empty(doc, 4)
     centered_text(doc, '석 사 학 위 논 문', 16, True)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, 'XGBoost와 SHAP을 활용한', 22, True)
     centered_text(doc, '서울시 아파트 매매가격 결정요인 분석', 22, True)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, 'Analysis of Determinants of Apartment Sale Prices', 14, True)
     centered_text(doc, 'in Seoul Using XGBoost and SHAP', 14, True)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, '지도교수  ____________', 14, True)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, '이 논문을 공학 석사학위논문으로 제출합니다.', 12)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, '2026 년  2 월', 14, True)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, '빅 데 이 터  전 공', 13)
-    doc.add_paragraph('')
+    _empty(doc)
     centered_text(doc, '박  현  근', 16, True)
     doc.add_page_break()
 
 
 def add_approval(doc):
     """양식3: 인준서"""
-    for _ in range(3):
-        doc.add_paragraph('')
+    _empty(doc, 3)
     centered_text(doc, '이 논문을 박현근의', 14)
     centered_text(doc, '석사학위 논문으로 인준함.', 14)
-    for _ in range(2):
-        doc.add_paragraph('')
+    _empty(doc, 2)
     centered_text(doc, '2026 년  2 월', 14, True)
-    for _ in range(4):
-        doc.add_paragraph('')
+    _empty(doc, 4)
     
     for role in ['심 사 위 원 장', '심  사  위  원', '심  사  위  원']:
         p = doc.add_paragraph()
@@ -236,8 +236,7 @@ def add_approval(doc):
         r = p.add_run(f'{role} :  ________________  (인)')
         set_font(r, 14)
     
-    for _ in range(3):
-        doc.add_paragraph('')
+    _empty(doc, 3)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
     doc.add_page_break()
 
@@ -285,7 +284,8 @@ def add_body(doc, text):
     if not text.strip():
         return
     p = doc.add_paragraph()
-    # 한양대 부동산융합대학원 표준: 본문 줄간격 160%, 첫 줄 들여쓰기 2자(약 0.7cm)
+    # 한국 학위논문 표준: 양쪽 정렬, 줄간격 160%, 첫 줄 들여쓰기 2자(약 0.7cm)
+    p.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
     p.paragraph_format.line_spacing = 1.6
     p.paragraph_format.first_line_indent = Cm(0.7)
     p.paragraph_format.space_after = Pt(0)
@@ -313,8 +313,15 @@ def add_body(doc, text):
                         r.font.size = Pt(10)
                         r.font.bold = is_bold
                     elif cp:
-                        r = p.add_run(cp)
-                        set_font(r, 11, is_bold)
+                        # 단일 별표 *italic* 처리 (참고문헌 학술지명·책명 등)
+                        italic_parts = re.split(r'(\*[^*\n]+\*)', cp)
+                        for ip in italic_parts:
+                            if ip.startswith('*') and ip.endswith('*') and len(ip) > 2 and not ip.startswith('**'):
+                                r = p.add_run(ip[1:-1])
+                                set_font(r, 11, bold=is_bold, italic=True)
+                            elif ip:
+                                r = p.add_run(ip)
+                                set_font(r, 11, is_bold)
     return p
 
 
@@ -356,19 +363,23 @@ def add_table(doc, rows, caption=''):
                 continue
             cell = tbl.rows[i].cells[j]
             cell.text = ''
+            cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
             p = cell.paragraphs[0]
             p.alignment = WD_ALIGN_PARAGRAPH.CENTER
             p.paragraph_format.first_line_indent = Cm(0)
             p.paragraph_format.space_before = Pt(1)
             p.paragraph_format.space_after = Pt(1)
-            # 셀 내 마크다운 **bold**, `code` 처리
-            parts = re.split(r'(\*\*[^*]+\*\*|`[^`]+`)', txt)
+            # 셀 내 마크다운 **bold**, *italic*, `code` 처리
+            parts = re.split(r'(\*\*[^*]+\*\*|\*[^*\n]+\*|`[^`]+`)', txt)
             for part in parts:
                 if not part:
                     continue
                 if part.startswith('**') and part.endswith('**'):
                     r = p.add_run(part[2:-2])
                     set_font(r, 9, bold=True, font='휴먼명조')
+                elif part.startswith('*') and part.endswith('*') and len(part) > 2 and not part.startswith('**'):
+                    r = p.add_run(part[1:-1])
+                    set_font(r, 9, bold=False, font='휴먼명조', italic=True)
                 elif part.startswith('`') and part.endswith('`'):
                     r = p.add_run(part[1:-1])
                     r.font.name = 'D2Coding'
@@ -384,9 +395,7 @@ def add_table(doc, rows, caption=''):
             if i == 0:
                 set_shading(cell, 'D9E2F3')
     
-    doc.add_paragraph('')
-
-
+    _empty(doc)
 def add_image(doc, path, caption=''):
     if not os.path.exists(path):
         add_body(doc, f'[그림 파일 없음: {os.path.basename(path)}]')
@@ -555,12 +564,12 @@ def main():
     add_approval(doc)
     
     # 4. 본문 (목차~참고문헌~Abstract 포함)
-    convert_md(doc, os.path.join(PAPER_DIR, '논문_초안_v8.md'))
+    convert_md(doc, os.path.join(PAPER_DIR, '석사학위논문_박현근.md'))
     
     # 페이지 번호 추가 (첫 번째 섹션)
     add_page_number(doc.sections[0])
     
-    out = os.path.join(PAPER_DIR, '논문_초안_v8.docx')
+    out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
     doc.save(out)
     
     print(f"✅ 완료: {out}")
