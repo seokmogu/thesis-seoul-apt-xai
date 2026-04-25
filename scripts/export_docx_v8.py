@@ -307,7 +307,14 @@ def add_body(doc, text):
 
 
 def is_sep(line):
-    return bool(re.match(r'^\s*\|[\s:-]+\|\s*$', line))
+    s = line.strip()
+    if not (s.startswith('|') and s.endswith('|')):
+        return False
+    # 컬럼별로 split 후 각 칸이 정렬 마커(- : 공백)만 포함하는지
+    cells = [c.strip() for c in s.strip('|').split('|')]
+    if not cells:
+        return False
+    return all(re.fullmatch(r':?-+:?', c) for c in cells if c != '')
 
 
 def parse_row(line):
@@ -342,8 +349,26 @@ def add_table(doc, rows, caption=''):
             p.paragraph_format.first_line_indent = Cm(0)
             p.paragraph_format.space_before = Pt(1)
             p.paragraph_format.space_after = Pt(1)
-            r = p.add_run(txt)
-            set_font(r, 9 if i > 0 else 9, bold=(i == 0), font='휴먼명조')
+            # 셀 내 마크다운 **bold**, `code` 처리
+            parts = re.split(r'(\*\*[^*]+\*\*|`[^`]+`)', txt)
+            for part in parts:
+                if not part:
+                    continue
+                if part.startswith('**') and part.endswith('**'):
+                    r = p.add_run(part[2:-2])
+                    set_font(r, 9, bold=True, font='휴먼명조')
+                elif part.startswith('`') and part.endswith('`'):
+                    r = p.add_run(part[1:-1])
+                    r.font.name = 'D2Coding'
+                    rPr = r._element.get_or_add_rPr()
+                    rFonts = rPr.find(qn('w:rFonts'))
+                    if rFonts is None:
+                        rPr.append(parse_xml(f'<w:rFonts {nsdecls("w")} w:ascii="D2Coding" w:hAnsi="D2Coding" w:eastAsia="D2Coding"/>'))
+                    r.font.size = Pt(9)
+                    r.font.bold = (i == 0)
+                else:
+                    r = p.add_run(part)
+                    set_font(r, 9, bold=(i == 0), font='휴먼명조')
             if i == 0:
                 set_shading(cell, 'D9E2F3')
     
