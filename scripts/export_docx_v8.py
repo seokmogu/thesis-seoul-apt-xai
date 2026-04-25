@@ -245,7 +245,13 @@ def add_approval(doc):
 def add_heading(doc, text, level=1):
     p = doc.add_paragraph()
     p.paragraph_format.first_line_indent = Cm(0)
-    
+    # 표준 Heading 스타일 적용 (TOC·목차 인식 + grep false positive 제거)
+    style_name = f'Heading {level}'
+    try:
+        p.style = doc.styles[style_name]
+    except Exception:
+        pass
+
     if level == 1:
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.space_before = Pt(24)
@@ -492,11 +498,29 @@ def convert_md(doc, md_path):
         if line.strip().startswith('- <표') or line.strip().startswith('- <그림'):
             i += 1
             continue
-        
+
         if not line.strip():
             i += 1
             continue
-        
+
+        # 마크다운 리스트 → docx bullet/number 스타일
+        m_dash = re.match(r'^[ \t]*-\s+(.*)$', line)
+        m_num = re.match(r'^[ \t]*(\d+)\.\s+(.*)$', line)
+        if m_dash:
+            p = add_body(doc, m_dash.group(1))
+            if p is not None:
+                p.style = doc.styles['List Bullet']
+                p.paragraph_format.first_line_indent = Cm(0)
+            i += 1
+            continue
+        if m_num:
+            p = add_body(doc, m_num.group(2))
+            if p is not None:
+                p.style = doc.styles['List Number']
+                p.paragraph_format.first_line_indent = Cm(0)
+            i += 1
+            continue
+
         add_body(doc, line)
         i += 1
 
