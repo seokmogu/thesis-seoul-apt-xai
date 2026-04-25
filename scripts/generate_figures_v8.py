@@ -24,8 +24,11 @@ from matplotlib import font_manager
 from xgboost import XGBRegressor
 from sklearn.model_selection import train_test_split
 import shap
+import sys
+sys.path.insert(0, os.path.dirname(__file__))
+from generate_figures import LABEL_MAP, kr
 
-# v7 스타일과 동일: NanumGothic(공백명), 300dpi, 학술 팔레트
+# 스타일과 동일: NanumGothic(공백명), 300dpi, 학술 팔레트
 _korean_fonts = [f.name for f in font_manager.fontManager.ttflist]
 for _cand in ['NanumGothic', 'Nanum Gothic', 'AppleGothic', 'Apple SD Gothic Neo']:
     if _cand in _korean_fonts:
@@ -98,9 +101,9 @@ def fig_shap_bar(sv, feats, out):
     fig, ax = plt.subplots(figsize=(9, 7))
     ax.barh(range(len(names)), vals[::-1], color='#1f77b4')
     ax.set_yticks(range(len(names)))
-    ax.set_yticklabels(names[::-1])
+    ax.set_yticklabels([kr(n) for n in names[::-1]])
     ax.set_xlabel('평균 |SHAP| (log 스케일)')
-    ax.set_title('<그림 4> SHAP Bar — v8 전체 모형 Top 15')
+    ax.set_title('<그림 4-1> SHAP Bar — 전체 모형 Top 15')
     ax.grid(True, axis='x', alpha=0.3)
     plt.tight_layout()
     fig.savefig(out, bbox_inches='tight')
@@ -108,10 +111,12 @@ def fig_shap_bar(sv, feats, out):
 
 
 def fig_shap_summary(sv, X, feats, out):
-    # shap의 summary_plot을 저장
+    # shap의 summary_plot을 저장. feature_names를 한글로 매핑
     plt.figure(figsize=(9, 7))
-    shap.summary_plot(sv, X[feats], show=False, max_display=15)
-    plt.title('<그림 5> SHAP Summary — v8 변수 방향성 및 분포')
+    Xkr = X[feats].copy()
+    Xkr.columns = [kr(c) for c in Xkr.columns]
+    shap.summary_plot(sv, Xkr, show=False, max_display=15)
+    plt.title('<그림 4-2> SHAP Summary — 변수 방향성 및 분포')
     plt.tight_layout()
     plt.savefig(out, bbox_inches='tight')
     plt.close()
@@ -130,7 +135,7 @@ def fig_dependence(sv, X, feats, var_name, out, title):
 def fig_ablation(out):
     rows = pd.read_csv(os.path.join(ROOT, 'results/ablation_v7_v8.csv'))
     pv = rows.pivot(index='scenario', columns='split', values='xgb_r2')
-    pv = pv.reindex(['A_행정동만_v7', 'B_거리만_시점무관(2026스냅샷)', 'C_거리+시점정합(v8)', 'D_거리+시점+행정동'])
+    pv = pv.reindex(['A_행정동만_v7', 'B_거리만_시점무관(2026스냅샷)', 'C_거리+시점정합()', 'D_거리+시점+행정동'])
     pv.index = ['A 행정동만(v7)', 'B 거리만·시점무관', 'C 거리+시점정합', 'D 통합(거리+시점+행정동)']
     pv = pv[['random', 'temporal', 'group']]
     pv.columns = ['무작위', '시간순', 'Group']
@@ -138,7 +143,7 @@ def fig_ablation(out):
     pv.plot(kind='bar', ax=ax, color=['#1f77b4', '#ff7f0e', '#2ca02c'])
     ax.set_ylim(0.6, 1.0)
     ax.set_ylabel('XGBoost R²')
-    ax.set_title('<그림 10> 어블레이션 시나리오별 XGB R² (분할별)')
+    ax.set_title('<그림 4-7> 어블레이션 시나리오별 XGB R² (분할별)')
     ax.legend(title='분할')
     ax.grid(True, axis='y', alpha=0.3)
     for c in ax.containers:
@@ -171,9 +176,9 @@ def fig_region_shap(out):
     ax.bar(x - w/2, gn, w, label='강남3구', color='#d62728')
     ax.bar(x + w/2, bn, w, label='비강남', color='#1f77b4')
     ax.set_xticks(x)
-    ax.set_xticklabels(all_feats, rotation=30, ha='right', fontsize=9)
+    ax.set_xticklabels([kr(f) for f in all_feats], rotation=30, ha='right', fontsize=9)
     ax.set_ylabel('연도 합산 평균 |SHAP|')
-    ax.set_title('<그림 11> 권역별 SHAP 주요 변수 비교')
+    ax.set_title('<그림 4-8> 권역별 SHAP 주요 변수 비교')
     ax.legend()
     ax.grid(True, axis='y', alpha=0.3)
     plt.tight_layout()
@@ -191,7 +196,7 @@ def fig_year_region_heatmap(out):
     ax.set_xticklabels(pv.columns)
     ax.set_yticks(range(len(pv.index)))
     ax.set_yticklabels(pv.index)
-    ax.set_title('<그림 12> 연도×권역 XGB R² 히트맵')
+    ax.set_title('<그림 4-9> 연도×권역 XGB R² 히트맵')
     for i in range(pv.shape[0]):
         for j in range(pv.shape[1]):
             v = pv.values[i, j]
@@ -213,16 +218,16 @@ def fig_top1_timeline(out):
     ax.plot(years, [1] * len(years), 'o', color='#d62728', markersize=14)
     ax.plot(years, [0] * len(years), 'o', color='#1f77b4', markersize=14)
     for y, f in zip(years, pv['강남3구']):
-        ax.annotate(f, (y, 1), textcoords="offset points", xytext=(0, 15),
+        ax.annotate(kr(f), (y, 1), textcoords="offset points", xytext=(0, 15),
                     ha='center', fontsize=8, color='#d62728')
     for y, f in zip(years, pv['비강남']):
-        ax.annotate(f, (y, 0), textcoords="offset points", xytext=(0, -22),
+        ax.annotate(kr(f), (y, 0), textcoords="offset points", xytext=(0, -22),
                     ha='center', fontsize=8, color='#1f77b4')
     ax.set_yticks([0, 1])
     ax.set_yticklabels(['비강남', '강남3구'])
     ax.set_xticks(years)
     ax.set_ylim(-0.6, 1.6)
-    ax.set_title('<그림 13> 연도별 Top 1 SHAP 변수 변화 (강남3구 vs 비강남)')
+    ax.set_title('<그림 4-10> 연도별 Top 1 SHAP 변수 변화 (강남3구 vs 비강남)')
     ax.grid(True, axis='x', alpha=0.3)
     plt.tight_layout()
     fig.savefig(out, bbox_inches='tight')
@@ -230,7 +235,7 @@ def fig_top1_timeline(out):
 
 
 def main():
-    print("v8 데이터 로딩...")
+    print(" 데이터 로딩...")
     df = load_v8()
     print(f"데이터: {len(df):,}")
     print("XGBoost 적합...")
@@ -245,16 +250,16 @@ def main():
     fig_shap_summary(sv, sample, TREE_FEATS, os.path.join(FIGS, 'v8_fig5_shap_summary.png'))
     fig_dependence(sv, sample, TREE_FEATS, '건물연령',
                    os.path.join(FIGS, 'v8_fig6_dep_건물연령.png'),
-                   '<그림 6> SHAP Dependence — 건물연령 U자형 비선형 패턴')
+                   '<그림 4-3> SHAP Dependence — 건물연령 U자형 비선형 패턴')
     fig_dependence(sv, sample, TREE_FEATS, '전용면적',
                    os.path.join(FIGS, 'v8_fig7_dep_전용면적.png'),
-                   '<그림 7> SHAP Dependence — 전용면적 체감형 비선형 패턴')
+                   '<그림 4-4> SHAP Dependence — 전용면적 체감형 비선형 패턴')
     fig_dependence(sv, sample, TREE_FEATS, 'subway_nearest_m',
                    os.path.join(FIGS, 'v8_fig8_dep_subway_nearest.png'),
-                   '<그림 8> SHAP Dependence — 지하철 최근접거리 임계반응형')
+                   '<그림 4-5> SHAP Dependence — 지하철 최근접거리 임계반응형')
     fig_dependence(sv, sample, TREE_FEATS, 'department_nearest_m',
                    os.path.join(FIGS, 'v8_fig9_dep_department_nearest.png'),
-                   '<그림 9> SHAP Dependence — 백화점 최근접거리')
+                   '<그림 4-6> SHAP Dependence — 백화점 최근접거리')
 
     fig_ablation(os.path.join(FIGS, 'v8_fig10_ablation.png'))
     fig_region_shap(os.path.join(FIGS, 'v8_fig11_region_shap.png'))
