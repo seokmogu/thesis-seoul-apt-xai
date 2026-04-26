@@ -100,6 +100,63 @@ def add_page_number(section, start_num=None, fmt='decimal', placeholder_fmt=None
 
 
 
+_BM_ID = [1000]
+
+
+def _next_bm_id():
+    _BM_ID[0] += 1
+    return _BM_ID[0]
+
+
+def wrap_paragraph_with_bookmark(p, name):
+    """기존 paragraph p의 콘텐츠를 bookmarkStart/End로 감싼다."""
+    bid = _next_bm_id()
+    bs = parse_xml(f'<w:bookmarkStart {nsdecls("w")} w:id="{bid}" w:name="{name}"/>')
+    be = parse_xml(f'<w:bookmarkEnd {nsdecls("w")} w:id="{bid}"/>')
+    pPr = p._p.find(qn('w:pPr'))
+    if pPr is not None:
+        pPr.addnext(bs)
+    else:
+        p._p.insert(0, bs)
+    p._p.append(be)
+
+
+def append_pageref_field(p, name, font='바탕', size=11, bold=False):
+    """Paragraph p 끝에 PAGEREF <name> \\h 필드를 삽입.
+    PAGE 자리 표시는 0으로 두고 settings.xml의 updateFields가 채운다."""
+    rPr_xml = f'<w:rPr><w:rFonts {nsdecls("w")} w:eastAsia="{font}"/><w:sz w:val="{size*2}"/>{("<w:b/>") if bold else ""}</w:rPr>'
+    begin = parse_xml(f'<w:r {nsdecls("w")}>{rPr_xml}<w:fldChar w:fldCharType="begin"/></w:r>')
+    instr = parse_xml(
+        f'<w:r {nsdecls("w")}>{rPr_xml}<w:instrText xml:space="preserve"> PAGEREF {name} \\h </w:instrText></w:r>'
+    )
+    sep = parse_xml(f'<w:r {nsdecls("w")}>{rPr_xml}<w:fldChar w:fldCharType="separate"/></w:r>')
+    placeholder = parse_xml(f'<w:r {nsdecls("w")}>{rPr_xml}<w:t>0</w:t></w:r>')
+    end = parse_xml(f'<w:r {nsdecls("w")}>{rPr_xml}<w:fldChar w:fldCharType="end"/></w:r>')
+    for el in (begin, instr, sep, placeholder, end):
+        p._p.append(el)
+
+
+def add_toc_entry(doc, text, bm_name, level=0, bold=False, tab_pos_cm=14.0):
+    """점 리더 + 우측 정렬 페이지번호로 구성된 목차 항목."""
+    from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
+    p = doc.add_paragraph()
+    p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+    p.paragraph_format.first_line_indent = Cm(0)
+    p.paragraph_format.left_indent = Cm(0.7 * level)
+    p.paragraph_format.line_spacing = 1.6
+    p.paragraph_format.space_after = Pt(0)
+    p.paragraph_format.tab_stops.add_tab_stop(
+        Cm(tab_pos_cm), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS
+    )
+    r = p.add_run(text)
+    set_font(r, 11, bold)
+    rt = p.add_run('\t')
+    set_font(rt, 11, bold)
+    if bm_name:
+        append_pageref_field(p, bm_name, size=11, bold=bold)
+    return p
+
+
 def _empty(doc, n=1):
     """빈 줄 추가 (줄간격 1.0 강제 — 표지/제출서 페이지 초과 방지)"""
     from docx.shared import Pt as _Pt
@@ -273,7 +330,7 @@ def add_approval(doc):
     doc.add_page_break()
 
 
-def add_heading(doc, text, level=1):
+def add_heading(doc, text, level=1, bm_name=None):
     p = doc.add_paragraph()
     p.paragraph_format.first_line_indent = Cm(0)
     # 한양대 표준: 헤딩 줄간격 160%, 들여쓰기 0
@@ -309,6 +366,8 @@ def add_heading(doc, text, level=1):
         p.paragraph_format.space_after = Pt(6)
         r = p.add_run(text)
         set_font(r, 12, True)
+    if bm_name:
+        wrap_paragraph_with_bookmark(p, bm_name)
     return p
 
 
@@ -372,7 +431,7 @@ def parse_row(line):
     return [c.strip() for c in line.strip().strip('|').split('|')]
 
 
-def add_table(doc, rows, caption=''):
+def add_table(doc, rows, caption='', bm_name=None):
     if caption:
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -380,6 +439,8 @@ def add_table(doc, rows, caption=''):
         p.paragraph_format.space_before = Pt(8)
         r = p.add_run(caption)
         set_font(r, 10, True, '휴먼명조')  # 공식: 표/그림 내용 10pt 휴먼명조
+        if bm_name:
+            wrap_paragraph_with_bookmark(p, bm_name)
     
     if not rows:
         return
@@ -428,7 +489,7 @@ def add_table(doc, rows, caption=''):
                 set_shading(cell, 'D9E2F3')
     
     _empty(doc)
-def add_image(doc, path, caption=''):
+def add_image(doc, path, caption='', bm_name=None):
     if not os.path.exists(path):
         add_body(doc, f'[그림 파일 없음: {os.path.basename(path)}]')
         return
@@ -438,6 +499,8 @@ def add_image(doc, path, caption=''):
         p.paragraph_format.first_line_indent = Cm(0)
         r = p.add_run(caption)
         set_font(r, 10, font='휴먼명조')
+        if bm_name:
+            wrap_paragraph_with_bookmark(p, bm_name)
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
@@ -445,7 +508,57 @@ def add_image(doc, path, caption=''):
     r.add_picture(path, width=Cm(13))
 
 
-def convert_md(doc, md_path):
+_TOC_HEADINGS = ('목차', '표 목차', '그림 목차')
+
+
+def prebuild_bookmark_map(md_path):
+    """본문 헤딩(H1·H2)·표 캡션·그림 캡션에 부여할 bookmark 사전.
+
+    목차/표목차/그림목차 영역(H1) 안의 H2 라인은 등록하지 않는다.
+    """
+    headings = {}  # full text → bm name
+    tables = {}    # 'N-M' → bm name
+    figures = {}   # 'N-M' → bm name
+
+    with open(md_path, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+
+    in_toc_zone = False
+    seq = 0
+    for ln in lines:
+        s = ln.rstrip()
+        if s.startswith('# ') and not s.startswith('## '):
+            txt = s[2:].strip()
+            seq += 1
+            bm = f'_h_{seq}'
+            headings[txt] = bm
+            in_toc_zone = txt in _TOC_HEADINGS
+            continue
+        if s.startswith('## '):
+            if in_toc_zone:
+                continue
+            txt = s[3:].strip()
+            seq += 1
+            bm = f'_h_{seq}'
+            headings[txt] = bm
+            continue
+        m = re.match(r'^\*\*<표\s*([0-9-]+)>[^*]*\*\*$', s.strip())
+        if m:
+            num = m.group(1)
+            tables[num] = f'_t_{num.replace("-", "_")}'
+            continue
+        m = re.match(r'^!\[<그림\s*([0-9-]+)>[^]]*\]\(.+?\)\s*$', s.strip())
+        if m:
+            num = m.group(1)
+            figures[num] = f'_f_{num.replace("-", "_")}'
+            continue
+    return {'headings': headings, 'tables': tables, 'figures': figures}
+
+
+def convert_md(doc, md_path, bm_map=None):
+    if bm_map is None:
+        bm_map = {'headings': {}, 'tables': {}, 'figures': {}}
+
     with open(md_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
@@ -461,6 +574,7 @@ def convert_md(doc, md_path):
     caption = ''
     body_section_started = False  # 첫 '제N장' 헤딩을 만나면 새 섹션 시작
     in_references = False  # 참고문헌 섹션 hanging indent 모드
+    toc_mode = None  # 'chapter' | 'table' | 'figure' | None
 
     while i < len(lines):
         line = lines[i].rstrip()
@@ -488,7 +602,7 @@ def convert_md(doc, md_path):
             caption = m.group(1)
             i += 1
             continue
-        
+
         # 표
         if '|' in line and line.strip().startswith('|') and not is_sep(line):
             rows = []
@@ -500,24 +614,32 @@ def convert_md(doc, md_path):
                     i += 1
                 else:
                     break
-            add_table(doc, rows, caption)
+            tbm = None
+            mn = re.match(r'^<표\s*([0-9-]+)>', caption)
+            if mn:
+                tbm = bm_map['tables'].get(mn.group(1))
+            add_table(doc, rows, caption, bm_name=tbm)
             caption = ''
             continue
-        
+
         if is_sep(line):
             i += 1
             continue
-        
+
         # 그림
         m = re.match(r'!\[(.+?)\]\((.+?)\)', line)
         if m:
             cap = m.group(1)
             rel = m.group(2)
             absp = os.path.normpath(os.path.join(PAPER_DIR, rel))
-            add_image(doc, absp, cap)
+            fbm = None
+            mn = re.match(r'^<그림\s*([0-9-]+)>', cap)
+            if mn:
+                fbm = bm_map['figures'].get(mn.group(1))
+            add_image(doc, absp, cap, bm_name=fbm)
             i += 1
             continue
-        
+
         # 제목
         if line.startswith('# '):
             txt = line[2:].strip()
@@ -526,6 +648,15 @@ def convert_md(doc, md_path):
                 in_references = True
             elif txt.startswith('Abstract') or txt.startswith('ABSTRACT'):
                 in_references = False
+            # 목차/표목차/그림목차 영역 진입 플래그
+            if txt == '목차':
+                toc_mode = 'chapter'
+            elif txt == '표 목차':
+                toc_mode = 'table'
+            elif txt == '그림 목차':
+                toc_mode = 'figure'
+            else:
+                toc_mode = None
             # 장 제목은 새 페이지. 첫 제N장 만남 → body 섹션 시작 (페이지 번호 1부터 아라비아)
             if txt.startswith('제') and '장' in txt:
                 if not body_section_started:
@@ -553,11 +684,20 @@ def convert_md(doc, md_path):
                     body_section_started = True
                 else:
                     doc.add_page_break()
-            add_heading(doc, txt, 1)
+            hbm = bm_map['headings'].get(txt)
+            add_heading(doc, txt, 1, bm_name=hbm)
             i += 1
             continue
         if line.startswith('## '):
-            add_heading(doc, line[3:].strip(), 2)
+            txt = line[3:].strip()
+            # 챕터 목차 영역에서는 ## 제N장 ... 라인을 TOC 항목으로 변환
+            if toc_mode == 'chapter':
+                bm = bm_map['headings'].get(txt)
+                add_toc_entry(doc, txt, bm, level=0, bold=True)
+                i += 1
+                continue
+            hbm = bm_map['headings'].get(txt)
+            add_heading(doc, txt, 2, bm_name=hbm)
             i += 1
             continue
         if line.startswith('#### '):
@@ -574,16 +714,20 @@ def convert_md(doc, md_path):
             i += 1
             continue
         
-        # 표 목차·그림 목차 항목은 List Bullet 스타일로 유지
-        if line.strip().startswith('- <표') or line.strip().startswith('- <그림'):
+        # 표 목차·그림 목차의 항목 → TOC entry (점 리더 + PAGEREF)
+        if toc_mode in ('table', 'figure') and (
+            line.strip().startswith('- <표') or line.strip().startswith('- <그림')
+        ):
             txt = line.strip()[2:]  # "- " 제거
-            p = add_body(doc, txt)
-            if p is not None:
-                try:
-                    p.style = doc.styles['List Bullet']
-                except Exception:
-                    pass
-                p.paragraph_format.first_line_indent = Cm(0)
+            mn = re.match(r'^<(표|그림)\s*([0-9-]+)>', txt)
+            bm = None
+            if mn:
+                key = mn.group(2)
+                if mn.group(1) == '표':
+                    bm = bm_map['tables'].get(key)
+                else:
+                    bm = bm_map['figures'].get(key)
+            add_toc_entry(doc, txt, bm, level=0)
             i += 1
             continue
 
@@ -595,7 +739,19 @@ def convert_md(doc, md_path):
         m_dash = re.match(r'^[ \t]*-\s+(.*)$', line)
         m_num = re.match(r'^[ \t]*(\d+)\.\s+(.*)$', line)
         if m_dash:
-            p = add_body(doc, m_dash.group(1))
+            txt = m_dash.group(1)
+            # 챕터 TOC 영역의 bullet 항목 → TOC entry
+            if toc_mode == 'chapter':
+                # 절 라인은 들여쓰기 1단, 그 외(국문초록·표목차 등)는 들여쓰기 0단·굵게
+                if txt.startswith('제') and '절' in txt[:6]:
+                    bm = bm_map['headings'].get(txt)
+                    add_toc_entry(doc, txt, bm, level=1)
+                else:
+                    bm = bm_map['headings'].get(txt)
+                    add_toc_entry(doc, txt, bm, level=0, bold=True)
+                i += 1
+                continue
+            p = add_body(doc, txt)
             if p is not None:
                 if in_references:
                     # 참고문헌: bullet 제거, hanging indent (1.0cm)
@@ -646,7 +802,9 @@ def main():
     add_page_number(doc.sections[0], start_num=1, fmt='lowerRoman')
 
     # 4. 본문 (목차~참고문헌~Abstract 포함). 제1장 만나면 새 섹션 시작 → 아라비아 1부터
-    convert_md(doc, os.path.join(PAPER_DIR, '석사학위논문_박현근.md'))
+    md_path = os.path.join(PAPER_DIR, '석사학위논문_박현근.md')
+    bm_map = prebuild_bookmark_map(md_path)
+    convert_md(doc, md_path, bm_map=bm_map)
     
     out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
     doc.save(out)
