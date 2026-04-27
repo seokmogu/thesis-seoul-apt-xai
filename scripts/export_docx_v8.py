@@ -262,20 +262,19 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
 
 def add_cover(doc):
     """양식1: 표지"""
-    _empty(doc, 4)
+    _empty(doc, 3)
     centered_text(doc, '석 사 학 위 논 문', 16, True)
-    _empty(doc, 2)
+    _empty(doc, 1)
     centered_text(doc, 'XGBoost와 SHAP을 활용한', 18, True)
     centered_text(doc, '서울시 아파트 단위면적당 매매가격의', 18, True)
     centered_text(doc, '설명 패턴 분석', 18, True)
     _empty(doc)
     centered_text(doc, 'Explanatory Patterns of Apartment Unit-Area', 14, True)
     centered_text(doc, 'Sale Prices in Seoul Using XGBoost and SHAP', 14, True)
-    _empty(doc, 5)
+    _empty(doc, 3)
     centered_text(doc, '2026 년  2 월', 14, True)
     _empty(doc)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    _empty(doc)
     centered_text(doc, '도 시 부 동 산 정 책 전 공', 13)
     _empty(doc)
     centered_text(doc, '박  현  근', 16, True)
@@ -284,24 +283,23 @@ def add_cover(doc):
 
 def add_submission(doc):
     """양식2: 제출서"""
-    _empty(doc, 4)
-    centered_text(doc, '석 사 학 위 논 문', 16, True)
     _empty(doc, 2)
+    centered_text(doc, '석 사 학 위 논 문', 16, True)
+    _empty(doc, 1)
     centered_text(doc, 'XGBoost와 SHAP을 활용한', 18, True)
     centered_text(doc, '서울시 아파트 단위면적당 매매가격의', 18, True)
     centered_text(doc, '설명 패턴 분석', 18, True)
     _empty(doc)
     centered_text(doc, 'Explanatory Patterns of Apartment Unit-Area', 14, True)
     centered_text(doc, 'Sale Prices in Seoul Using XGBoost and SHAP', 14, True)
-    _empty(doc, 2)
+    _empty(doc, 1)
     centered_text(doc, '지도교수  고  준  호', 14, True)
-    _empty(doc, 2)
+    _empty(doc, 1)
     centered_text(doc, '이 논문을 부동산학 석사학위논문으로 제출합니다.', 12)
-    _empty(doc, 2)
+    _empty(doc, 1)
     centered_text(doc, '2026 년  2 월', 14, True)
     _empty(doc)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    _empty(doc)
     centered_text(doc, '도 시 부 동 산 정 책 전 공', 13)
     _empty(doc)
     centered_text(doc, '박  현  근', 16, True)
@@ -327,7 +325,25 @@ def add_approval(doc):
     
     _empty(doc, 3)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    doc.add_page_break()
+    # 다음에 새 섹션이 NEW_PAGE로 시작하므로 별도 page break 불필요
+
+
+def start_front_matter_section(doc):
+    """인준서 다음, 목차/표목차/그림목차/국문초록 영역 — 로마자 i부터 페이지번호."""
+    from docx.enum.section import WD_SECTION
+    sec = doc.add_section(WD_SECTION.NEW_PAGE)
+    sec.page_width = Mm(210); sec.page_height = Mm(297)
+    sec.top_margin = Cm(4.0); sec.bottom_margin = Cm(4.0)
+    sec.left_margin = Cm(3.5); sec.right_margin = Cm(3.5)
+    sec.header_distance = Cm(1.5); sec.footer_distance = Cm(1.5)
+    sectPr = sec._sectPr
+    if sectPr.find(qn('w:type')) is None:
+        type_el = parse_xml(f'<w:type {nsdecls("w")} w:val="nextPage"/>')
+        pgSz = sectPr.find(qn('w:pgSz'))
+        if pgSz is not None:
+            pgSz.addprevious(type_el)
+    add_page_number(sec, start_num=1, fmt='lowerRoman')
+    return sec
 
 
 def add_heading(doc, text, level=1, bm_name=None):
@@ -843,19 +859,15 @@ def main():
     doc = create_doc()
     enable_update_fields(doc)
     
-    # 1. 표지
+    # 1. 표지 / 2. 제출서 / 3. 인준서 — 페이지번호 미표시 (한양대 표준)
     add_cover(doc)
-    
-    # 2. 제출서
     add_submission(doc)
-    
-    # 3. 인준서
     add_approval(doc)
-    
-    # 첫 섹션 (표지/제출서/인준서/목차/표목차/그림목차/국문초록): 로마자 i부터
-    add_page_number(doc.sections[0], start_num=1, fmt='lowerRoman')
 
-    # 4. 본문 (목차~참고문헌~Abstract 포함). 제1장 만나면 새 섹션 시작 → 아라비아 1부터
+    # 4. 목차/표목차/그림목차/국문초록 — 새 섹션, 로마자 i부터
+    start_front_matter_section(doc)
+
+    # 5. 본문 (제1장 만나면 다시 새 섹션 시작 → 아라비아 1부터)
     md_path = os.path.join(PAPER_DIR, '석사학위논문_박현근.md')
     bm_map = prebuild_bookmark_map(md_path)
     convert_md(doc, md_path, bm_map=bm_map)
