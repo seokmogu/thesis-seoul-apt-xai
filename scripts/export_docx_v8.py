@@ -783,6 +783,60 @@ def enable_update_fields(doc):
     settings.insert(0, el)
 
 
+def freeze_fields_via_libreoffice(docx_path):
+    """LibreOffice headless로 docx 재저장 → PAGE/PAGEREF 필드 평가값을 OOXML cache에 굽기.
+
+    Word for Mac AppleScript는 macOS sandbox로 fields update를 OOXML까지 굽지 못한다
+    (sdef 비어있음, do Visual Basic 컴파일 차단). LibreOffice는 변환 단계에서 fields를
+    평가하고 cache를 굽기 때문에 후처리로 사용한다. 한글 폰트·표 정렬에 미세한 변동이
+    있을 수 있어 결과 docx는 시각 검증 필요.
+    """
+    import subprocess, shutil, tempfile
+    soffice = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
+    if not os.path.exists(soffice):
+        print('  [skip] LibreOffice 미설치 — 필드는 placeholder로 남음')
+        return False
+    with tempfile.TemporaryDirectory() as tmp:
+        try:
+            subprocess.run(
+                [soffice, '--headless', '--convert-to', 'docx',
+                 '--outdir', tmp, docx_path],
+                check=True, timeout=240,
+                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+            )
+        except Exception as e:
+            print(f'  [warn] field freeze 실패: {e}')
+            return False
+        fname = os.path.basename(docx_path)
+        src = os.path.join(tmp, fname)
+        if not os.path.exists(src):
+            print('  [warn] LibreOffice 출력 파일 없음')
+            return False
+        shutil.move(src, docx_path)
+        print(f'  ✓ PAGE/PAGEREF 필드 cache 채움 (LibreOffice 재저장)')
+        return True
+
+
+def export_pdf_via_libreoffice(docx_path):
+    """docx → PDF (LibreOffice headless)."""
+    import subprocess
+    soffice = '/Applications/LibreOffice.app/Contents/MacOS/soffice'
+    if not os.path.exists(soffice):
+        return False
+    try:
+        subprocess.run(
+            [soffice, '--headless', '--convert-to', 'pdf',
+             '--outdir', os.path.dirname(docx_path), docx_path],
+            check=True, timeout=240,
+            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        )
+        print(f'  ✓ PDF 변환 완료')
+        return True
+    except Exception as e:
+        print(f'  [warn] PDF 변환 실패: {e}')
+        return False
+
+
 def main():
     print("📄 논문 DOCX v2 생성 (한양대 공식 서식)")
 
@@ -808,7 +862,12 @@ def main():
     
     out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
     doc.save(out)
-    
+
+    # 후처리: LibreOffice로 PAGE/PAGEREF 필드 cache 굽기 + PDF 변환
+    print('🔧 fields freeze + PDF 생성')
+    freeze_fields_via_libreoffice(out)
+    export_pdf_via_libreoffice(out)
+
     print(f"✅ 완료: {out}")
     print(f"   크기: {os.path.getsize(out)//1024}KB")
     print(f"   문단: {len(doc.paragraphs)}, 표: {len(doc.tables)}")
