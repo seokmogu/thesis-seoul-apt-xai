@@ -506,7 +506,7 @@ def main():
     ]
     splits = [
         ('무작위 분할', '같은 단지 중첩 — 가장 쉬움'),
-        ('단지 Group 분할', '미관측 단지 외삽 — 가장 엄격'),
+        ('단지 분할', '미관측 단지 외삽 — 가장 엄격'),
         ('시간순 분할', '≤2023 train / ≥2024 test'),
     ]
     for i, (m, d) in enumerate(models):
@@ -538,13 +538,13 @@ def main():
                  align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
         add_text(s, 7.7, y + 0.05, 5.2, 0.45, name, size=13, bold=True, color=NAVY)
         add_text(s, 7.7, y + 0.5, 5.2, 0.45, n, size=11, color=DARK)
-    add_notes(s, '모형은 OLS·Random Forest·XGBoost 3종을 무작위·Group·시간순 3분할에서 비교했고, Ablation은 4 시나리오로 공간 정합·시간 정합·결합 효과를 분리했습니다.')
+    add_notes(s, '모형은 OLS·Random Forest·XGBoost 3종을 무작위·단지·시간순 3분할에서 비교했고, Ablation은 4 시나리오로 공간 정합·시간 정합·결합 효과를 분리했습니다.')
 
     # ===== 12. RESULTS — Ablation (표) =====
     s = prs.slides.add_slide(blank)
     add_chapter_header(s, 4, 'RESULTS', 'Ablation — 거리 전환이 시간순 R² +7.1%p 견인', 12)
     # 표
-    headers = ['시나리오', '무작위', '시간순', '단지 Group', '변수 수']
+    headers = ['시나리오', '무작위', '시간순', '단지', '변수 수']
     rows = [
         ('A 행정동 집계만', '0.921', '0.800', '0.777', '18'),
         ('B 거리 기반 + 시점 무관', '0.952', '0.856', '0.727', '26'),
@@ -581,7 +581,7 @@ def main():
     findings = [
         'A→B (거리 기반 전환) : 시간순 +5.6%p — MAUP 완화 효과의 정량 증거',
         'B→C (시점 정합 단독) : R² 단독 효과 0.5%p 이내 — 성능 아닌 leakage 제거 가치',
-        'D (거리+시점+행정동) : 무작위·시간순·Group 모두 최고 — 보완적 결합',
+        'D (거리+시점+행정동) : 무작위·시간순·단지 분할 모두 최고 — 보완적 결합',
     ]
     add_bullets(s, 0.6, 5.5, 12.1, 1.1, findings, size=12)
     add_notes(s, '''[RESULTS Ablation]
@@ -595,7 +595,7 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
     add_text(s, 0.4, 6.4, 12.5, 0.5,
              '→ 모든 분할에서 D(통합)가 최고. A→B 거리 전환의 시간순 분할 개선이 가장 큼.',
              size=13, bold=True, color=ACCENT, align=PP_ALIGN.CENTER)
-    add_notes(s, '시각적으로도 D 시나리오가 무작위·시간순·Group 세 분할 모두에서 가장 높은 막대를 보입니다.')
+    add_notes(s, '시각적으로도 D 시나리오가 무작위·시간순·단지 세 분할 모두에서 가장 높은 막대를 보입니다.')
 
     # ===== 14. RESULTS — 전체 SHAP Top 15 =====
     s = prs.slides.add_slide(blank)
@@ -749,7 +749,7 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
         '도보 추정은 직선거리 × 1.35 / 4 km·h 근사',
         '거시·정책 변수 미포함 (LTV·DTI·재건축 인허가)',
         'SHAP은 인과 효과 아닌 예측 기여도',
-        'Group 분할 외삽 한계 + 비교 모형 범위 제한',
+        '단지 분할 외삽 한계 + 비교 모형 범위 제한',
     ], size=11)
     # 후속 연구
     add_rect(s, 6.7, 1.3, 6.2, 0.5, fill=NAVY_LT)
