@@ -115,15 +115,15 @@ def add_image(slide, path, l, t, w=None, h=None):
 
 def add_chapter_header(slide, num, en_chapter, kr_subtitle, page_num):
     """HUSA 표준 챕터 헤더 — 좌상단 네이비 박스 + 한글 부제 + 우상단 영문 부제."""
-    # 좌상단 네이비 박스 + 챕터 라벨
-    add_rect(slide, 0, 0, 2.3, 0.55, fill=NAVY)
-    add_text(slide, 0.15, 0, 2.1, 0.55, f'{num:02d}. {en_chapter}',
-             size=15, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE)
+    # 좌상단 네이비 박스 + 챕터 라벨 (LITERATURE REVIEW가 한 줄에 들어가도록 폭 확장)
+    add_rect(slide, 0, 0, 3.2, 0.55, fill=NAVY)
+    add_text(slide, 0.15, 0, 3.0, 0.55, f'{num:02d}. {en_chapter}',
+             size=14, bold=True, color=WHITE, anchor=MSO_ANCHOR.MIDDLE)
     # 한글 부제 (좌측)
     add_text(slide, 0.25, 0.6, 5.0, 0.4, kr_subtitle,
              size=13, bold=True, color=NAVY, anchor=MSO_ANCHOR.MIDDLE)
     # 영문 부제 (우상단)
-    add_text(slide, 5.5, 0.1, 7.7, 0.4, EN_TITLE,
+    add_text(slide, 6.4, 0.1, 6.8, 0.4, EN_TITLE,
              size=10, color=GRAY, align=PP_ALIGN.RIGHT, anchor=MSO_ANCHOR.MIDDLE)
     # 헤더 하단 라인
     add_rect(slide, 0.25, 1.05, 12.85, 0.02, fill=LIGHT)
@@ -591,8 +591,8 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
     # ===== 13. RESULTS — Ablation (그림) =====
     s = prs.slides.add_slide(blank)
     add_chapter_header(s, 4, 'RESULTS', 'Ablation 시나리오별 XGB R² 시각화', 13)
-    add_image(s, os.path.join(FIGS, 'fig10_ablation.png'), 1.5, 1.4, w=10.0)
-    add_text(s, 0.4, 6.4, 12.5, 0.5,
+    add_image(s, os.path.join(FIGS, 'fig10_ablation.png'), 2.4, 1.4, w=8.5)
+    add_text(s, 0.4, 6.55, 12.5, 0.5,
              '→ 모든 분할에서 D(통합)가 최고. A→B 거리 전환의 시간순 분할 개선이 가장 큼.',
              size=13, bold=True, color=ACCENT, align=PP_ALIGN.CENTER)
     add_notes(s, '시각적으로도 D 시나리오가 무작위·시간순·단지 세 분할 모두에서 가장 높은 막대를 보입니다.')
@@ -742,7 +742,7 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
     add_chapter_header(s, 5, 'CONCLUSION', '연구의 한계 · 후속 연구 · 마무리', 20)
     # 한계
     add_rect(s, 0.4, 1.3, 6.2, 0.5, fill=ACCENT)
-    add_text(s, 0.4, 1.3, 6.2, 0.5, '한계 (정직한 진단)',
+    add_text(s, 0.4, 1.3, 6.2, 0.5, '한계',
              size=14, bold=True, color=WHITE, align=PP_ALIGN.CENTER, anchor=MSO_ANCHOR.MIDDLE)
     add_bullets(s, 0.5, 1.9, 6.0, 3.0, [
         '5 시설군 스냅샷 잔존 (도서관·백화점·대형마트·CCTV·병원)',
