@@ -631,13 +631,15 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
     # ===== 15. RESULTS — 비선형 Dependence =====
     s = prs.slides.add_slide(blank)
     add_chapter_header(s, 4, 'RESULTS', 'SHAP 비선형 패턴 — 건물연령 U자 / 지하철 임계반응', 15)
+    # 차트 width 6.3in × aspect 1.27 → height 4.97in. bottom y = 1.3 + 4.97 = 6.27.
+    # 따라서 라벨 텍스트는 6.3 이상으로 내려야 차트와 겹치지 않음.
     add_image(s, os.path.join(FIGS, 'fig6_dep_건물연령.png'), 0.4, 1.3, w=6.3)
     add_image(s, os.path.join(FIGS, 'fig8_dep_subway_nearest.png'), 6.8, 1.3, w=6.3)
-    add_text(s, 0.4, 6.0, 6.3, 0.4, '건물연령 25~30년 반등 — 재건축 기대 신호',
+    add_text(s, 0.4, 6.35, 6.3, 0.35, '건물연령 25~30년 반등 — 재건축 기대 신호',
              size=12, bold=True, color=DARK, align=PP_ALIGN.CENTER)
-    add_text(s, 6.8, 6.0, 6.3, 0.4, '지하철 500m 이내 강한 양 → 평탄화 — 도보 역세권 프리미엄',
+    add_text(s, 6.8, 6.35, 6.3, 0.35, '지하철 500m 이내 강한 양 → 평탄화 — 도보 역세권 프리미엄',
              size=12, bold=True, color=DARK, align=PP_ALIGN.CENTER)
-    add_text(s, 0.4, 6.5, 12.5, 0.5,
+    add_text(s, 0.4, 6.8, 12.5, 0.4,
              '→ OLS 선형 가정으로 포착되지 않는 비선형 패턴을 SHAP이 정량 시각화',
              size=13, bold=True, color=ACCENT, align=PP_ALIGN.CENTER)
     add_notes(s, '건물연령은 25~30년 구간에서 반등하는 U자형이고, 지하철 최근접거리는 500m 이내 강한 양에서 평탄화되는 임계반응형입니다. OLS는 못 잡는 패턴입니다.')
@@ -692,14 +694,14 @@ Ablation 결과 거리 전환만으로 시간순 R²가 5.6%p 개선되었고, �
     # ===== 18. RESULTS — 연도별 Top1 변화 =====
     s = prs.slides.add_slide(blank)
     add_chapter_header(s, 4, 'RESULTS', '연도별 Top 1 SHAP 변수 — 강남 6회 교체 vs 비강남 안정', 18)
-    add_image(s, os.path.join(FIGS, 'fig13_top1_timeline.png'), 0.4, 1.3, w=12.5)
+    add_image(s, os.path.join(FIGS, 'fig13_top1_timeline.png'), 0.92, 1.3, w=11.5)
     # 하단 핵심 메시지
     add_rect(s, 0.4, 5.5, 12.5, 1.7, fill=BG_LIGHT)
     add_text(s, 0.6, 5.6, 12.1, 0.4, '핵심 발견 — 권역별 시간 안정성의 차이',
              size=14, bold=True, color=ACCENT)
     add_bullets(s, 0.6, 6.0, 12.1, 1.2, [
         '강남3구 : 백화점수→건물연령→CCTV→건물연령→종합병원→건물연령→백화점 최근접 — 7년간 6회 교체',
-        '비강남 : 7년 내내 건물연령이 Top1 (2020 어린이집 1회 예외) — 안정적 구조',
+        '비강남 : 7년 중 5년 건물연령 1위 (2020 어린이집수·2021 전용면적 예외) — 안정적 구조',
         '단일 SHAP에서 보이지 않던 "권역별 시간 안정성 차이"가 본 연구의 차별 발견',
     ], size=11)
     add_notes(s, '강남 Top1은 7년간 6회 바뀌고, 비강남은 거의 매년 건물연령이 1위입니다. 두 권역의 가격 설명 구조가 서로 다른 시간 안정성을 가집니다.')
