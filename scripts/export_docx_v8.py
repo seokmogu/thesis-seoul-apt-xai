@@ -513,6 +513,9 @@ def add_image(doc, path, caption='', bm_name=None):
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.first_line_indent = Cm(0)
+        p.paragraph_format.space_before = Pt(12)
+        p.paragraph_format.space_after = Pt(4)
+        p.paragraph_format.keep_with_next = True
         r = p.add_run(caption)
         set_font(r, 10, font='휴먼명조')
         if bm_name:
@@ -520,6 +523,8 @@ def add_image(doc, path, caption='', bm_name=None):
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
+    p.paragraph_format.space_after = Pt(12)
+    p.paragraph_format.keep_together = True
     r = p.add_run()
     r.add_picture(path, width=Cm(13))
 
