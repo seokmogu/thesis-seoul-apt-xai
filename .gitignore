@@ -4,8 +4,27 @@ __pycache__/
 .env
 .venv/
 .env.firecrawl
+node_modules/
 
 # 대용량 파생 데이터 (GitHub 100MB 초과)
 data/apartment_final_v8.csv
 data/seoul_large_stores_v2.csv
 .DS_Store
+
+# 문서 빌드/렌더 검증 산출물
+paper/backup/
+paper/render_check_*/
+paper/versions/
+paper/*_compact.docx
+paper/*_compact.pdf
+paper/*_compact.md
+
+# 그림 생성 중간 산출물
+figures/archive/gpt_image_trials_*/
+figures/archive/pre_concept_cleanup_*/
+figures/archive/pre_kopubworld_*/
+
+# 로컬 재빌드 로그
+results/export_docx_v8.log
+results/export_docx_v8_compact.log
+results/render_docx_*.log
