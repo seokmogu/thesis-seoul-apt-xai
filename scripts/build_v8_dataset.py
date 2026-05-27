@@ -27,13 +27,12 @@ def main():
     dist = dist.rename(columns={'gu': '구', 'bjd': '법정동', 'apt_name_raw': '아파트명'})
     print(f"거래: {len(trades):,}, 연도별 거리변수: {len(dist):,}")
 
-    # 기존 인프라 집계 컬럼(초/중/고/CCTV/백화점/지하철역수/공원/도서관/학원/어린이집) 이름 충돌 방지
-    # 거리 기반 변수가 우위이므로 기존 컬럼에 접미사 `_legacy` 붙이기
-    legacy_cols = ['초등학교수', '중학교수', '고등학교수', 'CCTV수', '백화점수',
-                   '지하철역수', '공원수', '도서관수', '학원수', '어린이집수']
-    rename = {c: f'{c}_legacy' for c in legacy_cols if c in trades.columns}
+    # 기존 행정동 경계 집계 컬럼은 기준선 비교용으로만 보존하고 이름 충돌을 피한다.
+    admin_count_cols = ['초등학교수', '중학교수', '고등학교수', 'CCTV수', '백화점수',
+                        '지하철역수', '공원수', '도서관수', '학원수', '어린이집수']
+    rename = {c: f'{c}_admin_count' for c in admin_count_cols if c in trades.columns}
     trades = trades.rename(columns=rename)
-    print(f"legacy 컬럼 rename: {len(rename)}개")
+    print(f"행정동 집계 기준선 컬럼 rename: {len(rename)}개")
 
     merged = trades.merge(
         dist, on=['구', '법정동', '아파트명', '거래년도'], how='left', validate='many_to_one')

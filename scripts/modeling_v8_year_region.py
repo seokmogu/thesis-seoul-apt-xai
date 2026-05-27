@@ -4,6 +4,7 @@
 
 7개년(2019-2025) × 3권역(전체/강남3구/비강남) = 21 서브모델.
 각 서브모델: XGB R², MAPE, SHAP Top 10
+전용면적은 종속변수 log(거래금액/전용면적) 산식에 사용되므로 설명변수에서 제외한다.
 
 출력:
   results/v8_year_region_results.json
@@ -22,7 +23,7 @@ import shap
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 RESULTS = os.path.join(os.path.dirname(__file__), '..', 'results')
 
-# v8 피처셋 (D 시나리오 — 거리 + 시점 + 행정동)
+# v8 최종 피처셋 — 거리 + 시점 정합
 DISTANCE_FEATS = [
     'subway_nearest_m', 'subway_count_1000m',
     'elem_school_nearest_m', 'elem_school_count_1000m',
@@ -36,12 +37,9 @@ DISTANCE_FEATS = [
     'hospital_general_nearest_m', 'hospital_count_1000m',
     'cctv_count_500m',
 ]
-LEGACY = ['초등학교수_legacy', '중학교수_legacy', '고등학교수_legacy',
-          'CCTV수_legacy', '백화점수_legacy', '지하철역수_legacy',
-          '공원수_legacy', '도서관수_legacy', '학원수_legacy', '어린이집수_legacy']
-COMMON = ['전용면적', '층', '건물연령', '강남구분',
+COMMON = ['층', '건물연령', '강남구분',
           '기준금리', 'CD금리', '소비자물가지수', 'M2']
-FEATURES = COMMON + DISTANCE_FEATS + LEGACY
+FEATURES = COMMON + DISTANCE_FEATS
 
 
 def metrics(y_true_log, y_pred_log):

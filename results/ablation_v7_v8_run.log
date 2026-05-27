@@ -1,32 +1,26 @@
 완전 레코드: 391,826
 B용 스냅샷 결합 후: 391,826
 
-=== A_행정동만_v7 (n=391,826, features=18) ===
-    random: XGB R²=0.9208 MAPE=0.0995  OLS R²=0.5061
-  temporal: XGB R²=0.8005 MAPE=0.1488  OLS R²=0.4135
-     group: XGB R²=0.7772 MAPE=0.1552  OLS R²=0.4274
+=== A_행정동집계_기준선 (n=391,826, features=17) ===
+    random: XGB R²=0.8524 MAPE=0.1455  OLS R²=0.4994
+  temporal: XGB R²=0.6653 MAPE=0.1947  OLS R²=0.4107
+     group: XGB R²=0.6763 MAPE=0.1945  OLS R²=0.4250
 
-=== B_거리만_시점무관(2026스냅샷) (n=391,826, features=26) ===
-    random: XGB R²=0.9519 MAPE=0.0742  OLS R²=0.5504
-  temporal: XGB R²=0.8558 MAPE=0.1247  OLS R²=0.4480
-     group: XGB R²=0.7275 MAPE=0.1786  OLS R²=0.4832
+=== B_거리만_시점무관(2026스냅샷) (n=391,826, features=25) ===
+    random: XGB R²=0.9200 MAPE=0.1049  OLS R²=0.5447
+  temporal: XGB R²=0.8156 MAPE=0.1444  OLS R²=0.4456
+     group: XGB R²=0.6429 MAPE=0.2053  OLS R²=0.4806
 
-=== C_거리+시점정합(v8) (n=391,826, features=26) ===
-    random: XGB R²=0.9493 MAPE=0.0762  OLS R²=0.5304
-  temporal: XGB R²=0.8513 MAPE=0.1312  OLS R²=0.4114
-     group: XGB R²=0.7260 MAPE=0.1824  OLS R²=0.4684
-
-=== D_거리+시점+행정동 (n=391,826, features=36) ===
-    random: XGB R²=0.9587 MAPE=0.0685  OLS R²=0.5837
-  temporal: XGB R²=0.8711 MAPE=0.1198  OLS R²=0.4861
-     group: XGB R²=0.8039 MAPE=0.1483  OLS R²=0.5023
+=== C_거리+시점정합_비교모형 (n=391,826, features=25) ===
+    random: XGB R²=0.9160 MAPE=0.1073  OLS R²=0.5258
+  temporal: XGB R²=0.7994 MAPE=0.1525  OLS R²=0.4107
+     group: XGB R²=0.6212 MAPE=0.2104  OLS R²=0.4660
 
 저장: results/ablation_v7_v8.json, .csv
 
 === 요약 (XGB R²) ===
 split                 group  random  temporal
 scenario                                     
-A_행정동만_v7            0.7772  0.9208    0.8005
-B_거리만_시점무관(2026스냅샷)  0.7275  0.9519    0.8558
-C_거리+시점정합(v8)        0.7260  0.9493    0.8513
-D_거리+시점+행정동          0.8039  0.9587    0.8711
+A_행정동집계_기준선          0.6763  0.8524    0.6653
+B_거리만_시점무관(2026스냅샷)  0.6429  0.9200    0.8156
+C_거리+시점정합_비교모형       0.6212  0.9160    0.7994

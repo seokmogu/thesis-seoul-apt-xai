@@ -3,12 +3,12 @@
 v7 vs v8 Ablation: 변수셋·시점 처리별 비교.
 
 비교할 피처셋:
-  A. 행정동만 (v7 원본): legacy_counts (초/중/고/어린이집/학원/공원/도서관/백화점/CCTV/지하철역수)
+  A. 행정동 집계만: admin_count features (초/중/고/어린이집/학원/공원/도서관/백화점/CCTV/지하철역수)
   B. 거리만 (시점 무관): v8 거리변수, 연도 스냅샷 없음 (모든 거래에 2026 스냅샷 적용)
-  C. 거리+시점: v8 전체 (연도별 시설 active 필터)
-  D. 거리+시점+행정동: C + legacy 보조 (robustness)
+  C. 거리+시점: 비교모형 (연도별 시설 active 필터)
 
-공통 변수: 전용면적·층·건물연령·강남구분·거시경제(기준금리/CD/CPI/M2)
+공통 변수: 층·건물연령·강남구분·거시경제(기준금리/CD/CPI/M2)
+전용면적은 종속변수 log(거래금액/전용면적) 산식에 사용되므로 설명변수에서 제외한다.
 
 분할: Random / Temporal(≤2023 train, ≥2024 test) / Group(단지 단위 5-fold)
 
@@ -29,13 +29,14 @@ from sklearn.metrics import r2_score
 DATA_DIR = os.path.join(os.path.dirname(__file__), '..', 'data')
 RESULTS = os.path.join(os.path.dirname(__file__), '..', 'results')
 
-COMMON = ['전용면적', '층', '건물연령', '강남구분',
+COMMON = ['층', '건물연령', '강남구분',
           '기준금리', 'CD금리', '소비자물가지수', 'M2']
 
-# A: 행정동 단순 개수 (v7 원본 + 레거시 유지)
-LEGACY = ['초등학교수_legacy', '중학교수_legacy', '고등학교수_legacy',
-          'CCTV수_legacy', '백화점수_legacy', '지하철역수_legacy',
-          '공원수_legacy', '도서관수_legacy', '학원수_legacy', '어린이집수_legacy']
+# A: 행정동 단순 개수 기준선
+ADMIN_COUNT = ['초등학교수_admin_count', '중학교수_admin_count', '고등학교수_admin_count',
+               'CCTV수_admin_count', '백화점수_admin_count', '지하철역수_admin_count',
+               '공원수_admin_count', '도서관수_admin_count', '학원수_admin_count',
+               '어린이집수_admin_count']
 
 # B/C: 거리 변수 (학술 문헌 관행 기반 축약; 시설별 최근접 + 1km 개수 선택)
 DISTANCE = [
@@ -88,8 +89,8 @@ def eval_split(df, features, split_kind):
 
 def main():
     df = pd.read_csv(os.path.join(DATA_DIR, 'apartment_final_v8.csv'), low_memory=False)
-    # A에는 레거시 컬럼이 필요하니 결측 제거
-    df = df.dropna(subset=LEGACY + DISTANCE + COMMON + ['log㎡당가격'])
+    # A에는 행정동 집계 기준선 컬럼이 필요하니 결측 제거
+    df = df.dropna(subset=ADMIN_COUNT + DISTANCE + COMMON + ['log㎡당가격'])
     print(f"완전 레코드: {len(df):,}")
 
     # v7 스냅샷 에뮬레이션 위한 C_snap (C: v8 전체) — 현재 v8 이미 시점 정합
@@ -107,10 +108,9 @@ def main():
     print(f"B용 스냅샷 결합 후: {len(df_b):,}")
 
     scenarios = {
-        'A_행정동만_v7': (df, COMMON + LEGACY),
+        'A_행정동집계_기준선': (df, COMMON + ADMIN_COUNT),
         'B_거리만_시점무관(2026스냅샷)': (df_b, COMMON + DISTANCE_SNAP),
-        'C_거리+시점정합(v8)': (df, COMMON + DISTANCE),
-        'D_거리+시점+행정동': (df, COMMON + DISTANCE + LEGACY),
+        'C_거리+시점정합_비교모형': (df, COMMON + DISTANCE),
     }
 
     results = {}

@@ -1,0 +1,20 @@
+{
+  "official_admin_dongs": 426,
+  "spatial_admin_dongs_in_sample": 424,
+  "legacy_name_admin_dongs": 215,
+  "transactions_in_final": 391826,
+  "transactions_with_spatial_match": 391826,
+  "apartments_with_spatial_match": 8601,
+  "missing_official_admin_dongs": [
+    {
+      "구": "종로구",
+      "행정동": "삼청동",
+      "adm_nm": "서울특별시 종로구 삼청동"
+    },
+    {
+      "구": "종로구",
+      "행정동": "가회동",
+      "adm_nm": "서울특별시 종로구 가회동"
+    }
+  ]
+}

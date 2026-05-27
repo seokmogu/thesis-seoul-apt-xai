@@ -5,6 +5,7 @@ v8 모델링: 거리 기반 변수 + 시점 정합 + 교수 피드백 반영.
 차이점 (v7 → v8):
   - Y: log(㎡당 가격) 유지 (v7 이미 반영)
   - X: 행정동 단순 개수 → 반경 거리 기반 + 연도별 시점 정합
+  - X: 전용면적은 단위면적당 가격 산식에 들어가므로 설명변수에서 제외
   - 모형 분할: 전체 + 권역(강남/비강남) + 면적대(20평대/30평대) + 연도별 (옵션)
 
 OLS 모형 (축소): VIF 관리를 위해 시설군당 최근접거리 1개 또는 반경 1개만.
@@ -36,7 +37,7 @@ OUT_JSON = os.path.join(RESULTS, 'modeling_v8_results.json')
 
 # OLS용 축소 피처 (VIF 관리)
 OLS_FEATURES = [
-    '전용면적', '층', '건물연령', '강남구분',
+    '층', '건물연령', '강남구분',
     'subway_nearest_m', 'elem_school_nearest_m', 'middle_school_nearest_m',
     'library_nearest_m', 'park_nearest_m', 'mart_nearest_m',
     'department_nearest_m', 'academy_nearest_m', 'hospital_general_nearest_m',
@@ -45,7 +46,6 @@ OLS_FEATURES = [
     '기준금리', '소비자물가지수', 'M2',
 ]
 
-# Tree 모형용 풀 피처
 TREE_FEATURES = OLS_FEATURES + [
     'subway_count_1000m', 'elem_school_count_1000m', 'middle_school_count_1000m',
     'high_school_count_1000m', 'mart_count_1000m', 'department_count_2000m',

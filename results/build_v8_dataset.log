@@ -1,9 +1,9 @@
 거래: 391,826, 연도별 거리변수: 60,207
-legacy 컬럼 rename: 10개
+행정동 집계 기준선 컬럼 rename: 10개
 조인 결측: 0 (0.00%)
 
 저장: /Users/seokmogu/project/thesis-seoul-apt-xai/scripts/../data/apartment_final_v8.csv
-최종 shape: (391826, 91)
+최종 shape: (391826, 103)
 
 주요 최근접거리(m) 중앙값:
   subway_nearest_m: 464
