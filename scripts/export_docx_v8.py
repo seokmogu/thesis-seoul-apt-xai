@@ -35,7 +35,7 @@ FONT_KR = 'KoPubWorldBatang_Pro'
 # 그림은 캡션과 함께 한 문단으로 묶이므로, 큰 그림이 하단에서 밀리며
 # 과도한 공백을 만들지 않도록 그림별 최대 폭/높이를 제한한다.
 IMAGE_SIZE_LIMITS_CM = {
-    'fig1_research_flow.png': (13.2, 8.2),
+    'fig1_research_flow.png': (12.4, 12.0),
     'fig2_xgboost_concept.png': (13.6, 8.8),
     'fig3_shap_framework.png': (13.6, 10.7),
     'fig4_shap_bar.png': (11.0, 8.8),
@@ -247,24 +247,24 @@ def append_pageref_field(p, name, font=None, size=11, bold=False):
         p._p.append(el)
 
 
-def add_toc_entry(doc, text, bm_name, level=0, bold=False, tab_pos_cm=14.0):
+def add_toc_entry(doc, text, bm_name, level=0, bold=False, tab_pos_cm=14.0, font_size=11, line_spacing=1.6):
     """점 리더 + 우측 정렬 페이지번호로 구성된 목차 항목."""
     from docx.enum.text import WD_TAB_ALIGNMENT, WD_TAB_LEADER
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.LEFT
     p.paragraph_format.first_line_indent = Cm(0)
     p.paragraph_format.left_indent = Cm(0.7 * level)
-    p.paragraph_format.line_spacing = 1.6
+    p.paragraph_format.line_spacing = line_spacing
     p.paragraph_format.space_after = Pt(0)
     p.paragraph_format.tab_stops.add_tab_stop(
         Cm(tab_pos_cm), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS
     )
     r = p.add_run(text)
-    set_font(r, 11, bold)
+    set_font(r, font_size, bold)
     rt = p.add_run('\t')
-    set_font(rt, 11, bold)
+    set_font(rt, font_size, bold)
     if bm_name:
-        append_pageref_field(p, bm_name, size=11, bold=bold)
+        append_pageref_field(p, bm_name, size=font_size, bold=bold)
     return p
 
 
@@ -375,16 +375,14 @@ def latex_to_omml(latex, block=False):
 
 
 def add_block_math(doc, latex):
-    # 직전 본문 paragraph가 수식과 같은 페이지에 있도록 keep_with_next 설정
-    if doc.paragraphs:
-        doc.paragraphs[-1].paragraph_format.keep_with_next = True
+    # 수식 문단 자체만 분리되지 않게 한다. 앞뒤 본문까지 묶으면 Word에서 큰 빈 공간이 생길 수 있다.
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
     p.paragraph_format.space_before = Pt(6)
     p.paragraph_format.space_after = Pt(6)
-    p.paragraph_format.keep_together = True       # 수식 paragraph 자체 split 금지
-    p.paragraph_format.keep_with_next = True      # 수식 다음 본문도 같은 페이지
+    p.paragraph_format.keep_together = True
+    p.paragraph_format.keep_with_next = False
     try:
         elem = latex_to_omml(latex, block=True)
         p._p.append(elem)
@@ -426,10 +424,10 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
 
 def add_cover(doc):
     """양식1: 표지 — 한양대 부동산융합대학원 표준 (조민지 2023 양식)
-    순서: 석사학위논문 → 한글제목 → 영문제목 → 이름 → 학교/대학원 → 연월
+    순서: 석사학위청구논문 → 한글제목 → 영문제목 → 이름 → 학교/대학원 → 연월
     전공명은 표지에 미표기, 제출서에만 표기."""
     _empty(doc, 2)
-    centered_text(doc, '석 사 학 위 논 문', 16, True)
+    centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
     centered_text(doc, '서울시 아파트 단위면적당', 18, True)
     centered_text(doc, '매매가격 구조 분석', 18, True)
@@ -443,7 +441,7 @@ def add_cover(doc):
     _empty(doc, 2)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
     _empty(doc, 1)
-    centered_text(doc, '2026 년  2 월', 14, True)
+    centered_text(doc, '2026 년  8 월', 14, True)
     doc.add_page_break()
 
 
@@ -453,7 +451,7 @@ def add_submission(doc):
     제출서는 표지보다 항목이 많으므로 Word 렌더링에서 이름이 다음 쪽으로 밀리지 않게
     제목 블록만 표지보다 한 단계 작게 둔다.
     """
-    centered_text(doc, '석 사 학 위 논 문', 16, True)
+    centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
     centered_text(doc, '서울시 아파트 단위면적당', 17, True)
     centered_text(doc, '매매가격 구조 분석', 17, True)
@@ -463,9 +461,9 @@ def add_submission(doc):
     centered_text(doc, 'Focusing on Distance-Based Accessibility and Spatiotemporal Heterogeneity', 10, True)
     centered_text(doc, '지도교수  고  준  호', 14, True, space_before=12)
     _empty(doc, 1)
-    centered_text(doc, '이 논문을 공학 석사학위논문으로 제출합니다.', 12)
+    centered_text(doc, '이 논문을 공학 석사학위청구논문으로 제출합니다.', 12)
     _empty(doc, 1)
-    centered_text(doc, '2026 년  2 월', 14, True)
+    centered_text(doc, '2026 년  8 월', 14, True)
     centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True, space_before=10)
     centered_text(doc, '도 시 · 부 동 산 빅 데 이 터 전 공', 13)
     centered_text(doc, '박  현  근', 16, True, space_before=12)
@@ -478,15 +476,20 @@ def add_approval(doc):
     centered_text(doc, '이 논문을 박현근의', 14)
     centered_text(doc, '석사학위 논문으로 인준함.', 14)
     _empty(doc, 2)
-    centered_text(doc, '2026 년  2 월', 14, True)
+    centered_text(doc, '2026 년  8 월', 14, True)
     _empty(doc, 4)
     
-    for role in ['심 사 위 원 장', '심  사  위  원', '심  사  위  원']:
+    committee = [
+        ('심 사 위 원 장', '조  미  정'),
+        ('심  사  위  원', '엄  선  용'),
+        ('심  사  위  원', '고  준  호'),
+    ]
+    for role, name in committee:
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.first_line_indent = Cm(0)
         p.paragraph_format.space_after = Pt(24)
-        r = p.add_run(f'{role} :  ________________  (인)')
+        r = p.add_run(f'{role} :  {name}  (인)')
         set_font(r, 14)
     
     _empty(doc, 3)
@@ -519,7 +522,7 @@ def start_front_matter_section(doc):
 def add_heading(doc, text, level=1, bm_name=None):
     p = doc.add_paragraph()
     p.paragraph_format.first_line_indent = Cm(0)
-    # 한양대 표준: 헤딩 줄간격 160%, 들여쓰기 0
+    # 한양대 표준: 장·절은 0, 하위 제목은 참고논문 이미지 기준으로 들여쓴다.
     p.paragraph_format.line_spacing = 1.6
     p.paragraph_format.keep_with_next = True
     # 표준 Heading 스타일 적용 (TOC·목차 인식 + grep false positive 제거)
@@ -543,12 +546,14 @@ def add_heading(doc, text, level=1, bm_name=None):
         set_font(r, 13, True)
     elif level == 3:
         p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.left_indent = Cm(0.7)
         p.paragraph_format.space_before = Pt(12)
         p.paragraph_format.space_after = Pt(8)
         r = p.add_run(text)
         set_font(r, 11, True)
     elif level == 4:
         p.alignment = WD_ALIGN_PARAGRAPH.LEFT
+        p.paragraph_format.left_indent = Cm(0.7)
         p.paragraph_format.space_before = Pt(10)
         p.paragraph_format.space_after = Pt(6)
         r = p.add_run(text)
@@ -623,13 +628,16 @@ def parse_row(line):
 
 def add_table(doc, rows, caption='', bm_name=None):
     is_var_table = caption.startswith('<표 3-1>')
-    is_year_top3_table = caption.startswith('<표 4-13>')
-    is_year_top5_table = caption.startswith('<표 4-14>')
+    is_distance_table = caption.startswith('<표 4-2>')
+    is_ablation_design_table = caption.startswith('<표 4-6>')
+    is_year_top5_overall_table = caption.startswith('<표 4-12>')
+    is_year_top3_table = caption.startswith('<표 4-14>')
+    is_year_top5_table = caption.startswith('<표 4-15>')
     if is_var_table:
         doc.add_page_break()
     if caption:
         p = doc.add_paragraph()
-        p.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p.alignment = WD_ALIGN_PARAGRAPH.LEFT
         p.paragraph_format.first_line_indent = Cm(0)
         p.paragraph_format.space_before = Pt(8)
         p.paragraph_format.keep_with_next = True
@@ -650,8 +658,17 @@ def add_table(doc, rows, caption='', bm_name=None):
         # A4 본문폭(약 14cm)에 맞춘 변수 정의표 전용 폭.
         # 셀 내부 줄간격을 별도 압축해 불필요한 행 높이를 줄인다.
         set_table_grid(tbl, [1.7, 2.55, 5.05, 1.5, 3.2])
+    elif is_distance_table and ncols == 5:
+        # 거리 변수명은 첫 열에서 줄바꿈이 생기기 쉬우므로 첫 열을 넓힌다.
+        set_table_grid(tbl, [4.1, 2.45, 2.45, 2.45, 2.5])
+    elif is_ablation_design_table and ncols == 3:
+        set_table_grid(tbl, [2.6, 6.0, 5.3])
     elif is_year_top3_table and ncols == 4:
         set_table_grid(tbl, [1.5, 4.2, 4.2, 4.1])
+    elif is_year_top5_overall_table and ncols == 6:
+        # 긴 변수명이 들어가는 전체 연도별 상위 5개 표는 한 페이지 안에서
+        # 셀 내 줄바꿈이 과도해지지 않도록 연도 칸을 줄이고 본문 칸을 넓힌다.
+        set_table_grid(tbl, [1.15, 2.57, 2.57, 2.57, 2.57, 2.57])
     elif is_year_top5_table and ncols == 6:
         # 연도 칸이 2025처럼 네 자리 숫자를 줄바꿈하지 않도록 고정 폭을 둔다.
         set_table_grid(tbl, [1.5, 2.5, 2.5, 2.5, 2.5, 2.5])
@@ -668,12 +685,12 @@ def add_table(doc, rows, caption='', bm_name=None):
             cell = tbl.rows[i].cells[j]
             cell.text = ''
             cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
-            if is_var_table:
+            if is_var_table or is_distance_table or is_ablation_design_table or is_year_top5_overall_table:
                 set_cell_margins(cell, top=45, left=70, bottom=45, right=70)
             else:
                 set_cell_margins(cell, top=60, left=90, bottom=60, right=90)
             p = cell.paragraphs[0]
-            if is_var_table and i > 0 and j in (1, 2, 4):
+            if (is_var_table and i > 0 and j in (1, 2, 4)) or (is_ablation_design_table and i > 0 and j in (1, 2)):
                 p.alignment = WD_ALIGN_PARAGRAPH.LEFT
             else:
                 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -690,6 +707,10 @@ def add_table(doc, rows, caption='', bm_name=None):
             cell_font_size = 8.0 if is_var_table else 9
             if is_year_top3_table:
                 cell_font_size = 8.6
+            elif is_ablation_design_table:
+                cell_font_size = 8.1
+            elif is_year_top5_overall_table:
+                cell_font_size = 7.5
             elif is_year_top5_table:
                 cell_font_size = 8.1
             for part in parts:
@@ -715,21 +736,21 @@ def add_image(doc, path, caption='', bm_name=None):
     if not os.path.exists(path):
         add_body(doc, f'[그림 파일 없음: {os.path.basename(path)}]')
         return
-    # 캡션과 이미지를 단일 paragraph에 line break로 묶음 → 절대 페이지 split 안 됨
+    # 이미지를 먼저 배치하고 캡션은 아래 가운데에 둔다.
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
     p.paragraph_format.space_before = Pt(6)
     p.paragraph_format.space_after = Pt(6)
     p.paragraph_format.keep_together = True
+    r = p.add_run()
+    r.add_picture(path, width=Cm(image_width_cm_for_docx(path)))
     if caption:
+        p.add_run().add_break()
         r = p.add_run(caption)
         set_font(r, 10, font=FONT_KR)
         if bm_name:
             wrap_paragraph_with_bookmark(p, bm_name)
-        p.add_run().add_break()  # paragraph 내부 line break (Shift+Enter)
-    r = p.add_run()
-    r.add_picture(path, width=Cm(image_width_cm_for_docx(path)))
 
 
 _TOC_HEADINGS = ('목차', '표 목차', '그림 목차')
@@ -767,7 +788,7 @@ def prebuild_bookmark_map(md_path):
         if s.startswith('# ') and not s.startswith('## '):
             txt = s[2:].strip()
             seq += 1
-            bm = f'_h_{seq}'
+            bm = f'bm_h_{seq}'
             headings[txt] = bm
             headings_norm[_norm_ref_text(txt)] = bm
             in_toc_zone = txt in _TOC_HEADINGS
@@ -777,19 +798,19 @@ def prebuild_bookmark_map(md_path):
                 continue
             txt = s[3:].strip()
             seq += 1
-            bm = f'_h_{seq}'
+            bm = f'bm_h_{seq}'
             headings[txt] = bm
             headings_norm[_norm_ref_text(txt)] = bm
             continue
         m = re.match(r'^(?:\*\*)?<표\s*([0-9-]+)>.*?(?:\*\*)?$', s.strip())
         if m:
             num = m.group(1)
-            tables[num] = f'_t_{num.replace("-", "_")}'
+            tables[num] = f'bm_t_{num.replace("-", "_")}'
             continue
         m = re.match(r'^!\[<그림\s*([0-9-]+)>[^]]*\]\(.+?\)\s*$', s.strip())
         if m:
             num = m.group(1)
-            figures[num] = f'_f_{num.replace("-", "_")}'
+            figures[num] = f'bm_f_{num.replace("-", "_")}'
             continue
     return {'headings': headings, 'headings_norm': headings_norm, 'tables': tables, 'figures': figures}
 
@@ -988,7 +1009,10 @@ def convert_md(doc, md_path, bm_map=None):
                     bm = bm_map['tables'].get(key)
                 else:
                     bm = bm_map['figures'].get(key)
-            add_toc_entry(doc, txt, bm, level=0)
+            if toc_mode in ('table', 'figure'):
+                add_toc_entry(doc, txt, bm, level=0, font_size=10.5, line_spacing=1.35)
+            else:
+                add_toc_entry(doc, txt, bm, level=0)
             i += 1
             continue
 
@@ -1408,8 +1432,11 @@ def main():
     out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
     doc.save(out)
 
-    print('🔧 목차 페이지 번호 고정 (임시 렌더, PDF 미보존)')
-    freeze_toc_numbers_via_temp_pdf(out)
+    if os.environ.get('THESIS_FREEZE_TOC_VIA_PDF') == '1':
+        print('🔧 목차 페이지 번호 고정 (임시 렌더, PDF 미보존)')
+        freeze_toc_numbers_via_temp_pdf(out)
+    else:
+        print('🔧 목차 페이지 번호 고정 생략 (DOCX 제출용; Word에서 필드 업데이트)')
 
     export_pdf = os.environ.get('THESIS_EXPORT_PDF') == '1'
     if export_pdf:
