@@ -27,9 +27,9 @@ from docx.oxml import parse_xml
 BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 PAPER_DIR = os.path.join(BASE_DIR, 'paper')
 
-# 가이드 명조계열 권장(바탕/신명조). macOS 기본에 "바탕" 미설치 → KoPubWorld 바탕체로 통일.
-# 한국출판인회의(KOPUS) 공식 배포 무료 폰트. 한·영·일·다국어 지원, OFL 라이선스.
-FONT_KR = 'KoPubWorldBatang_Pro'
+# 한양대 작성 지침은 명조·신명조·바탕체 등 일반 폰트를 권장한다.
+# 참고 표지의 명조계 조판과 Windows Word 변환 안정성을 함께 맞추기 위해 HY신명조로 통일한다.
+FONT_KR = 'HY신명조'
 
 
 # 본문 폭은 A4 좌우 여백 3.5cm 기준 약 14cm이다.
@@ -443,19 +443,14 @@ def add_cover(doc):
     """양식1: 표지 — 한양대 부동산융합대학원 표준 (조민지 2023 양식)
     순서: 석사학위청구논문 → 한글제목 → 영문제목 → 이름 → 학교/대학원 → 연월
     전공명은 표지에 미표기, 제출서에만 표기."""
-    _empty(doc, 2)
-    centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
-    _empty(doc, 1)
-    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 18, True)
-    centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 14, True)
-    _empty(doc, 1)
-    add_english_title_block(doc, size=12)
-    _empty(doc, 3)
-    centered_text(doc, '박  현  근', 16, True)
-    _empty(doc, 2)
-    centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True)
-    _empty(doc, 1)
-    centered_text(doc, '2026 년  8 월', 14, True)
+    centered_text(doc, '석 사 학 위 청 구 논 문', 16, True, space_before=20)
+    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 18, True, space_before=90)
+    centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 14, True, space_before=2)
+    add_english_title_block(doc, size=12, space_before=10)
+    # 참고 표지처럼 제목군은 위쪽에 두고 하단 정보와의 세로 간격을 넓게 확보한다.
+    centered_text(doc, '박  현  근', 16, True, space_before=64)
+    centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True, space_before=74)
+    centered_text(doc, '2026 년  8 월', 14, True, space_before=58)
     doc.add_page_break()
 
 
@@ -470,14 +465,13 @@ def add_submission(doc):
     centered_text(doc, '서울시 아파트 매매가격 구조 분석', 17, True)
     centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 13, True)
     add_english_title_block(doc, size=12, space_before=4)
-    centered_text(doc, '지도교수  고  준  호', 14, True, space_before=12)
-    _empty(doc, 1)
-    centered_text(doc, '이 논문을 공학 석사학위청구논문으로 제출합니다.', 12)
-    _empty(doc, 1)
-    centered_text(doc, '2026 년  8 월', 14, True)
-    centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True, space_before=10)
+    centered_text(doc, '지도교수  고  준  호', 14, True, space_before=26)
+    centered_text(doc, '이 논문을 공학 석사학위청구논문으로', 12, space_before=30)
+    centered_text(doc, '제출합니다.', 12)
+    centered_text(doc, '2026 년  8 월', 14, True, space_before=30)
+    centered_text(doc, '한 양 대 학 교  부 동 산 융 합 대 학 원', 14, True, space_before=22)
     centered_text(doc, '도 시 · 부 동 산 빅 데 이 터 전 공', 13)
-    centered_text(doc, '박  현  근', 16, True, space_before=12)
+    centered_text(doc, '박  현  근', 16, True, space_before=22)
     doc.add_page_break()
 
 
@@ -508,8 +502,164 @@ def add_approval(doc):
     # 다음에 새 섹션이 NEW_PAGE로 시작하므로 별도 page break 불필요
 
 
+def start_unnumbered_section(doc):
+    """쪽번호가 없어야 하는 후면 양식(연구윤리서약서)용 새 섹션."""
+    from docx.enum.section import WD_SECTION
+
+    sec = doc.add_section(WD_SECTION.NEW_PAGE)
+    sec.page_width = Mm(210); sec.page_height = Mm(297)
+    sec.top_margin = Cm(4.0); sec.bottom_margin = Cm(4.0)
+    sec.left_margin = Cm(3.5); sec.right_margin = Cm(3.5)
+    sec.header_distance = Cm(1.5); sec.footer_distance = Cm(1.5)
+
+    sectPr = sec._sectPr
+    if sectPr.find(qn('w:type')) is None:
+        type_el = parse_xml(f'<w:type {nsdecls("w")} w:val="nextPage"/>')
+        pgSz = sectPr.find(qn('w:pgSz'))
+        if pgSz is not None:
+            pgSz.addprevious(type_el)
+    for tag in ('w:vAlign', 'w:pgNumType'):
+        for ex in list(sectPr.findall(qn(tag))):
+            sectPr.remove(ex)
+    sectPr.append(parse_xml(f'<w:vAlign {nsdecls("w")} w:val="top"/>'))
+
+    for hf in (sec.header, sec.footer):
+        hf.is_linked_to_previous = False
+        for p in list(hf.paragraphs):
+            p._element.getparent().remove(p._element)
+    return sec
+
+
+def ethics_paragraph(doc, text, size=11, bold=False, align=WD_ALIGN_PARAGRAPH.LEFT,
+                     space_before=0, line_spacing=1.35, first_indent=False,
+                     font=FONT_KR):
+    p = doc.add_paragraph()
+    p.alignment = align
+    p.paragraph_format.first_line_indent = Cm(0.7 if first_indent else 0)
+    p.paragraph_format.left_indent = Cm(0)
+    p.paragraph_format.right_indent = Cm(0)
+    p.paragraph_format.line_spacing = line_spacing
+    p.paragraph_format.space_before = Pt(space_before)
+    p.paragraph_format.space_after = Pt(0)
+    r = p.add_run(text)
+    set_font(r, size=size, bold=bold, font=font)
+    return p
+
+
+def add_research_ethics_pledges(doc):
+    """공식 학위논문 양식: 국문 연구윤리서약서 → 영문 연구윤리서약서, 쪽번호 없음."""
+    start_unnumbered_section(doc)
+
+    _empty(doc, 1)
+    ethics_paragraph(doc, '연구 윤리 서약서', 16, True, WD_ALIGN_PARAGRAPH.CENTER, space_before=0)
+    ethics_paragraph(
+        doc,
+        '본인은 한양대학교 대학원생으로서 이 학위논문 작성과정에서\n'
+        '다음과 같이 연구 윤리의 기본 원칙을 준수하였음을 서약합니다.',
+        11,
+        space_before=32,
+        line_spacing=1.45,
+    )
+    ethics_paragraph(
+        doc,
+        '첫째, 지도교수의 지도를 받아 정직하고 엄정한 연구를 수행하여\n'
+        '학위논문을 작성한다.',
+        11,
+        space_before=20,
+        line_spacing=1.45,
+    )
+    ethics_paragraph(
+        doc,
+        '둘째, 논문 작성시 위조, 변조, 표절 등 학문적 진실성을 훼손하는\n'
+        '어떤 연구 부정행위도 하지 않는다.',
+        11,
+        space_before=20,
+        line_spacing=1.45,
+    )
+    ethics_paragraph(
+        doc,
+        '셋째, 논문 작성시 논문유사도 검증시스템 "카피킬러"등을 거쳐야\n'
+        '한다.',
+        11,
+        space_before=20,
+        line_spacing=1.45,
+    )
+    ethics_paragraph(doc, '2026년 6월 5일', 12, align=WD_ALIGN_PARAGRAPH.CENTER, space_before=46)
+    for text in (
+        '학 위 명 : 공학석사',
+        '학    과 : 도시·부동산빅데이터전공',
+        '지도교수 : 고  준  호',
+        '성    명 : 박  현  근  (서명)',
+    ):
+        p = ethics_paragraph(doc, text, 11, space_before=7)
+        p.paragraph_format.left_indent = Cm(5.1)
+    ethics_paragraph(
+        doc,
+        '한 양 대 학 교  부 동 산 융 합 대 학 원 장  귀 하',
+        14,
+        True,
+        WD_ALIGN_PARAGRAPH.CENTER,
+        space_before=34,
+    )
+
+    doc.add_page_break()
+
+    _empty(doc, 1)
+    ethics_paragraph(
+        doc,
+        'Declaration of Ethical Conduct in Research',
+        15,
+        True,
+        WD_ALIGN_PARAGRAPH.LEFT,
+        font='Times New Roman',
+    )
+    english_blocks = [
+        'I, as a graduate student of Hanyang University, hereby declare\n'
+        'that I have abided by the following Code of Research Ethics\n'
+        'while writing this dissertation thesis, during my degree\n'
+        'program.',
+        '"First, I have strived to be honest in my conduct, to produce\n'
+        'valid and reliable research conforming with the guidance of my\n'
+        'thesis supervisor, and I affirm that my thesis contains honest,\n'
+        'fair and reasonable conclusions based on my own careful\n'
+        'research under the guidance of my thesis supervisor.',
+        'Second, I have not committed any acts that may discredit or\n'
+        'damage the credibility of my research. These include, but are\n'
+        'not limited to: falsification, distortion of research findings or\n'
+        'plagiarism.',
+        'Third, I need to go through with Copykiller Program(Internet-\n'
+        'based Plagiarism-prevention service) before submitting a\n'
+        'thesis."',
+    ]
+    for idx, text in enumerate(english_blocks):
+        ethics_paragraph(
+            doc,
+            text,
+            10.5,
+            font='Times New Roman',
+            space_before=24 if idx == 0 else 17,
+            line_spacing=1.18,
+        )
+    ethics_paragraph(
+        doc,
+        'June 5, 2026',
+        12,
+        align=WD_ALIGN_PARAGRAPH.CENTER,
+        font='Times New Roman',
+        space_before=28,
+    )
+    for text in (
+        'Degree : Master of Engineering',
+        'Department : Urban and Real Estate Big Data Major',
+        'Thesis Supervisor : Ko, Joon Ho',
+        'Name : Park, Hyun Geun  (Signature)',
+    ):
+        p = ethics_paragraph(doc, text, 10.5, font='Times New Roman', space_before=6)
+        p.paragraph_format.left_indent = Cm(2.0)
+
+
 def start_front_matter_section(doc):
-    """인준서 다음, 목차/표목차/그림목차/국문초록 영역 — 로마자 i부터 페이지번호."""
+    """인준서 다음, 목차/표목차/그림목차/국문요지 영역 — 로마자 i부터 페이지번호."""
     from docx.enum.section import WD_SECTION
     sec = doc.add_section(WD_SECTION.NEW_PAGE)
     sec.page_width = Mm(210); sec.page_height = Mm(297)
@@ -835,11 +985,17 @@ def convert_md(doc, md_path, bm_map=None):
     with open(md_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
 
-    # 본문 시작은 표제지/제출서/인준서 다음의 첫 marker(목차 또는 국문초록)부터
+    # 본문 시작은 표제지/제출서/인준서 다음의 첫 marker(목차 또는 국문요지)부터
     start = 0
     for i, line in enumerate(lines):
         s = line.strip()
-        if s.startswith('# 목차') or s.startswith('# 국문초록') or s.startswith('# 국문 초록'):
+        if (
+            s.startswith('# 목차')
+            or s.startswith('# 국문요지')
+            or s.startswith('# 국문 요지')
+            or s.startswith('# 국문초록')
+            or s.startswith('# 국문 초록')
+        ):
             start = i
             break
 
@@ -968,7 +1124,7 @@ def convert_md(doc, md_path, bm_map=None):
                 # front matter 진입 직후 첫 H1 (목차) — 섹션 break이 이미 페이지 break 효과
                 just_started_section = False
             else:
-                # 그 외 모든 H1 (표목차·그림목차·국문초록·참고문헌·Abstract·감사의 글)
+                # 그 외 모든 H1 (표목차·그림목차·국문요지·참고문헌·Abstract·감사의 글)
                 needs_page_break_before = True
             hbm = _heading_bookmark(bm_map, txt)
             p_h1 = add_heading(doc, txt, 1, bm_name=hbm)
@@ -1040,7 +1196,7 @@ def convert_md(doc, md_path, bm_map=None):
             txt = m_dash.group(1)
             # 챕터 TOC 영역의 bullet 항목 → TOC entry
             if toc_mode == 'chapter':
-                # 절 라인은 들여쓰기 1단, 그 외(국문초록·표목차 등)는 들여쓰기 0단·굵게
+                # 절 라인은 들여쓰기 1단, 그 외(국문요지·표목차 등)는 들여쓰기 0단·굵게
                 if txt.startswith('제') and '절' in txt[:6]:
                     bm = _heading_bookmark(bm_map, txt)
                     add_toc_entry(doc, txt, bm, level=1)
@@ -1160,7 +1316,7 @@ def export_pdf_via_libreoffice(docx_path):
 
 
 def export_pdf_via_word(docx_path, pdf_path):
-    """docx → PDF (Word for Mac AppleScript). LibreOffice보다 한국어 폰트·정렬 정확."""
+    """docx → PDF (Microsoft Word). LibreOffice보다 한국어 폰트·정렬 정확."""
     import shutil
     import subprocess
     import tempfile
@@ -1169,6 +1325,60 @@ def export_pdf_via_word(docx_path, pdf_path):
     pdf_path = os.path.abspath(pdf_path)
     if os.path.exists(pdf_path):
         os.remove(pdf_path)
+    if os.name == 'nt':
+        tmpdir = tempfile.mkdtemp(prefix='thesis_word_export_')
+        ps1 = os.path.join(tmpdir, 'export_word_pdf.ps1')
+        script = r'''
+param(
+  [Parameter(Mandatory=$true)][string]$DocxPath,
+  [Parameter(Mandatory=$true)][string]$PdfPath
+)
+$ErrorActionPreference = "Stop"
+$word = New-Object -ComObject Word.Application
+$word.Visible = $false
+$word.DisplayAlerts = 0
+try {
+  $doc = $word.Documents.Open($DocxPath, $false, $false)
+  foreach ($field in $doc.Fields) { $field.Update() | Out-Null }
+  foreach ($toc in $doc.TablesOfContents) { $toc.Update() | Out-Null }
+  foreach ($tof in $doc.TablesOfFigures) { $tof.Update() | Out-Null }
+  $doc.Save()
+  $doc.ExportAsFixedFormat($PdfPath, 17, $false, 0)
+  $doc.Close($false)
+}
+finally {
+  $word.Quit()
+}
+'''
+        try:
+            with open(ps1, 'w', encoding='utf-8') as f:
+                f.write(script)
+            subprocess.run(
+                [
+                    'powershell',
+                    '-NoProfile',
+                    '-ExecutionPolicy',
+                    'Bypass',
+                    '-File',
+                    ps1,
+                    '-DocxPath',
+                    docx_path,
+                    '-PdfPath',
+                    pdf_path,
+                ],
+                check=True,
+                timeout=240,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+            print(f'  ✓ Word PDF 변환 완료 ({FONT_KR}, 한국어 정렬 정확)')
+            return os.path.exists(pdf_path)
+        except Exception as e:
+            print(f'  [warn] Word PDF 변환 실패: {e}')
+            return False
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
+
     tmpdir = tempfile.mkdtemp(prefix='thesis_word_export_')
     word_docx = os.path.join(tmpdir, 'thesis.docx')
     word_pdf = os.path.join(tmpdir, 'thesis.pdf')
@@ -1212,7 +1422,7 @@ end tell
                 )
             if proc.returncode != 0:
                 print('  [warn] Word가 종료 응답을 반환했지만 PDF 저장은 완료됨')
-            print(f'  ✓ Word PDF 변환 완료 (KoPubWorld 임베드, 한국어 정렬 정확)')
+            print(f'  ✓ Word PDF 변환 완료 ({FONT_KR}, 한국어 정렬 정확)')
             return True
         return False
     except Exception as e:
@@ -1511,6 +1721,7 @@ def _word_bookmark_page_numbers(docx_path, bookmark_names):
     """Microsoft Word가 DOCX 화면에서 계산한 bookmark별 조정 페이지 번호를 읽는다."""
     import shutil
     import subprocess
+    import tempfile
 
     unique_names = []
     for name in bookmark_names:
@@ -1518,6 +1729,91 @@ def _word_bookmark_page_numbers(docx_path, bookmark_names):
             unique_names.append(name)
     if not unique_names:
         return {}
+    if os.name == 'nt':
+        tmpdir = tempfile.mkdtemp(prefix='thesis_word_probe_')
+        probe_docx = os.path.join(tmpdir, 'probe.docx')
+        list_path = os.path.join(tmpdir, 'bookmarks.txt')
+        out_path = os.path.join(tmpdir, 'pages.tsv')
+        ps1 = os.path.join(tmpdir, 'probe_word_pages.ps1')
+        script = r'''
+param(
+  [Parameter(Mandatory=$true)][string]$DocxPath,
+  [Parameter(Mandatory=$true)][string]$BookmarkList,
+  [Parameter(Mandatory=$true)][string]$OutPath
+)
+$ErrorActionPreference = "Stop"
+$word = New-Object -ComObject Word.Application
+$word.Visible = $false
+$word.DisplayAlerts = 0
+$lines = New-Object System.Collections.Generic.List[string]
+try {
+  $doc = $word.Documents.Open($DocxPath, $false, $true)
+  $doc.Repaginate()
+  $names = Get-Content -LiteralPath $BookmarkList -Encoding UTF8
+  foreach ($bm in $names) {
+    try {
+      $range = $doc.Bookmarks.Item($bm).Range
+      $adj = $range.Information(1)
+      $raw = $range.Information(3)
+      $lines.Add("$bm`t$adj`t$raw")
+    }
+    catch {
+      $msg = $_.Exception.Message -replace "(`r`n|`n|`r)", " "
+      $lines.Add("$bm`tERR`t$msg")
+    }
+  }
+  $doc.Close($false)
+}
+finally {
+  $word.Quit()
+}
+[System.IO.File]::WriteAllLines($OutPath, $lines, [System.Text.UTF8Encoding]::new($false))
+'''
+        try:
+            shutil.copy2(docx_path, probe_docx)
+            remove_update_fields_from_docx(probe_docx)
+            with open(list_path, 'w', encoding='utf-8') as f:
+                f.write('\n'.join(unique_names))
+            with open(ps1, 'w', encoding='utf-8') as f:
+                f.write(script)
+            subprocess.run(
+                [
+                    'powershell',
+                    '-NoProfile',
+                    '-ExecutionPolicy',
+                    'Bypass',
+                    '-File',
+                    ps1,
+                    '-DocxPath',
+                    probe_docx,
+                    '-BookmarkList',
+                    list_path,
+                    '-OutPath',
+                    out_path,
+                ],
+                check=True,
+                timeout=240,
+                stdout=subprocess.DEVNULL,
+                stderr=subprocess.DEVNULL,
+            )
+            raw = open(out_path, encoding='utf-8').read()
+        finally:
+            shutil.rmtree(tmpdir, ignore_errors=True)
+
+        pages = {}
+        errors = []
+        for line in raw.splitlines():
+            parts = line.split('\t')
+            if len(parts) < 3:
+                continue
+            bm_name, adj, raw_page = parts[0], parts[1], parts[2]
+            if adj == 'ERR':
+                errors.append((bm_name, raw_page))
+                continue
+            pages[bm_name] = {'adjusted': adj, 'raw': raw_page}
+        if errors:
+            print(f'  [warn] Word bookmark 페이지 미검출 {len(errors)}개: {errors[:3]}')
+        return pages
 
     probe_docx = os.path.join(
         os.path.dirname(os.path.abspath(docx_path)),
@@ -1891,13 +2187,14 @@ def main():
     add_submission(doc)
     add_approval(doc)
 
-    # 4. 목차/표목차/그림목차/국문초록 — 새 섹션, 로마자 i부터
+    # 4. 목차/표목차/그림목차/국문요지 — 새 섹션, 로마자 i부터
     start_front_matter_section(doc)
 
     # 5. 본문 (제1장 만나면 다시 새 섹션 시작 → 아라비아 1부터)
     md_path = os.path.join(PAPER_DIR, '석사학위논문_박현근.md')
     bm_map = prebuild_bookmark_map(md_path)
     convert_md(doc, md_path, bm_map=bm_map)
+    add_research_ethics_pledges(doc)
     
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     out = os.path.join(PAPER_DIR, f'석사학위논문_박현근_{timestamp}.docx')

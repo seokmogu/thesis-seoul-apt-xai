@@ -83,7 +83,7 @@ cd /Users/seokmogu/project/thesis-seoul-apt-xai
 
 - 용지: A4
 - Word 여백: 상하 4.0cm, 좌우 3.5cm, 머리말·꼬리말 1.5cm
-- 본문 글꼴: KoPubWorldBatang_Pro 11pt
+- 본문 글꼴: HY신명조 11pt
 - 줄간격: 160%
 - 큰 제목: 16pt 진하게
 - 절 제목: 13pt 진하게

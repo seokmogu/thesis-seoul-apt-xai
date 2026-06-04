@@ -109,7 +109,7 @@ KAKAO_REST_API_KEY=...
 .venv/bin/python scripts/export_docx_v8.py
 ```
 
-빌드는 `paper/석사학위논문_박현근.md`를 읽어 한양대 부동산융합대학원 서식의 DOCX와 PDF를 생성한다. A4, 상하 4.0cm·좌우 3.5cm 여백, KoPubWorldBatang 11pt, 줄간격 160%, 장 제목 16pt, 절 제목 13pt 기준이다.
+빌드는 `paper/석사학위논문_박현근.md`를 읽어 한양대 부동산융합대학원 서식의 DOCX와 PDF를 생성한다. A4, 상하 4.0cm·좌우 3.5cm 여백, HY신명조 11pt, 줄간격 160%, 장 제목 16pt, 절 제목 13pt 기준이다.
 
 ## 주요 결과 파일
 
