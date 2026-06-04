@@ -268,8 +268,8 @@ def add_toc_entry(doc, text, bm_name, level=0, bold=False, tab_pos_cm=14.0, font
     return p
 
 
-CHAPTER_TOC_FONT_SIZE = 10.4
-CHAPTER_TOC_LINE_SPACING = 1.18
+CHAPTER_TOC_FONT_SIZE = 11
+CHAPTER_TOC_LINE_SPACING = 1.45
 
 
 def _empty(doc, n=1):
