@@ -268,6 +268,10 @@ def add_toc_entry(doc, text, bm_name, level=0, bold=False, tab_pos_cm=14.0, font
     return p
 
 
+CHAPTER_TOC_FONT_SIZE = 10.4
+CHAPTER_TOC_LINE_SPACING = 1.18
+
+
 def _empty(doc, n=1):
     """표지·제출서용 빈 줄.
 
@@ -1128,6 +1132,9 @@ def convert_md(doc, md_path, bm_map=None):
                 needs_page_break_before = True
             hbm = _heading_bookmark(bm_map, txt)
             p_h1 = add_heading(doc, txt, 1, bm_name=hbm)
+            if txt in _TOC_HEADINGS:
+                p_h1.paragraph_format.space_before = Pt(12)
+                p_h1.paragraph_format.space_after = Pt(10)
             if needs_page_break_before and p_h1 is not None:
                 p_h1.paragraph_format.page_break_before = True
             i += 1
@@ -1137,7 +1144,15 @@ def convert_md(doc, md_path, bm_map=None):
             # 챕터 목차 영역에서는 ## 제N장 ... 라인을 TOC 항목으로 변환
             if toc_mode == 'chapter':
                 bm = _heading_bookmark(bm_map, txt)
-                add_toc_entry(doc, txt, bm, level=0, bold=True)
+                add_toc_entry(
+                    doc,
+                    txt,
+                    bm,
+                    level=0,
+                    bold=True,
+                    font_size=CHAPTER_TOC_FONT_SIZE,
+                    line_spacing=CHAPTER_TOC_LINE_SPACING,
+                )
                 i += 1
                 continue
             hbm = _heading_bookmark(bm_map, txt)
@@ -1199,10 +1214,25 @@ def convert_md(doc, md_path, bm_map=None):
                 # 절 라인은 들여쓰기 1단, 그 외(국문요지·표목차 등)는 들여쓰기 0단·굵게
                 if txt.startswith('제') and '절' in txt[:6]:
                     bm = _heading_bookmark(bm_map, txt)
-                    add_toc_entry(doc, txt, bm, level=1)
+                    add_toc_entry(
+                        doc,
+                        txt,
+                        bm,
+                        level=1,
+                        font_size=CHAPTER_TOC_FONT_SIZE,
+                        line_spacing=CHAPTER_TOC_LINE_SPACING,
+                    )
                 else:
                     bm = _heading_bookmark(bm_map, txt)
-                    add_toc_entry(doc, txt, bm, level=0, bold=True)
+                    add_toc_entry(
+                        doc,
+                        txt,
+                        bm,
+                        level=0,
+                        bold=True,
+                        font_size=CHAPTER_TOC_FONT_SIZE,
+                        line_spacing=CHAPTER_TOC_LINE_SPACING,
+                    )
                 i += 1
                 continue
             p = add_body(doc, txt)
@@ -1225,7 +1255,9 @@ def convert_md(doc, md_path, bm_map=None):
             i += 1
             continue
 
-        add_body(doc, line)
+        p = add_body(doc, line)
+        if p is not None and '<그림 1-1>' in line:
+            p.paragraph_format.keep_with_next = True
         i += 1
 
 
