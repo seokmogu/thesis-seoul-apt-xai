@@ -422,6 +422,23 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
     return p
 
 
+def add_english_title_block(doc, size=12, space_before=0):
+    """표지·제출서 영문 제목을 의미 단위로 고정 줄바꿈한다."""
+    lines = [
+        'An Analysis of Apartment Sale Price Structure in Seoul',
+        'Focusing on Distance-Based Accessibility',
+        'and Spatiotemporal Heterogeneity',
+    ]
+    for idx, line in enumerate(lines):
+        centered_text(
+            doc,
+            line,
+            size,
+            True,
+            space_before=space_before if idx == 0 else 0,
+        )
+
+
 def add_cover(doc):
     """양식1: 표지 — 한양대 부동산융합대학원 표준 (조민지 2023 양식)
     순서: 석사학위청구논문 → 한글제목 → 영문제목 → 이름 → 학교/대학원 → 연월
@@ -429,13 +446,10 @@ def add_cover(doc):
     _empty(doc, 2)
     centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
-    centered_text(doc, '서울시 아파트 단위면적당', 18, True)
-    centered_text(doc, '매매가격 구조 분석', 18, True)
+    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 18, True)
     centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 14, True)
     _empty(doc, 1)
-    centered_text(doc, 'An Analysis of Apartment Unit-Area', 13, True)
-    centered_text(doc, 'Sale Price Structure in Seoul', 13, True)
-    centered_text(doc, 'Focusing on Distance-Based Accessibility and Spatiotemporal Heterogeneity', 12, True)
+    add_english_title_block(doc, size=12)
     _empty(doc, 3)
     centered_text(doc, '박  현  근', 16, True)
     _empty(doc, 2)
@@ -453,12 +467,9 @@ def add_submission(doc):
     """
     centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
-    centered_text(doc, '서울시 아파트 단위면적당', 17, True)
-    centered_text(doc, '매매가격 구조 분석', 17, True)
+    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 17, True)
     centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 13, True)
-    centered_text(doc, 'An Analysis of Apartment Unit-Area', 12, True, space_before=4)
-    centered_text(doc, 'Sale Price Structure in Seoul', 12, True)
-    centered_text(doc, 'Focusing on Distance-Based Accessibility and Spatiotemporal Heterogeneity', 10, True)
+    add_english_title_block(doc, size=12, space_before=4)
     centered_text(doc, '지도교수  고  준  호', 14, True, space_before=12)
     _empty(doc, 1)
     centered_text(doc, '이 논문을 공학 석사학위청구논문으로 제출합니다.', 12)
@@ -1432,11 +1443,11 @@ def main():
     out = os.path.join(PAPER_DIR, '석사학위논문_박현근_compact.docx')
     doc.save(out)
 
-    if os.environ.get('THESIS_FREEZE_TOC_VIA_PDF') == '1':
+    if os.environ.get('THESIS_SKIP_TOC_FREEZE') == '1':
+        print('🔧 목차 페이지 번호 고정 생략 (THESIS_SKIP_TOC_FREEZE=1)')
+    else:
         print('🔧 목차 페이지 번호 고정 (임시 렌더, PDF 미보존)')
         freeze_toc_numbers_via_temp_pdf(out)
-    else:
-        print('🔧 목차 페이지 번호 고정 생략 (DOCX 제출용; Word에서 필드 업데이트)')
 
     export_pdf = os.environ.get('THESIS_EXPORT_PDF') == '1'
     if export_pdf:

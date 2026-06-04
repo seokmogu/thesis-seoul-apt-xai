@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
   "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="326.97pt" height="319.428pt" viewBox="0 0 326.97 319.428" xmlns="http://www.w3.org/2000/svg" version="1.1">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="326.97pt" height="369.324pt" viewBox="0 0 326.97 369.324" xmlns="http://www.w3.org/2000/svg" version="1.1">
  <metadata>
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-02T09:38:46.505670</dc:date>
+    <dc:date>2026-06-04T23:24:28.117834</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -21,8 +21,8 @@
  </defs>
  <g id="figure_1">
   <g id="patch_1">
-   <path d="M 0 319.428 
-L 326.97 319.428 
+   <path d="M 0 369.324 
+L 326.97 369.324 
 L 326.97 0 
 L 0 0 
 z
@@ -30,193 +30,273 @@ z
   </g>
   <g id="axes_1">
    <g id="patch_2">
-    <path d="M 19.47915 53.9622 
-L 59.11947 53.9622 
-L 59.11947 21.54996 
-L 19.47915 21.54996 
+    <path d="M 19.47915 53.844093 
+L 70.578 53.844093 
+L 70.578 14.119284 
+L 19.47915 14.119284 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
-    <path d="M 62.83575 53.9622 
-L 307.49085 53.9622 
-L 307.49085 21.54996 
-L 62.83575 21.54996 
+    <path d="M 76.15242 53.844093 
+L 300.67767 53.844093 
+L 300.67767 14.119284 
+L 76.15242 14.119284 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
-    <path d="M 19.47915 94.34016 
-L 59.11947 94.34016 
-L 59.11947 61.92792 
-L 19.47915 61.92792 
+    <path d="M 19.47915 108.636934 
+L 70.578 108.636934 
+L 70.578 60.693198 
+L 19.47915 60.693198 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_5">
-    <path d="M 62.83575 94.34016 
-L 307.49085 94.34016 
-L 307.49085 61.92792 
-L 62.83575 61.92792 
+    <path d="M 76.15242 108.636934 
+L 300.67767 108.636934 
+L 300.67767 60.693198 
+L 76.15242 60.693198 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
-    <path d="M 19.47915 134.71812 
-L 59.11947 134.71812 
-L 59.11947 102.30588 
-L 19.47915 102.30588 
+    <path d="M 19.47915 151.923278 
+L 70.578 151.923278 
+L 70.578 112.746397 
+L 19.47915 112.746397 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
-    <path d="M 62.83575 134.71812 
-L 307.49085 134.71812 
-L 307.49085 102.30588 
-L 62.83575 102.30588 
+    <path d="M 76.15242 151.923278 
+L 300.67767 151.923278 
+L 300.67767 112.746397 
+L 76.15242 112.746397 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
-    <path d="M 19.47915 238.82184 
-L 59.11947 238.82184 
-L 59.11947 141.31044 
-L 19.47915 141.31044 
+    <path d="M 19.47915 293.56277 
+L 70.578 293.56277 
+L 70.578 159.320311 
+L 19.47915 159.320311 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
-    <path d="M 62.83575 238.82184 
-L 307.49085 238.82184 
-L 307.49085 141.31044 
-L 62.83575 141.31044 
+    <path d="M 76.15242 293.56277 
+L 300.67767 293.56277 
+L 300.67767 159.320311 
+L 76.15242 159.320311 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
-    <path d="M 71.50707 159.98868 
-L 124.77375 159.98868 
-L 124.77375 144.88128 
-L 71.50707 144.88128 
+    <path d="M 188.415045 287.535558 
+L 188.446014 287.535558 
+L 188.446014 165.347524 
+L 188.415045 165.347524 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.45; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #4b5563; stroke: #4b5563; stroke-width: 0.25; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
-    <path d="M 130.34817 159.98868 
-L 260.41797 159.98868 
-L 260.41797 144.88128 
-L 130.34817 144.88128 
+    <path d="M 19.47915 342.876327 
+L 70.578 342.876327 
+L 70.578 302.329625 
+L 19.47915 302.329625 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.45; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
-    <path d="M 265.99239 159.98868 
-L 298.81953 159.98868 
-L 298.81953 144.88128 
-L 265.99239 144.88128 
+    <path d="M 76.15242 342.876327 
+L 300.67767 342.876327 
+L 300.67767 302.329625 
+L 76.15242 302.329625 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.45; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
-    <path d="M 71.50707 186.35796 
-L 124.77375 186.35796 
-L 124.77375 163.8342 
-L 71.50707 163.8342 
+    <path d="M 16.07256 350.821289 
+L 306.56178 350.821289 
+L 306.56178 12.749463 
+L 16.07256 12.749463 
+L 16.07256 350.821289 
 z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_14">
-    <path d="M 130.34817 186.35796 
-L 260.41797 186.35796 
-L 260.41797 163.8342 
-L 130.34817 163.8342 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f8fafc; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_15">
-    <path d="M 265.99239 186.35796 
-L 298.81953 186.35796 
-L 298.81953 163.8342 
-L 265.99239 163.8342 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_16">
-    <path d="M 71.50707 212.72724 
-L 124.77375 212.72724 
-L 124.77375 190.20348 
-L 71.50707 190.20348 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_17">
-    <path d="M 130.34817 212.72724 
-L 260.41797 212.72724 
-L 260.41797 190.20348 
-L 130.34817 190.20348 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f8fafc; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_18">
-    <path d="M 265.99239 212.72724 
-L 298.81953 212.72724 
-L 298.81953 190.20348 
-L 265.99239 190.20348 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_19">
-    <path d="M 71.50707 239.09652 
-L 124.77375 239.09652 
-L 124.77375 216.57276 
-L 71.50707 216.57276 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_20">
-    <path d="M 130.34817 239.09652 
-L 260.41797 239.09652 
-L 260.41797 216.57276 
-L 130.34817 216.57276 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f8fafc; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_21">
-    <path d="M 265.99239 239.09652 
-L 298.81953 239.09652 
-L 298.81953 216.57276 
-L 265.99239 216.57276 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.35; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_22">
-    <path d="M 19.47915 280.02384 
-L 59.11947 280.02384 
-L 59.11947 247.6116 
-L 19.47915 247.6116 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #f3f4f6; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_23">
-    <path d="M 62.83575 280.02384 
-L 307.49085 280.02384 
-L 307.49085 247.6116 
-L 62.83575 247.6116 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: #ffffff; stroke: #4b5563; stroke-width: 0.85; stroke-linejoin: miter"/>
-   </g>
-   <g id="patch_24">
-    <path d="M 16.07256 291.01104 
-L 310.89744 291.01104 
-L 310.89744 15.78168 
-L 16.07256 15.78168 
-L 16.07256 291.01104 
-z
-" clip-path="url(#pbcd123d4c2)" style="fill: none; stroke: #4b5563; stroke-width: 0.65; stroke-linejoin: miter"/>
+" clip-path="url(#p8d9f55373d)" style="fill: none; stroke: #4b5563; stroke-width: 0.75; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <!-- 제1장 -->
-    <g style="fill: #111827" transform="translate(29.263724 39.861752) scale(0.087 -0.087)">
+    <g style="fill: #111827" transform="translate(33.262716 31.580411) scale(0.102 -0.102)">
+     <defs>
+      <path id="KoPubWorldDotumPB-c81c" d="M 3213 883 
+C 2797 1146 2509 1466 2336 1830 
+C 2163 2234 2074 2720 2074 3296 
+L 2074 3904 
+L 2944 3904 
+L 2944 4512 
+L 448 4512 
+L 448 3904 
+L 1318 3904 
+L 1318 3315 
+C 1318 2080 922 1229 19 659 
+L 614 211 
+C 1101 621 1536 1126 1690 1613 
+C 1869 1178 2246 710 2733 397 
+L 3213 883 
+z
+M 5210 4870 
+L 4512 4870 
+L 4512 -858 
+L 5210 -858 
+L 5210 4870 
+z
+M 4083 4774 
+L 3379 4774 
+L 3379 3085 
+L 2560 3085 
+L 2560 2413 
+L 3379 2413 
+L 3379 -589 
+L 4083 -589 
+L 4083 4774 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-31" d="M 2323 4352 
+C 2323 4486 2285 4525 2150 4525 
+L 1677 4525 
+C 1350 4186 1037 3942 627 3757 
+L 627 3085 
+C 1216 3386 1568 3597 1600 3629 
+L 1600 -205 
+L 2323 -205 
+L 2323 4352 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c7a5" d="M 3706 2227 
+C 2803 2528 2349 3078 2349 3802 
+L 2349 4026 
+L 3392 4026 
+L 3392 4627 
+L 544 4627 
+L 544 4026 
+L 1574 4026 
+L 1574 3814 
+C 1574 3040 1024 2406 96 2042 
+L 634 1562 
+C 1222 1869 1760 2278 1965 2739 
+C 2067 2541 2272 2336 2509 2157 
+C 2746 1978 3021 1811 3258 1709 
+L 3706 2227 
+z
+M 4896 2995 
+L 5626 2995 
+L 5626 3603 
+L 4896 3603 
+L 4896 4870 
+L 4166 4870 
+L 4166 1389 
+L 4896 1389 
+L 4896 2995 
+z
+M 1850 -794 
+C 1958 -838 2067 -864 2189 -883 
+C 2438 -934 2707 -960 3002 -960 
+C 3590 -960 4102 -864 4467 -666 
+C 4832 -467 5050 -186 5050 198 
+C 5050 563 4832 858 4467 1062 
+C 4102 1261 3597 1370 3008 1370 
+C 2445 1370 1933 1261 1568 1056 
+C 1203 858 979 563 979 198 
+C 979 -186 1190 -461 1555 -659 
+C 1651 -717 1754 -762 1850 -794 
+z
+M 1734 211 
+C 1734 595 2259 819 3002 819 
+C 3770 819 4288 595 4288 211 
+C 4288 -173 3770 -416 3002 -416 
+C 2630 -416 2330 -358 2093 -243 
+C 1856 -134 1734 19 1734 211 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPB-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c7a5" transform="translate(143.499969 0)"/>
+    </g>
+   </g>
+   <g id="text_2">
+    <!-- 서론 -->
+    <g style="fill: #111827" transform="translate(37.877919 43.412707) scale(0.082 -0.082)">
+     <defs>
+      <path id="KoPubWorldDotumPB-c11c" d="M 3776 819 
+C 2771 1408 2291 2310 2298 3392 
+L 2298 4659 
+L 1536 4659 
+L 1536 3430 
+C 1536 2304 1069 1338 -6 678 
+L 595 205 
+C 883 416 1197 704 1434 1005 
+C 1683 1293 1856 1594 1926 1824 
+C 2182 1235 2720 691 3245 333 
+L 3776 819 
+z
+M 5011 4870 
+L 4288 4870 
+L 4288 3187 
+L 3142 3187 
+L 3142 2534 
+L 4288 2534 
+L 4288 -858 
+L 5011 -858 
+L 5011 4870 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-b860" d="M 5421 1664 
+L 3142 1664 
+L 3142 2170 
+L 4832 2170 
+L 4832 2733 
+L 1549 2733 
+L 1549 3194 
+L 4557 3194 
+C 4685 3194 4736 3238 4736 3373 
+L 4736 4582 
+C 4736 4704 4678 4762 4557 4762 
+L 800 4762 
+L 800 4198 
+L 3968 4198 
+L 3968 3738 
+L 979 3738 
+C 845 3738 800 3686 800 3558 
+L 800 2349 
+C 800 2214 845 2170 979 2170 
+L 2362 2170 
+L 2362 1664 
+L 141 1664 
+L 141 1082 
+L 5421 1082 
+L 5421 1664 
+z
+M 4954 -134 
+L 1536 -134 
+L 1536 723 
+L 794 723 
+L 794 -570 
+C 794 -704 832 -749 966 -749 
+L 4954 -749 
+L 4954 -134 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-c11c"/>
+     <use xlink:href="#KoPubWorldDotumPB-b860" transform="translate(87.199982 0)"/>
+    </g>
+   </g>
+   <g id="text_3">
+    <!-- 제1절 연구의 배경 및 목적 -->
+    <g style="fill: #111827" transform="translate(84.82374 27.183524) scale(0.087 -0.087)">
      <defs>
       <path id="KoPubWorldDotumPM-c81c" d="M 3206 832 
 C 2304 1363 2010 2272 2010 3552 
@@ -263,70 +343,50 @@ L 2227 -205
 L 2227 4346 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c7a5" d="M 3718 2189 
-C 3334 2310 2976 2522 2701 2822 
-C 2426 3123 2253 3501 2253 3968 
-L 2253 4147 
-L 3373 4147 
-L 3373 4576 
-L 595 4576 
-L 595 4147 
-L 1722 4147 
-L 1722 3981 
-C 1722 3469 1542 3059 1261 2733 
-C 979 2400 602 2150 192 1990 
-L 570 1651 
-C 1203 1958 1786 2432 1990 3027 
-C 2144 2720 2387 2470 2643 2266 
-C 2899 2067 3174 1914 3398 1818 
-L 3718 2189 
+      <path id="KoPubWorldDotumPM-c808" d="M 3718 2419 
+C 3411 2502 3046 2669 2765 2931 
+C 2477 3187 2272 3533 2272 4019 
+L 2272 4160 
+L 3379 4160 
+L 3379 4589 
+L 608 4589 
+L 608 4160 
+L 1747 4160 
+L 1747 4038 
+C 1747 3546 1574 3162 1299 2874 
+C 1018 2573 640 2374 224 2227 
+L 589 1888 
+C 1229 2163 1728 2528 2010 3168 
+C 2336 2586 2790 2304 3405 2048 
+L 3718 2419 
 z
-M 4794 3110 
-L 5581 3110 
-L 5581 3552 
-L 4794 3552 
-L 4794 4838 
-L 4301 4838 
-L 4301 1389 
-L 4794 1389 
-L 4794 3110 
+M 4998 4826 
+L 4499 4826 
+L 4499 3642 
+L 3315 3642 
+L 3315 3213 
+L 4499 3213 
+L 4499 1882 
+L 4998 1882 
+L 4998 4826 
 z
-M 4947 218 
-C 4947 557 4768 838 4416 1050 
-C 4064 1261 3590 1370 3008 1370 
-C 2419 1370 1952 1254 1613 1050 
-C 1274 851 1082 557 1082 218 
-C 1082 -141 1267 -422 1606 -621 
-C 1939 -819 2419 -928 3008 -928 
-C 3590 -928 4064 -826 4416 -621 
-C 4768 -416 4947 -134 4947 218 
-z
-M 4013 -333 
-C 3750 -467 3418 -531 3008 -531 
-C 2598 -531 2272 -467 2022 -333 
-C 1766 -205 1619 -13 1619 218 
-C 1619 448 1766 634 2016 755 
-C 2278 890 2605 954 3008 954 
-C 3418 954 3750 890 4013 755 
-C 4282 621 4416 435 4416 211 
-C 4416 -19 4262 -205 4013 -333 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
-     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c7a5" transform="translate(143.499969 0)"/>
-    </g>
-   </g>
-   <g id="text_2">
-    <!-- · 연구의 배경 및 목적    · 연구의 범위    · 연구 방법 및 과정 -->
-    <g style="fill: #111827" transform="translate(70.578 39.292978) scale(0.0635 -0.0635)">
-     <defs>
-      <path id="KoPubWorldDotumPM-b7" d="M 1299 2483 
-L 749 2483 
-L 749 1856 
-L 1299 1856 
-L 1299 2483 
+M 5126 -371 
+L 1850 -371 
+L 1850 218 
+L 4858 218 
+C 4960 218 4992 250 4992 352 
+L 4992 1453 
+C 4992 1555 4960 1587 4858 1587 
+L 1306 1587 
+L 1306 1171 
+L 4448 1171 
+L 4448 608 
+L 1440 608 
+C 1338 608 1306 576 1306 474 
+L 1306 -646 
+C 1306 -749 1338 -781 1440 -781 
+L 5126 -781 
+L 5126 -371 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-20" transform="scale(0.015625)"/>
@@ -626,6 +686,43 @@ L 4998 1434
 L 4998 4838 
 z
 " transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc30" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acbd" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-baa9" transform="translate(869.89978 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c801" transform="translate(957.099762 0)"/>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- 제2절 연구의 범위 -->
+    <g style="fill: #111827" transform="translate(84.82374 37.457182) scale(0.087 -0.087)">
+     <defs>
+      <path id="KoPubWorldDotumPM-32" d="M 3200 237 
+L 883 237 
+C 1574 877 3098 2291 3098 3341 
+C 3098 4154 2502 4576 1715 4576 
+C 934 4576 339 4045 339 3213 
+L 864 3213 
+C 864 3776 1210 4134 1702 4134 
+C 2214 4134 2579 3866 2573 3302 
+C 2573 2502 896 845 301 275 
+L 301 -109 
+C 301 -186 314 -205 390 -205 
+L 3200 -205 
+L 3200 237 
+z
+" transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-bc94" d="M 1120 2374 
 L 1120 3315 
 L 2707 3315 
@@ -707,6 +804,45 @@ L 1843 1267
 L 1843 -710 
 L 2323 -710 
 L 2323 1274 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-32" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc94" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c704" transform="translate(637.499847 0)"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- 제3절 연구 방법 및 과정 -->
+    <g style="fill: #111827" transform="translate(84.82374 47.730839) scale(0.087 -0.087)">
+     <defs>
+      <path id="KoPubWorldDotumPM-33" d="M 192 1062 
+C 211 205 781 -314 1696 -314 
+C 2496 -314 3251 83 3251 1030 
+C 3251 1651 2829 2131 2202 2214 
+C 2771 2317 3149 2784 3149 3322 
+C 3149 4192 2483 4576 1722 4576 
+C 858 4576 275 4083 256 3290 
+L 768 3290 
+C 826 3853 1133 4134 1702 4134 
+C 2240 4134 2637 3840 2637 3296 
+C 2637 2707 2163 2483 1638 2464 
+L 1427 2464 
+C 1331 2464 1325 2438 1325 2336 
+L 1325 2099 
+C 1325 2003 1331 1997 1427 1997 
+L 1683 1997 
+C 2221 1978 2739 1722 2739 1088 
+C 2739 474 2355 128 1715 128 
+C 1107 128 768 442 698 1062 
+L 192 1062 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-bc29" d="M 1018 2323 
@@ -889,195 +1025,1427 @@ C 4570 -19 4416 -205 4166 -333
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(322.499924 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc30" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acbd" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-baa9" transform="translate(671.099823 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c801" transform="translate(758.299805 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(845.499786 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(874.499771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(903.499756 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(932.499741 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(961.499725 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(993.399719 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1022.399704 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1109.599686 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(1196.799667 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1283.999649 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc94" transform="translate(1312.999634 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c704" transform="translate(1400.199615 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1487.399597 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1516.399582 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1545.399567 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1574.399551 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(1603.399536 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1635.29953 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1664.299515 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1751.499496 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1838.699478 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(1867.699463 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc95" transform="translate(1954.899445 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(2042.099426 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(2071.099411 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(2158.299393 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(2187.299377 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(2274.499359 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-33" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(463.099884 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc95" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(666.499832 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(782.699799 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(869.89978 0)"/>
     </g>
    </g>
-   <g id="text_3">
+   <g id="text_6">
     <!-- 제2장 -->
-    <g style="fill: #111827" transform="translate(29.263724 80.239712) scale(0.087 -0.087)">
+    <g style="fill: #111827" transform="translate(33.262716 82.263789) scale(0.102 -0.102)">
      <defs>
-      <path id="KoPubWorldDotumPM-32" d="M 3200 237 
-L 883 237 
-C 1574 877 3098 2291 3098 3341 
-C 3098 4154 2502 4576 1715 4576 
-C 934 4576 339 4045 339 3213 
-L 864 3213 
-C 864 3776 1210 4134 1702 4134 
-C 2214 4134 2579 3866 2573 3302 
-C 2573 2502 896 845 301 275 
-L 301 -109 
-C 301 -186 314 -205 390 -205 
-L 3200 -205 
-L 3200 237 
+      <path id="KoPubWorldDotumPB-32" d="M 3283 403 
+L 1133 403 
+C 1651 947 3181 2221 3181 3341 
+C 3181 4166 2528 4634 1715 4634 
+C 902 4634 256 4058 256 3123 
+L 998 3123 
+C 998 3718 1280 4026 1715 4026 
+C 2157 4026 2445 3808 2438 3296 
+C 2438 2541 832 973 218 384 
+L 218 -32 
+C 218 -166 256 -205 390 -205 
+L 3283 -205 
+L 3283 403 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPB-32" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c7a5" transform="translate(143.499969 0)"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <!-- 이론적 배경 -->
+    <g style="fill: #111827" transform="translate(28.055505 89.350218) scale(0.073 -0.073)">
+     <defs>
+      <path id="KoPubWorldDotumPB-c774" d="M 2227 1094 
+C 2131 1018 2016 979 1894 979 
+C 1632 979 1440 1146 1318 1421 
+C 1190 1702 1133 2093 1133 2534 
+C 1133 2970 1190 3360 1318 3635 
+C 1440 3910 1632 4077 1894 4077 
+C 2150 4077 2342 3910 2464 3635 
+C 2592 3360 2656 2970 2656 2534 
+C 2656 2093 2592 1702 2464 1421 
+C 2406 1293 2330 1184 2227 1094 
+z
+M 2963 4192 
+C 2688 4544 2330 4723 1894 4723 
+C 1459 4723 1101 4544 826 4192 
+C 550 3840 410 3283 410 2528 
+C 410 1773 550 1216 826 864 
+C 1101 512 1459 333 1894 333 
+C 2323 333 2682 512 2957 864 
+C 3232 1216 3373 1773 3379 2528 
+C 3379 3283 3238 3840 2963 4192 
+z
+M 4986 4870 
+L 4262 4870 
+L 4262 -858 
+L 4986 -858 
+L 4986 4870 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c801" d="M 3718 2182 
+C 3328 2304 2982 2515 2746 2790 
+C 2490 3072 2362 3398 2362 3776 
+L 2362 4019 
+L 3405 4019 
+L 3405 4627 
+L 557 4627 
+L 557 4019 
+L 1587 4019 
+L 1587 3795 
+C 1587 2995 1037 2381 109 1997 
+L 640 1510 
+C 922 1645 1203 1837 1453 2048 
+C 1690 2253 1882 2477 1978 2688 
+C 2195 2298 2746 1882 3270 1658 
+L 3718 2182 
+z
+M 5094 4870 
+L 4371 4870 
+L 4371 3610 
+L 3309 3610 
+L 3309 2982 
+L 4371 2982 
+L 4371 1414 
+L 5094 1414 
+L 5094 4870 
+z
+M 5088 992 
+C 5088 1114 5030 1171 4909 1171 
+L 1152 1171 
+L 1152 570 
+L 4365 570 
+L 4365 -896 
+L 5088 -896 
+L 5088 992 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-20" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-bc30" d="M 1216 1158 
+L 1216 2560 
+L 1997 2560 
+L 1997 1158 
+L 1216 1158 
+z
+M 2701 4550 
+L 1997 4550 
+L 1997 3181 
+L 1216 3181 
+L 1216 4550 
+L 518 4550 
+L 518 723 
+C 518 589 557 544 691 544 
+L 2522 544 
+C 2650 544 2701 589 2701 723 
+L 2701 4550 
+z
+M 5075 4870 
+L 4378 4870 
+L 4378 2989 
+L 3872 2989 
+L 3872 4774 
+L 3168 4774 
+L 3168 -589 
+L 3872 -589 
+L 3872 2253 
+L 4378 2253 
+L 4378 -858 
+L 5075 -858 
+L 5075 4870 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-acbd" d="M 4947 -275 
+C 5056 -128 5107 45 5107 243 
+C 5107 627 4883 928 4525 1133 
+C 4160 1338 3654 1453 3066 1453 
+C 2496 1453 1984 1338 1619 1133 
+C 1254 922 1030 627 1030 243 
+C 1030 -147 1242 -448 1606 -653 
+C 1965 -858 2470 -960 3059 -960 
+C 3648 -960 4160 -858 4525 -653 
+C 4698 -550 4838 -422 4947 -275 
+z
+M 3974 -211 
+C 3750 -333 3443 -397 3066 -397 
+C 2694 -397 2394 -339 2157 -218 
+C 1920 -102 1805 58 1805 256 
+C 1805 646 2323 883 3066 883 
+C 3840 883 4326 666 4326 256 
+C 4326 58 4198 -102 3974 -211 
+z
+M 595 4640 
+L 595 4026 
+L 2451 4026 
+C 2240 3098 1542 2413 256 2054 
+L 704 1530 
+C 2342 2061 3110 3136 3264 4461 
+C 3264 4582 3206 4640 3085 4640 
+L 595 4640 
+z
+M 5037 4877 
+L 4314 4877 
+L 4314 4115 
+L 3347 4115 
+L 3347 3520 
+L 4320 3520 
+L 4320 2848 
+L 3226 2848 
+L 3226 2253 
+L 4314 2253 
+L 4314 1466 
+L 5037 1466 
+L 5037 4877 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-c774"/>
+     <use xlink:href="#KoPubWorldDotumPB-b860" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c801" transform="translate(174.399963 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-20" transform="translate(261.599945 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-bc30" transform="translate(290.59993 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-acbd" transform="translate(377.799911 0)"/>
+    </g>
+    <!-- 및 선행연구 -->
+    <g style="fill: #111827" transform="translate(28.055505 98.395466) scale(0.073 -0.073)">
+     <defs>
+      <path id="KoPubWorldDotumPB-bc0f" d="M 1248 2886 
+L 1248 4051 
+L 2528 4051 
+L 2528 2886 
+L 1248 2886 
+z
+M 3238 4474 
+C 3238 4595 3181 4653 3059 4653 
+L 723 4653 
+C 589 4653 544 4602 544 4474 
+L 544 2451 
+C 544 2317 582 2278 717 2278 
+L 3059 2278 
+C 3187 2278 3238 2323 3238 2458 
+L 3238 4474 
+z
+M 4992 4870 
+L 4269 4870 
+L 4269 1690 
+L 4992 1690 
+L 4992 4870 
+z
+M 3974 1882 
+L 1997 1882 
+L 1997 1357 
+L 3974 1357 
+L 3974 1882 
+z
+M 5267 -384 
+C 4326 -256 3731 122 3475 499 
+L 5005 499 
+L 5005 1024 
+L 1062 1024 
+L 1062 499 
+L 2566 499 
+C 2336 122 1747 -256 794 -384 
+L 1248 -890 
+C 2067 -755 2662 -365 3040 -6 
+C 3379 -358 3974 -736 4819 -890 
+L 5267 -384 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c120" d="M 3712 2170 
+C 3302 2304 2957 2566 2707 2880 
+C 2458 3194 2310 3571 2310 3955 
+L 2310 4749 
+L 1542 4749 
+L 1542 3942 
+C 1536 3117 1005 2426 51 1965 
+L 621 1478 
+C 909 1638 1203 1856 1434 2080 
+C 1670 2310 1850 2547 1926 2771 
+C 2144 2330 2707 1901 3251 1626 
+L 3712 2170 
+z
+M 5011 4870 
+L 4294 4870 
+L 4294 3853 
+L 3136 3853 
+L 3136 3232 
+L 4294 3232 
+L 4294 666 
+L 5011 666 
+L 5011 4870 
+z
+M 5146 -134 
+L 1907 -134 
+L 1907 1139 
+L 1178 1139 
+L 1178 -570 
+C 1178 -704 1216 -749 1350 -749 
+L 5146 -749 
+L 5146 -134 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-d589" d="M 3008 3981 
+L 288 3981 
+L 288 3456 
+L 3008 3456 
+L 3008 3981 
+z
+M 2374 4826 
+L 909 4826 
+L 909 4301 
+L 2374 4301 
+L 2374 4826 
+z
+M 2829 1971 
+C 2893 2086 2925 2214 2925 2349 
+C 2925 2886 2438 3270 1645 3270 
+C 851 3270 378 2886 378 2349 
+C 378 1811 877 1421 1645 1421 
+C 2234 1421 2656 1645 2829 1971 
+z
+M 2067 2029 
+C 1971 1946 1830 1907 1645 1907 
+C 1286 1907 1082 2086 1082 2336 
+C 1082 2586 1286 2784 1645 2784 
+C 2003 2784 2221 2586 2221 2336 
+C 2221 2214 2170 2112 2067 2029 
+z
+M 5171 4870 
+L 4474 4870 
+L 4474 3392 
+L 3974 3392 
+L 3974 4781 
+L 3277 4781 
+L 3277 1350 
+L 3974 1350 
+L 3974 2733 
+L 4474 2733 
+L 4474 1178 
+L 5171 1178 
+L 5171 4870 
+z
+M 5171 115 
+C 5171 755 4486 1178 3098 1178 
+C 1690 1178 1018 755 1018 115 
+C 1018 -531 1690 -954 3098 -954 
+C 4486 -954 5171 -531 5171 115 
+z
+M 4045 -282 
+C 3827 -365 3514 -403 3098 -403 
+C 2298 -403 1798 -243 1798 115 
+C 1798 480 2298 627 3098 627 
+C 3885 627 4397 486 4397 109 
+C 4397 -70 4282 -198 4045 -282 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c5f0" d="M 4986 4870 
+L 4256 4870 
+L 4256 4262 
+L 3040 4262 
+C 2765 4595 2362 4819 1850 4819 
+C 1389 4819 1011 4640 749 4358 
+C 474 4077 326 3693 326 3277 
+C 326 2861 474 2477 749 2195 
+C 1011 1914 1389 1741 1850 1741 
+C 2387 1741 2816 1978 3091 2362 
+L 4256 2362 
+L 4256 666 
+L 4986 666 
+L 4986 4870 
+z
+M 3347 2957 
+C 3366 3059 3379 3168 3379 3277 
+C 3379 3405 3360 3539 3334 3667 
+L 4256 3667 
+L 4256 2957 
+L 3347 2957 
+z
+M 1850 2355 
+C 1600 2355 1408 2445 1261 2624 
+C 1120 2810 1050 3027 1050 3277 
+C 1050 3789 1357 4205 1850 4205 
+C 2336 4205 2656 3789 2656 3277 
+C 2656 3027 2586 2810 2438 2624 
+C 2291 2445 2093 2355 1850 2355 
+z
+M 5114 -134 
+L 1862 -134 
+L 1862 1190 
+L 1133 1190 
+L 1133 -570 
+C 1133 -704 1171 -749 1306 -749 
+L 5114 -749 
+L 5114 -134 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-ad6c" d="M 3104 1600 
+L 5427 1600 
+L 5427 2208 
+L 4531 2208 
+C 4608 2541 4678 2976 4736 3411 
+C 4794 3846 4826 4250 4845 4512 
+C 4845 4634 4787 4691 4666 4691 
+L 698 4691 
+L 698 4077 
+L 4070 4077 
+C 4064 3821 4032 3488 3981 3149 
+C 3930 2816 3859 2470 3789 2208 
+L 134 2208 
+L 134 1600 
+L 2368 1600 
+L 2368 -858 
+L 3104 -858 
+L 3104 1600 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-bc0f"/>
+     <use xlink:href="#KoPubWorldDotumPB-20" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c120" transform="translate(116.199966 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-d589" transform="translate(203.399948 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c5f0" transform="translate(290.59993 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-ad6c" transform="translate(377.799911 0)"/>
+    </g>
+   </g>
+   <g id="text_8">
+    <!-- 제1절 헤도닉 가격모형 -->
+    <g style="fill: #111827" transform="translate(84.82374 73.53961) scale(0.078 -0.078)">
+     <defs>
+      <path id="KoPubWorldDotumPM-d5e4" d="M 3053 3782 
+L 352 3782 
+L 352 3341 
+L 3053 3341 
+L 3053 3782 
+z
+M 2451 4698 
+L 947 4698 
+L 947 4275 
+L 2451 4275 
+L 2451 4698 
+z
+M 4064 4736 
+L 3578 4736 
+L 3578 2560 
+L 2803 2560 
+L 2803 2234 
+C 2618 2669 2227 2912 1715 2912 
+C 998 2912 506 2419 506 1619 
+C 506 1222 621 902 845 666 
+C 1075 429 1363 314 1715 314 
+C 2067 314 2349 429 2573 666 
+C 2803 902 2918 1216 2918 1619 
+C 2918 1779 2893 1939 2861 2074 
+L 3578 2074 
+L 3578 -563 
+L 4064 -563 
+L 4064 4736 
+z
+M 1715 755 
+C 1229 755 973 1082 973 1619 
+C 973 2163 1229 2477 1715 2477 
+C 2176 2477 2445 2163 2445 1619 
+C 2445 1082 2176 755 1715 755 
+z
+M 5133 4832 
+L 4640 4832 
+L 4640 -838 
+L 5133 -838 
+L 5133 4832 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b3c4" d="M 5382 314 
+L 3034 314 
+L 3034 1773 
+L 4800 1773 
+L 4800 2202 
+L 1376 2202 
+L 1376 4096 
+L 4742 4096 
+L 4742 4531 
+L 1005 4531 
+C 902 4531 870 4499 870 4397 
+L 870 1901 
+C 870 1798 896 1773 1005 1773 
+L 2522 1773 
+L 2522 314 
+L 173 314 
+L 173 -122 
+L 5382 -122 
+L 5382 314 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b2c9" d="M 4077 2682 
+C 3898 2630 3469 2586 2982 2541 
+C 2496 2496 1946 2470 1530 2470 
+L 1101 2470 
+L 1101 4678 
+L 602 4678 
+L 602 2144 
+C 602 2042 634 2010 736 2010 
+L 1440 2010 
+C 1926 2010 2483 2042 2970 2086 
+C 3456 2131 3872 2195 4077 2246 
+L 4077 2682 
+z
+M 4851 4838 
+L 4346 4838 
+L 4346 1510 
+L 4851 1510 
+L 4851 4838 
+z
+M 4845 1075 
+C 4845 1178 4813 1210 4710 1210 
+L 1075 1210 
+L 1075 774 
+L 4333 774 
+L 4333 -870 
+L 4845 -870 
+L 4845 1075 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-ac00" d="M 678 346 
+C 1376 755 1978 1318 2394 2010 
+C 2829 2701 3072 3475 3117 4378 
+C 3117 4480 3072 4512 2970 4512 
+L 595 4512 
+L 595 4070 
+L 2547 4070 
+C 2445 2566 1581 1382 269 698 
+L 678 346 
+z
+M 4659 2099 
+L 5498 2099 
+L 5498 2560 
+L 4659 2560 
+L 4659 4838 
+L 4147 4838 
+L 4147 -838 
+L 4659 -838 
+L 4659 2099 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-aca9" d="M 666 4576 
+L 666 4134 
+L 2662 4134 
+C 2566 3571 2291 3098 1882 2733 
+C 1472 2368 941 2093 326 1914 
+L 653 1555 
+C 2208 2042 3066 2976 3226 4442 
+C 3226 4544 3194 4576 3091 4576 
+L 666 4576 
+z
+M 4941 4838 
+L 4435 4838 
+L 4435 4006 
+L 3398 4006 
+L 3398 3578 
+L 4435 3578 
+L 4435 2816 
+L 3251 2816 
+L 3251 2387 
+L 4435 2387 
+L 4435 1446 
+L 4941 1446 
+L 4941 4838 
+z
+M 4934 1005 
+C 4934 1107 4902 1139 4800 1139 
+L 1165 1139 
+L 1165 704 
+L 4422 704 
+L 4422 -870 
+L 4934 -870 
+L 4934 1005 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-baa8" d="M 1389 2176 
+L 1389 4096 
+L 4160 4096 
+L 4160 2176 
+L 1389 2176 
+z
+M 5382 320 
+L 3034 320 
+L 3034 1741 
+L 4531 1741 
+C 4634 1741 4666 1773 4666 1875 
+L 4666 4397 
+C 4666 4499 4634 4531 4531 4531 
+L 1030 4531 
+C 928 4531 896 4499 896 4397 
+L 896 1875 
+C 896 1773 928 1741 1030 1741 
+L 2502 1741 
+L 2502 320 
+L 173 320 
+L 173 -122 
+L 5382 -122 
+L 5382 320 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-d615" d="M 3552 4109 
+L 390 4109 
+L 390 3718 
+L 3552 3718 
+L 3552 4109 
+z
+M 2842 4858 
+L 1158 4858 
+L 1158 4461 
+L 2842 4461 
+L 2842 4858 
+z
+M 602 2502 
+C 602 2214 749 1971 998 1798 
+C 1248 1626 1600 1530 2010 1530 
+C 2419 1530 2765 1626 3014 1798 
+C 3264 1971 3418 2214 3418 2502 
+C 3418 2790 3290 3021 3027 3194 
+C 2765 3373 2426 3462 2010 3462 
+C 1594 3462 1254 3373 992 3194 
+C 730 3021 602 2790 602 2502 
+z
+M 2662 2067 
+C 2515 1958 2298 1907 2010 1907 
+C 1446 1907 1120 2144 1120 2502 
+C 1120 2861 1446 3085 2010 3085 
+C 2573 3085 2899 2861 2899 2502 
+C 2899 2317 2822 2176 2662 2067 
+z
+M 5011 4838 
+L 4518 4838 
+L 4518 3424 
+L 3584 3424 
+L 3584 3014 
+L 4518 3014 
+L 4518 2381 
+L 3584 2381 
+L 3584 1965 
+L 4512 1965 
+L 4518 1216 
+L 5011 1216 
+L 5011 4838 
+z
+M 5088 109 
+C 5088 723 4397 1171 3117 1171 
+C 1837 1171 1146 723 1146 109 
+C 1146 -512 1830 -954 3117 -954 
+C 4403 -954 5088 -512 5088 109 
+z
+M 3123 -557 
+C 2701 -557 2355 -499 2086 -384 
+C 1818 -269 1683 -102 1683 109 
+C 1683 544 2278 768 3123 768 
+C 3533 768 3872 710 4134 595 
+C 4403 486 4538 320 4538 102 
+C 4538 -115 4403 -275 4134 -384 
+C 3872 -499 3533 -557 3123 -557 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d5e4" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b2c9" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ac00" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-aca9" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-baa8" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d615" transform="translate(811.899811 0)"/>
+    </g>
+   </g>
+   <g id="text_9">
+    <!-- 제2절 머신러닝 기반 부동산 가격 예측 -->
+    <g style="fill: #111827" transform="translate(84.82374 83.128357) scale(0.078 -0.078)">
+     <defs>
+      <path id="KoPubWorldDotumPM-ba38" d="M 1158 1062 
+L 1158 4064 
+L 2720 4064 
+L 2720 1062 
+L 1158 1062 
+z
+M 4877 4838 
+L 4365 4838 
+L 4365 2880 
+L 3219 2880 
+L 3219 4371 
+C 3219 4474 3187 4506 3085 4506 
+L 787 4506 
+C 685 4506 653 4474 653 4371 
+L 653 755 
+C 653 653 685 621 787 621 
+L 3085 621 
+C 3187 621 3219 653 3219 755 
+L 3219 2426 
+L 4365 2426 
+L 4365 -832 
+L 4877 -832 
+L 4877 4838 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c2e0" d="M 3693 2080 
+C 3309 2214 2931 2470 2656 2803 
+C 2381 3136 2202 3546 2202 4032 
+L 2202 4698 
+L 1677 4698 
+L 1677 3987 
+C 1677 3475 1498 3053 1222 2694 
+C 941 2336 557 2067 141 1869 
+L 531 1517 
+C 813 1670 1107 1875 1363 2125 
+C 1619 2381 1824 2669 1946 3002 
+C 2080 2694 2323 2426 2579 2195 
+C 2835 1971 3110 1792 3360 1683 
+L 3693 2080 
+z
+M 4928 4838 
+L 4429 4838 
+L 4429 678 
+L 4928 678 
+L 4928 4838 
+z
+M 5094 -282 
+L 1773 -282 
+L 1773 1094 
+L 1261 1094 
+L 1261 -582 
+C 1261 -685 1293 -717 1395 -717 
+L 5094 -717 
+L 5094 -282 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b7ec" d="M 3872 1203 
+C 3642 1152 3309 1107 2899 1062 
+C 2490 1030 2042 998 1581 998 
+L 1197 998 
+L 1197 2342 
+L 2970 2342 
+C 3072 2342 3104 2374 3104 2477 
+L 3104 4429 
+C 3104 4531 3072 4563 2970 4563 
+L 691 4563 
+L 691 4122 
+L 2605 4122 
+L 2605 2778 
+L 826 2778 
+C 723 2778 691 2746 691 2643 
+L 691 678 
+C 691 576 723 544 826 544 
+L 1408 544 
+C 1901 544 2394 570 2829 614 
+C 3264 659 3610 710 3872 762 
+L 3872 1203 
+z
+M 4890 4838 
+L 4390 4838 
+L 4390 2976 
+L 3424 2976 
+L 3424 2515 
+L 4390 2515 
+L 4390 -838 
+L 4890 -838 
+L 4890 4838 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b2dd" d="M 4070 2778 
+C 3891 2726 3533 2682 3098 2637 
+C 2662 2592 2182 2566 1766 2566 
+L 1101 2566 
+L 1101 4678 
+L 602 4678 
+L 602 2240 
+C 602 2138 634 2106 736 2106 
+L 1677 2106 
+C 2163 2106 2650 2138 3085 2182 
+C 3520 2227 3866 2291 4070 2342 
+L 4070 2778 
+z
+M 4851 4838 
+L 4339 4838 
+L 4339 1459 
+L 4851 1459 
+L 4851 4838 
+z
+M 4915 198 
+C 4915 538 4736 819 4384 1030 
+C 4032 1242 3552 1350 2957 1350 
+C 2355 1350 1882 1248 1530 1037 
+C 1178 826 1005 550 1005 205 
+C 1005 -493 1747 -934 2957 -934 
+C 3552 -934 4032 -832 4384 -627 
+C 4736 -429 4915 -154 4915 198 
+z
+M 4384 192 
+C 4384 -32 4250 -211 3981 -339 
+C 3712 -467 3373 -531 2957 -531 
+C 2534 -531 2195 -467 1933 -333 
+C 1670 -198 1536 -13 1536 211 
+C 1536 442 1670 621 1933 749 
+C 2195 877 2534 941 2957 941 
+C 3341 941 3680 870 3981 736 
+C 4250 602 4384 416 4384 192 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-ae30" d="M 781 358 
+C 1478 768 2061 1325 2496 2016 
+C 2931 2688 3181 3475 3226 4378 
+C 3226 4480 3194 4512 3091 4512 
+L 704 4512 
+L 704 4070 
+L 2662 4070 
+C 2541 2566 1696 1376 371 698 
+L 781 358 
+z
+M 4928 4838 
+L 4416 4838 
+L 4416 -832 
+L 4928 -832 
+L 4928 4838 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-bc18" d="M 1018 2208 
+L 1018 3206 
+L 2605 3206 
+L 2605 2208 
+L 1018 2208 
+z
+M 3098 4640 
+L 2605 4640 
+L 2605 3635 
+L 1018 3635 
+L 1018 4640 
+L 525 4640 
+L 525 1914 
+C 525 1811 557 1779 659 1779 
+L 2963 1779 
+C 3066 1779 3098 1811 3098 1914 
+L 3098 4640 
+z
+M 4717 2906 
+L 5491 2906 
+L 5491 3354 
+L 4717 3354 
+L 4717 4838 
+L 4211 4838 
+L 4211 672 
+L 4717 672 
+L 4717 2906 
+z
+M 4896 -282 
+L 1658 -282 
+L 1658 1088 
+L 1146 1088 
+L 1146 -582 
+C 1146 -685 1178 -717 1280 -717 
+L 4896 -717 
+L 4896 -282 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-bd80" d="M 1370 2643 
+L 1370 3571 
+L 4173 3571 
+L 4173 2643 
+L 1370 2643 
+z
+M 4678 4717 
+L 4173 4717 
+L 4173 3987 
+L 1370 3987 
+L 1370 4717 
+L 870 4717 
+L 870 2349 
+C 870 2246 902 2214 1005 2214 
+L 4544 2214 
+C 4646 2214 4678 2246 4678 2349 
+L 4678 4717 
+z
+M 5376 1498 
+L 179 1498 
+L 179 1062 
+L 2541 1062 
+L 2541 -832 
+L 3053 -832 
+L 3053 1062 
+L 5376 1062 
+L 5376 1498 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b3d9" d="M 5376 2080 
+L 3034 2080 
+L 3034 2848 
+L 4749 2848 
+L 4749 3270 
+L 1382 3270 
+L 1382 4256 
+L 4691 4256 
+L 4691 4672 
+L 1011 4672 
+C 909 4672 877 4640 877 4538 
+L 877 2976 
+C 877 2874 902 2848 1011 2848 
+L 2515 2848 
+L 2515 2080 
+L 179 2080 
+L 179 1645 
+L 5376 1645 
+L 5376 2080 
+z
+M 2778 1248 
+C 2118 1248 1619 1146 1267 934 
+C 915 730 742 467 742 154 
+C 742 -486 1472 -941 2778 -941 
+C 4083 -941 4813 -486 4813 154 
+C 4813 467 4634 730 4282 934 
+C 3930 1146 3430 1248 2778 1248 
+z
+M 2778 -550 
+C 1882 -550 1299 -301 1299 160 
+C 1299 602 1882 858 2778 858 
+C 3181 858 3533 794 3840 672 
+C 4115 550 4256 378 4256 160 
+C 4256 -64 4115 -243 3840 -365 
+C 3533 -486 3181 -550 2778 -550 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c0b0" d="M 3565 2086 
+C 3181 2221 2810 2477 2534 2810 
+C 2253 3142 2080 3552 2080 4038 
+L 2080 4698 
+L 1549 4698 
+L 1549 3994 
+C 1549 3482 1376 3059 1094 2701 
+C 813 2342 429 2074 13 1875 
+L 403 1523 
+C 685 1677 979 1882 1235 2131 
+C 1491 2387 1702 2675 1824 3008 
+C 1958 2701 2202 2432 2458 2202 
+C 2714 1978 2995 1798 3232 1690 
+L 3565 2086 
+z
+M 4672 2701 
+L 5453 2701 
+L 5453 3149 
+L 4672 3149 
+L 4672 4838 
+L 4173 4838 
+L 4173 678 
+L 4672 678 
+L 4672 2701 
+z
+M 4851 -282 
+L 1626 -282 
+L 1626 1094 
+L 1120 1094 
+L 1120 -582 
+C 1120 -685 1152 -717 1254 -717 
+L 4851 -717 
+L 4851 -282 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c608" d="M 3949 4736 
+L 3462 4736 
+L 3462 3622 
+L 2643 3622 
+C 2438 4314 2035 4653 1574 4653 
+C 1222 4653 941 4480 717 4134 
+C 506 3795 371 3251 371 2528 
+C 371 1805 499 1280 723 922 
+C 934 563 1242 397 1574 397 
+C 2061 397 2464 755 2662 1504 
+L 3462 1504 
+L 3462 -563 
+L 3949 -563 
+L 3949 4736 
+z
+M 2746 1971 
+C 2765 2144 2778 2323 2778 2528 
+C 2778 2752 2765 2963 2739 3162 
+L 3462 3162 
+L 3462 1971 
+L 2746 1971 
+z
+M 1242 4038 
+C 1338 4134 1446 4179 1574 4179 
+C 1830 4179 2010 3987 2131 3686 
+C 2253 3379 2304 2970 2304 2528 
+C 2304 2067 2246 1664 2125 1363 
+C 2003 1056 1824 870 1574 870 
+C 1318 870 1139 1056 1018 1357 
+C 896 1658 838 2067 838 2528 
+C 838 2963 890 3373 1011 3680 
+C 1075 3827 1152 3949 1242 4038 
+z
+M 5005 4838 
+L 4518 4838 
+L 4518 -838 
+L 5005 -838 
+L 5005 4838 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-ce21" d="M 3814 4902 
+L 1728 4902 
+L 1728 4493 
+L 3814 4493 
+L 3814 4902 
+z
+M 5376 1875 
+L 179 1875 
+L 179 1453 
+L 5376 1453 
+L 5376 1875 
+z
+M 4678 723 
+C 4678 826 4646 858 4544 858 
+L 806 858 
+L 806 435 
+L 4166 435 
+L 4166 -870 
+L 4678 -870 
+L 4678 723 
+z
+M 5082 2637 
+C 4691 2682 4243 2784 3878 2938 
+C 3494 3098 3200 3322 3091 3610 
+L 4768 3610 
+L 4768 4013 
+L 774 4013 
+L 774 3610 
+L 2458 3610 
+C 2336 3322 2042 3104 1677 2944 
+C 1312 2790 864 2688 454 2637 
+L 794 2240 
+C 1152 2298 1549 2413 1914 2566 
+C 2272 2726 2598 2931 2784 3206 
+C 2989 2918 3302 2701 3661 2547 
+C 4019 2394 4397 2298 4755 2240 
+L 5082 2637 
 z
 " transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#KoPubWorldDotumPM-c81c"/>
      <use xlink:href="#KoPubWorldDotumPM-32" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c7a5" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ba38" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c2e0" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b7ec" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b2dd" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(608.499863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ae30" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc18" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(811.899811 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd80" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b3d9" transform="translate(928.099777 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c0b0" transform="translate(1015.299759 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1102.499741 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ac00" transform="translate(1131.499725 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-aca9" transform="translate(1218.699707 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1305.899689 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c608" transform="translate(1334.899673 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ce21" transform="translate(1422.099655 0)"/>
     </g>
    </g>
-   <g id="text_4">
-    <!-- · 이론적 배경    · 국내 선행연구 -->
-    <g style="fill: #111827" transform="translate(70.578 75.698527) scale(0.0635 -0.0635)">
+   <g id="text_10">
+    <!-- 제3절 설명가능한 인공지능(XAI) -->
+    <g style="fill: #111827" transform="translate(84.82374 92.756104) scale(0.078 -0.078)">
      <defs>
-      <path id="KoPubWorldDotumPM-c774" d="M 2874 922 
-C 3130 1280 3290 1798 3290 2547 
-C 3290 3296 3130 3814 2874 4173 
-C 2618 4531 2272 4704 1888 4704 
-C 1478 4704 1139 4544 883 4186 
-C 634 3827 480 3296 480 2547 
-C 480 1798 634 1274 890 915 
-C 1146 557 1498 390 1888 390 
-C 2272 390 2618 563 2874 922 
+      <path id="KoPubWorldDotumPM-c124" d="M 3667 2502 
+C 3251 2630 2880 2861 2618 3149 
+C 2342 3450 2189 3802 2189 4186 
+L 2189 4723 
+L 1658 4723 
+L 1658 4186 
+C 1658 3725 1491 3347 1210 3040 
+C 934 2726 563 2477 128 2298 
+L 531 1965 
+C 1114 2240 1677 2714 1926 3302 
+C 2246 2714 2816 2342 3347 2125 
+L 3667 2502 
 z
-M 2285 979 
-C 2176 890 2042 845 1888 845 
-C 1574 845 1350 1037 1197 1350 
-C 1050 1658 979 2086 979 2547 
-C 979 2989 1043 3418 1197 3731 
-C 1344 4045 1574 4250 1888 4250 
-C 2195 4250 2419 4045 2566 3738 
-C 2714 3424 2784 3008 2784 2547 
-C 2784 2086 2714 1658 2566 1350 
-C 2496 1203 2406 1075 2285 979 
+M 4928 4838 
+L 4416 4838 
+L 4416 3923 
+L 3168 3923 
+L 3168 3488 
+L 4416 3488 
+L 4416 1875 
+L 4928 1875 
+L 4928 4838 
 z
-M 4902 4838 
-L 4397 4838 
-L 4397 -845 
-L 4902 -845 
-L 4902 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-b860" d="M 5376 1606 
-L 3027 1606 
-L 3027 2253 
-L 4768 2253 
-L 4768 2662 
-L 1395 2662 
-L 1395 3296 
-L 4512 3296 
-C 4614 3296 4646 3328 4646 3430 
-L 4646 4582 
-C 4646 4685 4614 4717 4512 4717 
-L 877 4717 
-L 877 4314 
-L 4115 4314 
-L 4115 3693 
-L 1011 3693 
-C 909 3693 877 3661 877 3558 
-L 877 2387 
-C 877 2285 909 2253 1011 2253 
-L 2496 2253 
-L 2496 1606 
-L 186 1606 
-L 186 1184 
-L 5376 1184 
-L 5376 1606 
-z
-M 4890 -288 
-L 1382 -288 
-L 1382 774 
-L 877 774 
-L 877 -582 
-C 877 -685 909 -717 1011 -717 
-L 4890 -717 
-L 4890 -288 
+M 5050 -371 
+L 1779 -371 
+L 1779 218 
+L 4787 218 
+C 4890 218 4922 250 4922 352 
+L 4922 1453 
+C 4922 1555 4890 1587 4787 1587 
+L 1235 1587 
+L 1235 1171 
+L 4378 1171 
+L 4378 608 
+L 1370 608 
+C 1267 608 1235 576 1235 474 
+L 1235 -646 
+C 1235 -749 1267 -781 1370 -781 
+L 5050 -781 
+L 5050 -371 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ad6d" d="M 4685 979 
-C 4685 1082 4653 1114 4550 1114 
-L 2957 1114 
-L 2957 2176 
-L 5376 2176 
-L 5376 2611 
-L 4525 2611 
-C 4576 2886 4634 3238 4685 3578 
-C 4730 3936 4768 4262 4787 4538 
-C 4787 4640 4755 4672 4653 4672 
-L 794 4672 
-L 794 4237 
+      <path id="KoPubWorldDotumPM-ba85" d="M 1120 2349 
+L 1120 4141 
+L 2688 4141 
+L 2688 2349 
+L 1120 2349 
+z
+M 4915 4838 
+L 4416 4838 
+L 4416 4077 
+L 3174 4077 
+L 3174 4442 
+C 3174 4544 3142 4576 3040 4576 
+L 762 4576 
+C 659 4576 627 4544 627 4442 
+L 627 2054 
+C 627 1952 659 1920 762 1920 
+L 3040 1920 
+C 3142 1920 3174 1952 3174 2054 
+L 3174 2477 
+L 4416 2477 
+L 4416 1408 
+L 4915 1408 
+L 4915 4838 
+z
+M 3174 2899 
+L 3174 3654 
+L 4416 3654 
+L 4416 2899 
+L 3174 2899 
+z
+M 4998 192 
+C 4998 531 4819 813 4461 1024 
+C 4109 1235 3635 1338 3027 1338 
+C 2419 1338 1946 1235 1594 1024 
+C 1242 819 1062 544 1062 198 
+C 1062 -493 1818 -934 3027 -934 
+C 3629 -934 4109 -832 4461 -634 
+C 4819 -435 4998 -160 4998 192 
+z
+M 3027 -531 
+C 2598 -531 2259 -467 1997 -333 
+C 1728 -205 1594 -26 1594 205 
+C 1594 435 1728 614 1997 736 
+C 2266 864 2611 928 3027 928 
+C 3456 928 3795 864 4058 730 
+C 4333 595 4467 416 4467 186 
+C 4467 -45 4333 -218 4058 -339 
+C 3782 -467 3437 -531 3027 -531 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-b2a5" d="M 4787 3462 
+L 1376 3462 
+L 1376 4819 
+L 870 4819 
+L 870 3168 
+C 870 3066 902 3034 1005 3034 
+L 4787 3034 
+L 4787 3462 
+z
+M 5376 2336 
+L 186 2336 
+L 186 1907 
+L 5376 1907 
+L 5376 2336 
+z
+M 4813 192 
+C 4813 518 4634 794 4282 1005 
+C 3930 1216 3424 1325 2778 1325 
+C 2125 1325 1619 1216 1267 1005 
+C 915 794 742 525 742 192 
+C 742 -141 915 -410 1267 -621 
+C 1619 -832 2125 -941 2778 -941 
+C 3430 -941 3936 -832 4288 -621 
+C 4640 -410 4813 -141 4813 192 
+z
+M 3840 -352 
+C 3533 -474 3181 -538 2778 -538 
+C 1882 -538 1299 -275 1299 192 
+C 1299 653 1882 915 2778 915 
+C 3206 915 3565 851 3840 723 
+C 4115 602 4256 422 4256 192 
+C 4256 -45 4115 -230 3840 -352 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-d55c" d="M 3648 4032 
+L 397 4032 
+L 397 3629 
+L 3648 3629 
+L 3648 4032 
+z
+M 2848 4851 
+L 1171 4851 
+L 1171 4442 
+L 2848 4442 
+L 2848 4851 
+z
+M 4781 2662 
+L 5574 2662 
+L 5574 3110 
+L 4781 3110 
+L 4781 4838 
+L 4282 4838 
+L 4282 659 
+L 4781 659 
+L 4781 2662 
+z
+M 4966 -288 
+L 1741 -288 
+L 1741 864 
+L 1222 864 
+L 1222 -582 
+C 1222 -685 1254 -717 1357 -717 
+L 4966 -717 
+L 4966 -288 
+z
+M 3418 2298 
+C 3418 2611 3283 2861 3021 3046 
+C 2758 3238 2419 3334 2016 3334 
+C 1171 3334 614 2918 614 2298 
+C 614 1664 1171 1261 2016 1261 
+C 2426 1261 2765 1357 3027 1542 
+C 3290 1728 3418 1978 3418 2298 
+z
+M 2650 1811 
+C 2490 1702 2278 1645 2022 1645 
+C 1478 1645 1133 1882 1133 2298 
+C 1133 2707 1478 2950 2022 2950 
+C 2541 2950 2893 2707 2893 2298 
+C 2893 2086 2810 1926 2650 1811 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c778" d="M 1280 1837 
+C 1466 1760 1664 1722 1888 1722 
+C 2323 1722 2701 1888 2963 2170 
+C 3226 2445 3386 2822 3386 3238 
+C 3386 3654 3226 4032 2963 4314 
+C 2701 4589 2323 4762 1888 4762 
+C 1446 4762 1069 4589 813 4314 
+C 550 4032 397 3654 397 3238 
+C 397 2822 550 2445 813 2170 
+C 941 2029 1094 1920 1280 1837 
+z
+M 1888 2182 
+C 1581 2182 1344 2285 1171 2490 
+C 998 2688 915 2938 915 3238 
+C 915 3533 998 3782 1171 3994 
+C 1344 4205 1581 4307 1888 4307 
+C 2195 4307 2432 4205 2605 3994 
+C 2778 3782 2861 3533 2861 3238 
+C 2861 2938 2778 2688 2605 2490 
+C 2432 2285 2189 2182 1888 2182 
+z
+M 4922 4838 
+L 4416 4838 
+L 4416 672 
+L 4922 672 
+L 4922 4838 
+z
+M 5075 -282 
+L 1754 -282 
+L 1754 1139 
+L 1235 1139 
+L 1235 -582 
+C 1235 -685 1267 -717 1370 -717 
+L 5075 -717 
+L 5075 -282 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-acf5" d="M 4563 2726 
+C 4659 3238 4755 3789 4781 4538 
+C 4781 4640 4749 4672 4646 4672 
+L 781 4672 
+L 781 4237 
 L 4262 4237 
-C 4243 4032 4224 3738 4179 3450 
-C 4134 3149 4090 2842 4045 2611 
-L 186 2611 
-L 186 2176 
-L 2438 2176 
-L 2438 1114 
-L 800 1114 
-L 800 672 
-L 4166 672 
-L 4166 -870 
-L 4685 -870 
-L 4685 979 
+C 4237 3693 4179 3238 4077 2726 
+L 4563 2726 
+z
+M 5376 2298 
+L 2765 2298 
+L 2765 3494 
+L 2253 3494 
+L 2253 2298 
+L 179 2298 
+L 179 1856 
+L 5376 1856 
+L 5376 2298 
+z
+M 2778 -941 
+C 3430 -941 3936 -832 4288 -614 
+C 4640 -403 4819 -128 4819 198 
+C 4819 525 4640 794 4288 1011 
+C 3936 1229 3430 1338 2778 1338 
+C 2118 1338 1613 1229 1261 1011 
+C 909 794 730 525 730 198 
+C 730 -128 909 -403 1261 -614 
+C 1613 -832 2118 -941 2778 -941 
+z
+M 2778 -538 
+C 1882 -538 1293 -282 1293 205 
+C 1293 666 1882 928 2778 928 
+C 3213 928 3571 864 3846 736 
+C 4128 614 4269 435 4269 205 
+C 4269 -45 4128 -224 3846 -346 
+C 3571 -474 3213 -538 2778 -538 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-b0b4" d="M 2931 1229 
-C 2829 1203 2579 1171 2304 1146 
-C 2029 1120 1734 1101 1536 1101 
-L 1184 1101 
-L 1184 4582 
-L 672 4582 
-L 672 762 
-C 672 659 704 627 806 627 
-L 1171 627 
-C 1555 627 1946 653 2272 685 
-C 2586 717 2835 749 2931 774 
-L 2931 1229 
+      <path id="KoPubWorldDotumPM-c9c0" d="M 3898 813 
+C 2829 1427 2342 2278 2342 3514 
+L 2342 4083 
+L 3578 4083 
+L 3578 4512 
+L 595 4512 
+L 595 4083 
+L 1818 4083 
+L 1818 3597 
+C 1818 2266 1210 1286 186 646 
+L 602 294 
+C 883 499 1203 787 1466 1120 
+C 1741 1459 1958 1837 2080 2221 
+C 2214 1830 2413 1485 2682 1190 
+C 2957 890 3232 646 3533 448 
+L 3898 813 
 z
-M 4979 4838 
-L 4486 4838 
-L 4486 2803 
-L 3693 2803 
-L 3693 4742 
-L 3200 4742 
-L 3200 -563 
-L 3693 -563 
-L 3693 2317 
-L 4486 2317 
-L 4486 -838 
-L 4979 -838 
-L 4979 4838 
+M 5024 4826 
+L 4518 4826 
+L 4518 -845 
+L 5024 -845 
+L 5024 4826 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-28" d="M 2061 -1037 
+C 1286 -32 947 1030 947 2035 
+C 947 3040 1286 4102 2061 5107 
+L 1677 5107 
+C 864 4262 378 3085 378 2035 
+C 378 992 858 -205 1677 -1037 
+L 2061 -1037 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-58" d="M 2278 2227 
+L 3834 4544 
+L 3194 4544 
+L 1958 2598 
+L 723 4544 
+L 83 4544 
+L 1638 2227 
+L 38 -237 
+L 672 -237 
+L 1958 1843 
+L 3245 -237 
+L 3878 -237 
+L 2278 2227 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-41" d="M 1210 1478 
+L 1907 3430 
+L 2118 4090 
+L 2330 3430 
+L 3027 1478 
+L 1210 1478 
+z
+M 2426 4480 
+C 2413 4525 2374 4544 2310 4544 
+L 1920 4544 
+C 1862 4544 1824 4525 1811 4480 
+L 64 -237 
+L 589 -237 
+L 1050 1037 
+L 3187 1037 
+L 3648 -237 
+L 4173 -237 
+L 2426 4480 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-49" d="M 1158 4563 
+L 653 4563 
+L 653 -237 
+L 1158 -237 
+L 1158 4563 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-29" d="M 378 -1037 
+C 1197 -205 1677 992 1677 2035 
+C 1677 3085 1190 4262 378 5107 
+L -6 5107 
+C 768 4102 1107 3040 1107 2035 
+C 1107 1030 768 -32 -6 -1037 
+L 378 -1037 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-33" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c124" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ba85" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ac00" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b2a5" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d55c" transform="translate(608.499863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(695.699844 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c778" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acf5" transform="translate(811.899811 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c9c0" transform="translate(899.099792 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b2a5" transform="translate(986.299774 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-28" transform="translate(1073.499756 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-58" transform="translate(1104.499741 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(1165.399734 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-49" transform="translate(1231.599731 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-29" transform="translate(1259.899719 0)"/>
+    </g>
+   </g>
+   <g id="text_11">
+    <!-- 제4절 선행연구 검토 및 차별성 -->
+    <g style="fill: #111827" transform="translate(84.82374 102.305852) scale(0.078 -0.078)">
+     <defs>
+      <path id="KoPubWorldDotumPM-34" d="M 608 1261 
+L 2259 3968 
+L 2246 3379 
+L 2246 1261 
+L 608 1261 
+z
+M 2733 819 
+L 3430 819 
+L 3430 1261 
+L 2733 1261 
+L 2733 4416 
+C 2733 4512 2707 4538 2611 4538 
+L 2176 4538 
+C 2118 4538 2074 4512 2048 4454 
+L 179 1389 
+C 141 1331 122 1267 122 1210 
+L 122 941 
+C 122 858 160 819 243 819 
+L 2234 819 
+L 2234 -205 
+L 2733 -205 
+L 2733 819 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-c120" d="M 3693 2074 
@@ -1171,140 +2539,66 @@ C 3981 787 4570 550 4570 115
 C 4570 -90 4435 -250 4166 -371 
 z
 " transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c774" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b860" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c801" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(322.499924 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc30" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acbd" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(583.899841 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(612.899826 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(641.899811 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(673.799805 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6d" transform="translate(702.799789 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b0b4" transform="translate(789.999771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(877.199753 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c120" transform="translate(906.199738 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d589" transform="translate(993.399719 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1080.599701 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1167.799683 0)"/>
-    </g>
-    <!-- · 해외 선행연구    · 선행연구와의 차별성 -->
-    <g style="fill: #111827" transform="translate(70.578 83.64335) scale(0.0635 -0.0635)">
-     <defs>
-      <path id="KoPubWorldDotumPM-d574" d="M 3040 3814 
-L 352 3814 
-L 352 3398 
-L 3040 3398 
-L 3040 3814 
+      <path id="KoPubWorldDotumPM-ac80" d="M 666 4576 
+L 666 4134 
+L 2656 4134 
+C 2534 3520 2227 3085 1811 2726 
+C 1402 2387 870 2150 333 1997 
+L 666 1632 
+C 2170 2138 3066 3034 3219 4442 
+C 3219 4544 3187 4576 3085 4576 
+L 666 4576 
 z
-M 2451 4698 
-L 947 4698 
-L 947 4275 
-L 2451 4275 
-L 2451 4698 
+M 4941 4838 
+L 4435 4838 
+L 4435 3424 
+L 3251 3424 
+L 3251 2976 
+L 4435 2976 
+L 4435 1645 
+L 4941 1645 
+L 4941 4838 
 z
-M 2573 666 
-C 2803 902 2918 1216 2918 1619 
-C 2918 2419 2432 2918 1715 2918 
-C 998 2918 506 2419 506 1619 
-C 506 1222 621 902 845 666 
-C 1075 429 1363 307 1715 307 
-C 2061 307 2349 429 2573 666 
+M 1766 -352 
+L 1766 909 
+L 4422 909 
+L 4422 -352 
+L 1766 -352 
 z
-M 1715 749 
-C 1229 749 973 1082 973 1619 
-C 973 2163 1229 2483 1715 2483 
-C 2176 2483 2445 2163 2445 1619 
-C 2445 1082 2176 749 1715 749 
-z
-M 5133 4838 
-L 4653 4838 
-L 4653 2637 
-L 3923 2637 
-L 3923 4742 
-L 3437 4742 
-L 3437 -563 
-L 3923 -563 
-L 3923 2150 
-L 4653 2150 
-L 4653 -838 
-L 5133 -838 
-L 5133 4838 
+M 4928 1197 
+C 4928 1299 4896 1331 4794 1331 
+L 1395 1331 
+C 1293 1331 1261 1299 1261 1197 
+L 1261 -634 
+C 1261 -736 1293 -768 1395 -768 
+L 4794 -768 
+C 4896 -768 4928 -736 4928 -634 
+L 4928 1197 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c678" d="M 4262 947 
-C 4026 902 3706 883 3392 858 
-C 3066 838 2746 819 2490 813 
-L 2490 1862 
-C 2848 1920 3136 2080 3360 2336 
-C 3584 2598 3699 2918 3699 3283 
-C 3699 3693 3539 4045 3277 4301 
-C 3014 4550 2643 4704 2208 4704 
-C 1773 4704 1395 4550 1133 4294 
-C 851 4032 710 3693 710 3283 
-C 710 2899 826 2579 1062 2317 
-C 1286 2067 1594 1901 1978 1850 
-L 1978 806 
-L 390 806 
-L 390 365 
-L 1037 365 
-C 2310 365 3360 384 4262 506 
-L 4262 947 
-z
-M 2208 2285 
-C 1594 2285 1216 2669 1216 3283 
-C 1216 3853 1594 4275 2208 4275 
-C 2822 4275 3194 3866 3194 3277 
-C 3194 2682 2822 2285 2208 2285 
-z
-M 4979 4838 
-L 4474 4838 
-L 4474 -832 
-L 4979 -832 
-L 4979 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c640" d="M 3994 941 
-C 3770 896 3469 877 3142 858 
-C 2829 832 2496 819 2259 813 
-L 2259 1850 
-C 2637 1901 2931 2054 3149 2317 
-C 3366 2579 3475 2893 3475 3270 
-C 3475 3680 3328 4038 3066 4294 
-C 2810 4550 2432 4710 1990 4710 
-C 1530 4710 1171 4550 915 4294 
-C 659 4038 518 3680 518 3270 
-C 518 2906 640 2573 851 2317 
-C 1062 2067 1370 1894 1754 1843 
-L 1754 800 
-L 237 800 
-L 237 365 
-L 1869 365 
-C 2285 365 2688 378 3072 403 
-C 3462 435 3770 461 3994 506 
-L 3994 941 
-z
-M 1990 2278 
-C 1350 2278 1011 2675 1011 3270 
-C 1011 3853 1350 4282 1990 4282 
-C 2630 4282 2976 3840 2976 3270 
-C 2976 2682 2630 2278 1990 2278 
-z
-M 4710 2125 
-L 5517 2125 
-L 5517 2586 
-L 4710 2586 
-L 4710 4845 
-L 4211 4845 
-L 4211 -838 
-L 4710 -838 
-L 4710 2125 
+      <path id="KoPubWorldDotumPM-d1a0" d="M 5382 307 
+L 3040 307 
+L 3040 1363 
+L 4736 1363 
+L 4736 1792 
+L 1395 1792 
+L 1395 2752 
+L 4666 2752 
+L 4666 3174 
+L 1395 3174 
+L 1395 4141 
+L 4678 4141 
+L 4678 4570 
+L 1018 4570 
+C 915 4570 883 4538 883 4435 
+L 883 1498 
+C 883 1395 915 1363 1018 1363 
+L 2515 1363 
+L 2515 307 
+L 173 314 
+L 173 -122 
+L 5382 -122 
+L 5382 307 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-cc28" d="M 2829 4742 
@@ -1436,68 +2730,232 @@ C 4371 602 4506 416 4506 192
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d574" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c678" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c120" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d589" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(613.099854 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(671.099823 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(700.099808 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(729.099792 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(760.999786 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c120" transform="translate(789.999771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d589" transform="translate(877.199753 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(964.399734 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1051.599716 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c640" transform="translate(1138.799698 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(1225.99968 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1313.199661 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-cc28" transform="translate(1342.199646 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(1429.399628 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(1516.599609 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-34" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c120" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d589" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(608.499863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ac80" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d1a0" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(811.899811 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(928.099777 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-cc28" transform="translate(957.099762 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(1044.299744 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(1131.499725 0)"/>
     </g>
    </g>
-   <g id="text_5">
+   <g id="text_12">
     <!-- 제3장 -->
-    <g style="fill: #111827" transform="translate(29.263724 120.617672) scale(0.087 -0.087)">
+    <g style="fill: #111827" transform="translate(33.262716 129.93356) scale(0.102 -0.102)">
      <defs>
-      <path id="KoPubWorldDotumPM-33" d="M 192 1062 
-C 211 205 781 -314 1696 -314 
-C 2496 -314 3251 83 3251 1030 
-C 3251 1651 2829 2131 2202 2214 
-C 2771 2317 3149 2784 3149 3322 
-C 3149 4192 2483 4576 1722 4576 
-C 858 4576 275 4083 256 3290 
-L 768 3290 
-C 826 3853 1133 4134 1702 4134 
-C 2240 4134 2637 3840 2637 3296 
-C 2637 2707 2163 2483 1638 2464 
-L 1427 2464 
-C 1331 2464 1325 2438 1325 2336 
-L 1325 2099 
-C 1325 2003 1331 1997 1427 1997 
-L 1683 1997 
-C 2221 1978 2739 1722 2739 1088 
-C 2739 474 2355 128 1715 128 
-C 1107 128 768 442 698 1062 
-L 192 1062 
+      <path id="KoPubWorldDotumPB-33" d="M 115 1216 
+C 134 256 755 -314 1696 -314 
+C 2515 -314 3328 122 3328 1088 
+C 3328 1728 3021 2144 2374 2253 
+C 2938 2374 3232 2758 3232 3322 
+C 3232 4218 2509 4640 1722 4640 
+C 819 4640 192 4109 173 3200 
+L 896 3200 
+C 954 3789 1216 4032 1709 4032 
+C 2195 4032 2502 3789 2502 3302 
+C 2502 2765 2125 2592 1645 2573 
+L 1446 2573 
+C 1312 2573 1280 2541 1280 2406 
+L 1280 2112 
+C 1280 1978 1312 1946 1446 1946 
+L 1690 1946 
+C 2176 1926 2605 1722 2605 1139 
+C 2605 576 2285 294 1722 294 
+C 1178 294 896 570 826 1216 
+L 115 1216 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
-     <use xlink:href="#KoPubWorldDotumPM-33" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c7a5" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPB-33" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c7a5" transform="translate(143.499969 0)"/>
     </g>
    </g>
-   <g id="text_6">
-    <!-- · 연구 방법    · 변수의 정의 및 구축    · 연구 모형 -->
-    <g style="fill: #111827" transform="translate(70.578 120.048898) scale(0.0635 -0.0635)">
+   <g id="text_13">
+    <!-- 분석의 틀 -->
+    <g style="fill: #111827" transform="translate(29.538263 141.765855) scale(0.082 -0.082)">
+     <defs>
+      <path id="KoPubWorldDotumPB-bd84" d="M 1491 3059 
+L 1491 3629 
+L 4058 3629 
+L 4058 3059 
+L 1491 3059 
+z
+M 4781 4826 
+L 4058 4826 
+L 4058 4218 
+L 1491 4218 
+L 1491 4826 
+L 774 4826 
+L 774 2643 
+C 774 2509 813 2464 947 2464 
+L 4602 2464 
+C 4730 2464 4781 2509 4781 2643 
+L 4781 4826 
+z
+M 5421 1997 
+L 141 1997 
+L 141 1389 
+L 2496 1389 
+L 2496 282 
+L 3238 282 
+L 3238 1389 
+L 5421 1389 
+L 5421 1997 
+z
+M 4954 -134 
+L 1530 -134 
+L 1530 986 
+L 800 986 
+L 800 -570 
+C 800 -704 838 -749 973 -749 
+L 4954 -749 
+L 4954 -134 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c11d" d="M 3712 2278 
+C 3296 2426 2944 2675 2694 2982 
+C 2458 3290 2310 3654 2317 4038 
+L 2317 4749 
+L 1542 4749 
+L 1542 4026 
+C 1536 3200 1037 2534 58 2074 
+L 627 1587 
+C 915 1741 1210 1946 1440 2170 
+C 1677 2400 1856 2630 1933 2854 
+C 2054 2643 2240 2432 2483 2234 
+C 2733 2035 2995 1869 3258 1734 
+L 3712 2278 
+z
+M 5011 4870 
+L 4294 4870 
+L 4294 3917 
+L 3130 3917 
+L 3130 3302 
+L 4294 3302 
+L 4294 1427 
+L 5011 1427 
+L 5011 4870 
+z
+M 5011 1018 
+C 5011 1139 4954 1197 4832 1197 
+L 1062 1197 
+L 1062 595 
+L 4288 595 
+L 4288 -890 
+L 5011 -890 
+L 5011 1018 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c758" d="M 3546 2643 
+C 3622 2822 3661 3021 3661 3238 
+C 3661 3648 3501 4019 3238 4282 
+C 2963 4544 2592 4704 2131 4704 
+C 1670 4704 1293 4544 1018 4282 
+C 755 4019 602 3648 602 3238 
+C 602 2803 755 2445 1018 2182 
+C 1293 1920 1670 1766 2131 1766 
+C 2592 1766 2963 1920 3238 2182 
+C 3373 2317 3475 2470 3546 2643 
+z
+M 2131 2368 
+C 1619 2368 1331 2752 1331 3238 
+C 1331 3731 1619 4096 2131 4096 
+C 2643 4096 2931 3731 2931 3238 
+C 2931 2752 2643 2368 2131 2368 
+z
+M 4205 1158 
+C 3878 1101 3456 1043 3046 1011 
+C 2637 979 2278 954 2080 954 
+L 339 934 
+L 339 307 
+L 998 307 
+C 2298 307 3405 384 4205 563 
+L 4205 1158 
+z
+M 5075 4870 
+L 4352 4870 
+L 4352 -858 
+L 5075 -858 
+L 5075 4870 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-d2c0" d="M 4826 3098 
+L 1574 3098 
+L 1574 3450 
+L 4742 3450 
+L 4742 3917 
+L 1574 3917 
+L 1574 4269 
+L 4768 4269 
+L 4768 4768 
+L 979 4768 
+C 845 4768 800 4717 800 4589 
+L 800 2784 
+C 800 2650 838 2605 973 2605 
+L 4826 2605 
+L 4826 3098 
+z
+M 5421 2266 
+L 141 2266 
+L 141 1747 
+L 5421 1747 
+L 5421 2266 
+z
+M 4890 -320 
+L 1587 -320 
+L 1587 45 
+L 4570 45 
+C 4698 45 4749 90 4749 224 
+L 4749 1190 
+C 4749 1312 4691 1370 4570 1370 
+L 806 1370 
+L 806 870 
+L 3974 870 
+L 3974 512 
+L 986 512 
+C 851 512 806 461 806 333 
+L 806 -640 
+C 806 -774 851 -819 986 -819 
+L 4890 -819 
+L 4890 -320 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-bd84"/>
+     <use xlink:href="#KoPubWorldDotumPB-c11d" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c758" transform="translate(174.399963 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-20" transform="translate(261.599945 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-d2c0" transform="translate(290.59993 0)"/>
+    </g>
+   </g>
+   <g id="text_14">
+    <!-- 제1절 연구 방법 -->
+    <g style="fill: #111827" transform="translate(84.82374 125.810637) scale(0.087 -0.087)">
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(463.099884 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc95" transform="translate(550.299866 0)"/>
+    </g>
+   </g>
+   <g id="text_15">
+    <!-- 제2절 변수의 정의 및 구축 -->
+    <g style="fill: #111827" transform="translate(84.82374 135.81033) scale(0.087 -0.087)">
      <defs>
       <path id="KoPubWorldDotumPM-bcc0" d="M 1120 2086 
 L 1120 3213 
@@ -1608,365 +3066,203 @@ L 4678 -870
 L 4678 717 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-baa8" d="M 1389 2176 
-L 1389 4096 
-L 4160 4096 
-L 4160 2176 
-L 1389 2176 
-z
-M 5382 320 
-L 3034 320 
-L 3034 1741 
-L 4531 1741 
-C 4634 1741 4666 1773 4666 1875 
-L 4666 4397 
-C 4666 4499 4634 4531 4531 4531 
-L 1030 4531 
-C 928 4531 896 4499 896 4397 
-L 896 1875 
-C 896 1773 928 1741 1030 1741 
-L 2502 1741 
-L 2502 320 
-L 173 320 
-L 173 -122 
-L 5382 -122 
-L 5382 320 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-d615" d="M 3552 4109 
-L 390 4109 
-L 390 3718 
-L 3552 3718 
-L 3552 4109 
-z
-M 2842 4858 
-L 1158 4858 
-L 1158 4461 
-L 2842 4461 
-L 2842 4858 
-z
-M 602 2502 
-C 602 2214 749 1971 998 1798 
-C 1248 1626 1600 1530 2010 1530 
-C 2419 1530 2765 1626 3014 1798 
-C 3264 1971 3418 2214 3418 2502 
-C 3418 2790 3290 3021 3027 3194 
-C 2765 3373 2426 3462 2010 3462 
-C 1594 3462 1254 3373 992 3194 
-C 730 3021 602 2790 602 2502 
-z
-M 2662 2067 
-C 2515 1958 2298 1907 2010 1907 
-C 1446 1907 1120 2144 1120 2502 
-C 1120 2861 1446 3085 2010 3085 
-C 2573 3085 2899 2861 2899 2502 
-C 2899 2317 2822 2176 2662 2067 
-z
-M 5011 4838 
-L 4518 4838 
-L 4518 3424 
-L 3584 3424 
-L 3584 3014 
-L 4518 3014 
-L 4518 2381 
-L 3584 2381 
-L 3584 1965 
-L 4512 1965 
-L 4518 1216 
-L 5011 1216 
-L 5011 4838 
-z
-M 5088 109 
-C 5088 723 4397 1171 3117 1171 
-C 1837 1171 1146 723 1146 109 
-C 1146 -512 1830 -954 3117 -954 
-C 4403 -954 5088 -512 5088 109 
-z
-M 3123 -557 
-C 2701 -557 2355 -499 2086 -384 
-C 1818 -269 1683 -102 1683 109 
-C 1683 544 2278 768 3123 768 
-C 3533 768 3872 710 4134 595 
-C 4403 486 4538 320 4538 102 
-C 4538 -115 4403 -275 4134 -384 
-C 3872 -499 3533 -557 3123 -557 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc95" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(467.699875 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(496.69986 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(525.699844 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(554.699829 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(586.599823 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(615.599808 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(702.799789 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(789.999771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(877.199753 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(906.199738 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(993.399719 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1080.599701 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(1109.599686 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1196.799667 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1225.799652 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-cd95" transform="translate(1312.999634 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1400.199615 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1429.1996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1458.199585 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1487.19957 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(1516.199554 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1548.099548 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1577.099533 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1664.299515 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1751.499496 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-baa8" transform="translate(1780.499481 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d615" transform="translate(1867.699463 0)"/>
-    </g>
-   </g>
-   <g id="text_7">
-    <!-- 제4장 -->
-    <g style="fill: #111827" transform="translate(29.263724 192.171812) scale(0.087 -0.087)">
-     <defs>
-      <path id="KoPubWorldDotumPM-34" d="M 608 1261 
-L 2259 3968 
-L 2246 3379 
-L 2246 1261 
-L 608 1261 
-z
-M 2733 819 
-L 3430 819 
-L 3430 1261 
-L 2733 1261 
-L 2733 4416 
-C 2733 4512 2707 4538 2611 4538 
-L 2176 4538 
-C 2118 4538 2074 4512 2048 4454 
-L 179 1389 
-C 141 1331 122 1267 122 1210 
-L 122 941 
-C 122 858 160 819 243 819 
-L 2234 819 
-L 2234 -205 
-L 2733 -205 
-L 2733 819 
-z
-" transform="scale(0.015625)"/>
      </defs>
      <use xlink:href="#KoPubWorldDotumPM-c81c"/>
-     <use xlink:href="#KoPubWorldDotumPM-34" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c7a5" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-32" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(869.89978 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-cd95" transform="translate(957.099762 0)"/>
     </g>
    </g>
-   <g id="text_8">
-    <!-- 분석 구분 -->
-    <g style="fill: #111827" transform="translate(86.333769 153.947675) scale(0.0625 -0.0625)">
+   <g id="text_16">
+    <!-- 제3절 연구 모형 -->
+    <g style="fill: #111827" transform="translate(84.82374 145.810024) scale(0.087 -0.087)">
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-33" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-baa8" transform="translate(463.099884 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d615" transform="translate(550.299866 0)"/>
+    </g>
+   </g>
+   <g id="text_17">
+    <!-- 제4장 -->
+    <g style="fill: #111827" transform="translate(33.262716 224.040263) scale(0.102 -0.102)">
      <defs>
-      <path id="KoPubWorldDotumPM-bd84" d="M 1350 2931 
-L 1350 3661 
-L 4192 3661 
-L 4192 2931 
-L 1350 2931 
+      <path id="KoPubWorldDotumPB-34" d="M 813 1402 
+L 2125 3546 
+L 2118 3373 
+L 2118 1402 
+L 813 1402 
 z
-M 4691 4781 
-L 4192 4781 
-L 4192 4083 
-L 1350 4083 
-L 1350 4781 
-L 858 4781 
-L 858 2637 
-C 858 2534 890 2502 992 2502 
-L 4557 2502 
-C 4659 2502 4691 2534 4691 2637 
-L 4691 4781 
-z
-M 5376 1914 
-L 186 1914 
-L 186 1478 
-L 2605 1478 
-L 2605 269 
-L 3110 269 
-L 3110 1478 
-L 5376 1478 
-L 5376 1914 
-z
-M 4890 -282 
-L 1376 -282 
-L 1376 902 
-L 877 902 
-L 877 -582 
-C 877 -685 909 -717 1011 -717 
-L 4890 -717 
-L 4890 -282 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c11d" d="M 3693 2163 
-C 3283 2310 2906 2547 2643 2861 
-C 2368 3168 2208 3539 2208 4000 
-L 2208 4698 
-L 1677 4698 
-L 1677 4000 
-C 1677 3520 1530 3104 1242 2765 
-C 954 2438 582 2170 141 1958 
-L 544 1606 
-C 1190 1939 1734 2432 1939 3021 
-C 2221 2451 2778 2048 3366 1766 
-L 3693 2163 
-z
-M 4928 4838 
-L 4429 4838 
-L 4429 3814 
-L 3162 3814 
-L 3162 3373 
-L 4429 3373 
-L 4429 1440 
-L 4928 1440 
-L 4928 4838 
-z
-M 4928 1005 
-C 4928 1107 4896 1139 4794 1139 
-L 1152 1139 
-L 1152 704 
-L 4416 704 
-L 4416 -870 
-L 4928 -870 
-L 4928 1005 
+M 2822 794 
+L 3507 794 
+L 3507 1402 
+L 2822 1402 
+L 2822 4422 
+C 2822 4557 2784 4595 2650 4595 
+L 2125 4595 
+C 2067 4595 1978 4531 1933 4461 
+L 115 1478 
+C 70 1421 45 1350 45 1267 
+L 45 966 
+C 45 832 83 794 218 794 
+L 2106 794 
+L 2106 -205 
+L 2822 -205 
+L 2822 794 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-bd84"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(290.59993 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPB-34" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c7a5" transform="translate(143.499969 0)"/>
     </g>
    </g>
-   <g id="text_9">
-    <!-- 분석 내용 -->
-    <g style="fill: #111827" transform="translate(183.576429 153.947675) scale(0.0625 -0.0625)">
+   <g id="text_18">
+    <!-- 실증 분석 -->
+    <g style="fill: #111827" transform="translate(29.538263 235.872559) scale(0.082 -0.082)">
      <defs>
-      <path id="KoPubWorldDotumPM-c6a9" d="M 4678 -314 
-C 4762 -179 4806 -38 4806 102 
-C 4806 710 4141 1158 2784 1158 
-C 1427 1158 749 723 749 109 
-C 749 -499 1421 -947 2784 -947 
-C 3814 -947 4429 -698 4678 -314 
+      <path id="KoPubWorldDotumPB-c2e4" d="M 3686 2592 
+C 3302 2720 2963 2963 2707 3251 
+C 2445 3539 2278 3885 2285 4243 
+L 2285 4768 
+L 1523 4768 
+L 1523 4230 
+C 1517 3846 1376 3494 1101 3168 
+C 826 2854 474 2598 38 2400 
+L 614 1926 
+C 1229 2285 1651 2662 1907 3174 
+C 2189 2714 2675 2342 3238 2086 
+L 3686 2592 
 z
-M 3846 -378 
-C 3610 -499 3251 -557 2784 -557 
-C 1830 -557 1306 -307 1306 109 
-C 1306 525 1830 781 2784 781 
-C 3686 781 4243 538 4243 102 
-C 4243 -102 4109 -262 3846 -378 
+M 5011 4870 
+L 4288 4870 
+L 4288 1869 
+L 5011 1869 
+L 5011 4870 
 z
-M 2106 2048 
-L 2106 2758 
-C 2291 2714 2541 2701 2778 2701 
-C 3014 2701 3264 2714 3475 2765 
-L 3475 2048 
-L 2106 2048 
+M 5126 -256 
+L 1926 -256 
+L 1926 179 
+L 4819 179 
+C 4947 179 4998 224 4998 358 
+L 4998 1466 
+C 4998 1587 4941 1645 4819 1645 
+L 1152 1645 
+L 1152 1082 
+L 4237 1082 
+L 4237 685 
+L 1331 685 
+C 1197 685 1152 634 1152 506 
+L 1152 -640 
+C 1152 -774 1197 -819 1331 -819 
+L 5126 -819 
+L 5126 -256 
 z
-M 3821 3290 
-C 3514 3168 3168 3104 2778 3104 
-C 2336 3104 1990 3168 1728 3302 
-C 1466 3437 1331 3603 1331 3802 
-C 1331 4211 1850 4493 2778 4493 
-C 3674 4493 4230 4198 4230 3789 
-C 4230 3584 4096 3418 3821 3290 
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPB-c99d" d="M 4902 173 
+C 4902 838 4160 1312 2778 1312 
+C 1395 1312 653 838 653 173 
+C 653 -499 1389 -966 2778 -966 
+C 4166 -966 4902 -499 4902 173 
 z
-M 5376 2048 
-L 3968 2048 
-L 3968 2880 
-C 4506 3085 4774 3418 4774 3782 
-C 4774 4083 4608 4339 4282 4550 
-C 3955 4768 3450 4877 2778 4877 
-C 2131 4877 1632 4768 1293 4557 
-C 960 4346 794 4090 794 3795 
-C 794 3411 1062 3085 1606 2880 
-L 1606 2048 
-L 179 2048 
-L 179 1613 
-L 5376 1613 
-L 5376 2048 
+M 3731 -256 
+C 3475 -352 3155 -403 2778 -403 
+C 1952 -403 1466 -205 1466 179 
+C 1466 538 1952 762 2778 762 
+C 3578 762 4090 538 4090 179 
+C 4090 -13 3968 -160 3731 -256 
+z
+M 5165 3142 
+C 4730 3194 4282 3296 3923 3450 
+C 3558 3610 3283 3821 3200 4122 
+L 4806 4122 
+L 4806 4730 
+L 749 4730 
+L 749 4122 
+L 2349 4122 
+C 2272 3859 2029 3654 1690 3494 
+C 1331 3334 883 3219 371 3136 
+L 813 2618 
+C 1197 2669 1581 2778 1920 2925 
+C 2278 3078 2560 3264 2765 3514 
+C 2944 3264 3245 3072 3603 2925 
+C 3962 2778 4346 2675 4730 2618 
+L 5165 3142 
+z
+M 5421 2310 
+L 141 2310 
+L 141 1702 
+L 5421 1702 
+L 5421 2310 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-bd84"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b0b4" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c6a9" transform="translate(290.59993 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c2e4"/>
+     <use xlink:href="#KoPubWorldDotumPB-c99d" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-20" transform="translate(174.399963 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-bd84" transform="translate(203.399948 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c11d" transform="translate(290.59993 0)"/>
     </g>
    </g>
-   <g id="text_10">
-    <!-- 분석 방법 -->
-    <g style="fill: #111827" transform="translate(270.599319 153.947675) scale(0.0625 -0.0625)">
-     <use xlink:href="#KoPubWorldDotumPM-bd84"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc95" transform="translate(290.59993 0)"/>
-    </g>
-   </g>
-   <g id="text_11">
-    <!-- 기초통계 및 -->
-    <g style="fill: #111827" transform="translate(85.468734 173.005758) scale(0.0545 -0.0545)">
+   <g id="text_19">
+    <!-- 제1절 기술통계 및 변수 분포 -->
+    <g style="fill: #111827" transform="translate(83.89467 176.525947) scale(0.077 -0.077)">
      <defs>
-      <path id="KoPubWorldDotumPM-ae30" d="M 781 358 
-C 1478 768 2061 1325 2496 2016 
-C 2931 2688 3181 3475 3226 4378 
-C 3226 4480 3194 4512 3091 4512 
-L 704 4512 
-L 704 4070 
-L 2662 4070 
-C 2541 2566 1696 1376 371 698 
-L 781 358 
+      <path id="KoPubWorldDotumPM-c220" d="M 5088 3258 
+C 4602 3341 4102 3501 3712 3731 
+C 3328 3968 3059 4282 3059 4698 
+L 3059 4851 
+L 2502 4851 
+L 2502 4698 
+C 2502 4314 2266 4000 1901 3770 
+C 1510 3533 1037 3360 467 3264 
+L 781 2880 
+C 1216 2976 1600 3117 1958 3290 
+C 2323 3475 2598 3725 2784 4032 
+C 2957 3706 3290 3456 3654 3270 
+C 4019 3085 4435 2957 4774 2880 
+L 5088 3258 
 z
-M 4928 4838 
-L 4416 4838 
-L 4416 -832 
-L 4928 -832 
-L 4928 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-cd08" d="M 5114 1683 
-C 4723 1754 4237 1914 3846 2170 
-C 3437 2419 3130 2765 3078 3206 
-L 4794 3206 
-L 4794 3642 
-L 762 3642 
-L 762 3206 
-L 2477 3206 
-C 2406 2771 2118 2445 1734 2195 
-C 1350 1939 870 1766 435 1683 
-L 806 1267 
-C 1171 1350 1568 1517 1926 1728 
-C 2285 1952 2579 2227 2778 2566 
-C 2957 2208 3283 1939 3648 1715 
-C 4006 1491 4410 1344 4742 1267 
-L 5114 1683 
-z
-M 3840 4698 
-L 1696 4698 
-L 1696 4262 
-L 3840 4262 
-L 3840 4698 
-z
-M 5382 307 
-L 3040 307 
+M 4806 -390 
+L 1434 -390 
+L 1434 192 
+L 4544 192 
+C 4646 192 4678 224 4678 326 
+L 4678 1376 
+C 4678 1478 4646 1510 4544 1510 
 L 3040 1510 
-L 2515 1510 
-L 2515 307 
-L 173 307 
-L 173 -134 
-L 5382 -134 
-L 5382 307 
+L 3040 2138 
+L 5376 2138 
+L 5376 2547 
+L 179 2547 
+L 179 2138 
+L 2509 2138 
+L 2509 1510 
+L 877 1510 
+L 877 1114 
+L 4122 1114 
+L 4122 557 
+L 1011 557 
+C 909 557 877 525 877 422 
+L 877 -646 
+C 877 -749 909 -781 1011 -781 
+L 4806 -781 
+L 4806 -390 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-d1b5" d="M 5376 1869 
@@ -2045,51 +3341,99 @@ L 3891 -570
 L 3891 4742 
 z
 " transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-ae30"/>
-     <use xlink:href="#KoPubWorldDotumPM-cd08" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d1b5" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acc4" transform="translate(261.599945 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(348.799927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(377.799911 0)"/>
-    </g>
-    <!-- 성능 비교 -->
-    <g style="fill: #111827" transform="translate(87.845019 179.824543) scale(0.0545 -0.0545)">
-     <defs>
-      <path id="KoPubWorldDotumPM-b2a5" d="M 4787 3462 
-L 1376 3462 
-L 1376 4819 
-L 870 4819 
-L 870 3168 
-C 870 3066 902 3034 1005 3034 
-L 4787 3034 
-L 4787 3462 
+      <path id="KoPubWorldDotumPM-bd84" d="M 1350 2931 
+L 1350 3661 
+L 4192 3661 
+L 4192 2931 
+L 1350 2931 
 z
-M 5376 2336 
-L 186 2336 
-L 186 1907 
-L 5376 1907 
-L 5376 2336 
+M 4691 4781 
+L 4192 4781 
+L 4192 4083 
+L 1350 4083 
+L 1350 4781 
+L 858 4781 
+L 858 2637 
+C 858 2534 890 2502 992 2502 
+L 4557 2502 
+C 4659 2502 4691 2534 4691 2637 
+L 4691 4781 
 z
-M 4813 192 
-C 4813 518 4634 794 4282 1005 
-C 3930 1216 3424 1325 2778 1325 
-C 2125 1325 1619 1216 1267 1005 
-C 915 794 742 525 742 192 
-C 742 -141 915 -410 1267 -621 
-C 1619 -832 2125 -941 2778 -941 
-C 3430 -941 3936 -832 4288 -621 
-C 4640 -410 4813 -141 4813 192 
+M 5376 1914 
+L 186 1914 
+L 186 1478 
+L 2605 1478 
+L 2605 269 
+L 3110 269 
+L 3110 1478 
+L 5376 1478 
+L 5376 1914 
 z
-M 3840 -352 
-C 3533 -474 3181 -538 2778 -538 
-C 1882 -538 1299 -275 1299 192 
-C 1299 653 1882 915 2778 915 
-C 3206 915 3565 851 3840 723 
-C 4115 602 4256 422 4256 192 
-C 4256 -45 4115 -230 3840 -352 
+M 4890 -282 
+L 1376 -282 
+L 1376 902 
+L 877 902 
+L 877 -582 
+C 877 -685 909 -717 1011 -717 
+L 4890 -717 
+L 4890 -282 
 z
 " transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-d3ec" d="M 1926 2131 
+C 1920 2458 1914 2784 1914 3117 
+C 1907 3443 1901 3770 1901 4102 
+L 3648 4102 
+C 3642 3770 3635 3443 3635 3117 
+C 3629 2784 3622 2458 3622 2131 
+L 1926 2131 
+z
+M 5382 314 
+L 3034 314 
+L 3034 1702 
+L 4922 1702 
+L 4922 2131 
+L 4115 2131 
+C 4122 2778 4141 3437 4147 4102 
+L 4781 4102 
+L 4781 4531 
+L 762 4531 
+L 762 4102 
+L 1395 4102 
+C 1395 3770 1402 3443 1408 3117 
+C 1408 2784 1414 2458 1421 2131 
+L 627 2131 
+L 627 1702 
+L 2522 1702 
+L 2522 314 
+L 173 314 
+L 173 -115 
+L 5382 -115 
+L 5382 314 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ae30" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c220" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d1b5" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acc4" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(608.499863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(928.099777 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(957.099762 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d3ec" transform="translate(1044.299744 0)"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- 제2절 모형별 예측 성능 비교 -->
+    <g style="fill: #111827" transform="translate(83.89467 203.785385) scale(0.077 -0.077)">
+     <defs>
       <path id="KoPubWorldDotumPM-be44" d="M 1152 1011 
 L 1152 2650 
 L 2758 2650 
@@ -2142,1154 +3486,27 @@ L 5382 314
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c131"/>
-     <use xlink:href="#KoPubWorldDotumPM-b2a5" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-be44" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad50" transform="translate(290.59993 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-32" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-baa8" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d615" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c608" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ce21" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b2a5" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(928.099777 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-be44" transform="translate(957.099762 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad50" transform="translate(1044.299744 0)"/>
     </g>
    </g>
-   <g id="text_12">
-    <!-- · 종속변수 및 설명변수 분포 -->
-    <g style="fill: #111827" transform="translate(135.30321 173.285746) scale(0.0472 -0.0472)">
-     <defs>
-      <path id="KoPubWorldDotumPM-c885" d="M 5075 3021 
-C 4666 3072 4179 3206 3789 3418 
-C 3379 3622 3078 3898 3072 4256 
-L 4730 4256 
-L 4730 4672 
-L 826 4672 
-L 826 4256 
-L 2477 4256 
-C 2458 3917 2182 3642 1798 3437 
-C 1408 3232 909 3098 467 3027 
-L 787 2643 
-C 1178 2714 1587 2835 1946 3014 
-C 2304 3194 2598 3424 2778 3725 
-C 2957 3392 3302 3155 3667 2982 
-C 4032 2803 4442 2694 4755 2643 
-L 5075 3021 
-z
-M 5376 2054 
-L 3040 2054 
-L 3040 2906 
-L 2522 2906 
-L 2522 2054 
-L 186 2054 
-L 186 1619 
-L 5376 1619 
-L 5376 2054 
-z
-M 4678 -314 
-C 4762 -179 4806 -38 4806 102 
-C 4806 710 4141 1158 2784 1158 
-C 1427 1158 749 723 749 109 
-C 749 -499 1421 -947 2784 -947 
-C 3814 -947 4429 -698 4678 -314 
-z
-M 3846 -378 
-C 3610 -499 3251 -557 2784 -557 
-C 1830 -557 1306 -307 1306 109 
-C 1306 525 1830 781 2784 781 
-C 3686 781 4243 538 4243 102 
-C 4243 -102 4109 -262 3846 -378 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c18d" d="M 5101 3014 
-C 4659 3110 4160 3296 3750 3558 
-C 3341 3834 3059 4179 3059 4614 
-L 3059 4832 
-L 2502 4832 
-L 2502 4614 
-C 2502 4205 2253 3859 1869 3597 
-C 1485 3322 966 3123 448 3014 
-L 781 2637 
-C 1197 2733 1581 2893 1946 3104 
-C 2304 3315 2598 3590 2784 3917 
-C 2963 3590 3277 3315 3635 3104 
-C 3994 2880 4390 2720 4774 2637 
-L 5101 3014 
-z
-M 5376 2022 
-L 3040 2022 
-L 3040 2899 
-L 2522 2899 
-L 2522 2022 
-L 192 2022 
-L 192 1587 
-L 5376 1587 
-L 5376 2022 
-z
-M 4678 870 
-C 4678 973 4646 1005 4544 1005 
-L 806 1005 
-L 806 570 
-L 4166 570 
-L 4166 -870 
-L 4678 -870 
-L 4678 870 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c124" d="M 3667 2502 
-C 3251 2630 2880 2861 2618 3149 
-C 2342 3450 2189 3802 2189 4186 
-L 2189 4723 
-L 1658 4723 
-L 1658 4186 
-C 1658 3725 1491 3347 1210 3040 
-C 934 2726 563 2477 128 2298 
-L 531 1965 
-C 1114 2240 1677 2714 1926 3302 
-C 2246 2714 2816 2342 3347 2125 
-L 3667 2502 
-z
-M 4928 4838 
-L 4416 4838 
-L 4416 3923 
-L 3168 3923 
-L 3168 3488 
-L 4416 3488 
-L 4416 1875 
-L 4928 1875 
-L 4928 4838 
-z
-M 5050 -371 
-L 1779 -371 
-L 1779 218 
-L 4787 218 
-C 4890 218 4922 250 4922 352 
-L 4922 1453 
-C 4922 1555 4890 1587 4787 1587 
-L 1235 1587 
-L 1235 1171 
-L 4378 1171 
-L 4378 608 
-L 1370 608 
-C 1267 608 1235 576 1235 474 
-L 1235 -646 
-C 1235 -749 1267 -781 1370 -781 
-L 5050 -781 
-L 5050 -371 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ba85" d="M 1120 2349 
-L 1120 4141 
-L 2688 4141 
-L 2688 2349 
-L 1120 2349 
-z
-M 4915 4838 
-L 4416 4838 
-L 4416 4077 
-L 3174 4077 
-L 3174 4442 
-C 3174 4544 3142 4576 3040 4576 
-L 762 4576 
-C 659 4576 627 4544 627 4442 
-L 627 2054 
-C 627 1952 659 1920 762 1920 
-L 3040 1920 
-C 3142 1920 3174 1952 3174 2054 
-L 3174 2477 
-L 4416 2477 
-L 4416 1408 
-L 4915 1408 
-L 4915 4838 
-z
-M 3174 2899 
-L 3174 3654 
-L 4416 3654 
-L 4416 2899 
-L 3174 2899 
-z
-M 4998 192 
-C 4998 531 4819 813 4461 1024 
-C 4109 1235 3635 1338 3027 1338 
-C 2419 1338 1946 1235 1594 1024 
-C 1242 819 1062 544 1062 198 
-C 1062 -493 1818 -934 3027 -934 
-C 3629 -934 4109 -832 4461 -634 
-C 4819 -435 4998 -160 4998 192 
-z
-M 3027 -531 
-C 2598 -531 2259 -467 1997 -333 
-C 1728 -205 1594 -26 1594 205 
-C 1594 435 1728 614 1997 736 
-C 2266 864 2611 928 3027 928 
-C 3456 928 3795 864 4058 730 
-C 4333 595 4467 416 4467 186 
-C 4467 -45 4333 -218 4058 -339 
-C 3782 -467 3437 -531 3027 -531 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-d3ec" d="M 1926 2131 
-C 1920 2458 1914 2784 1914 3117 
-C 1907 3443 1901 3770 1901 4102 
-L 3648 4102 
-C 3642 3770 3635 3443 3635 3117 
-C 3629 2784 3622 2458 3622 2131 
-L 1926 2131 
-z
-M 5382 314 
-L 3034 314 
-L 3034 1702 
-L 4922 1702 
-L 4922 2131 
-L 4115 2131 
-C 4122 2778 4141 3437 4147 4102 
-L 4781 4102 
-L 4781 4531 
-L 762 4531 
-L 762 4102 
-L 1395 4102 
-C 1395 3770 1402 3443 1408 3117 
-C 1408 2784 1414 2458 1421 2131 
-L 627 2131 
-L 627 1702 
-L 2522 1702 
-L 2522 314 
-L 173 314 
-L 173 -115 
-L 5382 -115 
-L 5382 314 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c885" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c18d" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(322.499924 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(409.699905 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c124" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ba85" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(729.29982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(816.499802 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(903.699783 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(932.699768 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d3ec" transform="translate(1019.89975 0)"/>
-    </g>
-    <!-- · OLS · RF · XGBoost 예측 성능 비교 -->
-    <g style="fill: #111827" transform="translate(135.30321 179.191189) scale(0.0472 -0.0472)">
-     <defs>
-      <path id="KoPubWorldDotumPM-4f" d="M 3110 282 
-C 2918 166 2688 109 2413 109 
-C 1318 109 896 1107 896 2150 
-C 896 3194 1318 4198 2413 4198 
-C 3507 4198 3949 3194 3949 2150 
-C 3949 1357 3699 627 3110 282 
-z
-M 3942 346 
-C 4307 787 4486 1389 4486 2150 
-C 4486 3642 3738 4646 2406 4646 
-C 1075 4646 365 3642 365 2150 
-C 365 666 1075 -339 2406 -339 
-C 3072 -339 3584 -90 3942 346 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-4c" d="M 3386 205 
-L 1120 205 
-L 1120 4544 
-L 614 4544 
-L 614 -115 
-C 614 -198 653 -237 723 -237 
-L 3386 -237 
-L 3386 205 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-53" d="M 307 1043 
-C 314 166 877 -339 1856 -339 
-C 2349 -339 2675 -282 3027 -32 
-C 3334 192 3514 550 3514 1037 
-C 3514 1875 2918 2086 2246 2330 
-C 1517 2586 960 2739 960 3398 
-C 960 3878 1402 4198 1952 4198 
-C 2413 4198 2861 4006 2893 3462 
-L 3430 3462 
-C 3424 3923 3194 4243 2861 4422 
-C 2573 4576 2317 4646 1926 4646 
-C 1184 4646 435 4186 435 3341 
-C 435 2515 1043 2246 1677 2022 
-C 2541 1715 2982 1587 2982 998 
-C 2982 403 2426 109 1920 109 
-C 1338 109 838 320 858 1043 
-L 307 1043 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-52" d="M 1107 2464 
-L 1107 4102 
-L 2029 4102 
-C 2778 4102 3136 3885 3136 3296 
-C 3136 2707 2714 2464 1990 2464 
-L 1107 2464 
-z
-M 3814 -237 
-C 3629 90 3674 429 3590 1197 
-C 3539 1728 3398 2138 2854 2259 
-C 3341 2419 3654 2752 3654 3290 
-C 3654 4134 3027 4544 2118 4544 
-L 730 4544 
-C 634 4544 614 4518 614 4422 
-L 614 -237 
-L 1114 -237 
-L 1114 2016 
-L 2170 2016 
-C 2944 2016 3021 1850 3123 768 
-C 3149 435 3155 19 3238 -237 
-L 3814 -237 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-46" d="M 1075 2035 
-L 3213 2035 
-L 3213 2483 
-L 1075 2483 
-L 1075 4102 
-L 3232 4102 
-L 3232 4544 
-L 685 4538 
-C 614 4538 576 4499 576 4416 
-L 576 -237 
-L 1075 -237 
-L 1075 2035 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-58" d="M 2278 2227 
-L 3834 4544 
-L 3194 4544 
-L 1958 2598 
-L 723 4544 
-L 83 4544 
-L 1638 2227 
-L 38 -237 
-L 672 -237 
-L 1958 1843 
-L 3245 -237 
-L 3878 -237 
-L 2278 2227 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-47" d="M 3994 2106 
-C 3994 2189 3955 2227 3872 2227 
-L 2445 2227 
-L 2445 1786 
-L 3501 1786 
-L 3501 384 
-C 3501 326 3482 307 3450 288 
-C 3270 166 2925 109 2541 109 
-C 1363 109 902 883 902 2150 
-C 902 3245 1306 4198 2349 4198 
-C 2880 4198 3392 3936 3475 3322 
-L 3994 3322 
-C 3942 4205 3181 4646 2349 4646 
-C 1005 4646 365 3533 365 2150 
-C 365 634 1107 -339 2470 -339 
-C 3040 -339 3501 -243 3910 6 
-C 3981 51 3994 90 3994 192 
-L 3994 2106 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-42" d="M 1107 205 
-L 1107 2022 
-L 1830 2022 
-C 2656 2022 3238 1901 3238 1114 
-C 3238 390 2822 186 2054 205 
-L 1107 205 
-z
-M 1107 2458 
-L 1107 4102 
-L 2022 4102 
-C 2534 4083 3053 3968 3053 3296 
-C 3053 2662 2554 2458 2048 2458 
-L 1107 2458 
-z
-M 2368 -237 
-C 3373 -237 3763 416 3763 1050 
-C 3763 1722 3366 2138 2746 2259 
-C 3226 2394 3578 2822 3578 3334 
-C 3578 4102 2957 4538 2266 4538 
-L 723 4538 
-C 653 4538 614 4499 614 4416 
-L 614 -115 
-C 614 -198 653 -237 723 -237 
-L 2368 -237 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-6f" d="M 2214 192 
-C 2086 115 1933 77 1754 77 
-C 1037 77 749 774 749 1389 
-C 749 1997 1037 2707 1754 2707 
-C 2470 2707 2771 1997 2771 1389 
-C 2771 902 2598 442 2214 192 
-z
-M 2918 192 
-C 3174 518 3296 954 3296 1389 
-C 3296 2266 2810 3117 1754 3117 
-C 704 3117 230 2266 230 1389 
-C 230 512 704 -339 1754 -339 
-C 2291 -339 2669 -122 2918 192 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-73" d="M 2810 2163 
-C 2726 2893 2221 3117 1587 3117 
-C 1024 3117 384 2880 384 2182 
-C 384 1549 915 1421 1414 1299 
-C 1926 1178 2387 1139 2387 678 
-C 2387 237 1997 77 1606 77 
-C 1190 77 819 186 787 691 
-L 262 691 
-C 294 -83 954 -339 1517 -339 
-C 2253 -339 2912 -6 2912 742 
-C 2912 1107 2746 1370 2285 1517 
-C 1414 1843 896 1747 896 2214 
-C 896 2586 1216 2707 1555 2707 
-C 1926 2707 2253 2592 2285 2163 
-L 2810 2163 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-74" d="M 2010 134 
-C 1901 83 1805 58 1651 58 
-C 1414 58 1248 160 1248 563 
-L 1248 2611 
-L 1971 2611 
-L 1971 3027 
-L 1248 3027 
-L 1248 3955 
-L 774 3955 
-L 774 3027 
-L 141 3027 
-L 141 2611 
-L 774 2611 
-L 774 499 
-C 774 -186 1120 -339 1587 -339 
-C 1722 -339 1875 -320 2010 -275 
-L 2010 134 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c608" d="M 3949 4736 
-L 3462 4736 
-L 3462 3622 
-L 2643 3622 
-C 2438 4314 2035 4653 1574 4653 
-C 1222 4653 941 4480 717 4134 
-C 506 3795 371 3251 371 2528 
-C 371 1805 499 1280 723 922 
-C 934 563 1242 397 1574 397 
-C 2061 397 2464 755 2662 1504 
-L 3462 1504 
-L 3462 -563 
-L 3949 -563 
-L 3949 4736 
-z
-M 2746 1971 
-C 2765 2144 2778 2323 2778 2528 
-C 2778 2752 2765 2963 2739 3162 
-L 3462 3162 
-L 3462 1971 
-L 2746 1971 
-z
-M 1242 4038 
-C 1338 4134 1446 4179 1574 4179 
-C 1830 4179 2010 3987 2131 3686 
-C 2253 3379 2304 2970 2304 2528 
-C 2304 2067 2246 1664 2125 1363 
-C 2003 1056 1824 870 1574 870 
-C 1318 870 1139 1056 1018 1357 
-C 896 1658 838 2067 838 2528 
-C 838 2963 890 3373 1011 3680 
-C 1075 3827 1152 3949 1242 4038 
-z
-M 5005 4838 
-L 4518 4838 
-L 4518 -838 
-L 5005 -838 
-L 5005 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ce21" d="M 3814 4902 
-L 1728 4902 
-L 1728 4493 
-L 3814 4493 
-L 3814 4902 
-z
-M 5376 1875 
-L 179 1875 
-L 179 1453 
-L 5376 1453 
-L 5376 1875 
-z
-M 4678 723 
-C 4678 826 4646 858 4544 858 
-L 806 858 
-L 806 435 
-L 4166 435 
-L 4166 -870 
-L 4678 -870 
-L 4678 723 
-z
-M 5082 2637 
-C 4691 2682 4243 2784 3878 2938 
-C 3494 3098 3200 3322 3091 3610 
-L 4768 3610 
-L 4768 4013 
-L 774 4013 
-L 774 3610 
-L 2458 3610 
-C 2336 3322 2042 3104 1677 2944 
-C 1312 2790 864 2688 454 2637 
-L 794 2240 
-C 1152 2298 1549 2413 1914 2566 
-C 2272 2726 2598 2931 2784 3206 
-C 2989 2918 3302 2701 3661 2547 
-C 4019 2394 4397 2298 4755 2240 
-L 5082 2637 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-4f" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-4c" transform="translate(136.699966 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-53" transform="translate(192.199951 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(252.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(281.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(313.199921 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-52" transform="translate(342.199905 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-46" transform="translate(408.599899 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(464.099884 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(493.099869 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(524.999863 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-58" transform="translate(553.999847 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-47" transform="translate(611.899841 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-42" transform="translate(683.099823 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-6f" transform="translate(749.499817 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-6f" transform="translate(804.399811 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-73" transform="translate(859.299805 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-74" transform="translate(908.899796 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(942.999786 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c608" transform="translate(971.999771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ce21" transform="translate(1059.199753 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1146.399734 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(1175.399719 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b2a5" transform="translate(1262.599701 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1349.799683 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-be44" transform="translate(1378.799667 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad50" transform="translate(1465.999649 0)"/>
-    </g>
-   </g>
-   <g id="text_13">
-    <!-- 모형 구축 -->
-    <g style="fill: #111827" transform="translate(272.960647 176.306236) scale(0.05 -0.05)">
-     <use xlink:href="#KoPubWorldDotumPM-baa8"/>
-     <use xlink:href="#KoPubWorldDotumPM-d615" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-cd95" transform="translate(290.59993 0)"/>
-    </g>
-   </g>
-   <g id="text_14">
-    <!-- 공간·시간 -->
-    <g style="fill: #111827" transform="translate(87.765824 199.375038) scale(0.0545 -0.0545)">
-     <defs>
-      <path id="KoPubWorldDotumPM-acf5" d="M 4563 2726 
-C 4659 3238 4755 3789 4781 4538 
-C 4781 4640 4749 4672 4646 4672 
-L 781 4672 
-L 781 4237 
-L 4262 4237 
-C 4237 3693 4179 3238 4077 2726 
-L 4563 2726 
-z
-M 5376 2298 
-L 2765 2298 
-L 2765 3494 
-L 2253 3494 
-L 2253 2298 
-L 179 2298 
-L 179 1856 
-L 5376 1856 
-L 5376 2298 
-z
-M 2778 -941 
-C 3430 -941 3936 -832 4288 -614 
-C 4640 -403 4819 -128 4819 198 
-C 4819 525 4640 794 4288 1011 
-C 3936 1229 3430 1338 2778 1338 
-C 2118 1338 1613 1229 1261 1011 
-C 909 794 730 525 730 198 
-C 730 -128 909 -403 1261 -614 
-C 1613 -832 2118 -941 2778 -941 
-z
-M 2778 -538 
-C 1882 -538 1293 -282 1293 205 
-C 1293 666 1882 928 2778 928 
-C 3213 928 3571 864 3846 736 
-C 4128 614 4269 435 4269 205 
-C 4269 -45 4128 -224 3846 -346 
-C 3571 -474 3213 -538 2778 -538 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ac04" d="M 570 1344 
-C 1293 1606 1894 1990 2362 2528 
-C 2822 3040 3104 3667 3174 4442 
-C 3174 4544 3142 4576 3040 4576 
-L 595 4576 
-L 595 4134 
-L 2611 4134 
-C 2534 3578 2285 3098 1856 2682 
-C 1434 2266 890 1946 224 1722 
-L 570 1344 
-z
-M 4730 2682 
-L 5517 2682 
-L 5517 3130 
-L 4730 3130 
-L 4730 4838 
-L 4237 4838 
-L 4237 691 
-L 4730 691 
-L 4730 2682 
-z
-M 4915 -282 
-L 1690 -282 
-L 1690 1107 
-L 1184 1107 
-L 1184 -582 
-C 1184 -685 1216 -717 1318 -717 
-L 4915 -717 
-L 4915 -282 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c2dc" d="M 3763 806 
-C 2688 1472 2208 2291 2208 3494 
-L 2208 4608 
-L 1683 4608 
-L 1683 3558 
-C 1683 2330 1107 1274 58 634 
-L 480 294 
-C 787 525 1075 800 1350 1126 
-C 1626 1453 1818 1811 1933 2208 
-C 2214 1446 2784 851 3392 442 
-L 3763 806 
-z
-M 4928 4838 
-L 4416 4838 
-L 4416 -832 
-L 4928 -832 
-L 4928 4838 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-acf5"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac04" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c2dc" transform="translate(206.299957 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac04" transform="translate(293.499939 0)"/>
-    </g>
-    <!-- 정합성 검토 -->
-    <g style="fill: #111827" transform="translate(85.468734 206.193823) scale(0.0545 -0.0545)">
-     <defs>
-      <path id="KoPubWorldDotumPM-d569" d="M 3642 4154 
-L 390 4154 
-L 390 3763 
-L 3642 3763 
-L 3642 4154 
-z
-M 2842 4851 
-L 1158 4851 
-L 1158 4461 
-L 2842 4461 
-L 2842 4851 
-z
-M 3309 2214 
-C 3379 2323 3418 2451 3418 2586 
-C 3418 2854 3290 3072 3027 3245 
-C 2765 3418 2426 3501 2010 3501 
-C 1594 3501 1254 3418 992 3245 
-C 730 3072 602 2854 602 2586 
-C 602 2310 749 2086 998 1926 
-C 1248 1766 1600 1670 2010 1670 
-C 2419 1670 2765 1766 3014 1926 
-C 3136 2010 3238 2106 3309 2214 
-z
-M 2662 2182 
-C 2515 2074 2298 2022 2010 2022 
-C 1446 2022 1120 2259 1120 2586 
-C 1120 2918 1446 3136 2010 3136 
-C 2573 3136 2899 2918 2899 2586 
-C 2899 2426 2822 2291 2662 2182 
-z
-M 4781 2963 
-L 5568 2963 
-L 5568 3398 
-L 4781 3398 
-L 4781 4838 
-L 4275 4838 
-L 4275 1619 
-L 4781 1619 
-L 4781 2963 
-z
-M 1734 -365 
-L 1734 314 
-L 4294 314 
-L 4294 -365 
-L 1734 -365 
-z
-M 4787 1318 
-L 4294 1318 
-L 4294 723 
-L 1734 723 
-L 1734 1318 
-L 1229 1318 
-L 1229 -646 
-C 1229 -749 1261 -781 1363 -781 
-L 4653 -781 
-C 4755 -781 4787 -749 4787 -646 
-L 4787 1318 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ac80" d="M 666 4576 
-L 666 4134 
-L 2656 4134 
-C 2534 3520 2227 3085 1811 2726 
-C 1402 2387 870 2150 333 1997 
-L 666 1632 
-C 2170 2138 3066 3034 3219 4442 
-C 3219 4544 3187 4576 3085 4576 
-L 666 4576 
-z
-M 4941 4838 
-L 4435 4838 
-L 4435 3424 
-L 3251 3424 
-L 3251 2976 
-L 4435 2976 
-L 4435 1645 
-L 4941 1645 
-L 4941 4838 
-z
-M 1766 -352 
-L 1766 909 
-L 4422 909 
-L 4422 -352 
-L 1766 -352 
-z
-M 4928 1197 
-C 4928 1299 4896 1331 4794 1331 
-L 1395 1331 
-C 1293 1331 1261 1299 1261 1197 
-L 1261 -634 
-C 1261 -736 1293 -768 1395 -768 
-L 4794 -768 
-C 4896 -768 4928 -736 4928 -634 
-L 4928 1197 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-d1a0" d="M 5382 307 
-L 3040 307 
-L 3040 1363 
-L 4736 1363 
-L 4736 1792 
-L 1395 1792 
-L 1395 2752 
-L 4666 2752 
-L 4666 3174 
-L 1395 3174 
-L 1395 4141 
-L 4678 4141 
-L 4678 4570 
-L 1018 4570 
-C 915 4570 883 4538 883 4435 
-L 883 1498 
-C 883 1395 915 1363 1018 1363 
-L 2515 1363 
-L 2515 307 
-L 173 314 
-L 173 -122 
-L 5382 -122 
-L 5382 307 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c815"/>
-     <use xlink:href="#KoPubWorldDotumPM-d569" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(261.599945 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac80" transform="translate(290.59993 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d1a0" transform="translate(377.799911 0)"/>
-    </g>
-   </g>
-   <g id="text_15">
-    <!-- · 행정동 집계와 거리 기반 변수 비교 -->
-    <g style="fill: #111827" transform="translate(135.30321 199.655026) scale(0.0472 -0.0472)">
-     <defs>
-      <path id="KoPubWorldDotumPM-b3d9" d="M 5376 2080 
-L 3034 2080 
-L 3034 2848 
-L 4749 2848 
-L 4749 3270 
-L 1382 3270 
-L 1382 4256 
-L 4691 4256 
-L 4691 4672 
-L 1011 4672 
-C 909 4672 877 4640 877 4538 
-L 877 2976 
-C 877 2874 902 2848 1011 2848 
-L 2515 2848 
-L 2515 2080 
-L 179 2080 
-L 179 1645 
-L 5376 1645 
-L 5376 2080 
-z
-M 2778 1248 
-C 2118 1248 1619 1146 1267 934 
-C 915 730 742 467 742 154 
-C 742 -486 1472 -941 2778 -941 
-C 4083 -941 4813 -486 4813 154 
-C 4813 467 4634 730 4282 934 
-C 3930 1146 3430 1248 2778 1248 
-z
-M 2778 -550 
-C 1882 -550 1299 -301 1299 160 
-C 1299 602 1882 858 2778 858 
-C 3181 858 3533 794 3840 672 
-C 4115 550 4256 378 4256 160 
-C 4256 -64 4115 -243 3840 -365 
-C 3533 -486 3181 -550 2778 -550 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c9d1" d="M 3827 2381 
-C 3469 2483 3091 2656 2803 2912 
-C 2515 3174 2323 3514 2323 3949 
-L 2323 4147 
-L 3494 4147 
-L 3494 4576 
-L 608 4576 
-L 608 4147 
-L 1798 4147 
-L 1798 3968 
-C 1798 3482 1606 3098 1318 2810 
-C 1030 2522 627 2317 211 2170 
-L 608 1843 
-C 890 1965 1171 2125 1446 2330 
-C 1722 2541 1920 2803 2054 3104 
-C 2234 2778 2470 2547 2726 2374 
-C 2982 2195 3245 2080 3494 1997 
-L 3827 2381 
-z
-M 4998 4838 
-L 4493 4838 
-L 4493 1850 
-L 4998 1850 
-L 4998 4838 
-z
-M 1805 -358 
-L 1805 486 
-L 4506 486 
-L 4506 -358 
-L 1805 -358 
-z
-M 4998 1574 
-L 4499 1574 
-L 4499 890 
-L 1811 890 
-L 1811 1574 
-L 1312 1574 
-L 1312 -640 
-C 1312 -742 1344 -774 1446 -774 
-L 4864 -774 
-C 4966 -774 4998 -742 4998 -640 
-L 4998 1574 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-ac70" d="M 781 346 
-C 1478 762 2054 1312 2496 2010 
-C 2931 2701 3181 3475 3226 4378 
-C 3226 4480 3194 4512 3091 4512 
-L 698 4512 
-L 698 4070 
-L 2662 4070 
-C 2541 2560 1702 1370 371 685 
-L 781 346 
-z
-M 4928 4838 
-L 4416 4838 
-L 4416 2758 
-L 3187 2758 
-L 3187 2298 
-L 4416 2298 
-L 4416 -832 
-L 4928 -832 
-L 4928 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-b9ac" d="M 4090 1216 
-C 3859 1165 3526 1120 3117 1075 
-C 2707 1043 2259 1011 1798 1011 
-L 1178 1011 
-L 1178 2362 
-L 3078 2362 
-C 3181 2362 3213 2394 3213 2496 
-L 3213 4429 
-C 3213 4531 3181 4563 3078 4563 
-L 672 4563 
-L 672 4122 
-L 2714 4122 
-L 2714 2797 
-L 806 2797 
-C 704 2797 672 2765 672 2662 
-L 672 691 
-C 672 589 704 557 806 557 
-L 1626 557 
-C 2118 557 2611 582 3046 627 
-C 3482 672 3827 723 4090 774 
-L 4090 1216 
-z
-M 4883 4838 
-L 4378 4838 
-L 4378 -832 
-L 4883 -832 
-L 4883 4838 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-bc18" d="M 1018 2208 
-L 1018 3206 
-L 2605 3206 
-L 2605 2208 
-L 1018 2208 
-z
-M 3098 4640 
-L 2605 4640 
-L 2605 3635 
-L 1018 3635 
-L 1018 4640 
-L 525 4640 
-L 525 1914 
-C 525 1811 557 1779 659 1779 
-L 2963 1779 
-C 3066 1779 3098 1811 3098 1914 
-L 3098 4640 
-z
-M 4717 2906 
-L 5491 2906 
-L 5491 3354 
-L 4717 3354 
-L 4717 4838 
-L 4211 4838 
-L 4211 672 
-L 4717 672 
-L 4717 2906 
-z
-M 4896 -282 
-L 1658 -282 
-L 1658 1088 
-L 1146 1088 
-L 1146 -582 
-C 1146 -685 1178 -717 1280 -717 
-L 4896 -717 
-L 4896 -282 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d589" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b3d9" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(322.499924 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c9d1" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acc4" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c640" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(613.099854 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac70" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b9ac" transform="translate(729.29982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(816.499802 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ae30" transform="translate(845.499786 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc18" transform="translate(932.699768 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1019.89975 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(1048.899734 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(1136.099716 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1223.299698 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-be44" transform="translate(1252.299683 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad50" transform="translate(1339.499664 0)"/>
-    </g>
-    <!-- · 시설 시점 정합의 정보누수 통제 효과 분석 -->
-    <g style="fill: #111827" transform="translate(135.30321 205.560469) scale(0.0472 -0.0472)">
-     <defs>
-      <path id="KoPubWorldDotumPM-c810" d="M 3776 2189 
-C 3392 2310 3021 2522 2739 2822 
-C 2458 3123 2278 3501 2278 3968 
-L 2278 4141 
-L 3379 4141 
-L 3379 4576 
-L 608 4576 
-L 608 4141 
-L 1754 4141 
-L 1754 3981 
-C 1754 3469 1562 3053 1274 2720 
-C 986 2387 582 2144 173 1984 
-L 563 1651 
-C 870 1798 1152 1990 1427 2214 
-C 1696 2432 1894 2707 2016 3040 
-C 2170 2726 2426 2470 2688 2266 
-C 2950 2061 3232 1914 3456 1818 
-L 3776 2189 
-z
-M 4998 4838 
-L 4493 4838 
-L 4493 3584 
-L 3315 3584 
-L 3315 3149 
-L 4493 3149 
-L 4493 1562 
-L 4998 1562 
-L 4998 4838 
-z
-M 1837 -352 
-L 1837 851 
-L 4493 851 
-L 4493 -352 
-L 1837 -352 
-z
-M 4998 1133 
-C 4998 1235 4966 1267 4864 1267 
-L 1466 1267 
-C 1363 1267 1331 1235 1331 1133 
-L 1331 -634 
-C 1331 -736 1363 -768 1466 -768 
-L 4864 -768 
-C 4966 -768 4998 -736 4998 -634 
-L 4998 1133 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-bcf4" d="M 1389 2016 
-L 1389 3187 
-L 4166 3187 
-L 4166 2016 
-L 1389 2016 
-z
-M 5382 320 
-L 3034 320 
-L 3034 1574 
-L 4538 1574 
-C 4640 1574 4672 1606 4672 1709 
-L 4672 4608 
-L 4166 4608 
-L 4166 3616 
-L 1389 3616 
-L 1389 4608 
-L 883 4608 
-L 883 1709 
-C 883 1606 915 1574 1018 1574 
-L 2509 1574 
-L 2509 320 
-L 173 320 
-L 173 -122 
-L 5382 -122 
-L 5382 320 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-b204" d="M 4845 2931 
-L 1363 2931 
-L 1363 4666 
-L 858 4666 
-L 858 2630 
-C 858 2528 890 2496 992 2496 
-L 4845 2496 
-L 4845 2931 
-z
-M 5376 1664 
-L 179 1664 
-L 179 1229 
-L 2528 1229 
-L 2528 -832 
-L 3053 -832 
-L 3053 1229 
-L 5376 1229 
-L 5376 1664 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-d6a8" d="M 5382 262 
-L 3968 262 
-L 3968 1216 
-C 4333 1395 4563 1670 4563 2029 
-C 4563 2342 4378 2611 4051 2790 
-C 3738 2976 3290 3078 2778 3078 
-C 2259 3078 1818 2976 1491 2790 
-C 1178 2611 986 2342 986 2029 
-C 986 1645 1235 1363 1651 1184 
-L 1651 262 
-L 173 262 
-L 173 -173 
-L 5382 -173 
-L 5382 262 
-z
-M 2157 262 
-L 2157 1030 
-C 2355 998 2560 979 2771 979 
-C 3021 979 3251 998 3462 1050 
-L 3462 262 
-L 2157 262 
-z
-M 2330 2630 
-C 2477 2656 2624 2669 2778 2669 
-C 3078 2669 3373 2618 3597 2515 
-C 3821 2413 3968 2253 3968 2022 
-C 3968 1798 3821 1638 3597 1536 
-C 3373 1434 3078 1382 2778 1382 
-C 2470 1382 2163 1434 1952 1536 
-C 1728 1638 1587 1798 1587 2022 
-C 1587 2246 1728 2406 1952 2509 
-C 2061 2566 2182 2605 2330 2630 
-z
-M 3898 4691 
-L 1638 4691 
-L 1638 4243 
-L 3898 4243 
-L 3898 4691 
-z
-M 4915 3808 
-L 627 3808 
-L 627 3379 
-L 4915 3379 
-L 4915 3808 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c2dc" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c124" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c2dc" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c810" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(467.699875 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d569" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(729.29982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c815" transform="translate(758.299805 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcf4" transform="translate(845.499786 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b204" transform="translate(932.699768 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(1019.89975 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1107.099731 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d1b5" transform="translate(1136.099716 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c81c" transform="translate(1223.299698 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1310.49968 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d6a8" transform="translate(1339.499664 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(1426.699646 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1513.899628 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(1542.899612 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(1630.099594 0)"/>
-    </g>
-   </g>
-   <g id="text_16">
-    <!-- 소거분석 -->
-    <g style="fill: #111827" transform="translate(273.685648 202.675516) scale(0.05 -0.05)">
+   <g id="text_21">
+    <!-- 제3절 소거분석(Ablation) -->
+    <g style="fill: #111827" transform="translate(83.89467 231.083324) scale(0.077 -0.077)">
      <defs>
       <path id="KoPubWorldDotumPM-c18c" d="M 5139 1926 
 C 4653 2061 4141 2362 3731 2746 
@@ -3316,181 +3533,197 @@ L 5382 -115
 L 5382 320 
 z
 " transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-ac70" d="M 781 346 
+C 1478 762 2054 1312 2496 2010 
+C 2931 2701 3181 3475 3226 4378 
+C 3226 4480 3194 4512 3091 4512 
+L 698 4512 
+L 698 4070 
+L 2662 4070 
+C 2541 2560 1702 1370 371 685 
+L 781 346 
+z
+M 4928 4838 
+L 4416 4838 
+L 4416 2758 
+L 3187 2758 
+L 3187 2298 
+L 4416 2298 
+L 4416 -832 
+L 4928 -832 
+L 4928 4838 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c11d" d="M 3693 2163 
+C 3283 2310 2906 2547 2643 2861 
+C 2368 3168 2208 3539 2208 4000 
+L 2208 4698 
+L 1677 4698 
+L 1677 4000 
+C 1677 3520 1530 3104 1242 2765 
+C 954 2438 582 2170 141 1958 
+L 544 1606 
+C 1190 1939 1734 2432 1939 3021 
+C 2221 2451 2778 2048 3366 1766 
+L 3693 2163 
+z
+M 4928 4838 
+L 4429 4838 
+L 4429 3814 
+L 3162 3814 
+L 3162 3373 
+L 4429 3373 
+L 4429 1440 
+L 4928 1440 
+L 4928 4838 
+z
+M 4928 1005 
+C 4928 1107 4896 1139 4794 1139 
+L 1152 1139 
+L 1152 704 
+L 4416 704 
+L 4416 -870 
+L 4928 -870 
+L 4928 1005 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-62" d="M 2342 205 
+C 2221 122 2074 77 1914 77 
+C 1146 77 896 704 896 1453 
+C 896 2118 1171 2707 1869 2707 
+C 2541 2707 2797 2093 2797 1434 
+C 2797 960 2682 461 2342 205 
+z
+M 902 160 
+C 1133 -141 1421 -339 1939 -339 
+C 2918 -339 3322 486 3322 1402 
+C 3322 2304 2938 3117 1946 3117 
+C 1555 3117 1133 2938 909 2573 
+L 909 4570 
+L 448 4570 
+L 448 339 
+C 448 166 435 -83 403 -237 
+L 883 -237 
+L 902 160 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-6c" d="M 1005 4589 
+L 512 4589 
+L 512 -237 
+L 1005 -237 
+L 1005 4589 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-61" d="M 2291 877 
+C 2240 538 2093 262 1766 134 
+C 1664 96 1542 77 1395 77 
+C 1030 77 730 237 730 672 
+C 730 1478 1843 1363 2330 1363 
+C 2330 1197 2317 1037 2291 877 
+z
+M 2803 -237 
+C 2778 -109 2771 109 2771 256 
+L 2771 1997 
+C 2778 2765 2317 3117 1581 3117 
+C 947 3117 358 2816 326 2131 
+L 858 2131 
+C 909 2592 1190 2707 1574 2707 
+C 2003 2707 2266 2547 2310 2016 
+L 2310 1779 
+C 1914 1779 1293 1824 864 1619 
+C 454 1446 211 1139 211 678 
+C 211 26 704 -339 1318 -339 
+C 1728 -339 2131 -134 2317 115 
+L 2336 -237 
+L 2803 -237 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-74" d="M 2010 134 
+C 1901 83 1805 58 1651 58 
+C 1414 58 1248 160 1248 563 
+L 1248 2611 
+L 1971 2611 
+L 1971 3027 
+L 1248 3027 
+L 1248 3955 
+L 774 3955 
+L 774 3027 
+L 141 3027 
+L 141 2611 
+L 774 2611 
+L 774 499 
+C 774 -186 1120 -339 1587 -339 
+C 1722 -339 1875 -320 2010 -275 
+L 2010 134 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-69" d="M 1005 3085 
+L 512 3085 
+L 512 -237 
+L 1005 -237 
+L 1005 3085 
+z
+M 1030 4531 
+L 486 4531 
+L 486 3987 
+L 1030 3987 
+L 1030 4531 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-6f" d="M 2214 192 
+C 2086 115 1933 77 1754 77 
+C 1037 77 749 774 749 1389 
+C 749 1997 1037 2707 1754 2707 
+C 2470 2707 2771 1997 2771 1389 
+C 2771 902 2598 442 2214 192 
+z
+M 2918 192 
+C 3174 518 3296 954 3296 1389 
+C 3296 2266 2810 3117 1754 3117 
+C 704 3117 230 2266 230 1389 
+C 230 512 704 -339 1754 -339 
+C 2291 -339 2669 -122 2918 192 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-6e" d="M 3098 1920 
+C 3098 2694 2746 3117 2022 3117 
+C 1606 3117 1280 2982 979 2598 
+L 992 3014 
+L 518 3014 
+L 518 -237 
+L 979 -237 
+L 979 1651 
+C 979 2349 1427 2707 1856 2707 
+C 2400 2707 2605 2426 2605 1786 
+L 2605 -237 
+L 3098 -237 
+L 3098 1920 
+z
+" transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c18c"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac70" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(261.599945 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-33" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c18c" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ac70" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-28" transform="translate(608.499863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(639.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-62" transform="translate(705.699844 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-6c" transform="translate(761.899841 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-61" transform="translate(785.099838 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-74" transform="translate(835.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-69" transform="translate(869.79982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-6f" transform="translate(892.999817 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-6e" transform="translate(947.899811 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-29" transform="translate(1004.099808 0)"/>
     </g>
    </g>
-   <g id="text_17">
-    <!-- SHAP 기반 -->
-    <g style="fill: #111827" transform="translate(85.53984 225.744318) scale(0.0545 -0.0545)">
-     <defs>
-      <path id="KoPubWorldDotumPM-48" d="M 3981 4544 
-L 3475 4544 
-L 3475 2470 
-L 1101 2470 
-L 1101 4544 
-L 602 4544 
-L 602 -237 
-L 1101 -237 
-L 1101 2022 
-L 3475 2022 
-L 3475 -237 
-L 3981 -237 
-L 3981 4544 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-41" d="M 1210 1478 
-L 1907 3430 
-L 2118 4090 
-L 2330 3430 
-L 3027 1478 
-L 1210 1478 
-z
-M 2426 4480 
-C 2413 4525 2374 4544 2310 4544 
-L 1920 4544 
-C 1862 4544 1824 4525 1811 4480 
-L 64 -237 
-L 589 -237 
-L 1050 1037 
-L 3187 1037 
-L 3648 -237 
-L 4173 -237 
-L 2426 4480 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-50" d="M 1107 2240 
-L 1107 4102 
-L 2029 4102 
-C 2739 4102 3174 3827 3174 3168 
-C 3174 2509 2739 2240 2029 2240 
-L 1107 2240 
-z
-M 1114 1792 
-L 2118 1792 
-C 3008 1792 3693 2227 3693 3168 
-C 3693 4109 3008 4544 2118 4544 
-L 730 4544 
-C 634 4544 614 4518 614 4422 
-L 614 -237 
-L 1114 -237 
-L 1114 1792 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-53"/>
-     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(60.099991 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(131.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(198.099976 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(258.999969 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ae30" transform="translate(287.999954 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc18" transform="translate(375.199936 0)"/>
-    </g>
-    <!-- 가격 구조 분석 -->
-    <g style="fill: #111827" transform="translate(82.302199 232.563103) scale(0.0545 -0.0545)">
-     <defs>
-      <path id="KoPubWorldDotumPM-ac00" d="M 678 346 
-C 1376 755 1978 1318 2394 2010 
-C 2829 2701 3072 3475 3117 4378 
-C 3117 4480 3072 4512 2970 4512 
-L 595 4512 
-L 595 4070 
-L 2547 4070 
-C 2445 2566 1581 1382 269 698 
-L 678 346 
-z
-M 4659 2099 
-L 5498 2099 
-L 5498 2560 
-L 4659 2560 
-L 4659 4838 
-L 4147 4838 
-L 4147 -838 
-L 4659 -838 
-L 4659 2099 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-aca9" d="M 666 4576 
-L 666 4134 
-L 2662 4134 
-C 2566 3571 2291 3098 1882 2733 
-C 1472 2368 941 2093 326 1914 
-L 653 1555 
-C 2208 2042 3066 2976 3226 4442 
-C 3226 4544 3194 4576 3091 4576 
-L 666 4576 
-z
-M 4941 4838 
-L 4435 4838 
-L 4435 4006 
-L 3398 4006 
-L 3398 3578 
-L 4435 3578 
-L 4435 2816 
-L 3251 2816 
-L 3251 2387 
-L 4435 2387 
-L 4435 1446 
-L 4941 1446 
-L 4941 4838 
-z
-M 4934 1005 
-C 4934 1107 4902 1139 4800 1139 
-L 1165 1139 
-L 1165 704 
-L 4422 704 
-L 4422 -870 
-L 4934 -870 
-L 4934 1005 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c870" d="M 5165 1946 
-C 4672 2054 4147 2298 3738 2637 
-C 3328 2970 3059 3405 3059 3923 
-L 3059 4102 
-L 4742 4102 
-L 4742 4531 
-L 806 4531 
-L 806 4102 
-L 2490 4102 
-L 2490 3923 
-C 2490 3386 2240 2976 1850 2650 
-C 1459 2323 928 2099 365 1946 
-L 749 1555 
-C 1139 1702 1568 1888 1933 2138 
-C 2298 2387 2611 2688 2784 3098 
-C 2938 2714 3258 2387 3642 2125 
-C 4026 1862 4448 1664 4806 1562 
-L 5165 1946 
-z
-M 5382 314 
-L 3034 314 
-L 3034 1709 
-L 2515 1709 
-L 2515 314 
-L 173 314 
-L 173 -115 
-L 5382 -115 
-L 5382 314 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-ac00"/>
-     <use xlink:href="#KoPubWorldDotumPM-aca9" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(174.399963 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(203.399948 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c870" transform="translate(290.59993 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(377.799911 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(406.799896 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(493.999878 0)"/>
-    </g>
-   </g>
-   <g id="text_18">
-    <!-- · 전체 · 권역 · 연도 · 권역×연도별 변수 기여도 분석 -->
-    <g style="fill: #111827" transform="translate(135.30321 226.024306) scale(0.0472 -0.0472)">
+   <g id="text_22">
+    <!-- 제4절 전체 SHAP 분석 -->
+    <g style="fill: #111827" transform="translate(83.89467 258.304262) scale(0.077 -0.077)">
      <defs>
       <path id="KoPubWorldDotumPM-c804" d="M 3379 4576 
 L 614 4576 
@@ -3575,6 +3808,100 @@ L 4045 -563
 L 4045 4742 
 z
 " transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-53" d="M 307 1043 
+C 314 166 877 -339 1856 -339 
+C 2349 -339 2675 -282 3027 -32 
+C 3334 192 3514 550 3514 1037 
+C 3514 1875 2918 2086 2246 2330 
+C 1517 2586 960 2739 960 3398 
+C 960 3878 1402 4198 1952 4198 
+C 2413 4198 2861 4006 2893 3462 
+L 3430 3462 
+C 3424 3923 3194 4243 2861 4422 
+C 2573 4576 2317 4646 1926 4646 
+C 1184 4646 435 4186 435 3341 
+C 435 2515 1043 2246 1677 2022 
+C 2541 1715 2982 1587 2982 998 
+C 2982 403 2426 109 1920 109 
+C 1338 109 838 320 858 1043 
+L 307 1043 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-48" d="M 3981 4544 
+L 3475 4544 
+L 3475 2470 
+L 1101 2470 
+L 1101 4544 
+L 602 4544 
+L 602 -237 
+L 1101 -237 
+L 1101 2022 
+L 3475 2022 
+L 3475 -237 
+L 3981 -237 
+L 3981 4544 
+z
+" transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-50" d="M 1107 2240 
+L 1107 4102 
+L 2029 4102 
+C 2739 4102 3174 3827 3174 3168 
+C 3174 2509 2739 2240 2029 2240 
+L 1107 2240 
+z
+M 1114 1792 
+L 2118 1792 
+C 3008 1792 3693 2227 3693 3168 
+C 3693 4109 3008 4544 2118 4544 
+L 730 4544 
+C 634 4544 614 4518 614 4422 
+L 614 -237 
+L 1114 -237 
+L 1114 1792 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-34" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c804" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ccb4" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-53" transform="translate(463.099884 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(523.199875 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(594.999863 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(661.19986 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(722.099854 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(751.099838 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(838.29982 0)"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <!-- 제5절 권역별 SHAP 분석 -->
+    <g style="fill: #111827" transform="translate(196.157295 176.525947) scale(0.077 -0.077)">
+     <defs>
+      <path id="KoPubWorldDotumPM-35" d="M 378 934 
+C 429 128 1043 -314 1850 -314 
+C 2746 -314 3328 346 3328 1286 
+C 3328 2362 2726 2880 1984 2880 
+C 1523 2880 1146 2733 947 2458 
+L 1037 4032 
+L 3085 4032 
+L 3085 4467 
+L 646 4467 
+C 570 4467 550 4442 544 4346 
+L 474 1837 
+C 474 1754 480 1741 557 1741 
+L 864 1741 
+C 960 1741 966 1779 992 1850 
+C 1101 2234 1440 2458 1875 2458 
+C 2419 2458 2816 2074 2816 1280 
+C 2816 563 2406 115 1869 115 
+C 1350 115 966 416 883 934 
+L 378 934 
+z
+" transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-ad8c" d="M 4262 2963 
 C 3981 2912 3629 2880 3245 2861 
 C 3347 3315 3424 3859 3475 4493 
@@ -3655,25 +3982,80 @@ L 4902 -870
 L 4902 1075 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-b3c4" d="M 5382 314 
-L 3034 314 
-L 3034 1773 
-L 4800 1773 
-L 4800 2202 
-L 1376 2202 
-L 1376 4096 
-L 4742 4096 
-L 4742 4531 
-L 1005 4531 
-C 902 4531 870 4499 870 4397 
-L 870 1901 
-C 870 1798 896 1773 1005 1773 
-L 2522 1773 
-L 2522 314 
-L 173 314 
-L 173 -122 
-L 5382 -122 
-L 5382 314 
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-35" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad8c" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5ed" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-53" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(610.399857 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(682.199844 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(748.399841 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(809.299835 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(838.29982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(925.499802 0)"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- 제6절 연도별 SHAP 분석 -->
+    <g style="fill: #111827" transform="translate(196.157295 203.785385) scale(0.077 -0.077)">
+     <defs>
+      <path id="KoPubWorldDotumPM-36" d="M 2227 205 
+C 2074 147 1933 115 1805 115 
+C 1222 115 832 646 832 1338 
+C 832 1920 1242 2438 1818 2438 
+C 2464 2438 2810 1901 2810 1280 
+C 2810 787 2611 384 2227 205 
+z
+M 3245 3354 
+C 3162 4102 2669 4570 1869 4570 
+C 947 4570 269 3693 269 1984 
+C 269 1395 326 1024 448 672 
+C 653 102 1139 -314 1862 -314 
+C 2765 -314 3315 378 3315 1267 
+C 3315 2214 2790 2835 1946 2835 
+C 1376 2835 909 2586 710 2022 
+C 710 2874 973 4141 1875 4141 
+C 2336 4141 2720 3840 2739 3354 
+L 3245 3354 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-36" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-53" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(610.399857 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(682.199844 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(748.399841 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(809.299835 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(838.29982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(925.499802 0)"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <!-- 제7절 연도×권역 교차 SHAP 분석 -->
+    <g style="fill: #111827" transform="translate(196.157295 231.044824) scale(0.077 -0.077)">
+     <defs>
+      <path id="KoPubWorldDotumPM-37" d="M 3142 3923 
+C 3168 3974 3194 4032 3194 4102 
+L 3194 4346 
+C 3194 4429 3155 4467 3072 4467 
+L 307 4467 
+L 307 4026 
+L 2656 4026 
+L 902 -205 
+L 1472 -205 
+L 3142 3923 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-d7" d="M 3066 1107 
@@ -3691,104 +4073,157 @@ L 2752 762
 L 3066 1107 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c5ec" d="M 4902 4838 
-L 4397 4838 
-L 4397 3750 
-L 3098 3750 
-C 2848 4390 2400 4704 1888 4704 
-C 1478 4704 1139 4544 883 4186 
-C 634 3827 480 3296 480 2547 
-C 480 1798 634 1274 890 915 
-C 1146 557 1498 390 1888 390 
-C 2406 390 2874 717 3110 1382 
-L 4397 1382 
-L 4397 -845 
-L 4902 -845 
-L 4902 4838 
-z
-M 3232 1824 
-C 3264 2035 3290 2272 3290 2547 
-C 3290 2829 3264 3085 3219 3315 
-L 4397 3315 
-L 4397 1824 
-L 3232 1824 
-z
-M 2285 979 
-C 2176 890 2042 845 1888 845 
-C 1574 845 1350 1037 1197 1350 
-C 1050 1658 979 2086 979 2547 
-C 979 2989 1043 3418 1197 3731 
-C 1344 4045 1574 4250 1888 4250 
-C 2195 4250 2419 4045 2566 3738 
-C 2714 3424 2784 3008 2784 2547 
-C 2784 2086 2714 1658 2566 1350 
-C 2496 1203 2406 1075 2285 979 
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-37" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d7" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad8c" transform="translate(489.999893 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5ed" transform="translate(577.199875 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(664.399857 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad50" transform="translate(693.399841 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-cc28" transform="translate(780.599823 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(867.799805 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-53" transform="translate(896.799789 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(956.89978 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(1028.699768 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(1094.899765 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1155.799759 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(1184.799744 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(1271.999725 0)"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- 제5장 -->
+    <g style="fill: #111827" transform="translate(33.262716 320.201698) scale(0.102 -0.102)">
+     <defs>
+      <path id="KoPubWorldDotumPB-35" d="M 288 1088 
+C 339 173 1011 -314 1850 -314 
+C 2790 -314 3411 403 3411 1344 
+C 3411 2426 2752 2989 1978 2989 
+C 1568 2989 1254 2854 1094 2656 
+L 1165 3923 
+L 3168 3923 
+L 3168 4525 
+L 634 4525 
+C 499 4525 461 4486 461 4352 
+L 390 1875 
+C 390 1754 429 1702 563 1702 
+L 947 1702 
+C 1082 1702 1101 1805 1120 1875 
+C 1222 2208 1510 2400 1869 2400 
+C 2349 2400 2682 2080 2682 1338 
+C 2682 646 2342 282 1856 282 
+C 1395 282 1101 525 1005 1088 
+L 288 1088 
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c804" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ccb4" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(296.199921 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad8c" transform="translate(325.199905 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5ed" transform="translate(412.399887 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(499.599869 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(528.599854 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(560.499847 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(589.499832 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(676.699814 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(763.899796 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(792.89978 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(824.799774 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad8c" transform="translate(853.799759 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5ed" transform="translate(940.999741 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d7" transform="translate(1028.199722 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1084.099716 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(1171.299698 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc4" transform="translate(1258.49968 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1345.699661 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(1374.699646 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(1461.899628 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1549.099609 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ae30" transform="translate(1578.099594 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5ec" transform="translate(1665.299576 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b3c4" transform="translate(1752.499557 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1839.699539 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(1868.699524 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(1955.899506 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPB-35" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPB-c7a5" transform="translate(143.499969 0)"/>
     </g>
-    <!-- · 주요 변수의 방향성과 시공간 이질성 해석 -->
-    <g style="fill: #111827" transform="translate(135.30321 231.929749) scale(0.0472 -0.0472)">
+   </g>
+   <g id="text_27">
+    <!-- 결론 -->
+    <g style="fill: #111827" transform="translate(37.877919 332.033994) scale(0.082 -0.082)">
      <defs>
-      <path id="KoPubWorldDotumPM-c8fc" d="M 5120 2592 
-C 4678 2675 4192 2848 3782 3123 
-C 3392 3386 3091 3731 3059 4192 
-L 4736 4192 
-L 4736 4634 
-L 819 4634 
-L 819 4198 
-L 2490 4198 
-C 2445 3782 2214 3443 1830 3168 
-C 1446 2906 947 2701 410 2592 
-L 774 2208 
-C 1158 2310 1555 2451 1914 2675 
-C 2272 2886 2579 3168 2784 3526 
-C 2970 3142 3315 2854 3680 2643 
-C 4045 2432 4454 2285 4787 2208 
-L 5120 2592 
+      <path id="KoPubWorldDotumPB-acb0" d="M 595 4640 
+L 595 4038 
+L 2419 4038 
+C 2214 3213 1498 2643 262 2336 
+L 704 1818 
+C 2342 2336 3110 3251 3264 4461 
+C 3264 4582 3206 4640 3085 4640 
+L 595 4640 
 z
-M 5376 1645 
-L 186 1645 
-L 186 1210 
-L 2528 1210 
-L 2528 -845 
-L 3046 -845 
-L 3046 1210 
-L 5376 1210 
-L 5376 1645 
+M 5037 4877 
+L 4320 4877 
+L 4320 4173 
+L 3322 4173 
+L 3322 3597 
+L 4320 3597 
+L 4320 3066 
+L 3213 3066 
+L 3213 2490 
+L 4320 2490 
+L 4320 1875 
+L 5037 1875 
+L 5037 4877 
+z
+M 5152 -256 
+L 1946 -256 
+L 1946 179 
+L 4845 179 
+C 4973 179 5024 224 5024 358 
+L 5024 1466 
+C 5024 1587 4966 1645 4845 1645 
+L 1171 1645 
+L 1171 1082 
+L 4262 1082 
+L 4262 685 
+L 1350 685 
+C 1216 685 1171 634 1171 506 
+L 1171 -640 
+C 1171 -774 1216 -819 1350 -819 
+L 5152 -819 
+L 5152 -256 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPB-acb0"/>
+     <use xlink:href="#KoPubWorldDotumPB-b860" transform="translate(87.199982 0)"/>
+    </g>
+   </g>
+   <g id="text_28">
+    <!-- 제1절 연구 결과 요약 -->
+    <g style="fill: #111827" transform="translate(84.82374 315.442271) scale(0.089 -0.089)">
+     <defs>
+      <path id="KoPubWorldDotumPM-acb0" d="M 666 4576 
+L 666 4141 
+L 2630 4141 
+C 2509 3654 2227 3245 1818 2931 
+C 1408 2605 890 2368 320 2221 
+L 627 1850 
+C 1325 2061 1914 2381 2381 2816 
+C 2842 3238 3123 3782 3219 4442 
+C 3219 4544 3187 4576 3085 4576 
+L 666 4576 
+z
+M 4941 4838 
+L 4435 4838 
+L 4435 4058 
+L 3373 4058 
+L 3373 3648 
+L 4435 3648 
+L 4435 2963 
+L 3226 2963 
+L 3226 2554 
+L 4435 2554 
+L 4435 1894 
+L 4941 1894 
+L 4941 4838 
+z
+M 5062 -384 
+L 1786 -384 
+L 1786 218 
+L 4800 218 
+C 4902 218 4934 250 4934 352 
+L 4934 1453 
+C 4934 1555 4902 1587 4800 1587 
+L 1242 1587 
+L 1242 1171 
+L 4390 1171 
+L 4390 608 
+L 1376 608 
+C 1274 608 1242 576 1242 474 
+L 1242 -659 
+C 1242 -762 1274 -794 1376 -794 
+L 5062 -794 
+L 5062 -384 
 z
 " transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-c694" d="M 4230 3174 
@@ -3826,6 +4261,68 @@ L 5382 -122
 L 5382 320 
 z
 " transform="scale(0.015625)"/>
+      <path id="KoPubWorldDotumPM-c57d" d="M 3162 2726 
+C 3238 2906 3277 3098 3277 3302 
+C 3277 3693 3117 4064 2854 4326 
+C 2592 4589 2221 4755 1786 4755 
+C 1350 4755 973 4589 710 4326 
+C 435 4064 288 3693 288 3302 
+C 288 2893 435 2522 710 2259 
+C 973 1997 1350 1837 1786 1837 
+C 2221 1837 2592 1997 2854 2259 
+C 2989 2394 3091 2547 3162 2726 
+z
+M 1792 2291 
+C 1478 2291 1242 2387 1069 2586 
+C 902 2784 819 3021 819 3296 
+C 819 3859 1171 4301 1792 4301 
+C 2406 4301 2752 3859 2752 3296 
+C 2752 3021 2669 2784 2502 2586 
+C 2336 2387 2099 2291 1792 2291 
+z
+M 4672 2509 
+L 5440 2509 
+L 5440 2944 
+L 4672 2944 
+L 4672 3738 
+L 5440 3738 
+L 5440 4166 
+L 4672 4166 
+L 4672 4838 
+L 4166 4838 
+L 4166 1491 
+L 4672 1491 
+L 4672 2509 
+z
+M 4672 1050 
+C 4672 1152 4640 1184 4538 1184 
+L 960 1184 
+L 960 736 
+L 4166 736 
+L 4166 -883 
+L 4672 -883 
+L 4672 1050 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-31" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acb0" transform="translate(463.099884 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c694" transform="translate(666.499832 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c57d" transform="translate(753.699814 0)"/>
+    </g>
+   </g>
+   <g id="text_29">
+    <!-- 제2절 연구의 한계 및 향후 과제 -->
+    <g style="fill: #111827" transform="translate(84.82374 327.222732) scale(0.089 -0.089)">
+     <defs>
       <path id="KoPubWorldDotumPM-d5a5" d="M 3578 4115 
 L 314 4115 
 L 314 3718 
@@ -3885,258 +4382,6 @@ C 3731 794 4307 557 4307 122
 C 4307 -102 4166 -262 3917 -371 
 z
 " transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c9c8" d="M 3789 2502 
-C 3482 2586 3104 2739 2816 2995 
-C 2528 3251 2310 3584 2310 4070 
-L 2310 4166 
-L 3469 4166 
-L 3469 4595 
-L 608 4595 
-L 608 4166 
-L 1786 4166 
-L 1786 4090 
-C 1786 3597 1600 3219 1318 2938 
-C 1030 2656 640 2458 224 2310 
-L 589 1971 
-C 877 2093 1152 2253 1427 2451 
-C 1702 2637 1907 2893 2048 3219 
-C 2208 2931 2458 2701 2720 2522 
-C 2976 2342 3251 2214 3475 2131 
-L 3789 2502 
-z
-M 4998 4845 
-L 4499 4845 
-L 4499 1888 
-L 4998 1888 
-L 4998 4845 
-z
-M 5126 -371 
-L 1850 -371 
-L 1850 218 
-L 4858 218 
-C 4960 218 4992 250 4992 352 
-L 4992 1453 
-C 4992 1555 4960 1587 4858 1587 
-L 1306 1587 
-L 1306 1171 
-L 4448 1171 
-L 4448 608 
-L 1440 608 
-C 1338 608 1306 576 1306 474 
-L 1306 -646 
-C 1306 -749 1338 -781 1440 -781 
-L 5126 -781 
-L 5126 -371 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c8fc" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c694" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bcc0" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c218" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(525.899872 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc29" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d5a5" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(729.29982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(816.499802 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(903.699783 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c2dc" transform="translate(932.699768 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acf5" transform="translate(1019.89975 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ac04" transform="translate(1107.099731 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1194.299713 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c774" transform="translate(1223.299698 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c9c8" transform="translate(1310.49968 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c131" transform="translate(1397.699661 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1484.899643 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d574" transform="translate(1513.899628 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(1601.099609 0)"/>
-    </g>
-   </g>
-   <g id="text_19">
-    <!-- SHAP 분석 -->
-    <g style="fill: #111827" transform="translate(270.845804 229.044796) scale(0.05 -0.05)">
-     <use xlink:href="#KoPubWorldDotumPM-53"/>
-     <use xlink:href="#KoPubWorldDotumPM-48" transform="translate(60.099991 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-41" transform="translate(131.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-50" transform="translate(198.099976 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(258.999969 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(287.999954 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(375.199936 0)"/>
-    </g>
-   </g>
-   <g id="text_20">
-    <!-- 제5장 -->
-    <g style="fill: #111827" transform="translate(29.263724 265.923392) scale(0.087 -0.087)">
-     <defs>
-      <path id="KoPubWorldDotumPM-35" d="M 378 934 
-C 429 128 1043 -314 1850 -314 
-C 2746 -314 3328 346 3328 1286 
-C 3328 2362 2726 2880 1984 2880 
-C 1523 2880 1146 2733 947 2458 
-L 1037 4032 
-L 3085 4032 
-L 3085 4467 
-L 646 4467 
-C 570 4467 550 4442 544 4346 
-L 474 1837 
-C 474 1754 480 1741 557 1741 
-L 864 1741 
-C 960 1741 966 1779 992 1850 
-C 1101 2234 1440 2458 1875 2458 
-C 2419 2458 2816 2074 2816 1280 
-C 2816 563 2406 115 1869 115 
-C 1350 115 966 416 883 934 
-L 378 934 
-z
-" transform="scale(0.015625)"/>
-     </defs>
-     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
-     <use xlink:href="#KoPubWorldDotumPM-35" transform="translate(87.199982 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c7a5" transform="translate(143.499969 0)"/>
-    </g>
-   </g>
-   <g id="text_21">
-    <!-- · 분석 결과 요약    · 연구의 의의    · 연구의 한계 및 향후 과제 -->
-    <g style="fill: #111827" transform="translate(70.578 265.354618) scale(0.0635 -0.0635)">
-     <defs>
-      <path id="KoPubWorldDotumPM-acb0" d="M 666 4576 
-L 666 4141 
-L 2630 4141 
-C 2509 3654 2227 3245 1818 2931 
-C 1408 2605 890 2368 320 2221 
-L 627 1850 
-C 1325 2061 1914 2381 2381 2816 
-C 2842 3238 3123 3782 3219 4442 
-C 3219 4544 3187 4576 3085 4576 
-L 666 4576 
-z
-M 4941 4838 
-L 4435 4838 
-L 4435 4058 
-L 3373 4058 
-L 3373 3648 
-L 4435 3648 
-L 4435 2963 
-L 3226 2963 
-L 3226 2554 
-L 4435 2554 
-L 4435 1894 
-L 4941 1894 
-L 4941 4838 
-z
-M 5062 -384 
-L 1786 -384 
-L 1786 218 
-L 4800 218 
-C 4902 218 4934 250 4934 352 
-L 4934 1453 
-C 4934 1555 4902 1587 4800 1587 
-L 1242 1587 
-L 1242 1171 
-L 4390 1171 
-L 4390 608 
-L 1376 608 
-C 1274 608 1242 576 1242 474 
-L 1242 -659 
-C 1242 -762 1274 -794 1376 -794 
-L 5062 -794 
-L 5062 -384 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-c57d" d="M 3162 2726 
-C 3238 2906 3277 3098 3277 3302 
-C 3277 3693 3117 4064 2854 4326 
-C 2592 4589 2221 4755 1786 4755 
-C 1350 4755 973 4589 710 4326 
-C 435 4064 288 3693 288 3302 
-C 288 2893 435 2522 710 2259 
-C 973 1997 1350 1837 1786 1837 
-C 2221 1837 2592 1997 2854 2259 
-C 2989 2394 3091 2547 3162 2726 
-z
-M 1792 2291 
-C 1478 2291 1242 2387 1069 2586 
-C 902 2784 819 3021 819 3296 
-C 819 3859 1171 4301 1792 4301 
-C 2406 4301 2752 3859 2752 3296 
-C 2752 3021 2669 2784 2502 2586 
-C 2336 2387 2099 2291 1792 2291 
-z
-M 4672 2509 
-L 5440 2509 
-L 5440 2944 
-L 4672 2944 
-L 4672 3738 
-L 5440 3738 
-L 5440 4166 
-L 4672 4166 
-L 4672 4838 
-L 4166 4838 
-L 4166 1491 
-L 4672 1491 
-L 4672 2509 
-z
-M 4672 1050 
-C 4672 1152 4640 1184 4538 1184 
-L 960 1184 
-L 960 736 
-L 4166 736 
-L 4166 -883 
-L 4672 -883 
-L 4672 1050 
-z
-" transform="scale(0.015625)"/>
-      <path id="KoPubWorldDotumPM-d55c" d="M 3648 4032 
-L 397 4032 
-L 397 3629 
-L 3648 3629 
-L 3648 4032 
-z
-M 2848 4851 
-L 1171 4851 
-L 1171 4442 
-L 2848 4442 
-L 2848 4851 
-z
-M 4781 2662 
-L 5574 2662 
-L 5574 3110 
-L 4781 3110 
-L 4781 4838 
-L 4282 4838 
-L 4282 659 
-L 4781 659 
-L 4781 2662 
-z
-M 4966 -288 
-L 1741 -288 
-L 1741 864 
-L 1222 864 
-L 1222 -582 
-C 1222 -685 1254 -717 1357 -717 
-L 4966 -717 
-L 4966 -288 
-z
-M 3418 2298 
-C 3418 2611 3283 2861 3021 3046 
-C 2758 3238 2419 3334 2016 3334 
-C 1171 3334 614 2918 614 2298 
-C 614 1664 1171 1261 2016 1261 
-C 2426 1261 2765 1357 3027 1542 
-C 3290 1728 3418 1978 3418 2298 
-z
-M 2650 1811 
-C 2490 1702 2278 1645 2022 1645 
-C 1478 1645 1133 1882 1133 2298 
-C 1133 2707 1478 2950 2022 2950 
-C 2541 2950 2893 2707 2893 2298 
-C 2893 2086 2810 1926 2650 1811 
-z
-" transform="scale(0.015625)"/>
       <path id="KoPubWorldDotumPM-d6c4" d="M 4429 2112 
 C 4518 2221 4563 2342 4563 2477 
 C 4563 2739 4378 2970 4064 3123 
@@ -4183,55 +4428,31 @@ L 5376 1120
 z
 " transform="scale(0.015625)"/>
      </defs>
-     <use xlink:href="#KoPubWorldDotumPM-b7"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(31.899994 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bd84" transform="translate(60.899979 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c11d" transform="translate(148.09996 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(235.299942 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acb0" transform="translate(264.299927 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(351.499908 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(438.69989 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c694" transform="translate(467.699875 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c57d" transform="translate(554.899857 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(642.099838 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(671.099823 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(700.099808 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(729.099792 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(758.099777 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(789.999771 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(818.999756 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(906.199738 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(993.399719 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1080.599701 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(1109.599686 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(1196.799667 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1283.999649 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1312.999634 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1341.999619 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1370.999603 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-b7" transform="translate(1399.999588 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1431.899582 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(1460.899567 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(1548.099548 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(1635.29953 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1722.499512 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d55c" transform="translate(1751.499496 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acc4" transform="translate(1838.699478 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1925.89946 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(1954.899445 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(2042.099426 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d5a5" transform="translate(2071.099411 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-d6c4" transform="translate(2158.299393 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(2245.499374 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(2274.499359 0)"/>
-     <use xlink:href="#KoPubWorldDotumPM-c81c" transform="translate(2361.699341 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c"/>
+     <use xlink:href="#KoPubWorldDotumPM-32" transform="translate(87.199982 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c808" transform="translate(143.499969 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(230.699951 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c5f0" transform="translate(259.699936 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-ad6c" transform="translate(346.899918 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c758" transform="translate(434.099899 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(521.299881 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d55c" transform="translate(550.299866 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acc4" transform="translate(637.499847 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(724.699829 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-bc0f" transform="translate(753.699814 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(840.899796 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d5a5" transform="translate(869.89978 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-d6c4" transform="translate(957.099762 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-20" transform="translate(1044.299744 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-acfc" transform="translate(1073.299728 0)"/>
+     <use xlink:href="#KoPubWorldDotumPM-c81c" transform="translate(1160.49971 0)"/>
     </g>
    </g>
   </g>
  </g>
  <defs>
-  <clipPath id="pbcd123d4c2">
-   <rect x="8.64" y="8.64" width="309.69" height="302.148"/>
+  <clipPath id="p8d9f55373d">
+   <rect x="8.64" y="8.64" width="309.69" height="352.044"/>
   </clipPath>
  </defs>
 </svg>

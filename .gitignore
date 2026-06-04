@@ -18,6 +18,11 @@ paper/versions/
 paper/*_compact.docx
 paper/*_compact.pdf
 paper/*_compact.md
+paper/~$*.docx
+paper/*_render/
+paper/final_visual_check_*/
+paper/figure_1_1_check/
+review_inputs/rendered/
 
 # 그림 생성 중간 산출물
 figures/archive/gpt_image_trials_*/

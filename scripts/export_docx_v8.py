@@ -10,6 +10,7 @@
 큰제목(장): 16pt 진하게 / 중간제목(절): 13pt 진하게
 """
 import os, re, io, struct
+from datetime import datetime
 import latex2mathml.converter as _l2m
 import mathml2omml as _m2o
 from docx import Document
@@ -35,7 +36,7 @@ FONT_KR = 'KoPubWorldBatang_Pro'
 # 그림은 캡션과 함께 한 문단으로 묶이므로, 큰 그림이 하단에서 밀리며
 # 과도한 공백을 만들지 않도록 그림별 최대 폭/높이를 제한한다.
 IMAGE_SIZE_LIMITS_CM = {
-    'fig1_research_flow.png': (12.4, 12.0),
+    'fig1_research_flow.png': (12.0, 13.3),
     'fig2_xgboost_concept.png': (13.6, 8.8),
     'fig3_shap_framework.png': (13.6, 10.7),
     'fig4_shap_bar.png': (11.0, 8.8),
@@ -168,8 +169,7 @@ def add_page_number(section, start_num=None, fmt='decimal', placeholder_fmt=None
     r1 = p.add_run('- ')
     set_font(r1, 10)
 
-    # 페이지 번호 필드. w:fldSimple은 일부 뷰어/Word 미갱신 상태에서 cache 값(1)을
-    # 그대로 보여주는 경우가 있어, Word 표준 복합 필드로 넣고 dirty 플래그를 둔다.
+    # 페이지 번호 필드. 생성 직후에는 Word 계산을 유도하되, 최종 저장 전 dirty 플래그는 제거한다.
     rpr = f'<w:rPr {nsdecls("w")}><w:sz w:val="20"/></w:rPr>'
     field_parts = [
         f'<w:r {nsdecls("w")}>{rpr}<w:fldChar w:fldCharType="begin" w:dirty="true"/></w:r>',
@@ -422,6 +422,23 @@ def centered_text(doc, text, size=14, bold=False, space_before=0, space_after=0)
     return p
 
 
+def add_english_title_block(doc, size=12, space_before=0):
+    """표지·제출서 영문 제목을 의미 단위로 고정 줄바꿈한다."""
+    lines = [
+        'An Analysis of Apartment Sale Price Structure in Seoul',
+        'Focusing on Distance-Based Accessibility',
+        'and Spatiotemporal Heterogeneity',
+    ]
+    for idx, line in enumerate(lines):
+        centered_text(
+            doc,
+            line,
+            size,
+            True,
+            space_before=space_before if idx == 0 else 0,
+        )
+
+
 def add_cover(doc):
     """양식1: 표지 — 한양대 부동산융합대학원 표준 (조민지 2023 양식)
     순서: 석사학위청구논문 → 한글제목 → 영문제목 → 이름 → 학교/대학원 → 연월
@@ -429,13 +446,10 @@ def add_cover(doc):
     _empty(doc, 2)
     centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
-    centered_text(doc, '서울시 아파트 단위면적당', 18, True)
-    centered_text(doc, '매매가격 구조 분석', 18, True)
+    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 18, True)
     centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 14, True)
     _empty(doc, 1)
-    centered_text(doc, 'An Analysis of Apartment Unit-Area', 13, True)
-    centered_text(doc, 'Sale Price Structure in Seoul', 13, True)
-    centered_text(doc, 'Focusing on Distance-Based Accessibility and Spatiotemporal Heterogeneity', 12, True)
+    add_english_title_block(doc, size=12)
     _empty(doc, 3)
     centered_text(doc, '박  현  근', 16, True)
     _empty(doc, 2)
@@ -453,12 +467,9 @@ def add_submission(doc):
     """
     centered_text(doc, '석 사 학 위 청 구 논 문', 16, True)
     _empty(doc, 1)
-    centered_text(doc, '서울시 아파트 단위면적당', 17, True)
-    centered_text(doc, '매매가격 구조 분석', 17, True)
+    centered_text(doc, '서울시 아파트 매매가격 구조 분석', 17, True)
     centered_text(doc, '- 거리 기반 접근성과 시공간 이질성을 중심으로 -', 13, True)
-    centered_text(doc, 'An Analysis of Apartment Unit-Area', 12, True, space_before=4)
-    centered_text(doc, 'Sale Price Structure in Seoul', 12, True)
-    centered_text(doc, 'Focusing on Distance-Based Accessibility and Spatiotemporal Heterogeneity', 10, True)
+    add_english_title_block(doc, size=12, space_before=4)
     centered_text(doc, '지도교수  고  준  호', 14, True, space_before=12)
     _empty(doc, 1)
     centered_text(doc, '이 논문을 공학 석사학위청구논문으로 제출합니다.', 12)
@@ -737,11 +748,13 @@ def add_image(doc, path, caption='', bm_name=None):
         add_body(doc, f'[그림 파일 없음: {os.path.basename(path)}]')
         return
     # 이미지를 먼저 배치하고 캡션은 아래 가운데에 둔다.
+    compact = os.path.basename(path) == 'fig1_research_flow.png'
     p = doc.add_paragraph()
     p.alignment = WD_ALIGN_PARAGRAPH.CENTER
     p.paragraph_format.first_line_indent = Cm(0)
-    p.paragraph_format.space_before = Pt(6)
-    p.paragraph_format.space_after = Pt(6)
+    p.paragraph_format.space_before = Pt(0 if compact else 6)
+    p.paragraph_format.space_after = Pt(0 if compact else 6)
+    p.paragraph_format.line_spacing = 1.0
     p.paragraph_format.keep_together = True
     r = p.add_run()
     r.add_picture(path, width=Cm(image_width_cm_for_docx(path)))
@@ -1237,8 +1250,7 @@ def _pdf_footer_page_number(page_text):
     return matches[-1] if matches else None
 
 
-def _extract_toc_numbers_from_pdf(pdf_path):
-    """Word가 계산한 목차 페이지 번호를 PDF의 목차 영역에서 추출한다."""
+def _extract_pdf_pages(pdf_path):
     import subprocess
 
     try:
@@ -1247,16 +1259,23 @@ def _extract_toc_numbers_from_pdf(pdf_path):
             stderr=subprocess.DEVNULL,
         ).decode('utf-8', 'replace')
     except Exception as e:
-        print(f'  [warn] 목차 번호 추출 실패: {e}')
-        return {}
+        print(f'  [warn] PDF 텍스트 추출 실패: {e}')
+        return []
+    return [p for p in raw.split('\f') if p.strip()]
 
-    pages = [p for p in raw.split('\f') if p.strip()]
+
+def _extract_toc_entries_from_pdf(pdf_path):
+    """PDF의 목차/표목차/그림목차 영역에서 (항목명, 페이지 번호)를 순서대로 추출한다."""
+    pages = _extract_pdf_pages(pdf_path)
+    if not pages:
+        return []
+
     first_body_idx = next(
         (idx for idx, page in enumerate(pages) if _pdf_footer_page_number(page) == '1'),
         len(pages),
     )
 
-    toc_numbers = {}
+    toc_entries = []
     for page in pages[:first_body_idx]:
         for line in page.splitlines():
             raw_line = line.strip()
@@ -1278,8 +1297,362 @@ def _extract_toc_numbers_from_pdf(pdf_path):
                 or label in ('참고문헌', 'Abstract')
             ):
                 continue
-            toc_numbers[_toc_static_key(label)] = m.group('num')
-    return toc_numbers
+            toc_entries.append((label, m.group('num')))
+    return toc_entries
+
+
+def _extract_toc_numbers_from_pdf(pdf_path):
+    """Word가 계산한 목차 페이지 번호를 PDF의 목차 영역에서 추출한다."""
+    toc_entries = _extract_toc_entries_from_pdf(pdf_path)
+    if not toc_entries:
+        print('  [warn] PDF에서 목차 번호를 추출하지 못함')
+        return {}
+    return {_toc_static_key(label): num for label, num in toc_entries}
+
+
+def _toc_caption_id(text):
+    m = re.match(r'^\s*(<\s*(?:표|그림)\s*[0-9]+(?:-[0-9]+)?\s*>)', text or '')
+    return _toc_static_key(m.group(1)) if m else None
+
+
+def _toc_entry_matches_pdf_line(label, line):
+    """본문 참조문·그림 내부 텍스트를 실제 제목으로 오인하지 않도록 엄격히 매칭한다."""
+    caption_id = _toc_caption_id(label)
+    if caption_id:
+        return _toc_caption_id(line.strip()) == caption_id
+    return _toc_static_key(line.strip()) == _toc_static_key(label)
+
+
+def _extract_actual_toc_numbers_from_pdf(pdf_path, labels):
+    pages = _extract_pdf_pages(pdf_path)
+    if not pages:
+        return {}
+
+    first_body_idx = next(
+        (idx for idx, page in enumerate(pages) if _pdf_footer_page_number(page) == '1'),
+        len(pages),
+    )
+
+    actual_numbers = {}
+    for label in labels:
+        label_key = _toc_static_key(label)
+        for page in pages[first_body_idx:]:
+            page_num = _pdf_footer_page_number(page)
+            if not (page_num and page_num.isdigit()):
+                continue
+            for line in page.splitlines():
+                if _toc_entry_matches_pdf_line(label, line):
+                    actual_numbers[label_key] = page_num
+                    break
+            if label_key in actual_numbers:
+                break
+    return actual_numbers
+
+
+def validate_toc_numbers_in_pdf(pdf_path):
+    """최종 PDF에서 목차 표기 번호와 실제 본문/표/그림 위치를 전수 비교한다."""
+    entries = _extract_toc_entries_from_pdf(pdf_path)
+    if not entries:
+        print('  [warn] 목차 검증 실패: PDF 목차 항목을 추출하지 못함')
+        return False, {}
+
+    actual_numbers = _extract_actual_toc_numbers_from_pdf(
+        pdf_path,
+        [label for label, _num in entries],
+    )
+    missing = []
+    mismatches = []
+    for label, toc_num in entries:
+        label_key = _toc_static_key(label)
+        actual_num = actual_numbers.get(label_key)
+        if actual_num is None:
+            missing.append(label)
+        elif str(toc_num) != str(actual_num):
+            mismatches.append((label, toc_num, actual_num))
+
+    report = {
+        'entries': entries,
+        'actual_numbers': actual_numbers,
+        'missing': missing,
+        'mismatches': mismatches,
+    }
+    if missing or mismatches:
+        print(
+            f'  [warn] 목차 페이지 번호 검증 실패: '
+            f'누락 {len(missing)}개, 불일치 {len(mismatches)}개'
+        )
+        for label, toc_num, actual_num in mismatches[:8]:
+            print(f'    - {label}: 목차 {toc_num} / 실제 {actual_num}')
+        if missing:
+            print(f'    - 실제 위치 미검출: {missing[:5]}')
+        return False, report
+
+    print(f'  ✓ 목차 페이지 번호 검증 통과: {len(entries)}개 항목')
+    return True, report
+
+
+def _extract_toc_pageref_targets_from_docx(docx_path):
+    """DOCX 목차 필드에서 (표시 라벨, bookmark 이름)을 추출한다."""
+    from zipfile import ZipFile
+    from lxml import etree
+
+    ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+    with ZipFile(docx_path, 'r') as zin:
+        document_xml = zin.read('word/document.xml')
+
+    root = etree.fromstring(document_xml)
+    pairs = []
+    for p in root.xpath('//w:p[.//w:instrText[contains(., "PAGEREF")]]', namespaces=ns):
+        label = _toc_label_before_pageref(p, ns)
+        instr = ''.join(p.xpath('.//w:instrText/text()', namespaces=ns))
+        m = re.search(r'\bPAGEREF\s+([A-Za-z0-9_]+)\b', instr)
+        if label and m:
+            pairs.append((label, m.group(1)))
+    return pairs
+
+
+def _rewrite_docx_parts(docx_path, part_updater):
+    """DOCX zip 내부 part를 필요한 경우에만 갱신한다."""
+    import tempfile
+    from zipfile import ZipFile, ZIP_DEFLATED
+
+    with ZipFile(docx_path, 'r') as zin:
+        items = zin.infolist()
+        data = {item.filename: zin.read(item.filename) for item in items}
+
+    changed = False
+    for name, original in list(data.items()):
+        updated = part_updater(name, original)
+        if updated is not None and updated != original:
+            data[name] = updated
+            changed = True
+
+    if not changed:
+        return False
+
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.docx')
+    tmp.close()
+    try:
+        with ZipFile(tmp.name, 'w', ZIP_DEFLATED) as zout:
+            for item in items:
+                zout.writestr(item, data[item.filename])
+        os.replace(tmp.name, docx_path)
+    finally:
+        if os.path.exists(tmp.name):
+            os.remove(tmp.name)
+    return True
+
+
+def remove_update_fields_from_docx(docx_path):
+    """Word 열기 시 필드 업데이트 경고를 띄우는 updateFields 설정을 제거한다."""
+    from lxml import etree
+
+    ns_path = 'word/settings.xml'
+
+    def updater(name, original):
+        if name != ns_path:
+            return None
+        root = etree.fromstring(original)
+        changed = False
+        for el in list(root.findall(qn('w:updateFields'))):
+            root.remove(el)
+            changed = True
+        if not changed:
+            return None
+        return etree.tostring(
+            root,
+            xml_declaration=True,
+            encoding='UTF-8',
+            standalone=True,
+        )
+
+    return _rewrite_docx_parts(docx_path, updater)
+
+
+def clear_dirty_fields_from_docx(docx_path):
+    """최종 DOCX에서 Word 필드 자동 갱신 유발 플래그를 제거한다."""
+    from lxml import etree
+
+    def updater(name, original):
+        if not (name.startswith('word/') and name.endswith('.xml')):
+            return None
+        try:
+            root = etree.fromstring(original)
+        except etree.XMLSyntaxError:
+            return None
+        changed = False
+        for el in root.xpath('//*[@w:dirty]', namespaces={'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}):
+            del el.attrib[qn('w:dirty')]
+            changed = True
+        if not changed:
+            return None
+        return etree.tostring(
+            root,
+            xml_declaration=True,
+            encoding='UTF-8',
+            standalone=True,
+        )
+
+    return _rewrite_docx_parts(docx_path, updater)
+
+
+def sanitize_final_docx_fields(docx_path):
+    """제출 DOCX가 열릴 때 필드 업데이트 팝업으로 목차가 흔들리지 않게 정리한다."""
+    removed_update_fields = remove_update_fields_from_docx(docx_path)
+    cleared_dirty_fields = clear_dirty_fields_from_docx(docx_path)
+    return removed_update_fields or cleared_dirty_fields
+
+
+def _applescript_quote(text):
+    return '"' + (text or '').replace('\\', '\\\\').replace('"', '\\"') + '"'
+
+
+def _word_bookmark_page_numbers(docx_path, bookmark_names):
+    """Microsoft Word가 DOCX 화면에서 계산한 bookmark별 조정 페이지 번호를 읽는다."""
+    import shutil
+    import subprocess
+
+    unique_names = []
+    for name in bookmark_names:
+        if name and name not in unique_names:
+            unique_names.append(name)
+    if not unique_names:
+        return {}
+
+    probe_docx = os.path.join(
+        os.path.dirname(os.path.abspath(docx_path)),
+        f'toc_probe_{os.getpid()}.docx',
+    )
+    try:
+        shutil.copy2(docx_path, probe_docx)
+        remove_update_fields_from_docx(probe_docx)
+        bm_list = ', '.join(_applescript_quote(name) for name in unique_names)
+        script = f'''
+set docPath to {_applescript_quote(probe_docx)}
+tell application "Microsoft Word"
+    open file name docPath read only true add to recent files false
+    set theDoc to active document
+    repaginate theDoc
+    set bmNames to {{{bm_list}}}
+    set out to ""
+    repeat with bmName in bmNames
+        try
+            set br to text object of bookmark (bmName as text) of theDoc
+            set adj to get range information br information type active end adjusted page number
+            set rawp to get range information br information type active end page number
+            set out to out & (bmName as text) & tab & adj & tab & rawp & linefeed
+        on error errMsg
+            set out to out & (bmName as text) & tab & "ERR" & tab & errMsg & linefeed
+        end try
+    end repeat
+    close theDoc saving no
+    return out
+end tell
+'''
+        raw = subprocess.check_output(
+            ['osascript'],
+            input=script,
+            text=True,
+            stderr=subprocess.STDOUT,
+            timeout=180,
+        )
+    finally:
+        if os.path.exists(probe_docx):
+            os.remove(probe_docx)
+
+    pages = {}
+    errors = []
+    for line in raw.splitlines():
+        parts = line.split('\t')
+        if len(parts) < 3:
+            continue
+        bm_name, adj, raw_page = parts[0], parts[1], parts[2]
+        if adj == 'ERR':
+            errors.append((bm_name, raw_page))
+            continue
+        pages[bm_name] = {'adjusted': adj, 'raw': raw_page}
+    if errors:
+        print(f'  [warn] Word bookmark 페이지 미검출 {len(errors)}개: {errors[:3]}')
+    return pages
+
+
+def _extract_static_toc_numbers_from_docx(docx_path, labels):
+    from zipfile import ZipFile
+    from lxml import etree
+
+    wanted = {_toc_static_key(label) for label in labels}
+    ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
+    with ZipFile(docx_path, 'r') as zin:
+        document_xml = zin.read('word/document.xml')
+    root = etree.fromstring(document_xml)
+
+    numbers = {}
+    for p in root.xpath('//w:p', namespaces=ns):
+        label, num = _toc_label_from_static_paragraph(p, ns)
+        if label and _toc_static_key(label) in wanted:
+            numbers[_toc_static_key(label)] = num
+    return numbers
+
+
+def freeze_toc_numbers_via_word(docx_path):
+    """Microsoft Word가 DOCX 화면에서 계산한 페이지 번호로 목차를 고정한다."""
+    pairs = _extract_toc_pageref_targets_from_docx(docx_path)
+    if not pairs:
+        print('  [warn] Word 목차 고정 실패: PAGEREF 목차 항목 없음')
+        return False
+
+    for attempt in range(3):
+        word_pages = _word_bookmark_page_numbers(
+            docx_path,
+            [bm_name for _label, bm_name in pairs],
+        )
+        toc_numbers = {}
+        raw_pages = {}
+        for label, bm_name in pairs:
+            page_info = word_pages.get(bm_name)
+            if not page_info:
+                continue
+            toc_numbers[_toc_static_key(label)] = page_info['adjusted']
+            raw_pages[_toc_static_key(label)] = page_info['raw']
+        if len(toc_numbers) != len(pairs):
+            print(f'  [warn] Word 목차 고정 실패: {len(toc_numbers)}/{len(pairs)}개만 산출')
+            return False
+
+        if not apply_toc_numbers_to_docx(docx_path, toc_numbers):
+            return False
+        sanitize_final_docx_fields(docx_path)
+
+        visible_numbers = _extract_static_toc_numbers_from_docx(
+            docx_path,
+            [label for label, _bm_name in pairs],
+        )
+        mismatches = []
+        for label, _bm_name in pairs:
+            key = _toc_static_key(label)
+            if visible_numbers.get(key) != toc_numbers.get(key):
+                mismatches.append((label, visible_numbers.get(key), toc_numbers.get(key)))
+        if not mismatches:
+            print(f'  ✓ Word DOCX 기준 목차 페이지 번호 검증 통과: {len(pairs)}개 항목')
+            chapter_keys = [
+                _toc_static_key(label)
+                for label, _bm in pairs
+                if re.match(r'^제[0-9]+장\s+', label)
+            ]
+            chapter_summary = [
+                f'{label}: {toc_numbers[_toc_static_key(label)]}'
+                for label, _bm in pairs
+                if _toc_static_key(label) in chapter_keys
+            ]
+            if chapter_summary:
+                print('    장별 Word 표시 페이지: ' + ', '.join(chapter_summary))
+            return True
+
+        if attempt == 2:
+            print(f'  [warn] Word 목차 검증 불일치 {len(mismatches)}개: {mismatches[:5]}')
+            return False
+        print('  🔁 Word 기준 목차 번호 재확인 후 갱신')
+
+    return False
 
 
 def _toc_label_before_pageref(paragraph, ns):
@@ -1292,20 +1665,74 @@ def _toc_label_before_pageref(paragraph, ns):
     return ''.join(parts).strip()
 
 
-def freeze_toc_numbers_from_pdf(docx_path, pdf_path):
-    """목차/표목차/그림목차 PAGEREF를 최종 페이지 번호 텍스트로 고정한다.
+def _paragraph_text(paragraph, ns):
+    parts = []
+    for el in paragraph.iter():
+        if el.tag == qn('w:t'):
+            parts.append(el.text or '')
+        elif el.tag == qn('w:tab'):
+            parts.append('\t')
+        elif el.tag == qn('w:br'):
+            parts.append('\n')
+    return ''.join(parts)
 
-    Word가 PDF 출력 시에는 PAGEREF를 계산하지만, DOCX 화면에서는 필드 cache가 1로
-    보이는 경우가 있어 최종본은 필드 의존성을 제거한다.
-    """
+
+def _replace_static_toc_number(paragraph, ns, old_num, new_num):
+    text_nodes = paragraph.xpath('.//w:t', namespaces=ns)
+    for node in reversed(text_nodes):
+        text = node.text or ''
+        replaced = re.sub(
+            rf'({re.escape(str(old_num))})\s*$',
+            str(new_num),
+            text,
+            count=1,
+        )
+        if replaced != text:
+            node.text = replaced
+            return True
+    return False
+
+
+def _toc_label_from_static_paragraph(paragraph, ns):
+    text = _paragraph_text(paragraph, ns).strip()
+    if not text:
+        return None, None
+
+    if '\t' in text:
+        label, num = text.rsplit('\t', 1)
+        label = re.sub(r'\.{2,}', ' ', label).strip()
+        num = num.strip()
+        if not re.match(r'^(?:[0-9]+|[ivxlcdmIVXLCDM]+)$', num):
+            return None, None
+    else:
+        cleaned = re.sub(r'\.{2,}', ' ', text)
+        m = re.match(
+            r'^(?P<label>.+?)\s{2,}(?P<num>[0-9]+|[ivxlcdmIVXLCDM]+)\s*$',
+            cleaned,
+        )
+        if not m:
+            return None, None
+        label = m.group('label').strip()
+        num = m.group('num')
+
+    if not (
+        label.startswith('제')
+        or label.startswith('<표')
+        or label.startswith('<그림')
+        or label in ('참고문헌', 'Abstract')
+    ):
+        return None, None
+    return label, num
+
+
+def apply_toc_numbers_to_docx(docx_path, toc_numbers):
+    """PAGEREF 필드 상태와 이미 고정된 텍스트 상태를 모두 지원해 목차 숫자를 갱신한다."""
     import copy
     import tempfile
     from zipfile import ZipFile, ZIP_DEFLATED
     from lxml import etree
 
-    toc_numbers = _extract_toc_numbers_from_pdf(pdf_path)
     if not toc_numbers:
-        print('  [warn] 목차 번호 고정 생략: PDF에서 목차 번호를 추출하지 못함')
         return False
 
     ns = {'w': 'http://schemas.openxmlformats.org/wordprocessingml/2006/main'}
@@ -1313,16 +1740,18 @@ def freeze_toc_numbers_from_pdf(docx_path, pdf_path):
         document_xml = zin.read('word/document.xml')
 
     root = etree.fromstring(document_xml)
-    paragraphs = root.xpath(
+    field_paragraphs = root.xpath(
         '//w:p[.//w:instrText[contains(., "PAGEREF")]]',
         namespaces=ns,
     )
 
     changed = 0
     missing = []
-    for p in paragraphs:
+    handled = set()
+    for p in field_paragraphs:
         label = _toc_label_before_pageref(p, ns)
-        num = toc_numbers.get(_toc_static_key(label))
+        label_key = _toc_static_key(label)
+        num = toc_numbers.get(label_key)
         if num is None:
             missing.append(label)
             continue
@@ -1363,9 +1792,27 @@ def freeze_toc_numbers_from_pdf(docx_path, pdf_path):
             p.remove(old)
         p.insert(insert_at, r_new)
         changed += 1
+        handled.add(label_key)
+
+    for p in root.xpath('//w:p', namespaces=ns):
+        label, old_num = _toc_label_from_static_paragraph(p, ns)
+        if not label:
+            continue
+        label_key = _toc_static_key(label)
+        if label_key in handled:
+            continue
+        num = toc_numbers.get(label_key)
+        if num is None:
+            continue
+        if str(old_num) != str(num) and _replace_static_toc_number(p, ns, old_num, num):
+            changed += 1
+        handled.add(label_key)
 
     if missing:
         print(f'  [warn] 목차 번호 고정 누락 {len(missing)}개: {missing[:3]}')
+    missing_static = sorted(set(toc_numbers.keys()) - handled)
+    if missing_static:
+        print(f'  [warn] 목차 정적 항목 미검출 {len(missing_static)}개: {missing_static[:3]}')
 
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix='.docx')
     tmp.close()
@@ -1387,8 +1834,21 @@ def freeze_toc_numbers_from_pdf(docx_path, pdf_path):
         if os.path.exists(tmp.name):
             os.remove(tmp.name)
 
-    print(f'  ✓ 목차 페이지 번호 텍스트 고정: {changed}개')
-    return changed > 0 and not missing
+    print(f'  ✓ 목차 페이지 번호 텍스트 고정/갱신: {changed}개')
+    return not missing and not missing_static
+
+
+def freeze_toc_numbers_from_pdf(docx_path, pdf_path):
+    """목차/표목차/그림목차 PAGEREF를 최종 페이지 번호 텍스트로 고정한다.
+
+    Word가 PDF 출력 시에는 PAGEREF를 계산하지만, DOCX 화면에서는 필드 cache가 1로
+    보이는 경우가 있어 최종본은 필드 의존성을 제거한다.
+    """
+    toc_numbers = _extract_toc_numbers_from_pdf(pdf_path)
+    if not toc_numbers:
+        print('  [warn] 목차 번호 고정 생략: PDF에서 목차 번호를 추출하지 못함')
+        return False
+    return apply_toc_numbers_to_docx(docx_path, toc_numbers)
 
 
 def freeze_toc_numbers_via_temp_pdf(docx_path):
@@ -1410,6 +1870,16 @@ def freeze_toc_numbers_via_temp_pdf(docx_path):
         return freeze_toc_numbers_from_pdf(docx_path, tmp_pdf)
 
 
+def export_review_pdf(docx_path, final_pdf):
+    use_word_pdf = os.environ.get('THESIS_USE_WORD_PDF') == '1'
+    if use_word_pdf and export_pdf_via_word(docx_path, final_pdf):
+        return os.path.exists(final_pdf)
+    if use_word_pdf:
+        print('  Word 변환 실패 → LibreOffice fallback')
+    export_pdf_via_libreoffice(docx_path)
+    return os.path.exists(final_pdf)
+
+
 def main():
     print("📄 논문 DOCX v2 생성 (한양대 공식 서식)")
 
@@ -1429,25 +1899,33 @@ def main():
     bm_map = prebuild_bookmark_map(md_path)
     convert_md(doc, md_path, bm_map=bm_map)
     
-    out = os.path.join(PAPER_DIR, '석사학위논문_박현근.docx')
+    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    out = os.path.join(PAPER_DIR, f'석사학위논문_박현근_{timestamp}.docx')
     doc.save(out)
 
-    if os.environ.get('THESIS_FREEZE_TOC_VIA_PDF') == '1':
-        print('🔧 목차 페이지 번호 고정 (임시 렌더, PDF 미보존)')
+    if os.environ.get('THESIS_SKIP_TOC_FREEZE') == '1':
+        print('🔧 목차 페이지 번호 고정 생략 (THESIS_SKIP_TOC_FREEZE=1)')
+    elif os.environ.get('THESIS_TOC_SOURCE') == 'pdf':
+        print('🔧 목차 페이지 번호 고정 (PDF 렌더 기준)')
         freeze_toc_numbers_via_temp_pdf(out)
     else:
-        print('🔧 목차 페이지 번호 고정 생략 (DOCX 제출용; Word에서 필드 업데이트)')
+        print('🔧 목차 페이지 번호 고정 (Microsoft Word DOCX 화면 기준)')
+        if not freeze_toc_numbers_via_word(out):
+            raise RuntimeError('Word DOCX 기준 목차 페이지 번호 고정 실패')
 
     export_pdf = os.environ.get('THESIS_EXPORT_PDF') == '1'
     if export_pdf:
         # PDF 검수는 명시 opt-in이다. 제출 기준은 DOCX이며, PDF 변환은 렌더러별 폰트 차이가 있다.
         print('🔧 PDF 생성 (검수용, opt-in)')
         final_pdf = out.replace('.docx', '.pdf')
-        use_word_pdf = os.environ.get('THESIS_USE_WORD_PDF') == '1'
-        if not (use_word_pdf and export_pdf_via_word(out, final_pdf)):
-            if use_word_pdf:
-                print('  Word 변환 실패 → LibreOffice fallback')
-            export_pdf_via_libreoffice(out)
+        if not export_review_pdf(out, final_pdf):
+            raise RuntimeError('PDF 생성 실패')
+        if os.environ.get('THESIS_VALIDATE_PDF_TOC') == '1':
+            ok, _report = validate_toc_numbers_in_pdf(final_pdf)
+            if not ok:
+                raise RuntimeError('최종 PDF 목차 페이지 번호 검증 실패')
+        else:
+            print('  ✓ PDF 생성 완료; 목차 검증 기준은 Word DOCX 화면')
     else:
         print('🔧 PDF 생성 생략 (DOCX 제출용; 필요 시 THESIS_EXPORT_PDF=1)')
 

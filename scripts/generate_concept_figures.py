@@ -166,9 +166,9 @@ def arrow(ax: plt.Axes, start: tuple[float, float], end: tuple[float, float], co
 
 
 def make_fig1() -> None:
-    fig, ax = plt.subplots(figsize=(5.55, 5.45))
+    fig, ax = plt.subplots(figsize=(5.55, 6.35))
     ax.set_xlim(0, 10.0)
-    ax.set_ylim(0, 11.0)
+    ax.set_ylim(0, 12.85)
     ax.axis("off")
 
     edge = "#4B5563"
@@ -176,82 +176,101 @@ def make_fig1() -> None:
     lighter = "#F8FAFC"
     text = "#111827"
 
-    def square_box(x, y, w, h, fill="white", lw=0.85):
+    def square_box(x, y, w, h, fill="white", lw=0.9):
         box = patches.Rectangle((x, y), w, h, linewidth=lw, edgecolor=edge, facecolor=fill)
         ax.add_patch(box)
         return box
 
-    def put(x, y, s, size=8.0, weight="normal", ha="left", va="center"):
-        ax.text(x, y, s, fontsize=size, fontweight=weight, color=text, ha=ha, va=va, linespacing=1.42)
+    def put(x, y, s, size=9.0, weight="normal", ha="left", va="center"):
+        ax.text(x, y, s, fontsize=size, fontweight=weight, color=text, ha=ha, va=va, linespacing=1.38)
 
     left_x = 0.35
-    left_w = 1.28
-    body_x = 1.75
-    body_w = 7.9
-    row_h = 1.18
+    left_w = 1.65
+    body_x = 2.18
+    body_w = 7.25
 
-    rows = [
-        ("제1장", "· 연구의 배경 및 목적    · 연구의 범위    · 연구 방법 및 과정"),
-        ("제2장", "· 이론적 배경    · 국내 선행연구\n· 해외 선행연구    · 선행연구와의 차별성"),
-        ("제3장", "· 연구 방법    · 변수의 정의 및 구축    · 연구 모형"),
-    ]
+    def chapter_row(y, h, chapter, title, lines, font_size=8.6, two_cols=False, title_size=8.2):
+        square_box(left_x, y, left_w, h, fill=light)
+        square_box(body_x, y, body_w, h, fill="white")
+        put(left_x + left_w / 2, y + h / 2 + 0.18, chapter, size=10.2, weight="bold", ha="center")
+        put(left_x + left_w / 2, y + h / 2 - 0.27, title, size=title_size, weight="bold", ha="center")
+        if two_cols:
+            mid = body_x + body_w / 2
+            square_box(mid, y + 0.22, 0.001, h - 0.44, fill=edge, lw=0.25)
+            left_lines, right_lines = lines
+            start_y = y + h - 0.56
+            gap = (h - 0.92) / max(len(left_lines), len(right_lines), 1)
+            for idx, line in enumerate(left_lines):
+                put(body_x + 0.25, start_y - gap * idx, line, size=font_size)
+            for idx, line in enumerate(right_lines):
+                put(mid + 0.25, start_y - gap * idx, line, size=font_size)
+        else:
+            start_y = y + h - 0.40
+            gap = min(0.43, (h - 0.70) / max(len(lines) - 1, 1))
+            for idx, line in enumerate(lines):
+                put(body_x + 0.28, start_y - gap * idx, line, size=font_size)
 
-    for y, (chapter, body) in zip([9.35, 7.88, 6.41], rows):
-        square_box(left_x, y, left_w, row_h, fill=light)
-        square_box(body_x, y, body_w, row_h)
-        put(left_x + left_w / 2, y + row_h / 2, chapter, size=8.7, ha="center")
-        put(body_x + 0.25, y + row_h / 2, body, size=6.35)
-
-    y = 2.62
-    row4_h = 3.55
-    square_box(left_x, y, left_w, row4_h, fill=light)
-    square_box(body_x, y, body_w, row4_h)
-    put(left_x + left_w / 2, y + row4_h / 2, "제4장", size=8.7, ha="center")
-
-    margin = 0.28
-    col1_w = 1.72
-    col2_w = 4.20
-    col3_w = 1.06
-    x1 = body_x + margin
-    x2 = x1 + col1_w + 0.18
-    x3 = x2 + col2_w + 0.18
-    top = y + row4_h - 0.68
-    head_h = 0.55
-    cell_h = 0.82
-    row_gap = 0.14
-
-    for x, w, label in [(x1, col1_w, "분석 구분"), (x2, col2_w, "분석 내용"), (x3, col3_w, "분석 방법")]:
-        square_box(x, top, w, head_h, fill=light, lw=0.45)
-        put(x + w / 2, top + head_h / 2, label, size=6.25, ha="center")
-
-    analyses = [
-        ("기초통계 및\n성능 비교", "· 종속변수 및 설명변수 분포\n· OLS · RF · XGBoost 예측 성능 비교", "모형 구축"),
-        ("공간·시간\n정합성 검토", "· 행정동 집계와 거리 기반 변수 비교\n· 시설 시점 정합의 정보누수 통제 효과 분석", "소거분석"),
-        ("SHAP 기반\n가격 구조 분석", "· 전체 · 권역 · 연도 · 권역×연도별 변수 기여도 분석\n· 주요 변수의 방향성과 시공간 이질성 해석", "SHAP 분석"),
-    ]
-
-    cy = top - cell_h - row_gap
-    for label, detail, method in analyses:
-        square_box(x1, cy, col1_w, cell_h, fill=light, lw=0.35)
-        square_box(x2, cy, col2_w, cell_h, fill=lighter, lw=0.35)
-        square_box(x3, cy, col3_w, cell_h, fill=light, lw=0.35)
-        put(x1 + col1_w / 2, cy + cell_h / 2, label, size=5.45, ha="center")
-        put(x2 + 0.16, cy + cell_h / 2, detail, size=4.72)
-        put(x3 + col3_w / 2, cy + cell_h / 2, method, size=5.0, ha="center")
-        cy -= cell_h + row_gap
-
-    y = 1.12
-    square_box(left_x, y, left_w, row_h, fill=light)
-    square_box(body_x, y, body_w, row_h)
-    put(left_x + left_w / 2, y + row_h / 2, "제5장", size=8.7, ha="center")
-    put(
-        body_x + 0.25,
-        y + row_h / 2,
-        "· 분석 결과 요약    · 연구의 의의    · 연구의 한계 및 향후 과제",
-        size=6.35,
+    chapter_row(
+        11.20,
+        1.45,
+        "제1장",
+        "서론",
+        ["제1절 연구의 배경 및 목적", "제2절 연구의 범위", "제3절 연구 방법 및 과정"],
+        font_size=8.7,
+    )
+    chapter_row(
+        9.20,
+        1.75,
+        "제2장",
+        "이론적 배경\n및 선행연구",
+        [
+            "제1절 헤도닉 가격모형",
+            "제2절 머신러닝 기반 부동산 가격 예측",
+            "제3절 설명가능한 인공지능(XAI)",
+            "제4절 선행연구 검토 및 차별성",
+        ],
+        font_size=7.8,
+        title_size=7.3,
+    )
+    chapter_row(
+        7.62,
+        1.43,
+        "제3장",
+        "분석의 틀",
+        ["제1절 연구 방법", "제2절 변수의 정의 및 구축", "제3절 연구 모형"],
+        font_size=8.7,
+    )
+    chapter_row(
+        2.45,
+        4.90,
+        "제4장",
+        "실증 분석",
+        (
+            [
+                "제1절 기술통계 및 변수 분포",
+                "제2절 모형별 예측 성능 비교",
+                "제3절 소거분석(Ablation)",
+                "제4절 전체 SHAP 분석",
+            ],
+            [
+                "제5절 권역별 SHAP 분석",
+                "제6절 연도별 SHAP 분석",
+                "제7절 연도×권역 교차 SHAP 분석",
+            ],
+        ),
+        font_size=7.7,
+        two_cols=True,
+    )
+    chapter_row(
+        0.65,
+        1.48,
+        "제5장",
+        "결론",
+        ["제1절 연구 결과 요약", "제2절 연구의 한계 및 향후 과제"],
+        font_size=8.9,
     )
 
-    square_box(0.24, 0.72, 9.52, 10.02, fill="none", lw=0.65)
+    square_box(0.24, 0.36, 9.38, 12.34, fill="none", lw=0.75)
     save(fig, "fig1_research_flow.png")
 
 
