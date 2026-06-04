@@ -2226,7 +2226,10 @@ def main():
     md_path = os.path.join(PAPER_DIR, '석사학위논문_박현근.md')
     bm_map = prebuild_bookmark_map(md_path)
     convert_md(doc, md_path, bm_map=bm_map)
-    add_research_ethics_pledges(doc)
+    # 학위청구논문 심사용 기본본에는 연구윤리서약서를 본문 뒤에 넣지 않는다.
+    # 서약서는 HY-in 청구논문 신청 단계에서 확인하고, 최종 인쇄본 제출 때 별도 출력·날인본을 첨부한다.
+    if os.environ.get('THESIS_INCLUDE_ETHICS') == '1':
+        add_research_ethics_pledges(doc)
     
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     out = os.path.join(PAPER_DIR, f'석사학위논문_박현근_{timestamp}.docx')
