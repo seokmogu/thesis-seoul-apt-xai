@@ -12,6 +12,7 @@
 - 체크리스트: `committee_final_revision/CHECKLIST.md`
 - 리뷰 전문 재검토: `committee_final_revision/FULL_TRANSCRIPT_RECHECK.md`
 - Claude Code 재검토 아티팩트: `.omx/artifacts/ask-claude-thesis-full-transcript-review-cc-20260609.md`
+- 조미정 교수 텍스트 피드백 반영표: `committee_final_revision/JOMIJEONG_TEXT_FEEDBACK_RECHECK.md`
 
 ## Windows에서 반영할 핵심 변경
 
@@ -68,6 +69,9 @@
 - 표제지, 제출서, 인준서, 연구윤리 서약서 등 front matter 포함 여부.
 - 목차, 표 목차, 그림 목차 업데이트.
 - 표/그림 캡션 위치와 번호.
+- 조미정 교수 피드백 기준으로 제목·절 제목 바로 아래에 표가 먼저 오지 않고, 설명 문단 뒤에 표가 오도록 각 표의 페이지 배치를 확인한다.
+- `<표 3-2>` XGBoost 하이퍼파라미터 표 추가로 표 목차와 이후 표 번호가 자동 갱신됐는지 확인한다.
+- `<표 4-1>`, `<표 4-2>`, `<표 4-4>`, `<표 4-5>`, `<표 4-7>`, `<표 4-10>`, `<표 4-11>` 주변 문단과 표 위치가 Word에서 자연스럽게 이어지는지 확인한다.
 - `<표 4-4>`는 Markdown 변환 안정성을 위해 첫 열의 분할명을 반복 표기했다. Word에서 행 병합을 적용할 경우 의미가 바뀌지 않는지 확인한다.
 - 그림 링크 또는 삽입 이미지 누락 여부.
 - 그림 파일명과 본문 그림 번호가 다르므로 수동 삽입 시 대응 관계를 다시 확인한다.

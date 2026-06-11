@@ -24,6 +24,11 @@ advisor-feedback review, formatting check, and defense-presentation work.
   received in Downloads. The file is image-based, so text extraction is blank;
   the rendered pages were reviewed visually and summarized in
   `committee_final_revision/UMSANGYONG_FEEDBACK_RECHECK.md`.
+- `advisor_feedback/조미정_교수_피드백_20260612.txt`: June 12, 2026
+  professor feedback text file received in Downloads. Content-focused items
+  were cross-checked and summarized in
+  `committee_final_revision/JOMIJEONG_TEXT_FEEDBACK_RECHECK.md`; Word layout
+  placement items remain for the Windows DOCX step.
 
 ## Included From Downloads
 
