@@ -16,6 +16,14 @@ advisor-feedback review, formatting check, and defense-presentation work.
   three HUSA samples named in `scripts/build_pptx_husa.py`).
 - `reference_papers/` (1 file): downloaded PDF thesis directly related to
   mart/retail facility effects on apartment prices.
+- `thesis_presentation_20260608_134813.m4a`: June 8, 2026 thesis presentation
+  discussion/feedback recording. Transcribed via Mac Studio meeting-notes
+  pipeline and stored as
+  `review_inputs/transcripts/thesis_presentation_20260608_134813.txt`.
+- `advisor_feedback/엄상용_피드백.pdf`: June 11, 2026 professor feedback PDF
+  received in Downloads. The file is image-based, so text extraction is blank;
+  the rendered pages were reviewed visually and summarized in
+  `committee_final_revision/UMSANGYONG_FEEDBACK_RECHECK.md`.
 
 ## Included From Downloads
 
