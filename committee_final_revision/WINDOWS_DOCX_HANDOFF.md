@@ -13,6 +13,7 @@
 - 리뷰 전문 재검토: `committee_final_revision/FULL_TRANSCRIPT_RECHECK.md`
 - Claude Code 재검토 아티팩트: `.omx/artifacts/ask-claude-thesis-full-transcript-review-cc-20260609.md`
 - 조미정 교수 텍스트 피드백 반영표: `committee_final_revision/JOMIJEONG_TEXT_FEEDBACK_RECHECK.md`
+- 문서 포맷 전용 체크리스트: `committee_final_revision/WINDOWS_DOCX_FORMAT_FEEDBACK.md`
 
 ## Windows에서 반영할 핵심 변경
 
@@ -65,6 +66,7 @@
 
 ## Windows Word 확인 항목
 
+- 문서 포맷 전용 체크리스트(`WINDOWS_DOCX_FORMAT_FEEDBACK.md`)를 먼저 열고 표/그림 배치 대상 목록을 확인한다.
 - 표지 제목과 영문 제목 반영 여부.
 - 표제지, 제출서, 인준서, 연구윤리 서약서 등 front matter 포함 여부.
 - 목차, 표 목차, 그림 목차 업데이트.
